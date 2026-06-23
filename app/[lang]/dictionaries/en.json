@@ -1,0 +1,891 @@
+{
+  "nav": {
+    "courses": "Programs",
+    "why": "Why Nexo",
+    "contact": "Contact Us",
+    "enroll": "Reserve My Spot"
+  },
+  "hero": {
+    "badge": "Taught by Canadian Industry Experts · Certificate of Completion Included",
+    "headline": [
+      "Learn the skills that",
+      "get you hired.",
+      "Not just certified."
+    ],
+    "sub": "Hands-on weekend training led by active industry professionals — the real tools, the real practice, the proof you're job-ready.",
+    "cta_primary": "See Our Programs",
+    "cta_secondary": "Talk to Us",
+    "stat1": {
+      "value": "200+",
+      "label": "Professionals trained"
+    },
+    "stat2": {
+      "value": "5",
+      "label": "Programs available"
+    },
+    "stat3": {
+      "value": "100%",
+      "label": "Certificate included"
+    }
+  },
+  "courses": {
+    "label": "Our Programs",
+    "title": "Find the program that fits your goal",
+    "sub": "Three expert tracks built for working professionals — practical, focused, and designed to move your career forward.",
+    "count_one": "program",
+    "count_other": "programs",
+    "categories": [
+      {
+        "key": "tech",
+        "label": "Testing & Development",
+        "sub": "Software quality, AI-powered testing and engineering careers",
+        "color": "blue"
+      },
+      {
+        "key": "quality",
+        "label": "Quality Management",
+        "sub": "Standards, compliance, audits and organizational excellence",
+        "color": "violet"
+      },
+      {
+        "key": "digital",
+        "label": "Digital Skills",
+        "sub": "AI-powered tools, web creation and digital productivity",
+        "color": "emerald"
+      }
+    ],
+    "items": [
+      {
+        "category": "tech",
+        "badge": "July 2026 · 3 Weekends",
+        "tag": "Most Popular",
+        "title": "AI-Powered QA Engineering",
+        "sub": "Go from zero to job-ready QA Engineer in just 3 weekends. Learn manual testing, then supercharge every skill with AI tools that professionals actually use.",
+        "details": [
+          "3 weekends only — July 2026",
+          "$297 one-time · no hidden fees",
+          "Certificate of completion"
+        ],
+        "cta": "Reserve My Spot — $297",
+        "href": "#contact?course=qa"
+      },
+      {
+        "category": "quality",
+        "badge": "July 2026 · Weekends",
+        "tag": "Planned",
+        "title": "ISO 9001:2015 Quality Management",
+        "sub": "The world's most recognized quality standard, decoded. Implement a full QMS, run internal audits, and walk away ready for certification — in one weekend format.",
+        "details": [
+          "Weekend format · July 2026",
+          "$200 · one-time",
+          "Certificate of completion"
+        ],
+        "cta": "Reserve My Spot — $200",
+        "href": "#contact?course=iso"
+      },
+      {
+        "category": "tech",
+        "badge": "August 2026 · 1 Weekend",
+        "tag": "Planned",
+        "title": "Web Accessibility & Testing Tools",
+        "sub": "Learn to build and audit inclusive websites — and master the tools professionals use to catch what the eye misses.",
+        "details": [
+          "1 weekend · August 2026",
+          "$200 · one-time",
+          "Certificate of completion"
+        ],
+        "cta": "Reserve My Spot — $200",
+        "href": "#contact?course=a11y"
+      },
+      {
+        "category": "quality",
+        "badge": "September 2026 · 1 Weekend",
+        "tag": "Planned",
+        "title": "ISO 9001 Internal Auditor",
+        "sub": "Master the audit process from planning to closing meeting. Conduct effective internal audits, write findings that drive real improvement, and prepare your organization for external certification.",
+        "details": [
+          "1 weekend · September 2026",
+          "$200 · one-time",
+          "Certificate of completion"
+        ],
+        "cta": "Reserve My Spot — $200",
+        "href": "#contact?course=audit"
+      },
+      {
+        "category": "digital",
+        "badge": "August 2026 · 1 Weekend",
+        "tag": "Planned",
+        "title": "Build Your Website with AI",
+        "sub": "Turn your idea into a live, professional website in a single weekend — no coding required. You do the work, AI handles the heavy lifting.",
+        "details": [
+          "1 weekend · August 2026",
+          "$200 · one-time",
+          "Certificate of completion"
+        ],
+        "cta": "Reserve My Spot — $200",
+        "href": "#contact?course=web"
+      }
+    ],
+    "detail_label": "View program"
+  },
+  "qaSection": {
+    "label": "Program 1 — Testing & Development",
+    "title": "AI-Powered QA Engineering",
+    "sub": "Three weekends. Hands-on modules. A job-ready portfolio. Everything a QA employer wants to see — built by you, guided by an expert."
+  },
+  "features": {
+    "label": "Why Nexo Skills",
+    "title": "We built the training we wished existed",
+    "sub": "Too many programs teach outdated theory with zero career support. We do the opposite — active professionals, real tools, and a community that keeps paying off long after graduation.",
+    "items": [
+      {
+        "title": "Taught by active professionals",
+        "description": "Every trainer works in the field today. No retired academics, no outdated slides — just people who face the same challenges your future employer does."
+      },
+      {
+        "title": "Zero fluff. All practice.",
+        "description": "Every session is built around doing, not watching. You leave each weekend with real deliverables, a real project, and a portfolio that speaks for itself."
+      },
+      {
+        "title": "AI built into everything",
+        "description": "AI isn't a bonus module here — it's woven into every program from day one. You learn how today's professionals actually work, not how they worked five years ago."
+      },
+      {
+        "title": "We don't stop at graduation",
+        "description": "CV review, LinkedIn makeover, mock interviews, and job placement support are included. We're invested in your outcome, not just your registration."
+      },
+      {
+        "title": "A network that keeps paying off",
+        "description": "When you join Nexo Skills, you join a private community of alumni sharing job leads, advice, and opportunities. The connections you make here can outlast any certificate."
+      },
+      {
+        "title": "Proof you can put on your CV",
+        "description": "Every program ends with an official certificate of completion — recognized by employers and worth adding to both your CV and your LinkedIn headline."
+      }
+    ]
+  },
+  "program": {
+    "label": "The Curriculum",
+    "title": "3 weekends. One career change.",
+    "sub": "A focused, progressive curriculum that takes you from the basics of software testing to AI-powered techniques — and ends with a job-ready portfolio and interview prep. Dates to be confirmed.",
+    "modules": [
+      {
+        "title": "QA Fundamentals",
+        "description": "Understand how software is built and how it breaks. You'll master the SDLC, testing types, bug lifecycle, test case design, and how to write bug reports that developers actually act on.",
+        "duration": "Weekend 1 — Saturday",
+        "tags": [
+          "Manual Testing",
+          "Bug Reports",
+          "Test Cases",
+          "SDLC"
+        ]
+      },
+      {
+        "title": "AI Essentials for Testers",
+        "description": "Understand what AI actually is — not the hype, the reality. Learn how large language models work, why they matter for QA, and how to start using ChatGPT as a professional tool, not a toy.",
+        "duration": "Weekend 1 — Sunday",
+        "tags": [
+          "ChatGPT",
+          "LLMs",
+          "Prompt Engineering",
+          "AI Mindset"
+        ]
+      },
+      {
+        "title": "AI-Assisted Testing in Practice",
+        "description": "Put AI to work on real testing tasks. Generate test cases in seconds, write test plans from requirements, spot edge cases you would have missed, and cut your exploratory testing time in half.",
+        "duration": "Weekend 2 — Full",
+        "tags": [
+          "AI Prompting",
+          "Test Generation",
+          "Exploratory Testing",
+          "Automation Basics"
+        ]
+      },
+      {
+        "title": "Career Launch",
+        "description": "Build a portfolio that shows employers you can hit the ground running. We review your CV, optimize your LinkedIn, run live mock interviews, and coach you on how to stand out in a competitive QA job market.",
+        "duration": "Weekend 3 — Full",
+        "tags": [
+          "Portfolio",
+          "CV & LinkedIn",
+          "Mock Interviews",
+          "Job Strategy"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "label": "Investment — AI & QA Program · Dates TBD",
+    "title": "One price. Everything included.",
+    "sub": "No upsells. No extras. One payment covers the full program, all materials, career support, and your certificate.",
+    "price": "$297",
+    "period": "one-time · full access",
+    "installment": "Pay in 3 × $99/month if preferred",
+    "badge": "Best Value",
+    "included": [
+      "4 live modules across 3 weekends (July 2026)",
+      "Taught by a Canadian QA Expert",
+      "AI-powered testing techniques and tools",
+      "Real project portfolio you keep forever",
+      "CV & LinkedIn profile review",
+      "2 live mock interviews with feedback",
+      "Private alumni community (lifetime access)",
+      "All course materials — lifetime access",
+      "Official certificate of completion"
+    ],
+    "cta": "Secure My Spot — $297",
+    "guarantee": "Not satisfied in the first 30 days? Full refund. No questions, no forms."
+  },
+  "isoSection": {
+    "label": "Program 2 — Quality Management",
+    "title": "ISO 9001:2015 Quality Management System",
+    "sub": "The standard that governs quality in over 1 million organizations worldwide — finally taught the way practitioners actually need it.",
+    "description": "ISO 9001 isn't just a certificate on the wall. It's a management system that, when implemented correctly, transforms how an organization operates. This program gives you the knowledge to build it, audit it, and defend it — whether you're implementing from scratch or preparing for external certification.",
+    "modules": [
+      {
+        "title": "Organizational Context & Leadership",
+        "description": "Map your organization's environment, identify internal and external stakeholders, define the scope of your QMS, and understand what leadership commitment actually looks like in practice.",
+        "tags": [
+          "Context Analysis",
+          "Stakeholders",
+          "Leadership",
+          "Quality Policy"
+        ]
+      },
+      {
+        "title": "Planning & Risk-Based Thinking",
+        "description": "Learn to think in terms of risks and opportunities — not just problems and solutions. Set measurable quality objectives and build action plans that connect strategy to daily operations.",
+        "tags": [
+          "Risk Management",
+          "Opportunities",
+          "Quality Objectives",
+          "Planning"
+        ]
+      },
+      {
+        "title": "Support, Resources & Operations",
+        "description": "Understand what resources the standard requires — people, infrastructure, knowledge — and how to document your processes in a way that is useful, not just compliant.",
+        "tags": [
+          "Resources",
+          "Competence",
+          "Documentation",
+          "Process Control"
+        ]
+      },
+      {
+        "title": "Performance Evaluation & Continual Improvement",
+        "description": "Close the loop: monitor what matters, run effective internal audits, conduct meaningful management reviews, and build a culture of continuous improvement that lasts beyond certification day.",
+        "tags": [
+          "Internal Audit",
+          "KPIs",
+          "Management Review",
+          "Continual Improvement"
+        ]
+      }
+    ],
+    "audience_label": "This program is for you if…",
+    "audience": [
+      "You are a quality manager or coordinator responsible for certification",
+      "You manage operations or processes and want to understand the standard",
+      "You are preparing your organization for its first ISO 9001 audit",
+      "You are a consultant or internal auditor wanting a structured foundation"
+    ],
+    "cta": "Reserve My Spot",
+    "badge": "July 2026 · Exact dates coming soon"
+  },
+  "webSection": {
+    "label": "Program 3 — Digital Skills",
+    "title": "Build Your Website with AI — No Code Required",
+    "sub": "You have an idea, a business, or a brand that deserves an online presence. This weekend changes that.",
+    "badge": "100% Practical · Zero coding",
+    "practical": "No slides, no theory, no homework. Every exercise is done live — you work, we guide. By the end of the weekend, your site is live and your name is on it.",
+    "tools_label": "Tools you'll master",
+    "tools": [
+      "ChatGPT",
+      "v0.dev",
+      "Bolt.new",
+      "Framer AI",
+      "Notion AI"
+    ],
+    "modules": [
+      {
+        "title": "Define Your Site, Your Message, Your Offer",
+        "description": "Before you build anything, you need to know what your site needs to say. Use ChatGPT to clarify your positioning, write compelling copy, define your audience, and map out your pages — in under two hours.",
+        "tags": [
+          "ChatGPT",
+          "Positioning",
+          "Copywriting",
+          "Sitemap"
+        ]
+      },
+      {
+        "title": "Design a Full Website with AI — No Code",
+        "description": "Generate complete, professional pages using v0.dev and Bolt.new. Adjust layout, colors and content through natural language — no CSS, no HTML, no frustration.",
+        "tags": [
+          "v0.dev",
+          "Bolt.new",
+          "Framer AI",
+          "Visual Design"
+        ]
+      },
+      {
+        "title": "Launch It — Domain, Hosting, SEO",
+        "description": "Connect your domain, deploy your site live, and set up the SEO basics that help people find you. You'll end the day with a real URL you can actually share.",
+        "tags": [
+          "Deployment",
+          "Domain Setup",
+          "SEO Basics",
+          "Vercel"
+        ]
+      },
+      {
+        "title": "Own It — Update, Track, Grow",
+        "description": "A website is only useful if you can keep it current. Learn how to update your content with AI, read your analytics, add contact forms, and evolve your site as your needs change — all on your own.",
+        "tags": [
+          "Analytics",
+          "Content Updates",
+          "AI Automation",
+          "Forms"
+        ]
+      }
+    ],
+    "audience_label": "This program is made for…",
+    "audience": [
+      "Entrepreneurs and freelancers without an online presence",
+      "Small business owners with an outdated or nonexistent website",
+      "Coaches, consultants and creators building their personal brand",
+      "Professionals who tried website builders and gave up in frustration",
+      "Anyone who has been putting this off because it felt too complicated"
+    ],
+    "outcome": "You will leave with a live, professional website that looks like it cost thousands — built by you in a single weekend, powered by AI, and ready to represent your business from day one.",
+    "cta": "Reserve My Spot",
+    "badge2": "August 2026 · Exact date coming soon"
+  },
+  "testimonials": {
+    "label": "Student Stories",
+    "title": "They did it. You can too.",
+    "items": [
+      {
+        "name": "Amira S.",
+        "role": "Junior QA Engineer",
+        "company": "Fintech Startup, Paris",
+        "avatar": "AS",
+        "quote": "I had zero tech background before this program. Nine weeks later I had a job offer. The AI module wasn't just useful — it made me stand out in every interview. I still use those skills every single day."
+      },
+      {
+        "name": "Youssef B.",
+        "role": "QA Analyst",
+        "company": "E-commerce Platform, Casablanca",
+        "avatar": "YB",
+        "quote": "I had the skills but my CV wasn't telling the story. After the career session, I rewrote everything. One week later: three interview requests. The coaching alone justified the $297."
+      },
+      {
+        "name": "Fatima L.",
+        "role": "QA Engineer",
+        "company": "SaaS Company, Tunis",
+        "avatar": "FL",
+        "quote": "I spent months on free YouTube tutorials going in circles. This program gave me a clear path, someone to answer my questions, and a portfolio I was actually proud to show. That changes everything."
+      }
+    ]
+  },
+  "cta": {
+    "title1": "Every week you wait is a week",
+    "title2": "someone else gets ahead.",
+    "sub": "The skills that move careers don't come from watching videos. Join Nexo Skills and build something real — starting this weekend.",
+    "button": "See All Programs",
+    "contact": "Enroll now →",
+    "trust": "Taught by industry experts · Certificate included · 30-day money-back guarantee"
+  },
+  "form": {
+    "label": "Enrollment",
+    "title": "Reserve your spot",
+    "sub": "Fill in your details to enroll in one of our programs. We confirm your registration within 24 hours.",
+    "course": "Which program would you like to join?",
+    "course_placeholder": "Choose a program…",
+    "courses": [
+      {
+        "group": "Testing & Development",
+        "value": "qa",
+        "label": "AI-Powered QA Engineering",
+        "badge": "Scheduled · $297",
+        "stripe": true
+      },
+      {
+        "group": "Testing & Development",
+        "value": "a11y",
+        "label": "Web Accessibility & Testing Tools",
+        "badge": "Scheduled · $200"
+      },
+      {
+        "group": "Quality Management",
+        "value": "iso",
+        "label": "ISO 9001:2015 Quality Management",
+        "badge": "Scheduled · $200"
+      },
+      {
+        "group": "Quality Management",
+        "value": "audit",
+        "label": "ISO 9001 Internal Auditor",
+        "badge": "Scheduled · $200"
+      },
+      {
+        "group": "Digital Skills",
+        "value": "web",
+        "label": "Build Your Website with AI",
+        "badge": "Scheduled · $200"
+      },
+      {
+        "group": "",
+        "value": "multiple",
+        "label": "More than one program — I'd like to discuss"
+      }
+    ],
+    "name": "Full Name",
+    "name_placeholder": "Your full name",
+    "email": "Email Address",
+    "email_placeholder": "you@example.com",
+    "phone": "Phone / WhatsApp",
+    "phone_placeholder": "+1 234 567 8900",
+    "experience": "Where are you starting from?",
+    "exp_placeholder": "Select your level…",
+    "exp_none": "No tech or quality background",
+    "exp_some": "Some knowledge, looking to go further",
+    "exp_dev": "Working professional looking to upskill",
+    "submit": "Reserve My Spot",
+    "submit_pay": "Reserve My Spot — {badge}",
+    "loading": "Redirecting to secure payment…",
+    "trust": "Secured by Stripe · 30-day money-back guarantee · No hidden fees",
+    "error": "Something went wrong on our end. Please try again or email us directly."
+  },
+  "footer": {
+    "copyright": "Nexo Skills",
+    "email": "contact@nexoskills.com",
+    "contact_label": "Contact us",
+    "legal_label": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "refund": "Refund Policy"
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Common questions, answered.",
+    "items": [
+      {
+        "q": "What level do I need to join?",
+        "a": "No prior experience required for most programs. QA Engineering and Website programs start from zero. ISO and Auditor programs don't require a technical background, but some familiarity with business operations is helpful."
+      },
+      {
+        "q": "Are courses online or in-person?",
+        "a": "All programs are delivered live online via video conference. You attend from anywhere — all you need is a computer and a stable internet connection."
+      },
+      {
+        "q": "How many students per group?",
+        "a": "Groups are capped at 12 participants so every student gets direct attention from the trainer."
+      },
+      {
+        "q": "Is the certificate recognized by employers?",
+        "a": "Our certificate is issued by Nexo Skills and documents that you completed the full program. It is not a government-accredited diploma, but it is valued by employers who prioritize practical skills over formal credentials."
+      },
+      {
+        "q": "Can I pay in installments?",
+        "a": "Yes. For the QA Engineering program ($297), you can split the payment into 3 monthly installments of $99. Email us at contact@nexoskills.com to arrange it."
+      },
+      {
+        "q": "What if I miss a session?",
+        "a": "All sessions are recorded and shared with enrolled participants. You can catch up on any missed session via the recording at any time."
+      },
+      {
+        "q": "What language are courses taught in?",
+        "a": "Courses are taught in French. All written materials are available in both French and English."
+      },
+      {
+        "q": "How quickly will I hear back after registering?",
+        "a": "You will receive a confirmation email within 24 hours. For questions before that, email us at contact@nexoskills.com — we typically reply within a few hours."
+      }
+    ]
+  },
+  "success": {
+    "title": "You're in. Welcome to Nexo Skills.",
+    "sub": "Your spot is confirmed. We're glad you made the move.",
+    "body": "Check your inbox — a confirmation email with everything you need is on its way. If you have any questions before we start, just reply to that email. We'll be in touch within 24 hours.",
+    "back": "Back to home"
+  },
+  "contactForm": {
+    "label": "Contact Us",
+    "title": "A question? We're here.",
+    "sub": "Not ready to enroll yet? Ask us anything — we'll get back to you within 24 hours.",
+    "name": "Full Name",
+    "name_placeholder": "Your name",
+    "email": "Email Address",
+    "email_placeholder": "you@example.com",
+    "message": "Your message",
+    "message_placeholder": "Ask your question, describe your situation...",
+    "submit": "Send message",
+    "success_title": "Message sent!",
+    "success_sub": "We'll get back to you within 24 hours.",
+    "error": "Something went wrong. Email us directly at contact@nexoskills.com"
+  },
+  "formations": {
+    "back": "← All programs",
+    "enroll_label": "Reserve my spot",
+    "loading": "Redirecting to secure payment…",
+    "trust": "Secure payment · 30-day money-back guarantee",
+    "modules_title": "The curriculum",
+    "audience_title": "This program is for you if…",
+    "name_placeholder": "Your full name",
+    "email_placeholder": "you@example.com",
+    "detail_label": "View details",
+    "courses": {
+      "qa": {
+        "title": "AI-Powered QA Engineering",
+        "tagline": "From zero to job-ready QA Engineer in 3 weekends — with AI as your force multiplier.",
+        "price": "$297",
+        "duration": "3 weekends · 21h",
+        "date": "July 2026",
+        "cert": "Certificate of completion",
+        "highlights": [
+          {
+            "title": "Taught by an active professional",
+            "text": "A Canadian QA expert who works in the field today — not an academic."
+          },
+          {
+            "title": "Real portfolio included",
+            "text": "CV review, LinkedIn optimization, real projects. You leave with something to show."
+          },
+          {
+            "title": "AI built into everything",
+            "text": "ChatGPT and AI testing tools are at the core of every module — not a bonus at the end."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "QA Fundamentals",
+            "description": "SDLC, testing types, bug lifecycle, test case design and bug reports that developers actually act on.",
+            "tags": [
+              "Manual Testing",
+              "Bug Reports",
+              "Test Cases"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "AI Essentials for Testers",
+            "description": "How LLMs work, why they change QA, and how to use ChatGPT as a professional tool starting now.",
+            "tags": [
+              "ChatGPT",
+              "Prompt Engineering",
+              "LLMs"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "AI-Assisted Testing in Practice",
+            "description": "Generate test cases in seconds, catch missed edge cases, cut your exploratory testing time in half.",
+            "tags": [
+              "Test Generation",
+              "Exploratory Testing"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Career Launch",
+            "description": "Portfolio, CV review, LinkedIn, live mock interviews — everything you need to land your first QA role.",
+            "tags": [
+              "Portfolio",
+              "CV & LinkedIn",
+              "Mock Interviews"
+            ]
+          }
+        ],
+        "audience": [
+          "You're looking to transition into a tech career",
+          "You're a developer who wants to structure your quality approach",
+          "You're looking for a first job and want a concrete advantage",
+          "You want to understand how AI is transforming the tester's role"
+        ]
+      },
+      "iso": {
+        "title": "ISO 9001:2015 Quality Management System",
+        "tagline": "The world's most recognized quality standard — finally taught the way practitioners actually need it.",
+        "price": "$200",
+        "duration": "2 weekends",
+        "date": "July 2026",
+        "cert": "Certificate of completion",
+        "highlights": [
+          {
+            "title": "Applicable from day one",
+            "text": "No pointless theory. Every module translates into concrete action in your organization."
+          },
+          {
+            "title": "Full standard coverage",
+            "text": "From organizational context to continual improvement — all 10 chapters covered."
+          },
+          {
+            "title": "Ready for certification",
+            "text": "You leave with everything needed to prepare your organization for a certification audit."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Organizational Context & Leadership",
+            "description": "Map your organization, identify stakeholders and define QMS scope.",
+            "tags": [
+              "Context",
+              "Stakeholders",
+              "Leadership"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Planning & Risk-Based Thinking",
+            "description": "Reason in terms of risks and opportunities, set measurable quality objectives.",
+            "tags": [
+              "Risk Management",
+              "Opportunities",
+              "Planning"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Support, Resources & Operations",
+            "description": "Human and infrastructure resources, useful documentation, process control.",
+            "tags": [
+              "Resources",
+              "Documentation",
+              "Process Control"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Performance Evaluation & Improvement",
+            "description": "Effective internal audits, management reviews, culture of continual improvement.",
+            "tags": [
+              "Internal Audit",
+              "KPIs",
+              "Improvement"
+            ]
+          }
+        ],
+        "audience": [
+          "You are a quality manager or coordinator responsible for certification",
+          "You manage operations and want to understand the standard in depth",
+          "You are preparing your organization for its first ISO 9001 audit",
+          "You are a consultant or internal auditor looking for a structured foundation"
+        ]
+      },
+      "web": {
+        "title": "Build Your Website with AI",
+        "tagline": "From idea to a live professional website in one weekend — without writing a single line of code.",
+        "price": "$200",
+        "duration": "1 weekend",
+        "date": "August 2026",
+        "cert": "Certificate of completion",
+        "highlights": [
+          {
+            "title": "Zero code, 100% result",
+            "text": "v0.dev, Bolt.new and Framer AI generate your site. You guide it in plain language."
+          },
+          {
+            "title": "Your site live by the end",
+            "text": "Domain connected, site deployed, real URL. You leave with something to show."
+          },
+          {
+            "title": "Full independence",
+            "text": "You learn to update content, read analytics and grow your site on your own."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Define your site and message",
+            "description": "Use ChatGPT to clarify your positioning, write compelling copy and plan your pages.",
+            "tags": [
+              "ChatGPT",
+              "Positioning",
+              "Copywriting"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Design your site with AI",
+            "description": "Generate complete pages with v0.dev and Bolt.new. Adjust colors and layout in plain language.",
+            "tags": [
+              "v0.dev",
+              "Bolt.new",
+              "Framer AI"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Launch it live",
+            "description": "Connect your domain, deploy on Vercel and set up basic SEO to be found.",
+            "tags": [
+              "Deployment",
+              "Domain",
+              "SEO"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Own it",
+            "description": "Update your content with AI, read your analytics, add contact forms.",
+            "tags": [
+              "Analytics",
+              "Updates",
+              "Automation"
+            ]
+          }
+        ],
+        "audience": [
+          "Entrepreneurs and freelancers without an online presence",
+          "Small business owners with an outdated or nonexistent website",
+          "Coaches, consultants and creators building their personal brand",
+          "Anyone who has been putting this off because it feels too complicated"
+        ]
+      },
+      "a11y": {
+        "title": "Web Accessibility & Testing Tools",
+        "tagline": "Learn to build and audit inclusive websites with the tools professionals actually use.",
+        "price": "$200",
+        "duration": "1 weekend",
+        "date": "August 2026",
+        "cert": "Certificate of completion",
+        "highlights": [
+          {
+            "title": "WCAG 2.1 compliance",
+            "text": "Master the accessibility criteria that apply to public websites and businesses."
+          },
+          {
+            "title": "Industry tools",
+            "text": "Axe, Lighthouse, NVDA, VoiceOver — you actually use them during the training."
+          },
+          {
+            "title": "Immediately applicable",
+            "text": "Leave with an audit checklist and the skills to apply it on any website right away."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Understanding Web Accessibility",
+            "description": "The 4 WCAG principles, A/AA/AAA levels, and legal requirements.",
+            "tags": [
+              "WCAG 2.1",
+              "Legal Requirements",
+              "Principles"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "The Most Common Barriers",
+            "description": "Missing alt text, insufficient contrast, broken keyboard navigation, inaccessible forms.",
+            "tags": [
+              "Contrast",
+              "Keyboard Navigation",
+              "Forms"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Audit Tools in Practice",
+            "description": "Axe DevTools, Lighthouse, screen readers (NVDA/VoiceOver) — used on real sites during training.",
+            "tags": [
+              "Axe",
+              "Lighthouse",
+              "NVDA"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Conducting an Accessibility Audit",
+            "description": "Plan and perform a full audit, write an actionable report and prioritize fixes.",
+            "tags": [
+              "Audit",
+              "Report",
+              "Prioritization"
+            ]
+          }
+        ],
+        "audience": [
+          "Front-end developers who want to master accessibility",
+          "QA testers who audit web applications",
+          "Project managers overseeing digital products",
+          "Anyone working on public websites subject to accessibility laws"
+        ]
+      },
+      "audit": {
+        "title": "ISO 9001 Internal Auditor",
+        "tagline": "Plan, conduct and close effective internal audits — and write findings that drive real improvement.",
+        "price": "$200",
+        "duration": "1 weekend",
+        "date": "September 2026",
+        "cert": "Certificate of completion",
+        "highlights": [
+          {
+            "title": "Proven methodology",
+            "text": "The same method used by certified auditors — adapted to be practical from day one."
+          },
+          {
+            "title": "Real role-play exercises",
+            "text": "Practice audit interviews, finding writing and debriefs under real conditions."
+          },
+          {
+            "title": "Ready for auditing",
+            "text": "You leave with the skills to conduct audits as part of an ISO 9001 program."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "ISO 9001 & Audit Context",
+            "description": "The standard's requirements related to internal audits, the auditor's role and success conditions.",
+            "tags": [
+              "ISO 9001",
+              "Audit Program",
+              "Roles"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Audit Preparation",
+            "description": "Audit plan, checklists, document review, communication with the auditee — everything done before.",
+            "tags": [
+              "Audit Plan",
+              "Checklist",
+              "Document Review"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Conducting the Audit",
+            "description": "Interview techniques, collecting objective evidence, identifying and qualifying nonconformities.",
+            "tags": [
+              "Interviews",
+              "Evidence",
+              "Nonconformities"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Closing Meeting & Audit Report",
+            "description": "Closing meeting, report writing, corrective action follow-up.",
+            "tags": [
+              "Report",
+              "Corrective Actions",
+              "Closing"
+            ]
+          }
+        ],
+        "audience": [
+          "You're part of a quality team and need to conduct internal audits",
+          "You're a quality manager responsible for the annual audit program",
+          "You're preparing your organization for ISO 9001 certification",
+          "You've completed the ISO 9001 training and want to move to practice"
+        ]
+      }
+    }
+  }
+}

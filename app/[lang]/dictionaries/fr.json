@@ -1,0 +1,891 @@
+{
+  "nav": {
+    "courses": "Formations",
+    "why": "Pourquoi Nexo",
+    "contact": "Nous contacter",
+    "enroll": "Réserver ma place"
+  },
+  "hero": {
+    "badge": "Formateurs experts en activité · Certificat de réussite inclus",
+    "headline": [
+      "Pas juste un certificat.",
+      "Les vraies compétences",
+      "que les recruteurs cherchent."
+    ],
+    "sub": "Des weekends intensifs encadrés par des professionnels en activité — vous repartez avec du concret, pas du théorique.",
+    "cta_primary": "Voir nos formations",
+    "cta_secondary": "Nous contacter",
+    "stat1": {
+      "value": "200+",
+      "label": "Professionnels formés"
+    },
+    "stat2": {
+      "value": "5",
+      "label": "Programmes disponibles"
+    },
+    "stat3": {
+      "value": "100%",
+      "label": "Certificat inclus"
+    }
+  },
+  "courses": {
+    "label": "Nos programmes",
+    "title": "Trouvez la formation qui correspond à votre objectif",
+    "sub": "Trois parcours d'expertise pour professionnels en activité — concrets, ciblés, et pensés pour faire avancer votre carrière.",
+    "count_one": "formation",
+    "count_other": "formations",
+    "categories": [
+      {
+        "key": "tech",
+        "label": "Métiers du Test & Dev",
+        "sub": "Qualité logicielle, tests assistés par l'IA et carrières tech",
+        "color": "blue"
+      },
+      {
+        "key": "quality",
+        "label": "Gestion de la Qualité",
+        "sub": "Normes, conformité, audits et excellence organisationnelle",
+        "color": "violet"
+      },
+      {
+        "key": "digital",
+        "label": "Compétences Digitales",
+        "sub": "Outils IA, création web et productivité numérique",
+        "color": "emerald"
+      }
+    ],
+    "items": [
+      {
+        "category": "tech",
+        "badge": "Juillet 2026 · 3 weekends",
+        "tag": "Le plus demandé",
+        "title": "Ingénierie QA propulsée par l'IA",
+        "sub": "De zéro à Ingénieur QA opérationnel en 3 weekends. Maîtrisez les tests logiciels, puis décuplez chaque compétence avec les outils IA que les professionnels utilisent vraiment.",
+        "details": [
+          "3 weekends seulement — Juillet 2026",
+          "297$ · paiement unique, sans surprise",
+          "Certificat de réussite"
+        ],
+        "cta": "Réserver ma place — 297$",
+        "href": "#contact?course=qa"
+      },
+      {
+        "category": "quality",
+        "badge": "Juillet 2026 · Weekends",
+        "tag": "Planifié",
+        "title": "ISO 9001:2015 — Management de la Qualité",
+        "sub": "La norme qualité la plus reconnue au monde, enfin enseignée comme les praticiens en ont besoin. Mettez en place un SMQ complet, conduisez des audits internes, et sortez prêt pour la certification.",
+        "details": [
+          "Format weekends · Juillet 2026",
+          "200$ · paiement unique",
+          "Certificat de réussite"
+        ],
+        "cta": "Réserver ma place — 200$",
+        "href": "#contact?course=iso"
+      },
+      {
+        "category": "tech",
+        "badge": "Août 2026 · 1 weekend",
+        "tag": "Planifié",
+        "title": "Accessibilité web & outils de test",
+        "sub": "Apprenez à créer et auditer des sites inclusifs — et maîtrisez les outils que les professionnels utilisent pour détecter ce que l'œil ne voit pas.",
+        "details": [
+          "1 weekend · Août 2026",
+          "200$ · paiement unique",
+          "Certificat de réussite"
+        ],
+        "cta": "Réserver ma place — 200$",
+        "href": "#contact?course=a11y"
+      },
+      {
+        "category": "quality",
+        "badge": "Septembre 2026 · 1 weekend",
+        "tag": "Planifié",
+        "title": "Devenir auditeur qualité ISO 9001",
+        "sub": "Maîtrisez le processus d'audit de bout en bout. Planifiez, conduisez et clôturez des audits internes efficaces — et rédigez des constats qui génèrent une vraie amélioration.",
+        "details": [
+          "1 weekend · Septembre 2026",
+          "200$ · paiement unique",
+          "Certificat de réussite"
+        ],
+        "cta": "Réserver ma place — 200$",
+        "href": "#contact?course=audit"
+      },
+      {
+        "category": "digital",
+        "badge": "Août 2026 · 1 weekend",
+        "tag": "Planifié",
+        "title": "Créez votre site web avec l'IA",
+        "sub": "Vous avez une idée, une activité ou une marque qui mérite d'exister en ligne. Ce weekend change ça — sans une seule ligne de code.",
+        "details": [
+          "1 weekend · Août 2026",
+          "200$ · paiement unique",
+          "Certificat de réussite"
+        ],
+        "cta": "Réserver ma place — 200$",
+        "href": "#contact?course=web"
+      }
+    ],
+    "detail_label": "Voir le programme"
+  },
+  "qaSection": {
+    "label": "Formation 1 — Métiers du Test & Dev",
+    "title": "Ingénierie QA propulsée par l'IA",
+    "sub": "Trois weekends. Des modules 100% pratiques. Un portfolio qui convainc les recruteurs. Tout ce qu'un employeur QA veut voir — construit par vous, guidé par un expert."
+  },
+  "features": {
+    "label": "Pourquoi Nexo Skills",
+    "title": "On a construit la formation qu'on aurait voulu suivre",
+    "sub": "Trop de programmes enseignent une théorie dépassée sans aucun suivi carrière. Nous faisons l'inverse — des professionnels en activité, de vrais outils, et une communauté qui continue de vous apporter bien après la formation.",
+    "items": [
+      {
+        "title": "Formateurs en activité",
+        "description": "Chaque formateur travaille dans son domaine aujourd'hui. Pas d'anciens professeurs, pas de slides vieillissants — des gens qui font face aux mêmes défis que votre futur employeur."
+      },
+      {
+        "title": "Zéro remplissage. 100% pratique.",
+        "description": "Chaque séance est construite autour du faire, pas du regarder. Vous repartez chaque weekend avec des livrables réels, un vrai projet, et un portfolio qui parle à votre place."
+      },
+      {
+        "title": "L'IA dans tout ce qu'on fait",
+        "description": "L'IA n'est pas un module bonus ici — elle est intégrée dans chaque programme dès le premier jour. Vous apprenez comment les professionnels travaillent aujourd'hui, pas il y a cinq ans."
+      },
+      {
+        "title": "On ne s'arrête pas à la remise du certificat",
+        "description": "Révision de CV, refonte LinkedIn, entretiens simulés et suivi placement sont inclus. Votre résultat nous importe autant que votre inscription."
+      },
+      {
+        "title": "Un réseau qui continue de rapporter",
+        "description": "Rejoindre Nexo Skills, c'est rejoindre une communauté privée d'anciens qui partagent offres d'emploi, conseils et opportunités. Les connexions faites ici peuvent durer toute une carrière."
+      },
+      {
+        "title": "Une preuve concrète pour votre CV",
+        "description": "Chaque programme se conclut par un certificat officiel de réussite — reconnu par les employeurs et qui mérite une place sur votre CV et votre profil LinkedIn."
+      }
+    ]
+  },
+  "program": {
+    "label": "Le programme",
+    "title": "3 weekends. Un changement de cap.",
+    "sub": "Un cursus progressif et concentré qui vous emmène des bases du test logiciel aux techniques boostées par l'IA — et se termine avec un portfolio prêt à montrer et une préparation aux entretiens. Dates à confirmer.",
+    "modules": [
+      {
+        "title": "Fondamentaux du QA",
+        "description": "Comprenez comment un logiciel est construit et comment il peut échouer. Vous maîtriserez le SDLC, les types de tests, le cycle de vie des bugs, la conception de cas de test et comment rédiger des rapports que les développeurs prennent au sérieux.",
+        "duration": "Weekend 1 — Samedi",
+        "tags": [
+          "Tests manuels",
+          "Rapports de bugs",
+          "Cas de test",
+          "SDLC"
+        ]
+      },
+      {
+        "title": "L'IA pour les testeurs — l'essentiel",
+        "description": "Comprenez vraiment ce qu'est l'IA — pas le battage médiatique, la réalité. Apprenez comment fonctionnent les grands modèles de langage, pourquoi ils changent le QA, et comment utiliser ChatGPT comme un outil professionnel, pas comme un gadget.",
+        "duration": "Weekend 1 — Dimanche",
+        "tags": [
+          "ChatGPT",
+          "LLMs",
+          "Prompt Engineering",
+          "État d'esprit IA"
+        ]
+      },
+      {
+        "title": "Tests assistés par l'IA — en pratique",
+        "description": "Mettez l'IA au travail sur de vraies tâches de test. Générez des cas de test en quelques secondes, rédigez des plans de test depuis les exigences, détectez les cas limites que vous auriez manqués, et divisez votre temps de test exploratoire par deux.",
+        "duration": "Weekend 2 — Complet",
+        "tags": [
+          "Prompting IA",
+          "Génération de tests",
+          "Tests exploratoires",
+          "Bases automatisation"
+        ]
+      },
+      {
+        "title": "Lancement de carrière",
+        "description": "Construisez un portfolio qui montre aux recruteurs que vous êtes opérationnel dès le premier jour. On revoit votre CV, optimise votre LinkedIn, fait de vrais entretiens simulés, et vous coache sur comment vous démarquer sur un marché QA compétitif.",
+        "duration": "Weekend 3 — Complet",
+        "tags": [
+          "Portfolio",
+          "CV & LinkedIn",
+          "Entretiens simulés",
+          "Stratégie emploi"
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "label": "Investissement — Formation IA & QA",
+    "title": "Un seul prix. Tout inclus.",
+    "sub": "Pas d'upsell. Pas d'extras cachés. Un paiement couvre l'intégralité du programme, tous les supports, le suivi carrière, et votre certificat.",
+    "price": "297$",
+    "period": "paiement unique · accès complet",
+    "installment": "Ou en 3 × 99$/mois si vous préférez",
+    "badge": "Meilleur rapport qualité-prix",
+    "included": [
+      "4 modules en direct sur 3 weekends (juillet 2026)",
+      "Formé par un expert QA canadien en activité",
+      "Techniques et outils QA boostés par l'IA",
+      "Portfolio de projets réels — vous le gardez",
+      "Révision complète CV & profil LinkedIn",
+      "2 entretiens simulés en direct avec feedback",
+      "Communauté privée d'anciens (accès à vie)",
+      "Tous les supports de cours — accès à vie",
+      "Certificat officiel de réussite"
+    ],
+    "cta": "Réserver ma place — 297$",
+    "guarantee": "Pas satisfait dans les 30 premiers jours ? Remboursement intégral. Sans question, sans formulaire."
+  },
+  "isoSection": {
+    "label": "Formation 2 — Gestion de la Qualité",
+    "title": "ISO 9001:2015 — Système de Management de la Qualité",
+    "sub": "La norme qui gouverne la qualité dans plus d'un million d'organisations dans le monde — enfin enseignée comme les praticiens en ont besoin.",
+    "description": "ISO 9001 n'est pas qu'un certificat affiché sur un mur. C'est un système de management qui, lorsqu'il est bien mis en œuvre, transforme profondément le fonctionnement d'une organisation. Ce programme vous donne les connaissances pour le construire, l'auditer et le défendre — que vous partiez de zéro ou que vous vous prépariez à une certification externe.",
+    "modules": [
+      {
+        "title": "Contexte organisationnel & Leadership",
+        "description": "Cartographiez l'environnement de votre organisation, identifiez vos parties prenantes internes et externes, définissez le domaine d'application de votre SMQ, et comprenez ce que l'engagement du leadership signifie vraiment dans la pratique.",
+        "tags": [
+          "Analyse du contexte",
+          "Parties prenantes",
+          "Leadership",
+          "Politique qualité"
+        ]
+      },
+      {
+        "title": "Planification & Approche par les risques",
+        "description": "Apprenez à raisonner en termes de risques et d'opportunités — pas seulement de problèmes et de solutions. Définissez des objectifs qualité mesurables et construisez des plans d'action qui relient la stratégie aux opérations quotidiennes.",
+        "tags": [
+          "Gestion des risques",
+          "Opportunités",
+          "Objectifs qualité",
+          "Planification"
+        ]
+      },
+      {
+        "title": "Support, ressources & Réalisation des activités",
+        "description": "Comprenez les ressources exigées par la norme — humaines, infrastructurelles, de connaissance — et comment documenter vos processus de manière utile, pas seulement conforme.",
+        "tags": [
+          "Ressources",
+          "Compétences",
+          "Documentation",
+          "Maîtrise des processus"
+        ]
+      },
+      {
+        "title": "Évaluation des performances & Amélioration continue",
+        "description": "Fermez la boucle : surveillez ce qui compte, conduisez des audits internes efficaces, menez des revues de direction qui débouchent sur des décisions, et ancrez une culture d'amélioration continue qui survive au jour de la certification.",
+        "tags": [
+          "Audit interne",
+          "Indicateurs clés",
+          "Revue de direction",
+          "Amélioration continue"
+        ]
+      }
+    ],
+    "audience_label": "Cette formation est faite pour vous si…",
+    "audience": [
+      "Vous êtes responsable qualité et pilotez une démarche de certification",
+      "Vous gérez des opérations ou des processus et voulez comprendre la norme",
+      "Vous préparez votre organisation à son premier audit ISO 9001",
+      "Vous êtes consultant ou auditeur interne et cherchez des bases solides"
+    ],
+    "cta": "Réserver ma place",
+    "badge": "Juillet 2026 · Dates exactes à venir"
+  },
+  "webSection": {
+    "label": "Formation 3 — Compétences Digitales",
+    "title": "Créez votre site web avec l'IA — Sans coder",
+    "sub": "Vous avez une idée, une activité ou une marque qui mérite d'exister en ligne. Ce weekend change ça.",
+    "badge": "100% Pratique · Zéro code",
+    "practical": "Pas de slides, pas de théorie, pas de devoirs. Chaque exercice est réalisé en direct — vous travaillez, on guide. En fin de weekend, votre site est en ligne et votre nom est dessus.",
+    "tools_label": "Les outils que vous maîtriserez",
+    "tools": [
+      "ChatGPT",
+      "v0.dev",
+      "Bolt.new",
+      "Framer AI",
+      "Notion AI"
+    ],
+    "modules": [
+      {
+        "title": "Définissez votre site, votre message, votre offre",
+        "description": "Avant de construire quoi que ce soit, il faut savoir ce que votre site doit dire. Utilisez ChatGPT pour clarifier votre positionnement, rédiger des textes percutants, définir votre audience et planifier vos pages — en moins de deux heures.",
+        "tags": [
+          "ChatGPT",
+          "Positionnement",
+          "Rédaction",
+          "Plan de site"
+        ]
+      },
+      {
+        "title": "Designez un site complet avec l'IA — sans code",
+        "description": "Générez des pages professionnelles complètes avec v0.dev et Bolt.new. Ajustez la mise en page, les couleurs et le contenu en langage naturel — sans CSS, sans HTML, sans frustration.",
+        "tags": [
+          "v0.dev",
+          "Bolt.new",
+          "Framer AI",
+          "Design visuel"
+        ]
+      },
+      {
+        "title": "Mettez-le en ligne — domaine, hébergement, SEO",
+        "description": "Connectez votre nom de domaine, déployez votre site en production et configurez le référencement de base pour que les gens vous trouvent. Vous terminerez la journée avec une vraie URL que vous pouvez partager.",
+        "tags": [
+          "Déploiement",
+          "Nom de domaine",
+          "SEO de base",
+          "Vercel"
+        ]
+      },
+      {
+        "title": "Appropriez-vous le — mettez à jour, mesurez, faites grandir",
+        "description": "Un site n'est utile que si vous pouvez le faire évoluer. Apprenez à mettre à jour votre contenu avec l'IA, lire vos analytics, ajouter des formulaires de contact, et faire grandir votre site au fil de vos besoins — en toute autonomie.",
+        "tags": [
+          "Analytics",
+          "Mises à jour",
+          "IA éditoriale",
+          "Automatisation"
+        ]
+      }
+    ],
+    "audience_label": "Cette formation est faite pour…",
+    "audience": [
+      "Les entrepreneurs et freelances sans présence en ligne",
+      "Les dirigeants de TPE/PME avec un site dépassé ou inexistant",
+      "Les coachs, consultants et créateurs qui développent leur marque",
+      "Ceux qui ont essayé les outils de création et abandonné par frustration",
+      "Tous ceux qui remettent ça à plus tard parce que ça leur semble trop compliqué"
+    ],
+    "outcome": "Vous repartirez avec un site web professionnel en ligne qui donne l'air d'avoir coûté des milliers d'euros — créé par vous en un seul weekend, propulsé par l'IA, et prêt à représenter votre activité dès le premier jour.",
+    "cta": "Réserver ma place",
+    "badge2": "Août 2026 · Date exacte à venir"
+  },
+  "testimonials": {
+    "label": "Ils l'ont fait. Vous aussi pouvez.",
+    "title": "Des vraies personnes. Des vrais résultats.",
+    "items": [
+      {
+        "name": "Amira S.",
+        "role": "Ingénieure QA Junior",
+        "company": "Startup Fintech, Paris",
+        "avatar": "AS",
+        "quote": "J'avais zéro background tech avant ce programme. Neuf semaines plus tard, j'avais une offre d'emploi. Le module IA ne m'a pas juste aidée — il m'a démarquée dans chaque entretien. J'utilise ces compétences tous les jours."
+      },
+      {
+        "name": "Youssef B.",
+        "role": "Analyste QA",
+        "company": "Plateforme e-commerce, Casablanca",
+        "avatar": "YB",
+        "quote": "J'avais les compétences mais mon CV ne les montrait pas. Après la session carrière, j'ai tout réécrit. Une semaine plus tard : trois demandes d'entretien. Le coaching seul justifiait les 297$."
+      },
+      {
+        "name": "Fatima L.",
+        "role": "Ingénieure QA",
+        "company": "Entreprise SaaS, Tunis",
+        "avatar": "FL",
+        "quote": "J'ai passé des mois sur des tutoriels YouTube à tourner en rond. Ce programme m'a donné un chemin clair, quelqu'un pour répondre à mes questions, et un portfolio dont j'étais fière de montrer. Ça change tout."
+      }
+    ]
+  },
+  "cta": {
+    "title1": "Chaque semaine qui passe est une semaine",
+    "title2": "où quelqu'un d'autre prend de l'avance.",
+    "sub": "Les compétences qui font avancer les carrières ne s'acquièrent pas en regardant des vidéos. Rejoignez Nexo Skills et construisez quelque chose de réel — dès ce weekend.",
+    "button": "Voir toutes les formations",
+    "contact": "S'inscrire →",
+    "trust": "Formateurs en activité · Certificat inclus · Remboursement sous 30 jours"
+  },
+  "form": {
+    "label": "Inscription",
+    "title": "Réservez votre place",
+    "sub": "Remplissez le formulaire pour vous inscrire à l'une de nos formations. Nous confirmons votre inscription sous 24 heures.",
+    "course": "À quelle formation souhaitez-vous vous inscrire ?",
+    "course_placeholder": "Choisir une formation…",
+    "courses": [
+      {
+        "group": "Métiers du Test & Dev",
+        "value": "qa",
+        "label": "Ingénierie QA propulsée par l'IA",
+        "badge": "Juillet 2026 · 297$",
+        "stripe": true
+      },
+      {
+        "group": "Métiers du Test & Dev",
+        "value": "a11y",
+        "label": "Accessibilité web & outils de test",
+        "badge": "Planifié · 200$"
+      },
+      {
+        "group": "Gestion de la Qualité",
+        "value": "iso",
+        "label": "ISO 9001:2015 — Management Qualité",
+        "badge": "Planifié · 200$"
+      },
+      {
+        "group": "Gestion de la Qualité",
+        "value": "audit",
+        "label": "Auditeur qualité ISO 9001",
+        "badge": "Planifié · 200$"
+      },
+      {
+        "group": "Compétences Digitales",
+        "value": "web",
+        "label": "Créez votre site web avec l'IA",
+        "badge": "Planifié · 200$"
+      },
+      {
+        "group": "",
+        "value": "multiple",
+        "label": "Plusieurs formations — j'aimerais en discuter"
+      }
+    ],
+    "name": "Nom complet",
+    "name_placeholder": "Votre nom complet",
+    "email": "Adresse email",
+    "email_placeholder": "vous@exemple.com",
+    "phone": "Téléphone / WhatsApp",
+    "phone_placeholder": "+1 234 567 8900",
+    "experience": "Où en êtes-vous aujourd'hui ?",
+    "exp_placeholder": "Sélectionnez votre niveau…",
+    "exp_none": "Aucun background tech ou qualité",
+    "exp_some": "Quelques connaissances, je veux aller plus loin",
+    "exp_dev": "Professionnel en activité cherchant à monter en compétences",
+    "submit": "Réserver ma place",
+    "submit_pay": "Réserver ma place — {badge}",
+    "loading": "Redirection vers le paiement sécurisé…",
+    "trust": "Sécurisé par Stripe · Remboursement sous 30 jours · Sans frais cachés",
+    "error": "Une erreur s'est produite de notre côté. Réessayez ou écrivez-nous directement."
+  },
+  "footer": {
+    "copyright": "Nexo Skills",
+    "email": "contact@nexoskills.com",
+    "contact_label": "Nous contacter",
+    "legal_label": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions générales",
+    "refund": "Politique de remboursement"
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Vos questions, nos réponses.",
+    "items": [
+      {
+        "q": "Quel niveau est requis pour s'inscrire ?",
+        "a": "Aucune expérience préalable n'est requise pour la plupart des programmes. Les formations QA Engineering et Site web partent de zéro. Les formations ISO 9001 et Auditeur ne nécessitent pas de background technique, mais une certaine familiarité avec le monde de l'entreprise est utile."
+      },
+      {
+        "q": "Les formations sont-elles en ligne ou en présentiel ?",
+        "a": "Toutes les formations sont dispensées en direct par visioconférence. Vous participez depuis n'importe où — il vous faut uniquement un ordinateur et une connexion internet stable."
+      },
+      {
+        "q": "Combien de participants par groupe ?",
+        "a": "Les groupes sont limités à 12 participants maximum pour que chaque apprenant bénéficie d'une attention directe du formateur."
+      },
+      {
+        "q": "Le certificat est-il reconnu par les employeurs ?",
+        "a": "Le certificat est émis par Nexo Skills et atteste que vous avez complété l'intégralité du programme. Ce n'est pas un diplôme d'État, mais il est valorisé par les employeurs qui privilégient les compétences pratiques sur les titres formels."
+      },
+      {
+        "q": "Peut-on payer en plusieurs fois ?",
+        "a": "Oui. Pour la formation QA Engineering (297$), il est possible de payer en 3 mensualités de 99$. Écrivez-nous à contact@nexoskills.com pour en convenir."
+      },
+      {
+        "q": "Que se passe-t-il si je rate une session ?",
+        "a": "Toutes les séances sont enregistrées et partagées avec les participants inscrits. Vous pouvez rattraper n'importe quelle session via l'enregistrement, à tout moment."
+      },
+      {
+        "q": "Dans quelle langue sont enseignées les formations ?",
+        "a": "Les formations sont dispensées en français. Tous les supports écrits sont disponibles en français et en anglais."
+      },
+      {
+        "q": "Sous quel délai suis-je contacté après mon inscription ?",
+        "a": "Vous recevez un email de confirmation dans les 24 heures. Pour toute question avant cela, écrivez-nous à contact@nexoskills.com — nous répondons généralement en quelques heures."
+      }
+    ]
+  },
+  "success": {
+    "title": "C'est fait. Bienvenue chez Nexo Skills.",
+    "sub": "Votre place est confirmée. On est content que vous ayez franchi le pas.",
+    "body": "Vérifiez votre boîte mail — un email de confirmation avec tout ce dont vous avez besoin est en route. Si vous avez des questions avant le début, répondez simplement à cet email. On revient vers vous sous 24 heures.",
+    "back": "Retour à l'accueil"
+  },
+  "contactForm": {
+    "label": "Nous contacter",
+    "title": "Une question ? On est là.",
+    "sub": "Pas encore prêt à vous inscrire ? Posez-nous vos questions — on revient vers vous sous 24h.",
+    "name": "Nom complet",
+    "name_placeholder": "Votre nom",
+    "email": "Adresse email",
+    "email_placeholder": "vous@exemple.com",
+    "message": "Votre message",
+    "message_placeholder": "Posez votre question, décrivez votre situation...",
+    "submit": "Envoyer le message",
+    "success_title": "Message envoyé !",
+    "success_sub": "On revient vers vous sous 24h.",
+    "error": "Une erreur s'est produite. Écrivez-nous directement à contact@nexoskills.com"
+  },
+  "formations": {
+    "back": "← Toutes les formations",
+    "enroll_label": "Réserver ma place",
+    "loading": "Redirection vers le paiement…",
+    "trust": "Paiement sécurisé · Remboursement sous 30 jours",
+    "modules_title": "Au programme",
+    "audience_title": "Cette formation est pour vous si…",
+    "name_placeholder": "Votre nom complet",
+    "email_placeholder": "vous@exemple.com",
+    "detail_label": "Consulter le détail",
+    "courses": {
+      "qa": {
+        "title": "Ingénierie QA propulsée par l'IA",
+        "tagline": "De zéro à QA Engineer opérationnel en 3 weekends — avec l'IA comme multiplicateur de force.",
+        "price": "297$",
+        "duration": "3 weekends · 21h",
+        "date": "Juillet 2026",
+        "cert": "Certificat de réussite",
+        "highlights": [
+          {
+            "title": "Formateur en activité",
+            "text": "Un expert QA canadien qui travaille dans le domaine aujourd'hui — pas un professeur."
+          },
+          {
+            "title": "Portfolio réel inclus",
+            "text": "CV revu, LinkedIn optimisé, projets concrets. Vous repartez avec quelque chose à montrer."
+          },
+          {
+            "title": "L'IA intégrée partout",
+            "text": "ChatGPT et les outils IA de test sont au cœur de chaque module — pas un bonus de fin."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Fondamentaux du QA",
+            "description": "SDLC, types de tests, cycle de vie des bugs, conception de cas de test et rapports que les développeurs prennent au sérieux.",
+            "tags": [
+              "Tests manuels",
+              "Rapports de bugs",
+              "Cas de test"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "L'IA pour les testeurs",
+            "description": "Comment fonctionnent les LLMs, pourquoi ils changent le QA, et comment utiliser ChatGPT comme outil professionnel dès maintenant.",
+            "tags": [
+              "ChatGPT",
+              "Prompt Engineering",
+              "LLMs"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Tests assistés par l'IA en pratique",
+            "description": "Générez des cas de test en secondes, détectez des cas limites manqués, coupez votre temps de test exploratoire en deux.",
+            "tags": [
+              "Génération de tests",
+              "Tests exploratoires"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Lancement de carrière",
+            "description": "Portfolio, révision CV, LinkedIn, entretiens simulés en direct — tout ce qu'il faut pour décrocher votre premier poste QA.",
+            "tags": [
+              "Portfolio",
+              "CV & LinkedIn",
+              "Entretiens simulés"
+            ]
+          }
+        ],
+        "audience": [
+          "Vous cherchez à vous reconvertir dans les métiers tech",
+          "Vous êtes développeur et voulez structurer votre approche qualité",
+          "Vous cherchez un premier emploi et voulez un avantage concret",
+          "Vous voulez comprendre comment l'IA transforme le métier de testeur"
+        ]
+      },
+      "iso": {
+        "title": "ISO 9001:2015 — Management de la Qualité",
+        "tagline": "La norme qualité la plus reconnue au monde — enfin enseignée comme les praticiens en ont besoin.",
+        "price": "200$",
+        "duration": "2 weekends",
+        "date": "Juillet 2026",
+        "cert": "Certificat de réussite",
+        "highlights": [
+          {
+            "title": "Applicable dès le lundi",
+            "text": "Pas de théorie gratuite. Chaque module se traduit en actions concrètes dans votre organisation."
+          },
+          {
+            "title": "Couverture complète",
+            "text": "Du contexte organisationnel à l'amélioration continue — les 10 chapitres de la norme traités."
+          },
+          {
+            "title": "Prêt pour la certification",
+            "text": "Vous sortez avec tout ce qu'il faut pour préparer votre organisation à un audit de certification."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Contexte organisationnel & Leadership",
+            "description": "Cartographiez votre organisation, identifiez les parties prenantes et définissez la portée de votre SMQ.",
+            "tags": [
+              "Contexte",
+              "Parties prenantes",
+              "Leadership"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Planification & Approche par les risques",
+            "description": "Raisonner en risques et opportunités, définir des objectifs qualité mesurables, construire des plans d'action.",
+            "tags": [
+              "Risques",
+              "Opportunités",
+              "Planification"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Support, ressources & Réalisation",
+            "description": "Ressources, documentation utile (pas seulement conforme), maîtrise des processus.",
+            "tags": [
+              "Ressources",
+              "Documentation",
+              "Processus"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Évaluation & Amélioration continue",
+            "description": "Audits internes efficaces, revues de direction, culture d'amélioration continue.",
+            "tags": [
+              "Audit interne",
+              "KPIs",
+              "Amélioration"
+            ]
+          }
+        ],
+        "audience": [
+          "Vous êtes responsable qualité et pilotez une démarche de certification",
+          "Vous gérez des opérations et voulez comprendre la norme en profondeur",
+          "Vous préparez votre organisation à son premier audit ISO 9001",
+          "Vous êtes consultant ou auditeur interne cherchant des bases solides"
+        ]
+      },
+      "web": {
+        "title": "Créez votre site web avec l'IA",
+        "tagline": "De l'idée à un site professionnel en ligne en un seul weekend — sans écrire une ligne de code.",
+        "price": "200$",
+        "duration": "1 weekend",
+        "date": "Août 2026",
+        "cert": "Certificat de réussite",
+        "highlights": [
+          {
+            "title": "Zéro code, 100% résultat",
+            "text": "v0.dev, Bolt.new et Framer AI génèrent votre site. Vous le guidez en langage naturel."
+          },
+          {
+            "title": "Votre site en ligne à la fin",
+            "text": "Domaine connecté, site déployé, URL réelle. Vous repartez avec quelque chose à montrer."
+          },
+          {
+            "title": "Autonomie totale",
+            "text": "Vous apprenez à mettre à jour votre contenu, lire vos analytics et faire grandir votre site seul."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Définissez votre site et votre message",
+            "description": "Utilisez ChatGPT pour clarifier votre positionnement, rédiger des textes percutants et planifier vos pages.",
+            "tags": [
+              "ChatGPT",
+              "Positionnement",
+              "Copywriting"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Designez votre site avec l'IA",
+            "description": "Générez des pages complètes avec v0.dev et Bolt.new. Ajustez couleurs et layout en langage naturel.",
+            "tags": [
+              "v0.dev",
+              "Bolt.new",
+              "Framer AI"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Mettez-le en ligne",
+            "description": "Connectez votre domaine, déployez sur Vercel et configurez le SEO de base.",
+            "tags": [
+              "Déploiement",
+              "Domaine",
+              "SEO"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Appropriez-vous le",
+            "description": "Mettez à jour votre contenu avec l'IA, lisez vos analytics, ajoutez des formulaires.",
+            "tags": [
+              "Analytics",
+              "Mises à jour",
+              "Automatisation"
+            ]
+          }
+        ],
+        "audience": [
+          "Les entrepreneurs et freelances sans présence en ligne",
+          "Les dirigeants de TPE/PME avec un site dépassé ou inexistant",
+          "Les coachs, consultants et créateurs développant leur marque personnelle",
+          "Tous ceux qui remettent ça à plus tard parce que ça semble compliqué"
+        ]
+      },
+      "a11y": {
+        "title": "Accessibilité web & outils de test",
+        "tagline": "Apprenez à créer et auditer des sites inclusifs avec les outils que les professionnels utilisent.",
+        "price": "200$",
+        "duration": "1 weekend",
+        "date": "Août 2026",
+        "cert": "Certificat de réussite",
+        "highlights": [
+          {
+            "title": "Conformité WCAG 2.1",
+            "text": "Maîtrisez les critères qui s'appliquent aux sites publics et aux entreprises."
+          },
+          {
+            "title": "Outils du marché",
+            "text": "Axe, Lighthouse, NVDA, VoiceOver — vous les utilisez vraiment pendant la formation."
+          },
+          {
+            "title": "Applicable immédiatement",
+            "text": "Repartez avec une checklist d'audit et les compétences pour l'appliquer sur n'importe quel site."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Comprendre l'accessibilité web",
+            "description": "Les 4 principes WCAG, les niveaux A/AA/AAA et les obligations légales.",
+            "tags": [
+              "WCAG 2.1",
+              "Obligations légales",
+              "Principes"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Les barrières les plus fréquentes",
+            "description": "Images sans alt, contraste insuffisant, navigation clavier défaillante, formulaires inaccessibles.",
+            "tags": [
+              "Contraste",
+              "Navigation clavier",
+              "Formulaires"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Outils d'audit en pratique",
+            "description": "Axe DevTools, Lighthouse, lecteurs d'écran (NVDA/VoiceOver) — utilisés sur de vrais sites.",
+            "tags": [
+              "Axe",
+              "Lighthouse",
+              "NVDA"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Conduire un audit d'accessibilité",
+            "description": "Planifiez et réalisez un audit complet, rédigez un rapport exploitable et priorisez les corrections.",
+            "tags": [
+              "Audit",
+              "Rapport",
+              "Priorisation"
+            ]
+          }
+        ],
+        "audience": [
+          "Les développeurs front-end qui veulent maîtriser l'accessibilité",
+          "Les testeurs QA qui auditent des applications web",
+          "Les chefs de projet gérant des produits numériques",
+          "Toute personne sur des sites publics soumis aux obligations légales"
+        ]
+      },
+      "audit": {
+        "title": "Devenir Auditeur Interne ISO 9001",
+        "tagline": "Planifiez, conduisez et clôturez des audits internes efficaces — et rédigez des constats qui génèrent de vraies améliorations.",
+        "price": "200$",
+        "duration": "1 weekend",
+        "date": "Septembre 2026",
+        "cert": "Certificat de réussite",
+        "highlights": [
+          {
+            "title": "Méthode éprouvée",
+            "text": "La même méthodologie utilisée par les auditeurs certifiés — adaptée pour être praticable dès le lundi."
+          },
+          {
+            "title": "Jeux de rôle réels",
+            "text": "Pratiquez les entretiens d'audit, la rédaction de constats et la restitution en conditions réelles."
+          },
+          {
+            "title": "Prêt pour l'audit",
+            "text": "Vous repartez avec les compétences pour conduire des audits dans le cadre d'une démarche ISO 9001."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "ISO 9001 & contexte d'audit",
+            "description": "Les exigences liées à l'audit interne, le rôle de l'auditeur et les conditions de réussite d'un programme d'audit.",
+            "tags": [
+              "ISO 9001",
+              "Programme d'audit",
+              "Rôles"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Préparation de l'audit",
+            "description": "Plan d'audit, check-lists, revue documentaire, communication avec l'audité — tout ce qui se fait avant.",
+            "tags": [
+              "Plan d'audit",
+              "Checklist",
+              "Revue documentaire"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Conduite de l'audit",
+            "description": "Techniques d'entretien, collecte de preuves, identification et qualification des non-conformités.",
+            "tags": [
+              "Entretiens",
+              "Preuves",
+              "Non-conformités"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Restitution & rapport d'audit",
+            "description": "Réunion de clôture, rédaction du rapport, suivi des actions correctives.",
+            "tags": [
+              "Rapport",
+              "Actions correctives",
+              "Clôture"
+            ]
+          }
+        ],
+        "audience": [
+          "Vous faites partie d'une équipe qualité et devez conduire des audits internes",
+          "Vous êtes responsable qualité en charge du programme d'audit annuel",
+          "Vous préparez votre organisation à une certification ISO 9001",
+          "Vous avez suivi la formation ISO 9001 et voulez passer à la pratique"
+        ]
+      }
+    }
+  }
+}

@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #020817;
+  --foreground: #f1f5f9;
+  --surface: #0f172a;
+  --surface-elevated: #1e293b;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --primary: #3b82f6;
+  --primary-glow: rgba(59, 130, 246, 0.12);
 }
 
 @theme inline {
@@ -12,15 +17,91 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  /* Compatible iOS/Safari — pas de background-attachment: fixed */
+  background-image:
+    radial-gradient(ellipse 100% 55% at 50% 0%,   rgba(59, 130, 246, 0.18) 0%, transparent 58%),
+    radial-gradient(ellipse 55%  45% at 90% 85%,  rgba(99, 102, 241, 0.10) 0%, transparent 58%),
+    radial-gradient(ellipse 45%  35% at  5% 65%,  rgba(16, 185, 129, 0.07) 0%, transparent 55%);
 }
+
+/* Grain CSS — texture de profondeur, compatible tous navigateurs */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  background-repeat: repeat;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #0a0f1e; }
+::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2563eb; }
+
+/* Selection */
+::selection { background: rgba(59, 130, 246, 0.25); color: #fff; }
+
+/* ── Animations ── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(12px, -18px) scale(1.02); }
+  66%       { transform: translate(-8px, -8px) scale(0.99); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(-14px, -12px) scale(1.01); }
+  66%       { transform: translate(10px, -20px) scale(1.03); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.15; }
+  50%       { opacity: 0.30; }
+}
+
+/* Utility classes for animations */
+.animate-fade-up   { animation: fade-up 0.7s cubic-bezier(.22,1,.36,1) both; }
+.animate-fade-in   { animation: fade-in 0.6s ease both; }
+.animate-float     { animation: float 9s ease-in-out infinite; }
+.animate-float-rev { animation: float-reverse 11s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+.animate-marquee   { animation: marquee 30s linear infinite; }
+.animate-marquee:hover { animation-play-state: paused; }
+
+/* Delay utilities */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
