@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,6 +13,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Email service not configured" }, { status: 500 });
     }
 
+    const { Resend } = await import("resend");
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Notify admin
