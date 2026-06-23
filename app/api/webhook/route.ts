@@ -3,7 +3,6 @@ import Stripe from "stripe";
 import { Resend } from "resend";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 const COURSE_NAMES: Record<string, { fr: string; en: string }> = {
   qa:       { fr: "Ingénierie QA propulsée par l'IA",        en: "AI-Powered QA Engineering" },
@@ -157,6 +156,7 @@ export async function POST(req: NextRequest) {
     console.log("[webhook] payment confirmed", { email, courseKey, name, lang });
 
     if (email && process.env.RESEND_API_KEY) {
+      const resend = new Resend(process.env.RESEND_API_KEY);
       const { subject, html } = buildEmail(name, courseName, lang);
       const { error } = await resend.emails.send({
         from: "Nexo Skills <contact@nexoskills.com>",
