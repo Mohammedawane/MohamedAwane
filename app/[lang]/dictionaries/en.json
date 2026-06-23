@@ -108,7 +108,7 @@
           "$200 · one-time",
           "Certificate of completion"
         ],
-        "cta": "Reserve My Spot — $200",
+        "cta": "Reserve my spot — $80",
         "href": "#contact?course=audit"
       },
       {
@@ -819,9 +819,9 @@
       "audit": {
         "title": "ISO 9001 Internal Auditor",
         "tagline": "Plan, conduct and close effective internal audits — and write findings that drive real improvement.",
-        "price": "$200",
+        "price": "$80",
         "duration": "1 weekend",
-        "date": "September 2026",
+        "date": "July 4-5, 2026",
         "cert": "Certificate of completion",
         "highlights": [
           {

@@ -108,7 +108,7 @@
           "200$ · paiement unique",
           "Certificat de réussite"
         ],
-        "cta": "Réserver ma place — 200$",
+        "cta": "Réserver ma place — 80$",
         "href": "#contact?course=audit"
       },
       {
@@ -819,9 +819,9 @@
       "audit": {
         "title": "Devenir Auditeur Interne ISO 9001",
         "tagline": "Planifiez, conduisez et clôturez des audits internes efficaces — et rédigez des constats qui génèrent de vraies améliorations.",
-        "price": "200$",
+        "price": "80$",
         "duration": "1 weekend",
-        "date": "Septembre 2026",
+        "date": "4-5 juillet 2026",
         "cert": "Certificat de réussite",
         "highlights": [
           {

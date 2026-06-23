@@ -19,9 +19,9 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
     amount: 20000, // $200
   },
   audit: {
-    name: "ISO 9001 Internal Auditor — September 2026",
+    name: "ISO 9001 Internal Auditor — July 4-5, 2026",
     description: "1 weekend. Plan, conduct and close internal audits. Write findings that drive real improvement.",
-    amount: 20000, // $200
+    amount: 8000, // $80
   },
   web: {
     name: "Build Your Website with AI — No Code Required",
