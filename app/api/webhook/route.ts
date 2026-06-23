@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
-import { Resend } from "resend";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
@@ -156,6 +155,7 @@ export async function POST(req: NextRequest) {
     console.log("[webhook] payment confirmed", { email, courseKey, name, lang });
 
     if (email && process.env.RESEND_API_KEY) {
+      const { Resend } = await import("resend");
       const resend = new Resend(process.env.RESEND_API_KEY);
       const { subject, html } = buildEmail(name, courseName, lang);
       const { error } = await resend.emails.send({
