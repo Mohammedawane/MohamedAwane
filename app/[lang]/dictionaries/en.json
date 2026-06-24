@@ -508,7 +508,7 @@
   },
   "footer": {
     "copyright": "Nexo Skills",
-    "email": "contact@nexoskills.com",
+    "email": "info@nexo-skills.com",
     "contact_label": "Contact us",
     "legal_label": "Legal",
     "privacy": "Privacy Policy",
@@ -537,7 +537,7 @@
       },
       {
         "q": "Can I pay in installments?",
-        "a": "Yes. For the QA Engineering program ($297), you can split the payment into 3 monthly installments of $99. Email us at contact@nexoskills.com to arrange it."
+        "a": "Yes. For the QA Engineering program ($297), you can split the payment into 3 monthly installments of $99. Email us at info@nexo-skills.com to arrange it."
       },
       {
         "q": "What if I miss a session?",
@@ -549,7 +549,7 @@
       },
       {
         "q": "How quickly will I hear back after registering?",
-        "a": "You will receive a confirmation email within 24 hours. For questions before that, email us at contact@nexoskills.com — we typically reply within a few hours."
+        "a": "You will receive a confirmation email within 24 hours. For questions before that, email us at info@nexo-skills.com — we typically reply within a few hours."
       }
     ]
   },
@@ -572,7 +572,7 @@
     "submit": "Send message",
     "success_title": "Message sent!",
     "success_sub": "We'll get back to you within 24 hours.",
-    "error": "Something went wrong. Email us directly at contact@nexoskills.com"
+    "error": "Something went wrong. Email us directly at info@nexo-skills.com"
   },
   "formations": {
     "back": "← All programs",

@@ -508,7 +508,7 @@
   },
   "footer": {
     "copyright": "Nexo Skills",
-    "email": "contact@nexoskills.com",
+    "email": "info@nexo-skills.com",
     "contact_label": "Nous contacter",
     "legal_label": "Mentions légales",
     "privacy": "Politique de confidentialité",
@@ -537,7 +537,7 @@
       },
       {
         "q": "Peut-on payer en plusieurs fois ?",
-        "a": "Oui. Pour la formation QA Engineering (297$), il est possible de payer en 3 mensualités de 99$. Écrivez-nous à contact@nexoskills.com pour en convenir."
+        "a": "Oui. Pour la formation QA Engineering (297$), il est possible de payer en 3 mensualités de 99$. Écrivez-nous à info@nexo-skills.com pour en convenir."
       },
       {
         "q": "Que se passe-t-il si je rate une session ?",
@@ -549,7 +549,7 @@
       },
       {
         "q": "Sous quel délai suis-je contacté après mon inscription ?",
-        "a": "Vous recevez un email de confirmation dans les 24 heures. Pour toute question avant cela, écrivez-nous à contact@nexoskills.com — nous répondons généralement en quelques heures."
+        "a": "Vous recevez un email de confirmation dans les 24 heures. Pour toute question avant cela, écrivez-nous à info@nexo-skills.com — nous répondons généralement en quelques heures."
       }
     ]
   },
@@ -572,7 +572,7 @@
     "submit": "Envoyer le message",
     "success_title": "Message envoyé !",
     "success_sub": "On revient vers vous sous 24h.",
-    "error": "Une erreur s'est produite. Écrivez-nous directement à contact@nexoskills.com"
+    "error": "Une erreur s'est produite. Écrivez-nous directement à info@nexo-skills.com"
   },
   "formations": {
     "back": "← Toutes les formations",

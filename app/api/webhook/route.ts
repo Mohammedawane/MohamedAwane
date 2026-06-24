@@ -111,7 +111,7 @@ function buildEmail(name: string, courseName: string, lang: string): { subject: 
         <tr>
           <td style="padding:20px 40px;border-top:1px solid rgba(255,255,255,0.05);text-align:center;">
             <p style="margin:0;font-size:12px;color:#334155;">
-              Nexo Skills · contact@nexoskills.com
+              Nexo Skills · info@nexo-skills.com
             </p>
           </td>
         </tr>
@@ -159,7 +159,7 @@ export async function POST(req: NextRequest) {
       const resend = new Resend(process.env.RESEND_API_KEY);
       const { subject, html } = buildEmail(name, courseName, lang);
       const { error } = await resend.emails.send({
-        from: "Nexo Skills <contact@nexoskills.com>",
+        from: "Nexo Skills <info@nexo-skills.com>",
         to: email,
         subject,
         html,

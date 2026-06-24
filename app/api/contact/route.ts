@@ -18,8 +18,8 @@ export async function POST(req: NextRequest) {
 
     // Notify admin
     await resend.emails.send({
-      from: "Nexo Skills <contact@nexoskills.com>",
-      to: "contact@nexoskills.com",
+      from: "Nexo Skills <info@nexo-skills.com>",
+      to: "info@nexo-skills.com",
       subject: `Nouveau message de ${name}`,
       html: `
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
 
     // Auto-reply to sender
     await resend.emails.send({
-      from: "Nexo Skills <contact@nexoskills.com>",
+      from: "Nexo Skills <info@nexo-skills.com>",
       to: email,
       subject: "On a bien reçu votre message — Nexo Skills",
       html: `
@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
           </div>
           <p style="color:#94a3b8;">Bonjour ${name},</p>
           <p style="color:#cbd5e1;line-height:1.7;">Merci pour votre message. Notre équipe l'a bien reçu et vous répondra dans les <strong style="color:#fff;">24 heures</strong>.</p>
-          <p style="color:#475569;font-size:14px;margin-top:32px;">L'équipe Nexo Skills<br>contact@nexoskills.com</p>
+          <p style="color:#475569;font-size:14px;margin-top:32px;">L'équipe Nexo Skills<br>info@nexo-skills.com</p>
         </div>
       `,
     });

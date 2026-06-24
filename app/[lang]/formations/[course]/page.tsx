@@ -191,7 +191,7 @@ export default async function FormationPage({
 
       {/* Footer */}
       <footer className="border-t border-white/5 px-6 py-8 text-center text-xs text-slate-600">
-        <p>© {new Date().getFullYear()} Nexo Skills — contact@nexoskills.com</p>
+        <p>© {new Date().getFullYear()} Nexo Skills — info@nexo-skills.com</p>
       </footer>
     </main>
   );

@@ -12,7 +12,7 @@ const CONTENT: Record<Doc, Record<"en" | "fr", { title: string; sections: { head
       sections: [
         {
           heading: "1. Who we are",
-          body: "Nexo Skills (contact@nexoskills.com) is the data controller for the personal information collected on this website.",
+          body: "Nexo Skills (info@nexo-skills.com) is the data controller for the personal information collected on this website.",
         },
         {
           heading: "2. What we collect",
@@ -32,7 +32,7 @@ const CONTENT: Record<Doc, Record<"en" | "fr", { title: string; sections: { head
         },
         {
           heading: "6. Your rights",
-          body: "You have the right to access, correct, or delete your personal data at any time. To exercise these rights, email us at contact@nexoskills.com.",
+          body: "You have the right to access, correct, or delete your personal data at any time. To exercise these rights, email us at info@nexo-skills.com.",
         },
         {
           heading: "7. Cookies",
@@ -40,7 +40,7 @@ const CONTENT: Record<Doc, Record<"en" | "fr", { title: string; sections: { head
         },
         {
           heading: "8. Contact",
-          body: "For any privacy-related questions, contact us at contact@nexoskills.com.",
+          body: "For any privacy-related questions, contact us at info@nexo-skills.com.",
         },
       ],
     },
@@ -49,7 +49,7 @@ const CONTENT: Record<Doc, Record<"en" | "fr", { title: string; sections: { head
       sections: [
         {
           heading: "1. Qui sommes-nous",
-          body: "Nexo Skills (contact@nexoskills.com) est le responsable du traitement des données personnelles collectées sur ce site.",
+          body: "Nexo Skills (info@nexo-skills.com) est le responsable du traitement des données personnelles collectées sur ce site.",
         },
         {
           heading: "2. Ce que nous collectons",
@@ -69,7 +69,7 @@ const CONTENT: Record<Doc, Record<"en" | "fr", { title: string; sections: { head
         },
         {
           heading: "6. Vos droits",
-          body: "Vous avez le droit d'accéder, de corriger ou de supprimer vos données personnelles à tout moment. Pour exercer ces droits, contactez-nous à contact@nexoskills.com.",
+          body: "Vous avez le droit d'accéder, de corriger ou de supprimer vos données personnelles à tout moment. Pour exercer ces droits, contactez-nous à info@nexo-skills.com.",
         },
         {
           heading: "7. Cookies",
@@ -77,7 +77,7 @@ const CONTENT: Record<Doc, Record<"en" | "fr", { title: string; sections: { head
         },
         {
           heading: "8. Contact",
-          body: "Pour toute question relative à la confidentialité, contactez-nous à contact@nexoskills.com.",
+          body: "Pour toute question relative à la confidentialité, contactez-nous à info@nexo-skills.com.",
         },
       ],
     },
@@ -100,7 +100,7 @@ const CONTENT: Record<Doc, Record<"en" | "fr", { title: string; sections: { head
         },
         {
           heading: "4. Payment",
-          body: "Prices are in US dollars (USD). Payment is processed securely via Stripe. Installment plans may be available upon request — contact us at contact@nexoskills.com.",
+          body: "Prices are in US dollars (USD). Payment is processed securely via Stripe. Installment plans may be available upon request — contact us at info@nexo-skills.com.",
         },
         {
           heading: "5. Cancellation by participant",
@@ -145,7 +145,7 @@ const CONTENT: Record<Doc, Record<"en" | "fr", { title: string; sections: { head
         },
         {
           heading: "4. Paiement",
-          body: "Les prix sont exprimés en dollars américains (USD). Le paiement est traité de manière sécurisée via Stripe. Des facilités de paiement peuvent être disponibles sur demande — contactez-nous à contact@nexoskills.com.",
+          body: "Les prix sont exprimés en dollars américains (USD). Le paiement est traité de manière sécurisée via Stripe. Des facilités de paiement peuvent être disponibles sur demande — contactez-nous à info@nexo-skills.com.",
         },
         {
           heading: "5. Annulation par le participant",
@@ -192,7 +192,7 @@ const CONTENT: Record<Doc, Record<"en" | "fr", { title: string; sections: { head
         },
         {
           heading: "Spot transfer",
-          body: "Instead of a refund, you may transfer your spot to another person at no cost. Contact us at contact@nexoskills.com at least 48 hours before the start date.",
+          body: "Instead of a refund, you may transfer your spot to another person at no cost. Contact us at info@nexo-skills.com at least 48 hours before the start date.",
         },
         {
           heading: "Session cancelled by Nexo Skills",
@@ -200,7 +200,7 @@ const CONTENT: Record<Doc, Record<"en" | "fr", { title: string; sections: { head
         },
         {
           heading: "How to request a refund",
-          body: "Email contact@nexoskills.com with your name and registration details. We will process your request within 2 business days.",
+          body: "Email info@nexo-skills.com with your name and registration details. We will process your request within 2 business days.",
         },
       ],
     },
@@ -221,7 +221,7 @@ const CONTENT: Record<Doc, Record<"en" | "fr", { title: string; sections: { head
         },
         {
           heading: "Transfert de place",
-          body: "En lieu et place d'un remboursement, vous pouvez transférer votre place à une autre personne sans frais. Contactez-nous à contact@nexoskills.com au moins 48 heures avant la date de début.",
+          body: "En lieu et place d'un remboursement, vous pouvez transférer votre place à une autre personne sans frais. Contactez-nous à info@nexo-skills.com au moins 48 heures avant la date de début.",
         },
         {
           heading: "Session annulée par Nexo Skills",
@@ -229,7 +229,7 @@ const CONTENT: Record<Doc, Record<"en" | "fr", { title: string; sections: { head
         },
         {
           heading: "Comment demander un remboursement",
-          body: "Envoyez un e-mail à contact@nexoskills.com avec votre nom et vos informations d'inscription. Nous traiterons votre demande dans les 2 jours ouvrés.",
+          body: "Envoyez un e-mail à info@nexo-skills.com avec votre nom et vos informations d'inscription. Nous traiterons votre demande dans les 2 jours ouvrés.",
         },
       ],
     },
@@ -283,8 +283,8 @@ export default async function LegalPage({ params }: { params: Promise<{ lang: st
             {locale === "fr"
               ? "Des questions ? Contactez-nous à "
               : "Questions? Contact us at "}
-            <a href="mailto:contact@nexoskills.com" className="text-blue-400 hover:text-blue-300">
-              contact@nexoskills.com
+            <a href="mailto:info@nexo-skills.com" className="text-blue-400 hover:text-blue-300">
+              info@nexo-skills.com
             </a>
           </p>
         </div>
