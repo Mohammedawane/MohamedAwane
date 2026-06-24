@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "../../dictionaries";
 import FormationEnroll from "@/app/Component/FormationEnroll";
 
-const VALID_COURSES = ["qa", "iso", "web", "a11y", "audit"] as const;
+const VALID_COURSES = ["qa", "iso", "web", "a11y", "audit", "tutorat-francais", "tutorat-anglais", "tutorat-math"] as const;
 type CourseSlug = (typeof VALID_COURSES)[number];
 
 function isValidCourse(slug: string): slug is CourseSlug {

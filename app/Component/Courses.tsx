@@ -63,6 +63,17 @@ const COLORS = {
     pill: "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
     cta: "hover:bg-emerald-500/10 hover:text-emerald-300 hover:border-emerald-500/20",
   },
+  amber: {
+    section: "border-amber-500/20 bg-gradient-to-r from-amber-500/8 to-transparent",
+    label: "text-amber-400",
+    dot: "bg-amber-500 shadow-amber-500/50 shadow-sm",
+    border: "border-amber-500/20 hover:border-amber-500/40",
+    glow: "bg-amber-600/10",
+    tag: "bg-amber-600 shadow-amber-600/25 shadow-sm",
+    check: "text-amber-400",
+    pill: "bg-amber-500/10 text-amber-400 border border-amber-500/20",
+    cta: "hover:bg-amber-500/10 hover:text-amber-300 hover:border-amber-500/20",
+  },
 };
 
 export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {

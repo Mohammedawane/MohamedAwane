@@ -5,9 +5,9 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   ...(process.env.STRIPE_ACCOUNT_ID ? { stripeAccount: process.env.STRIPE_ACCOUNT_ID } : {}),
 });
 
-type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple";
+type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math";
 
-const COURSES: Record<CourseKey, { name: string; description: string; amount: number }> = {
+const COURSES: Record<CourseKey, { name: string; description: string; amount: number; recurring?: boolean }> = {
   qa: {
     name: "AI-Powered QA Engineering — July 2026",
     description: "4 modules across 3 weekends. Taught by a Canadian QA Expert.",
@@ -36,7 +36,25 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
   multiple: {
     name: "Nexo Skills — Multiple Programs",
     description: "Registration for multiple training programs.",
-    amount: 29700, // deposit — to be adjusted per program
+    amount: 29700,
+  },
+  "tutorat-francais": {
+    name: "Tutorat Français — Primaire",
+    description: "Cours individuel en ligne · 1h/séance · abonnement mensuel",
+    amount: 15000, // $150/mois
+    recurring: true,
+  },
+  "tutorat-anglais": {
+    name: "Tutorat Anglais — Primaire",
+    description: "Cours individuel en ligne · 1h/séance · abonnement mensuel",
+    amount: 15000,
+    recurring: true,
+  },
+  "tutorat-math": {
+    name: "Tutorat Mathématiques — Primaire",
+    description: "Cours individuel en ligne · 1h/séance · abonnement mensuel",
+    amount: 15000,
+    recurring: true,
   },
 };
 
@@ -47,9 +65,11 @@ export async function POST(req: NextRequest) {
     const courseData = COURSES[course as CourseKey] ?? COURSES.qa;
     const origin = req.headers.get("origin") ?? "http://localhost:3000";
 
+    const isSubscription = courseData.recurring === true;
+
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
-      mode: "payment",
+      mode: isSubscription ? "subscription" : "payment",
       customer_email: email ?? undefined,
       metadata: {
         name: name ?? "",
@@ -67,6 +87,7 @@ export async function POST(req: NextRequest) {
               description: courseData.description,
             },
             unit_amount: courseData.amount,
+            ...(isSubscription ? { recurring: { interval: "month" } } : {}),
           },
           quantity: 1,
         },

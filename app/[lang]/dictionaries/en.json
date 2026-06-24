@@ -52,6 +52,12 @@
         "label": "Digital Skills",
         "sub": "AI-powered tools, web creation and digital productivity",
         "color": "emerald"
+      },
+      {
+        "key": "tutorat",
+        "label": "Online Tutoring — Primary School",
+        "sub": "Individual online sessions · French, English, Mathematics",
+        "color": "amber"
       }
     ],
     "items": [
@@ -124,6 +130,48 @@
         ],
         "cta": "Reserve My Spot — $200",
         "href": "#contact?course=web"
+      },
+      {
+        "category": "tutorat",
+        "badge": "Open enrollment · 1h/session",
+        "tag": "Individual session",
+        "title": "French Tutoring — Primary School",
+        "sub": "Reading, writing, grammar and expression. Individual sessions adapted to your child's level, led by a qualified tutor.",
+        "details": [
+          "1 hour per session · online",
+          "$150 / month · monthly subscription",
+          "Personalized individual sessions"
+        ],
+        "cta": "Enroll — $150/month",
+        "href": "#contact?course=tutorat-francais"
+      },
+      {
+        "category": "tutorat",
+        "badge": "Open enrollment · 1h/session",
+        "tag": "Individual session",
+        "title": "English Tutoring — Primary School",
+        "sub": "Vocabulary, reading and listening comprehension, basic English grammar. A supportive environment for your child to gain confidence and progress at their own pace.",
+        "details": [
+          "1 hour per session · online",
+          "$150 / month · monthly subscription",
+          "Personalized individual sessions"
+        ],
+        "cta": "Enroll — $150/month",
+        "href": "#contact?course=tutorat-anglais"
+      },
+      {
+        "category": "tutorat",
+        "badge": "Open enrollment · 1h/session",
+        "tag": "Individual session",
+        "title": "Math Tutoring — Primary School",
+        "sub": "Operations, fractions, word problems and logical reasoning. We start from the fundamentals and build solidly so your child follows and understands in class.",
+        "details": [
+          "1 hour per session · online",
+          "$150 / month · monthly subscription",
+          "Personalized individual sessions"
+        ],
+        "cta": "Enroll — $150/month",
+        "href": "#contact?course=tutorat-math"
       }
     ],
     "detail_label": "View program"
@@ -884,6 +932,216 @@
           "You're a quality manager responsible for the annual audit program",
           "You're preparing your organization for ISO 9001 certification",
           "You've completed the ISO 9001 training and want to move to practice"
+        ]
+      },
+      "tutorat-francais": {
+        "title": "French Tutoring — Primary School",
+        "tagline": "Individual online sessions to strengthen your child's foundations in French and rebuild their confidence.",
+        "price": "$150/month",
+        "duration": "1h / session",
+        "date": "Open enrollment",
+        "cert": "Progress tracking included",
+        "highlights": [
+          {
+            "title": "100% individual",
+            "text": "Your child has the tutor's full attention — guaranteed progress."
+          },
+          {
+            "title": "Adapted to their level",
+            "text": "Every session is prepared based on the student's specific needs."
+          },
+          {
+            "title": "Online, no commute",
+            "text": "From home, on a computer or tablet — simple and convenient."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Reading & Comprehension",
+            "description": "Work on reading fluency, text comprehension and identifying main ideas.",
+            "tags": [
+              "Reading",
+              "Comprehension",
+              "Vocabulary"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Grammar & Spelling",
+            "description": "Core rules, verb and noun agreement, dictation and targeted exercises based on the student's weaknesses.",
+            "tags": [
+              "Grammar",
+              "Spelling",
+              "Conjugation"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Written Expression",
+            "description": "Learn to structure ideas, write clear sentences and build short texts.",
+            "tags": [
+              "Writing",
+              "Structure",
+              "Expression"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Review & Test Preparation",
+            "description": "Review current lessons, prepare for school tests and exams.",
+            "tags": [
+              "Review",
+              "Tests",
+              "Assessment"
+            ]
+          }
+        ],
+        "audience": [
+          "Your child is struggling with French in primary school",
+          "They need personalized support the classroom can't provide",
+          "You want to rebuild their confidence before an important test",
+          "You're looking for consistent support throughout the school year"
+        ]
+      },
+      "tutorat-anglais": {
+        "title": "English Tutoring — Primary School",
+        "tagline": "Individual online sessions to build strong English foundations and grow in confidence.",
+        "price": "$150/month",
+        "duration": "1h / session",
+        "date": "Open enrollment",
+        "cert": "Progress tracking included",
+        "highlights": [
+          {
+            "title": "100% individual",
+            "text": "Your child has the tutor's full attention — guaranteed progress."
+          },
+          {
+            "title": "Adapted to their level",
+            "text": "Beginner or intermediate, every session builds on what the student already knows."
+          },
+          {
+            "title": "Online, no commute",
+            "text": "From home, on a computer or tablet — simple and convenient."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Vocabulary & Pronunciation",
+            "description": "Learn everyday vocabulary — colors, numbers, animals — through games and oral exercises.",
+            "tags": [
+              "Vocabulary",
+              "Speaking",
+              "Pronunciation"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Basic Grammar",
+            "description": "Simple sentence structure, use of 'is/are/have', questions and answers, simple present tense.",
+            "tags": [
+              "Grammar",
+              "Sentences",
+              "Structure"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Comprehension & Expression",
+            "description": "Short texts, simple dialogues, listening exercises and answering in English.",
+            "tags": [
+              "Comprehension",
+              "Listening",
+              "Expression"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Review & Test Preparation",
+            "description": "Review current lessons, unit vocabulary, and preparation for school tests.",
+            "tags": [
+              "Review",
+              "Tests",
+              "Assessment"
+            ]
+          }
+        ],
+        "audience": [
+          "Your child is starting English and needs gentle support",
+          "They're struggling to keep up in class and losing confidence",
+          "You want to give them a head start from primary school",
+          "You're looking for consistent, caring support throughout the year"
+        ]
+      },
+      "tutorat-math": {
+        "title": "Math Tutoring — Primary School",
+        "tagline": "Individual online sessions to understand math — not just memorize it.",
+        "price": "$150/month",
+        "duration": "1h / session",
+        "date": "Open enrollment",
+        "cert": "Progress tracking included",
+        "highlights": [
+          {
+            "title": "100% individual",
+            "text": "Your child has the tutor's full attention — guaranteed progress."
+          },
+          {
+            "title": "Back to basics",
+            "text": "No judgment — we identify the gaps and close them one by one."
+          },
+          {
+            "title": "Online, no commute",
+            "text": "From home, on a computer or tablet — simple and convenient."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Operations & Mental Math",
+            "description": "Addition, subtraction, multiplication, division. Quick calculation techniques and practical exercises.",
+            "tags": [
+              "Addition",
+              "Multiplication",
+              "Mental Math"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Fractions & Decimals",
+            "description": "Understanding fractions, comparing and adding them. Introduction to decimal numbers.",
+            "tags": [
+              "Fractions",
+              "Decimals",
+              "Comparison"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Geometry & Measurements",
+            "description": "Shapes, perimeters, areas, units of measurement. Practical exercises with simple figures.",
+            "tags": [
+              "Geometry",
+              "Measurements",
+              "Shapes"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Word Problems & Logic",
+            "description": "Step-by-step problem solving, reading and understanding word problems, logical reasoning.",
+            "tags": [
+              "Word Problems",
+              "Logic",
+              "Reasoning"
+            ]
+          }
+        ],
+        "audience": [
+          "Your child is stuck on math and starting to hate it",
+          "Gaps are piling up and they're struggling to follow class",
+          "You want personalized support to help them catch up",
+          "You're preparing your child for an assessment or grade transition"
         ]
       }
     }

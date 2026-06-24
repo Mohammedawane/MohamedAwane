@@ -52,6 +52,12 @@
         "label": "Compétences Digitales",
         "sub": "Outils IA, création web et productivité numérique",
         "color": "emerald"
+      },
+      {
+        "key": "tutorat",
+        "label": "Tutorat en ligne — Primaire",
+        "sub": "Cours individuels en ligne · Français, Anglais, Mathématiques",
+        "color": "amber"
       }
     ],
     "items": [
@@ -124,6 +130,48 @@
         ],
         "cta": "Réserver ma place — 200$",
         "href": "#contact?course=web"
+      },
+      {
+        "category": "tutorat",
+        "badge": "Inscriptions ouvertes · 1h/séance",
+        "tag": "Cours individuel",
+        "title": "Tutorat Français — Primaire",
+        "sub": "Renforcement en lecture, écriture, grammaire et expression. Séances individuelles adaptées au niveau de votre enfant, animées par un tuteur qualifié.",
+        "details": [
+          "1 heure par séance · en ligne",
+          "150$ / mois · abonnement mensuel",
+          "Séances individuelles personnalisées"
+        ],
+        "cta": "S'inscrire — 150$/mois",
+        "href": "#contact?course=tutorat-francais"
+      },
+      {
+        "category": "tutorat",
+        "badge": "Inscriptions ouvertes · 1h/séance",
+        "tag": "Cours individuel",
+        "title": "Tutorat Anglais — Primaire",
+        "sub": "Vocabulaire, compréhension orale et écrite, bases de la grammaire anglaise. Un environnement bienveillant pour que votre enfant gagne confiance et progresse à son rythme.",
+        "details": [
+          "1 heure par séance · en ligne",
+          "150$ / mois · abonnement mensuel",
+          "Séances individuelles personnalisées"
+        ],
+        "cta": "S'inscrire — 150$/mois",
+        "href": "#contact?course=tutorat-anglais"
+      },
+      {
+        "category": "tutorat",
+        "badge": "Inscriptions ouvertes · 1h/séance",
+        "tag": "Cours individuel",
+        "title": "Tutorat Mathématiques — Primaire",
+        "sub": "Opérations, fractions, problèmes et raisonnement logique. On repart des bases et on construit solidement pour que votre enfant suive et comprenne en classe.",
+        "details": [
+          "1 heure par séance · en ligne",
+          "150$ / mois · abonnement mensuel",
+          "Séances individuelles personnalisées"
+        ],
+        "cta": "S'inscrire — 150$/mois",
+        "href": "#contact?course=tutorat-math"
       }
     ],
     "detail_label": "Voir le programme"
@@ -884,6 +932,216 @@
           "Vous êtes responsable qualité en charge du programme d'audit annuel",
           "Vous préparez votre organisation à une certification ISO 9001",
           "Vous avez suivi la formation ISO 9001 et voulez passer à la pratique"
+        ]
+      },
+      "tutorat-francais": {
+        "title": "Tutorat Français — Primaire",
+        "tagline": "Des séances individuelles en ligne pour renforcer les bases et redonner confiance à votre enfant en français.",
+        "price": "150$/mois",
+        "duration": "1h / séance",
+        "date": "Inscriptions ouvertes",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          {
+            "title": "100% individuel",
+            "text": "Votre enfant est seul avec le tuteur — attention complète, progression garantie."
+          },
+          {
+            "title": "Adapté à son niveau",
+            "text": "Chaque séance est préparée en fonction des besoins spécifiques de l'élève."
+          },
+          {
+            "title": "En ligne, sans déplacement",
+            "text": "Depuis la maison, sur un ordinateur ou une tablette — simple et pratique."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Lecture & Compréhension",
+            "description": "Travailler la fluidité de lecture, la compréhension de textes et l'identification des idées principales.",
+            "tags": [
+              "Lecture",
+              "Compréhension",
+              "Vocabulaire"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Grammaire & Orthographe",
+            "description": "Règles de base, accord du verbe et du nom, dictées et exercices ciblés selon les difficultés de l'élève.",
+            "tags": [
+              "Grammaire",
+              "Orthographe",
+              "Conjugaison"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Expression écrite",
+            "description": "Apprendre à structurer ses idées, rédiger des phrases claires et construire de petits textes.",
+            "tags": [
+              "Rédaction",
+              "Structure",
+              "Expression"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Révisions & Préparation aux évaluations",
+            "description": "Révision des leçons en cours, préparation aux contrôles et examens scolaires.",
+            "tags": [
+              "Révisions",
+              "Évaluations",
+              "Bilan"
+            ]
+          }
+        ],
+        "audience": [
+          "Votre enfant a des difficultés en français à l'école primaire",
+          "Il a besoin d'un suivi personnalisé que la classe ne peut pas offrir",
+          "Vous voulez lui redonner confiance avant une évaluation importante",
+          "Vous cherchez un soutien régulier tout au long de l'année scolaire"
+        ]
+      },
+      "tutorat-anglais": {
+        "title": "Tutorat Anglais — Primaire",
+        "tagline": "Des séances individuelles en ligne pour poser des bases solides en anglais et progresser avec confiance.",
+        "price": "150$/mois",
+        "duration": "1h / séance",
+        "date": "Inscriptions ouvertes",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          {
+            "title": "100% individuel",
+            "text": "Votre enfant est seul avec le tuteur — attention complète, progression garantie."
+          },
+          {
+            "title": "Adapté à son niveau",
+            "text": "Débutant ou intermédiaire, chaque séance part des acquis de l'élève."
+          },
+          {
+            "title": "En ligne, sans déplacement",
+            "text": "Depuis la maison, sur un ordinateur ou une tablette — simple et pratique."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Vocabulaire & Prononciation",
+            "description": "Apprendre le vocabulaire du quotidien, les couleurs, les chiffres, les animaux — avec des jeux et des exercices oraux.",
+            "tags": [
+              "Vocabulaire",
+              "Oral",
+              "Prononciation"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Grammaire de base",
+            "description": "Structure des phrases simples, usage de 'is/are/have', questions et réponses, présent simple.",
+            "tags": [
+              "Grammaire",
+              "Phrases",
+              "Structure"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Compréhension & Expression",
+            "description": "Petits textes, dialogues simples, exercices d'écoute et de réponse en anglais.",
+            "tags": [
+              "Compréhension",
+              "Écoute",
+              "Expression"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Révisions & Préparation aux évaluations",
+            "description": "Révision des leçons en cours, vocabulaire des unités scolaires, préparation aux contrôles.",
+            "tags": [
+              "Révisions",
+              "Évaluations",
+              "Bilan"
+            ]
+          }
+        ],
+        "audience": [
+          "Votre enfant commence l'anglais et a besoin d'un accompagnement doux",
+          "Il a du mal à suivre en classe et perd confiance",
+          "Vous voulez lui donner une longueur d'avance dès le primaire",
+          "Vous cherchez un suivi régulier et bienveillant tout au long de l'année"
+        ]
+      },
+      "tutorat-math": {
+        "title": "Tutorat Mathématiques — Primaire",
+        "tagline": "Des séances individuelles en ligne pour comprendre les maths, pas juste les mémoriser.",
+        "price": "150$/mois",
+        "duration": "1h / séance",
+        "date": "Inscriptions ouvertes",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          {
+            "title": "100% individuel",
+            "text": "Votre enfant est seul avec le tuteur — attention complète, progression garantie."
+          },
+          {
+            "title": "On repart des bases",
+            "text": "Pas de jugement — on identifie les lacunes et on les comble une par une."
+          },
+          {
+            "title": "En ligne, sans déplacement",
+            "text": "Depuis la maison, sur un ordinateur ou une tablette — simple et pratique."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Opérations & Calcul mental",
+            "description": "Addition, soustraction, multiplication, division. Techniques de calcul rapide et exercices pratiques.",
+            "tags": [
+              "Addition",
+              "Multiplication",
+              "Calcul mental"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Fractions & Décimaux",
+            "description": "Comprendre les fractions, les comparer, les additionner. Introduction aux nombres décimaux.",
+            "tags": [
+              "Fractions",
+              "Décimaux",
+              "Comparaison"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Géométrie & Mesures",
+            "description": "Formes, périmètres, aires, unités de mesure. Exercices concrets avec des figures simples.",
+            "tags": [
+              "Géométrie",
+              "Mesures",
+              "Formes"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Problèmes & Logique",
+            "description": "Résolution de problèmes par étapes, lecture et compréhension des énoncés, raisonnement logique.",
+            "tags": [
+              "Problèmes",
+              "Logique",
+              "Raisonnement"
+            ]
+          }
+        ],
+        "audience": [
+          "Votre enfant bloque sur les maths et commence à les détester",
+          "Il a des lacunes qui s'accumulent et il peine à suivre en classe",
+          "Vous voulez un suivi personnalisé pour l'aider à combler ses lacunes",
+          "Vous préparez votre enfant pour une évaluation ou un passage de niveau"
         ]
       }
     }
