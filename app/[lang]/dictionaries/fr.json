@@ -179,11 +179,6 @@
     "label": "Pourquoi Nexo Skills",
     "title": "La formation qu'on aurait voulu suivre",
     "sub": "Pas de théorie dépassée, pas de formateurs déconnectés. Des professionnels en activité, de vrais outils, et des résultats mesurables — dès le premier weekend.",
-    "stats": [
-      { "value": "100%", "label": "des heures sont pratiques" },
-      { "value": "30j", "label": "de remboursement garanti" },
-      { "value": "Certif.", "label": "officiel inclus à chaque formation" }
-    ],
     "items": [
       {
         "title": "L'IA au cœur de chaque programme",
@@ -204,10 +199,6 @@
       {
         "title": "Suivi carrière après la formation",
         "description": "Révision de CV, simulation d'entretiens, refonte LinkedIn — nous vous accompagnons au-delà du certificat, jusqu'à votre prochain poste."
-      },
-      {
-        "title": "Satisfaction garantie — 30 jours",
-        "description": "Si après les deux premières séances la formation ne vous correspond pas, vous êtes remboursé intégralement. Sans question, sans formulaire."
       }
     ]
   },

@@ -179,11 +179,6 @@
     "label": "Why Nexo Skills",
     "title": "The training we wished existed",
     "sub": "No outdated theory, no disconnected instructors. Active professionals, real tools, and measurable outcomes — starting from the very first weekend.",
-    "stats": [
-      { "value": "100%", "label": "of hours are hands-on" },
-      { "value": "30d", "label": "money-back guarantee" },
-      { "value": "Cert.", "label": "official certificate in every program" }
-    ],
     "items": [
       {
         "title": "AI at the core of every program",
@@ -204,10 +199,6 @@
       {
         "title": "Career support after graduation",
         "description": "CV review, mock interviews, LinkedIn makeover — we stay with you beyond the certificate, all the way to your next role."
-      },
-      {
-        "title": "Satisfaction guaranteed — 30 days",
-        "description": "If after the first two sessions the training isn't right for you, you get a full refund. No questions asked, no forms to fill."
       }
     ]
   },

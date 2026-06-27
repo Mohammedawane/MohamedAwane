@@ -23,13 +23,11 @@ const CARD_ACCENTS = [
 ];
 
 type FeatureItem = { title: string; description: string };
-type Stat = { value: string; label: string };
 
 type FeaturesDict = {
   label: string;
   title: string;
   sub: string;
-  stats?: Stat[];
   items: FeatureItem[];
 };
 
@@ -44,18 +42,6 @@ export default function Features({ t }: { t: FeaturesDict }) {
           <h2 className="text-4xl font-bold text-gray-900 md:text-5xl">{t.title}</h2>
           <p className="mx-auto mt-4 max-w-xl text-gray-600">{t.sub}</p>
         </div>
-
-        {/* Stats band */}
-        {t.stats && (
-          <div className="mb-12 grid grid-cols-3 divide-x divide-blue-200 overflow-hidden rounded-2xl border border-blue-200 bg-blue-700 text-white">
-            {t.stats.map((s) => (
-              <div key={s.value} className="flex flex-col items-center py-6 px-4 text-center">
-                <span className="text-3xl font-extrabold tracking-tight md:text-4xl">{s.value}</span>
-                <span className="mt-1 text-xs font-medium text-blue-200 md:text-sm">{s.label}</span>
-              </div>
-            ))}
-          </div>
-        )}
 
         {/* All feature cards — uniform 2-column horizontal layout */}
         <div className="grid gap-4 md:grid-cols-2">
