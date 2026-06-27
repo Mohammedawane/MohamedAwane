@@ -76,9 +76,14 @@ export default async function FormationPage({
 
       {/* Hero image banner */}
       {imageSrc && (
-        <div className="relative h-64 overflow-hidden md:h-80">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={imageSrc} alt={f.title} className="h-full w-full object-cover" />
+        <div
+          className="relative h-64 md:h-80"
+          style={{
+            backgroundImage: `url(${imageSrc})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/75 via-gray-900/30 to-transparent" />
           <div className="absolute bottom-6 left-5 flex flex-wrap gap-2 md:left-10">
             <span className="rounded-full bg-blue-700 px-4 py-1.5 text-sm font-semibold text-white">{f.date}</span>
