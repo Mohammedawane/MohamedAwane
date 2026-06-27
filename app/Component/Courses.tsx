@@ -27,7 +27,6 @@ type CoursesDict = {
   detail_label: string;
 };
 
-import Image from "next/image";
 import CourseLink from "./CourseLink";
 
 const COURSE_IMAGES: Record<string, string> = {
@@ -131,14 +130,13 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
                       className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     >
                       {/* Course image / fallback gradient */}
-                      <div className="relative h-44 overflow-hidden">
+                      <div className="h-44 overflow-hidden">
                         {imageSrc ? (
-                          <Image
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
                             src={imageSrc}
                             alt={course.title}
-                            fill
-                            sizes="(max-width: 768px) 100vw, 33vw"
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                           />
                         ) : (
                           <div className={`h-full ${c.header} flex items-center justify-center`}>
