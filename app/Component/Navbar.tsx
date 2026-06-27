@@ -170,16 +170,20 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
                 const c = CAT_COLORS[cat.color] ?? CAT_COLORS.blue;
                 return (
                   <div key={cat.key}>
-                    {/* Category header */}
-                    <div className="mb-4 flex items-center gap-2.5">
-                      <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${c.dot}`}>
+                    {/* Category header — clickable */}
+                    <a
+                      href={`#${cat.key}`}
+                      onClick={() => setMegaOpen(false)}
+                      className="mb-4 flex items-center gap-2.5 group/cat"
+                    >
+                      <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${c.dot} transition-opacity group-hover/cat:opacity-80`}>
                         <CatIcon catKey={cat.key} />
                       </span>
                       <div>
-                        <p className={`text-xs font-bold uppercase tracking-wider ${c.label}`}>{cat.label}</p>
+                        <p className={`text-xs font-bold uppercase tracking-wider ${c.label} group-hover/cat:underline underline-offset-2`}>{cat.label}</p>
                         <p className="text-[11px] text-gray-400">{cat.sub}</p>
                       </div>
-                    </div>
+                    </a>
 
                     {/* Course links */}
                     <ul className="space-y-0.5">
@@ -251,7 +255,13 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
                       const c = CAT_COLORS[cat.color] ?? CAT_COLORS.blue;
                       return (
                         <div key={cat.key}>
-                          <p className={`mb-1.5 text-[11px] font-bold uppercase tracking-wider ${c.label}`}>{cat.label}</p>
+                          <a
+                            href={`#${cat.key}`}
+                            onClick={() => { setOpen(false); setMobileCoursesOpen(false); }}
+                            className={`mb-1.5 block text-[11px] font-bold uppercase tracking-wider ${c.label} hover:underline underline-offset-2`}
+                          >
+                            {cat.label}
+                          </a>
                           <ul className="space-y-0.5">
                             {items.map((course) => {
                               const slug = course.href.replace("#contact?course=", "");
