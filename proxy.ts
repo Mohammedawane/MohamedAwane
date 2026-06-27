@@ -10,7 +10,9 @@ export function proxy(request: NextRequest) {
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
-    pathname.startsWith("/favicon")
+    pathname.startsWith("/favicon") ||
+    pathname.startsWith("/coursesPics") ||
+    /\.(?:jpg|jpeg|png|gif|svg|ico|webp|woff2?|ttf)$/.test(pathname)
   )
     return;
 
@@ -37,5 +39,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|favicon).*)"],
+  matcher: ["/((?!_next|api|favicon|coursesPics).*)"],
 };
