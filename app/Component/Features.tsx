@@ -34,8 +34,6 @@ type FeaturesDict = {
 };
 
 export default function Features({ t }: { t: FeaturesDict }) {
-  const [featured, ...rest] = t.items;
-
   return (
     <section id="why" className="bg-gray-50 py-16 px-5 md:py-24 md:px-6">
       <div className="mx-auto max-w-6xl">
@@ -59,41 +57,11 @@ export default function Features({ t }: { t: FeaturesDict }) {
           </div>
         )}
 
-        {/* Featured card — first item (AI) */}
-        <div className="mb-6 overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-700 to-blue-900 p-8 shadow-lg md:p-10">
-          <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-10">
-            {/* Icon */}
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/15 backdrop-blur-sm">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7 text-white">
-                <path fillRule="evenodd" d={ICONS[0]} clipRule="evenodd" />
-              </svg>
-            </div>
-
-            {/* Content */}
-            <div className="flex-1">
-              <div className="mb-1 inline-block rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-100">
-                Notre principal atout
-              </div>
-              <h3 className="mt-3 text-2xl font-extrabold text-white md:text-3xl">{featured.title}</h3>
-              <p className="mt-3 max-w-2xl text-base leading-relaxed text-blue-100">{featured.description}</p>
-
-              {/* Proof points */}
-              <div className="mt-6 flex flex-wrap gap-3">
-                {["ChatGPT & Copilot", "Automatisation des tests", "Prompt Engineering", "Veille IA continue"].map((tag) => (
-                  <span key={tag} className="rounded-full bg-white/15 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Remaining cards — 2-column horizontal layout */}
+        {/* All feature cards — uniform 2-column horizontal layout */}
         <div className="grid gap-4 md:grid-cols-2">
-          {rest.map((item, i) => {
-            const accent = CARD_ACCENTS[(i + 1) % CARD_ACCENTS.length];
-            const iconPath = ICONS[i + 1] ?? ICONS[0];
+          {t.items.map((item, i) => {
+            const accent = CARD_ACCENTS[i % CARD_ACCENTS.length];
+            const iconPath = ICONS[i] ?? ICONS[0];
             return (
               <div
                 key={item.title}
