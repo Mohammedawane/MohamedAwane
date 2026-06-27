@@ -22,7 +22,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
   return (
     <main className="min-h-screen">
-      <Navbar t={dict.nav} lang={lang} />
+      <Navbar t={dict.nav} lang={lang} courses={dict.courses} />
       <Hero t={dict.hero} coursesCount={dict.courses.items.length} />
 
       <Reveal><Courses t={dict.courses} lang={lang} /></Reveal>
