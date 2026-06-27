@@ -95,7 +95,7 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
             if (!items.length) return null;
 
             return (
-              <div key={cat.key} id={cat.key === "tutorat" ? "tutorat" : undefined}>
+              <div key={cat.key} id={cat.key === "tutorat-langue" ? "tutorat" : undefined}>
                 {/* Category header */}
                 <div className="mb-6 flex items-center gap-4 rounded-2xl border border-gray-200 bg-gray-50 px-6 py-4">
                   <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${c.categoryDot}`} />

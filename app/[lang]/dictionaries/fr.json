@@ -36,33 +36,27 @@
     "count_other": "formations",
     "categories": [
       {
-        "key": "tech",
-        "label": "Métiers du Test & Dev",
-        "sub": "Qualité logicielle, tests assistés par l'IA et carrières tech",
+        "key": "digital-si",
+        "label": "Digital et SI",
+        "sub": "QA, tests logiciels, développement web et accessibilité numérique",
         "color": "blue"
       },
       {
-        "key": "quality",
-        "label": "Gestion de la Qualité",
-        "sub": "Normes, conformité, audits et excellence organisationnelle",
+        "key": "qhse",
+        "label": "QHSE et industrie",
+        "sub": "Systèmes qualité, audits, normes ISO et conformité organisationnelle",
         "color": "violet"
       },
       {
-        "key": "digital",
-        "label": "Compétences Digitales",
-        "sub": "Outils IA, création web et productivité numérique",
-        "color": "emerald"
-      },
-      {
-        "key": "tutorat",
-        "label": "Tutorat en ligne — Primaire",
-        "sub": "Cours individuels en ligne · Français, Anglais, Mathématiques",
+        "key": "tutorat-langue",
+        "label": "Tutorat et langue",
+        "sub": "Cours individuels en ligne — Primaire · Français, Anglais, Mathématiques",
         "color": "amber"
       }
     ],
     "items": [
       {
-        "category": "tech",
+        "category": "digital-si",
         "badge": "Juillet 2026 · 3 weekends",
         "tag": "Le plus demandé",
         "title": "Ingénierie QA propulsée par l'IA",
@@ -76,7 +70,7 @@
         "href": "#contact?course=qa"
       },
       {
-        "category": "quality",
+        "category": "qhse",
         "badge": "Juillet 2026 · Weekends",
         "tag": "Planifié",
         "title": "ISO 9001:2015 — Management de la Qualité",
@@ -90,7 +84,7 @@
         "href": "#contact?course=iso"
       },
       {
-        "category": "tech",
+        "category": "digital-si",
         "badge": "Août 2026 · 1 weekend",
         "tag": "Planifié",
         "title": "Accessibilité web & outils de test",
@@ -104,7 +98,7 @@
         "href": "#contact?course=a11y"
       },
       {
-        "category": "quality",
+        "category": "qhse",
         "badge": "Septembre 2026 · 1 weekend",
         "tag": "Planifié",
         "title": "Devenir auditeur qualité ISO 9001",
@@ -118,7 +112,7 @@
         "href": "#contact?course=audit"
       },
       {
-        "category": "digital",
+        "category": "digital-si",
         "badge": "Août 2026 · 1 weekend",
         "tag": "Planifié",
         "title": "Créez votre site web avec l'IA",
@@ -132,7 +126,7 @@
         "href": "#contact?course=web"
       },
       {
-        "category": "tutorat",
+        "category": "tutorat-langue",
         "badge": "Inscriptions ouvertes · 1h/séance",
         "tag": "Cours individuel",
         "title": "Tutorat Français — Primaire",
@@ -146,7 +140,7 @@
         "href": "#contact?course=tutorat-francais"
       },
       {
-        "category": "tutorat",
+        "category": "tutorat-langue",
         "badge": "Inscriptions ouvertes · 1h/séance",
         "tag": "Cours individuel",
         "title": "Tutorat Anglais — Primaire",
@@ -160,7 +154,7 @@
         "href": "#contact?course=tutorat-anglais"
       },
       {
-        "category": "tutorat",
+        "category": "tutorat-langue",
         "badge": "Inscriptions ouvertes · 1h/séance",
         "tag": "Cours individuel",
         "title": "Tutorat Mathématiques — Primaire",
@@ -453,32 +447,32 @@
     "course_placeholder": "Choisir une formation…",
     "courses": [
       {
-        "group": "Métiers du Test & Dev",
+        "group": "Digital et SI",
         "value": "qa",
         "label": "Ingénierie QA propulsée par l'IA",
         "badge": "Juillet 2026 · 297$",
         "stripe": true
       },
       {
-        "group": "Métiers du Test & Dev",
+        "group": "Digital et SI",
         "value": "a11y",
         "label": "Accessibilité web & outils de test",
         "badge": "Planifié · 200$"
       },
       {
-        "group": "Gestion de la Qualité",
+        "group": "QHSE et industrie",
         "value": "iso",
         "label": "ISO 9001:2015 — Management Qualité",
         "badge": "Planifié · 200$"
       },
       {
-        "group": "Gestion de la Qualité",
+        "group": "QHSE et industrie",
         "value": "audit",
         "label": "Auditeur qualité ISO 9001",
         "badge": "Planifié · 200$"
       },
       {
-        "group": "Compétences Digitales",
+        "group": "Digital et SI",
         "value": "web",
         "label": "Créez votre site web avec l'IA",
         "badge": "Planifié · 200$"

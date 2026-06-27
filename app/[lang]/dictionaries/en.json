@@ -36,33 +36,27 @@
     "count_other": "programs",
     "categories": [
       {
-        "key": "tech",
-        "label": "Testing & Development",
-        "sub": "Software quality, AI-powered testing and engineering careers",
+        "key": "digital-si",
+        "label": "Digital & IT",
+        "sub": "QA, software testing, web development and digital accessibility",
         "color": "blue"
       },
       {
-        "key": "quality",
-        "label": "Quality Management",
-        "sub": "Standards, compliance, audits and organizational excellence",
+        "key": "qhse",
+        "label": "QHSE & Industry",
+        "sub": "Quality systems, audits, ISO standards and organizational compliance",
         "color": "violet"
       },
       {
-        "key": "digital",
-        "label": "Digital Skills",
-        "sub": "AI-powered tools, web creation and digital productivity",
-        "color": "emerald"
-      },
-      {
-        "key": "tutorat",
-        "label": "Online Tutoring — Primary School",
-        "sub": "Individual online sessions · French, English, Mathematics",
+        "key": "tutorat-langue",
+        "label": "Tutoring & Language",
+        "sub": "Individual online sessions — Primary School · French, English, Mathematics",
         "color": "amber"
       }
     ],
     "items": [
       {
-        "category": "tech",
+        "category": "digital-si",
         "badge": "July 2026 · 3 Weekends",
         "tag": "Most Popular",
         "title": "AI-Powered QA Engineering",
@@ -76,7 +70,7 @@
         "href": "#contact?course=qa"
       },
       {
-        "category": "quality",
+        "category": "qhse",
         "badge": "July 2026 · Weekends",
         "tag": "Planned",
         "title": "ISO 9001:2015 Quality Management",
@@ -90,7 +84,7 @@
         "href": "#contact?course=iso"
       },
       {
-        "category": "tech",
+        "category": "digital-si",
         "badge": "August 2026 · 1 Weekend",
         "tag": "Planned",
         "title": "Web Accessibility & Testing Tools",
@@ -104,7 +98,7 @@
         "href": "#contact?course=a11y"
       },
       {
-        "category": "quality",
+        "category": "qhse",
         "badge": "September 2026 · 1 Weekend",
         "tag": "Planned",
         "title": "ISO 9001 Internal Auditor",
@@ -118,7 +112,7 @@
         "href": "#contact?course=audit"
       },
       {
-        "category": "digital",
+        "category": "digital-si",
         "badge": "August 2026 · 1 Weekend",
         "tag": "Planned",
         "title": "Build Your Website with AI",
@@ -132,7 +126,7 @@
         "href": "#contact?course=web"
       },
       {
-        "category": "tutorat",
+        "category": "tutorat-langue",
         "badge": "Open enrollment · 1h/session",
         "tag": "Individual session",
         "title": "French Tutoring — Primary School",
@@ -146,7 +140,7 @@
         "href": "#contact?course=tutorat-francais"
       },
       {
-        "category": "tutorat",
+        "category": "tutorat-langue",
         "badge": "Open enrollment · 1h/session",
         "tag": "Individual session",
         "title": "English Tutoring — Primary School",
@@ -160,7 +154,7 @@
         "href": "#contact?course=tutorat-anglais"
       },
       {
-        "category": "tutorat",
+        "category": "tutorat-langue",
         "badge": "Open enrollment · 1h/session",
         "tag": "Individual session",
         "title": "Math Tutoring — Primary School",
