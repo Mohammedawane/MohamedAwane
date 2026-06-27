@@ -23,13 +23,24 @@ const CARD_ACCENTS = [
 ];
 
 type FeatureItem = { title: string; description: string };
+type Stat = { value: string; label: string };
 
 type FeaturesDict = {
   label: string;
   title: string;
   sub: string;
+  stats?: Stat[];
   items: FeatureItem[];
 };
+
+const STAT_ICONS = [
+  // Checkmark circle
+  "M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z",
+  // Heart / satisfaction
+  "M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z",
+  // Certificate
+  "M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z",
+];
 
 export default function Features({ t }: { t: FeaturesDict }) {
   return (
@@ -42,6 +53,28 @@ export default function Features({ t }: { t: FeaturesDict }) {
           <h2 className="text-4xl font-bold text-gray-900 md:text-5xl">{t.title}</h2>
           <p className="mx-auto mt-4 max-w-xl text-gray-600">{t.sub}</p>
         </div>
+
+        {/* Stats band — redesigned with icons */}
+        {t.stats && (
+          <div className="mb-10 grid grid-cols-3 gap-4">
+            {t.stats.map((s, i) => (
+              <div
+                key={s.value}
+                className="flex flex-col items-center gap-3 rounded-2xl border border-gray-200 bg-white px-4 py-6 text-center shadow-sm"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-700">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={1.8} className="h-5 w-5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d={STAT_ICONS[i] ?? STAT_ICONS[0]} />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-2xl font-extrabold tracking-tight text-gray-900 md:text-3xl">{s.value}</p>
+                  <p className="mt-0.5 text-xs text-gray-500 md:text-sm">{s.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* All feature cards — uniform 2-column horizontal layout */}
         <div className="grid gap-4 md:grid-cols-2">

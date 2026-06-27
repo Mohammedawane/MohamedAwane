@@ -179,6 +179,11 @@
     "label": "Pourquoi Nexo Skills",
     "title": "La formation qu'on aurait voulu suivre",
     "sub": "Pas de théorie dépassée, pas de formateurs déconnectés. Des professionnels en activité, de vrais outils, et des résultats mesurables — dès le premier weekend.",
+    "stats": [
+      { "value": "100%", "label": "des heures sont pratiques" },
+      { "value": "✓", "label": "Satisfaction garantie" },
+      { "value": "Certif.", "label": "officiel inclus à chaque formation" }
+    ],
     "items": [
       {
         "title": "L'IA au cœur de chaque programme",
