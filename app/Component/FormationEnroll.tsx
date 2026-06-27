@@ -70,7 +70,7 @@ export default function FormationEnroll({
           "Formateur professionnel en activité",
           "Certificat de réussite inclus",
           "Supports de cours accès à vie",
-          "Remboursement sous 30 jours",
+          "Satisfaction garantie",
         ].map((item) => (
           <div key={item} className="flex items-center gap-2.5 py-1.5">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-4 w-4 shrink-0 text-blue-700">

@@ -442,7 +442,7 @@
     "sub": "The skills that move careers don't come from watching videos. Join Nexo Skills and build something real — starting this weekend.",
     "button": "See All Programs",
     "contact": "Enroll now →",
-    "trust": "Taught by industry experts · Certificate included · 30-day money-back guarantee"
+    "trust": "Taught by industry experts · Certificate included · Satisfaction guaranteed"
   },
   "form": {
     "label": "Enrollment",
@@ -502,7 +502,7 @@
     "submit": "Reserve My Spot",
     "submit_pay": "Reserve My Spot — {badge}",
     "loading": "Redirecting to secure payment…",
-    "trust": "Secured by Stripe · 30-day money-back guarantee · No hidden fees",
+    "trust": "Secured by Stripe · Satisfaction guaranteed · No hidden fees",
     "error": "Something went wrong on our end. Please try again or email us directly."
   },
   "stats": {
@@ -606,7 +606,7 @@
     "back": "← All programs",
     "enroll_label": "Reserve my spot",
     "loading": "Redirecting to secure payment…",
-    "trust": "Secure payment · 30-day money-back guarantee",
+    "trust": "Secure payment · Satisfaction guaranteed",
     "modules_title": "The curriculum",
     "audience_title": "This program is for you if…",
     "name_placeholder": "Your full name",

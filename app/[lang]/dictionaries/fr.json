@@ -442,7 +442,7 @@
     "sub": "Les compétences qui font avancer les carrières ne s'acquièrent pas en regardant des vidéos. Rejoignez Nexo Skills et construisez quelque chose de réel — dès ce weekend.",
     "button": "Voir toutes les formations",
     "contact": "S'inscrire →",
-    "trust": "Formateurs en activité · Certificat inclus · Remboursement sous 30 jours"
+    "trust": "Formateurs en activité · Certificat inclus · Satisfaction garantie"
   },
   "form": {
     "label": "Inscription",
@@ -502,7 +502,7 @@
     "submit": "Réserver ma place",
     "submit_pay": "Réserver ma place — {badge}",
     "loading": "Redirection vers le paiement sécurisé…",
-    "trust": "Sécurisé par Stripe · Remboursement sous 30 jours · Sans frais cachés",
+    "trust": "Sécurisé par Stripe · Satisfaction garantie · Sans frais cachés",
     "error": "Une erreur s'est produite de notre côté. Réessayez ou écrivez-nous directement."
   },
   "stats": {
@@ -606,7 +606,7 @@
     "back": "← Toutes les formations",
     "enroll_label": "Réserver ma place",
     "loading": "Redirection vers le paiement…",
-    "trust": "Paiement sécurisé · Remboursement sous 30 jours",
+    "trust": "Paiement sécurisé · Satisfaction garantie",
     "modules_title": "Au programme",
     "audience_title": "Cette formation est pour vous si…",
     "name_placeholder": "Votre nom complet",
