@@ -1,7 +1,5 @@
 type TestimonialItem = {
   name: string;
-  role: string;
-  company: string;
   avatar: string;
   quote: string;
 };
@@ -50,8 +48,6 @@ function Card({ item, i }: { item: TestimonialItem; i: number }) {
         </div>
         <div>
           <div className="text-sm font-semibold text-gray-900">{item.name}</div>
-          <div className="text-xs text-gray-500">{item.role}</div>
-          <div className="text-xs text-gray-400">{item.company}</div>
         </div>
       </div>
     </div>

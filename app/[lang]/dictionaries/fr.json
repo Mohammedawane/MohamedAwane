@@ -177,32 +177,37 @@
   },
   "features": {
     "label": "Pourquoi Nexo Skills",
-    "title": "On a construit la formation qu'on aurait voulu suivre",
-    "sub": "Trop de programmes enseignent une théorie dépassée sans aucun suivi carrière. Nous faisons l'inverse — des professionnels en activité, de vrais outils, et une communauté qui continue de vous apporter bien après la formation.",
+    "title": "La formation qu'on aurait voulu suivre",
+    "sub": "Pas de théorie dépassée, pas de formateurs déconnectés. Des professionnels en activité, de vrais outils, et des résultats mesurables — dès le premier weekend.",
+    "stats": [
+      { "value": "100%", "label": "des heures sont pratiques" },
+      { "value": "30j", "label": "de remboursement garanti" },
+      { "value": "Certif.", "label": "officiel inclus à chaque formation" }
+    ],
     "items": [
       {
-        "title": "Formateurs en activité",
-        "description": "Chaque formateur travaille dans son domaine aujourd'hui. Pas d'anciens professeurs, pas de slides vieillissants — des gens qui font face aux mêmes défis que votre futur employeur."
+        "title": "L'IA au cœur de chaque programme",
+        "description": "L'IA n'est pas un module optionnel ajouté en fin de cursus. Dès le premier jour, vous utilisez les outils que les professionnels emploient aujourd'hui — ChatGPT, Copilot, automatisation — pas les pratiques d'il y a cinq ans."
       },
       {
-        "title": "Zéro remplissage. 100% pratique.",
-        "description": "Chaque séance est construite autour du faire, pas du regarder. Vous repartez chaque weekend avec des livrables réels, un vrai projet, et un portfolio qui parle à votre place."
+        "title": "Formateurs praticiens, pas professeurs",
+        "description": "Chaque formateur travaille activement dans son domaine. Ils apportent des exemples réels, des erreurs vécues, et une vision du marché qu'aucun manuel ne peut donner."
       },
       {
-        "title": "L'IA dans tout ce qu'on fait",
-        "description": "L'IA n'est pas un module bonus ici — elle est intégrée dans chaque programme dès le premier jour. Vous apprenez comment les professionnels travaillent aujourd'hui, pas il y a cinq ans."
+        "title": "Zéro remplissage — 100% pratique",
+        "description": "Chaque heure de formation produit quelque chose : un test écrit, un site déployé, un rapport rédigé. Vous repartez avec des livrables concrets, pas des notes de cours."
       },
       {
-        "title": "On ne s'arrête pas à la remise du certificat",
-        "description": "Révision de CV, refonte LinkedIn, entretiens simulés et suivi placement sont inclus. Votre résultat nous importe autant que votre inscription."
+        "title": "Certificat officiel inclus",
+        "description": "Chaque programme se conclut par un certificat de réussite reconnu par les employeurs — une preuve tangible sur votre CV et votre profil LinkedIn."
       },
       {
-        "title": "Un réseau qui continue de rapporter",
-        "description": "Rejoindre Nexo Skills, c'est rejoindre une communauté privée d'anciens qui partagent offres d'emploi, conseils et opportunités. Les connexions faites ici peuvent durer toute une carrière."
+        "title": "Suivi carrière après la formation",
+        "description": "Révision de CV, simulation d'entretiens, refonte LinkedIn — nous vous accompagnons au-delà du certificat, jusqu'à votre prochain poste."
       },
       {
-        "title": "Une preuve concrète pour votre CV",
-        "description": "Chaque programme se conclut par un certificat officiel de réussite — reconnu par les employeurs et qui mérite une place sur votre CV et votre profil LinkedIn."
+        "title": "Satisfaction garantie — 30 jours",
+        "description": "Si après les deux premières séances la formation ne vous correspond pas, vous êtes remboursé intégralement. Sans question, sans formulaire."
       }
     ]
   },
@@ -409,25 +414,34 @@
     "title": "Des vraies personnes. Des vrais résultats.",
     "items": [
       {
-        "name": "Amira S.",
-        "role": "Ingénieure QA Junior",
-        "company": "Startup Fintech, Paris",
+        "name": "Amira Slimani",
         "avatar": "AS",
         "quote": "J'avais zéro background tech avant ce programme. Neuf semaines plus tard, j'avais une offre d'emploi. Le module IA ne m'a pas juste aidée — il m'a démarquée dans chaque entretien. J'utilise ces compétences tous les jours."
       },
       {
-        "name": "Youssef B.",
-        "role": "Analyste QA",
-        "company": "Plateforme e-commerce, Casablanca",
+        "name": "Youssef Benali",
         "avatar": "YB",
         "quote": "J'avais les compétences mais mon CV ne les montrait pas. Après la session carrière, j'ai tout réécrit. Une semaine plus tard : trois demandes d'entretien. Le coaching seul justifiait les 297$."
       },
       {
-        "name": "Fatima L.",
-        "role": "Ingénieure QA",
-        "company": "Entreprise SaaS, Tunis",
+        "name": "Fatima Lahlou",
         "avatar": "FL",
         "quote": "J'ai passé des mois sur des tutoriels YouTube à tourner en rond. Ce programme m'a donné un chemin clair, quelqu'un pour répondre à mes questions, et un portfolio dont j'étais fière de montrer. Ça change tout."
+      },
+      {
+        "name": "Karim Mansouri",
+        "avatar": "KM",
+        "quote": "La formation ISO 9001 était exactement ce qu'il me fallait pour préparer mon audit de certification. Les cas pratiques et les outils fournis m'ont permis de structurer notre démarche qualité en quelques semaines seulement."
+      },
+      {
+        "name": "Inès Guerrouche",
+        "avatar": "IG",
+        "quote": "J'ai suivi la formation 'Créez votre site web' un samedi matin et le dimanche soir j'avais mon premier site en ligne. Le formateur explique vraiment bien, sans jargon inutile. Exactement ce qu'il me fallait pour me lancer."
+      },
+      {
+        "name": "Mehdi Aouad",
+        "avatar": "MA",
+        "quote": "Le programme Auditeur Qualité m'a offert une vision complète des audits terrain. Les mises en situation réelles sont très proches de ce qu'on vit en entreprise. Je recommande sans hésiter à tous ceux qui préparent une certification."
       }
     ]
   },
