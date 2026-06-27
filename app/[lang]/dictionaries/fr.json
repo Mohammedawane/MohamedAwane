@@ -506,6 +506,35 @@
     "trust": "Sécurisé par Stripe · Remboursement sous 30 jours · Sans frais cachés",
     "error": "Une erreur s'est produite de notre côté. Réessayez ou écrivez-nous directement."
   },
+  "stats": {
+    "items": [
+      { "value": "5", "label": "Formations disponibles" },
+      { "value": "150+", "label": "Apprenants formés" },
+      { "value": "98%", "label": "Taux de satisfaction" },
+      { "value": "100%", "label": "Certifié à la réussite" }
+    ]
+  },
+  "modalities": {
+    "title": "Comment se déroulent nos formations ?",
+    "sub": "Des modalités flexibles adaptées à votre emploi du temps et votre style d'apprentissage.",
+    "items": [
+      { "icon": "calendar", "title": "Weekend intensif", "description": "Des sessions concentrées sur 1 à 3 weekends pour apprendre sans quitter votre emploi." },
+      { "icon": "video", "title": "En ligne en direct", "description": "Classes virtuelles en temps réel avec votre formateur — depuis n'importe où." },
+      { "icon": "user", "title": "Tutorat individuel", "description": "Séances individuelles personnalisées pour les élèves du primaire, en ligne." },
+      { "icon": "briefcase", "title": "Coaching carrière", "description": "Révision CV, LinkedIn, entretiens simulés — un suivi jusqu'à votre objectif." }
+    ]
+  },
+  "about": {
+    "label": "Qui sommes-nous",
+    "title": "Une école de formation pensée par des praticiens, pour des praticiens.",
+    "description": "Nexo Skills est né d'un constat simple : trop de formations enseignent une théorie dépassée, sans lien avec la réalité du terrain. Nous avons voulu faire autrement — des formateurs qui exercent leur métier aujourd'hui, des contenus qui reflètent les pratiques actuelles, et un suivi qui va jusqu'à l'emploi.",
+    "points": [
+      "Formateurs professionnels en activité",
+      "Contenus 100% pratiques et actualisés",
+      "L'IA intégrée dans chaque programme",
+      "Suivi carrière inclus (CV, LinkedIn, entretiens)"
+    ]
+  },
   "footer": {
     "copyright": "Nexo Skills",
     "email": "info@nexo-skills.com",

@@ -22,32 +22,33 @@ export default function Navbar({ t, lang }: { t: NavDict; lang: string }) {
 
   const links = [
     { href: "#formations", label: t.courses },
+    { href: "#tutorat", label: "Tutorat" },
     { href: "#why", label: t.why },
     { href: "#nous-contacter", label: t.contact },
   ];
 
   return (
     <header
-      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed left-0 right-0 top-0 z-50 bg-white transition-all duration-300 ${
         scrolled
-          ? "border-b border-white/8 bg-[#020817]/92 shadow-xl shadow-black/30 backdrop-blur-2xl"
-          : "border-b border-white/5 bg-[#020817]/60 backdrop-blur-xl"
+          ? "border-b border-gray-200 shadow-md"
+          : "border-b border-gray-100"
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5">
 
         {/* Logo */}
         <a href={`/${lang}`} className="group flex items-center gap-3">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 shadow-lg shadow-blue-600/30 transition-transform duration-300 group-hover:scale-110">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-700 shadow-sm transition-transform duration-300 group-hover:scale-110">
             <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
               <path d="M4 5h3l5 7 5-7h3L14 13l6 6h-3l-5-7-5 7H4l6-6L4 5Z" fill="white" />
             </svg>
           </div>
           <div className="flex flex-col leading-none">
-            <span className="text-sm font-bold tracking-tight text-white">
-              Nexo <span className="text-blue-400">Skills</span>
+            <span className="text-sm font-bold tracking-tight text-gray-900">
+              Nexo <span className="text-blue-700">Skills</span>
             </span>
-            <span className="hidden text-[9px] tracking-widest text-slate-600 sm:block">
+            <span className="hidden text-[9px] tracking-widest text-gray-400 sm:block">
               CONNECT TO YOUR NEXT LEVEL
             </span>
           </div>
@@ -59,7 +60,7 @@ export default function Navbar({ t, lang }: { t: NavDict; lang: string }) {
             <a
               key={link.href}
               href={link.href}
-              className="relative rounded-lg px-4 py-2 text-sm text-slate-400 transition-all duration-200 hover:bg-white/5 hover:text-white"
+              className="rounded-lg px-4 py-2 text-sm font-medium text-gray-600 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900"
             >
               {link.label}
             </a>
@@ -70,16 +71,15 @@ export default function Navbar({ t, lang }: { t: NavDict; lang: string }) {
         <div className="flex items-center gap-2">
           <a
             href="#contact"
-            className="hidden rounded-lg px-5 py-2 text-sm font-semibold text-white shadow-md shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-blue-500/30 md:block"
-            style={{ background: "linear-gradient(135deg, #3b82f6 0%, #4f46e5 100%)" }}
+            className="hidden rounded-lg bg-blue-700 px-5 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-blue-800 md:block"
           >
             {t.enroll}
           </a>
 
-          {/* Hamburger — uses + path rotated 45° → becomes × */}
+          {/* Hamburger */}
           <button
             onClick={() => setOpen((v) => !v)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-slate-400 transition-all duration-200 hover:border-white/20 hover:bg-white/5 hover:text-white md:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 text-gray-500 transition-all duration-200 hover:bg-gray-50 hover:text-gray-900 md:hidden"
             aria-label="Menu"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className={`h-5 w-5 transition-transform duration-300 ${open ? "rotate-45" : ""}`}>
@@ -95,16 +95,16 @@ export default function Navbar({ t, lang }: { t: NavDict; lang: string }) {
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden transition-all duration-300 md:hidden ${open ? "max-h-80 border-t border-white/5" : "max-h-0"}`}
+        className={`overflow-hidden transition-all duration-300 md:hidden ${open ? "max-h-80 border-t border-gray-100" : "max-h-0"}`}
       >
-        <div className="bg-[#020817]/95 px-6 py-4">
+        <div className="bg-white px-6 py-4">
           <nav className="flex flex-col gap-1">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-3 text-sm text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+                className="rounded-xl px-4 py-3 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900"
               >
                 {link.label}
               </a>
@@ -113,8 +113,7 @@ export default function Navbar({ t, lang }: { t: NavDict; lang: string }) {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-4 block w-full rounded-xl py-3 text-center text-sm font-semibold text-white transition-opacity hover:opacity-90"
-            style={{ background: "linear-gradient(135deg, #3b82f6 0%, #4f46e5 100%)" }}
+            className="mt-4 block w-full rounded-xl bg-blue-700 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-800"
           >
             {t.enroll}
           </a>

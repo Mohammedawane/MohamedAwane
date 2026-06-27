@@ -8,54 +8,12 @@ const ICONS = [
 ];
 
 const ACCENTS = [
-  {
-    icon: "text-blue-400",
-    iconBg: "from-blue-600/20 to-blue-500/5 border-blue-500/20",
-    watermark: "group-hover:text-blue-500/10",
-    glow: "group-hover:opacity-100",
-    glowColor: "bg-blue-600/8",
-    border: "hover:border-blue-500/25",
-  },
-  {
-    icon: "text-violet-400",
-    iconBg: "from-violet-600/20 to-violet-500/5 border-violet-500/20",
-    watermark: "group-hover:text-violet-500/10",
-    glow: "group-hover:opacity-100",
-    glowColor: "bg-violet-600/8",
-    border: "hover:border-violet-500/25",
-  },
-  {
-    icon: "text-emerald-400",
-    iconBg: "from-emerald-600/20 to-emerald-500/5 border-emerald-500/20",
-    watermark: "group-hover:text-emerald-500/10",
-    glow: "group-hover:opacity-100",
-    glowColor: "bg-emerald-600/8",
-    border: "hover:border-emerald-500/25",
-  },
-  {
-    icon: "text-sky-400",
-    iconBg: "from-sky-600/20 to-sky-500/5 border-sky-500/20",
-    watermark: "group-hover:text-sky-500/10",
-    glow: "group-hover:opacity-100",
-    glowColor: "bg-sky-600/8",
-    border: "hover:border-sky-500/25",
-  },
-  {
-    icon: "text-indigo-400",
-    iconBg: "from-indigo-600/20 to-indigo-500/5 border-indigo-500/20",
-    watermark: "group-hover:text-indigo-500/10",
-    glow: "group-hover:opacity-100",
-    glowColor: "bg-indigo-600/8",
-    border: "hover:border-indigo-500/25",
-  },
-  {
-    icon: "text-rose-400",
-    iconBg: "from-rose-600/20 to-rose-500/5 border-rose-500/20",
-    watermark: "group-hover:text-rose-500/10",
-    glow: "group-hover:opacity-100",
-    glowColor: "bg-rose-600/8",
-    border: "hover:border-rose-500/25",
-  },
+  { icon: "text-blue-700", iconBg: "bg-blue-50" },
+  { icon: "text-violet-700", iconBg: "bg-violet-50" },
+  { icon: "text-emerald-700", iconBg: "bg-emerald-50" },
+  { icon: "text-sky-700", iconBg: "bg-sky-50" },
+  { icon: "text-indigo-700", iconBg: "bg-indigo-50" },
+  { icon: "text-rose-600", iconBg: "bg-rose-50" },
 ];
 
 type FeaturesDict = {
@@ -67,39 +25,36 @@ type FeaturesDict = {
 
 export default function Features({ t }: { t: FeaturesDict }) {
   return (
-    <section id="why" className="py-16 px-5 md:py-24 md:px-6">
+    <section id="why" className="bg-white py-16 px-5 md:py-24 md:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-400">{t.label}</p>
-          <h2 className="text-4xl font-bold text-slate-100 md:text-5xl">{t.title}</h2>
-          <p className="mx-auto mt-4 max-w-xl text-slate-400">{t.sub}</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-700">{t.label}</p>
+          <h2 className="text-4xl font-bold text-gray-900 md:text-5xl">{t.title}</h2>
+          <p className="mx-auto mt-4 max-w-xl text-gray-600">{t.sub}</p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {t.items.map((item, i) => {
             const a = ACCENTS[i % ACCENTS.length];
             return (
               <div
                 key={item.title}
-                className={`group relative overflow-hidden rounded-2xl border border-white/5 bg-slate-900/60 p-6 transition-all duration-300 hover:bg-slate-900/90 hover:-translate-y-0.5 hover:shadow-xl ${a.border}`}
+                className="group relative flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
               >
-                {/* Corner glow */}
-                <div className={`pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full opacity-0 blur-2xl transition-opacity duration-500 ${a.glowColor} ${a.glow}`} />
-
-                {/* Number watermark */}
-                <span className={`absolute right-5 top-4 select-none text-6xl font-bold text-white/4 transition-colors duration-300 ${a.watermark}`}>
+                {/* Number */}
+                <span className="absolute right-5 top-4 select-none text-5xl font-bold text-gray-100">
                   {String(i + 1).padStart(2, "0")}
                 </span>
 
                 {/* Icon */}
-                <div className={`mb-5 inline-flex rounded-xl border bg-gradient-to-br p-3 ${a.iconBg} ${a.icon}`}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-6 w-6">
+                <div className={`mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl ${a.iconBg}`}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className={`h-6 w-6 ${a.icon}`}>
                     <path strokeLinecap="round" strokeLinejoin="round" d={ICONS[i] ?? ICONS[0]} />
                   </svg>
                 </div>
 
-                <h3 className="mb-2 text-base font-bold text-slate-100">{item.title}</h3>
-                <p className="text-sm leading-relaxed text-slate-400">{item.description}</p>
+                <h3 className="mb-2 text-base font-bold text-gray-900">{item.title}</h3>
+                <p className="text-sm leading-relaxed text-gray-600">{item.description}</p>
               </div>
             );
           })}

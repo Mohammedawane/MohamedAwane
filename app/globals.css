@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020817;
-  --foreground: #f1f5f9;
-  --surface: #0f172a;
-  --surface-elevated: #1e293b;
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --primary: #3b82f6;
-  --primary-glow: rgba(59, 130, 246, 0.12);
+  --background: #ffffff;
+  --foreground: #111827;
+  --surface: #f9fafb;
+  --surface-elevated: #ffffff;
+  --border-subtle: #e5e7eb;
+  --primary: #1d4ed8;
+  --primary-glow: rgba(29, 78, 216, 0.10);
 }
 
 @theme inline {
@@ -25,34 +25,16 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-  /* Compatible iOS/Safari — pas de background-attachment: fixed */
-  background-image:
-    radial-gradient(ellipse 100% 55% at 50% 0%,   rgba(59, 130, 246, 0.18) 0%, transparent 58%),
-    radial-gradient(ellipse 55%  45% at 90% 85%,  rgba(99, 102, 241, 0.10) 0%, transparent 58%),
-    radial-gradient(ellipse 45%  35% at  5% 65%,  rgba(16, 185, 129, 0.07) 0%, transparent 55%);
-}
-
-/* Grain CSS — texture de profondeur, compatible tous navigateurs */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.028;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 180px 180px;
-  background-repeat: repeat;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #0a0f1e; }
-::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #2563eb; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #1d4ed8; }
 
 /* Selection */
-::selection { background: rgba(59, 130, 246, 0.25); color: #fff; }
+::selection { background: rgba(29, 78, 216, 0.15); color: #1e3a8a; }
 
 /* ── Animations ── */
 @keyframes fade-up {
@@ -83,8 +65,8 @@ body::before {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.15; }
-  50%       { opacity: 0.30; }
+  0%, 100% { opacity: 0.10; }
+  50%       { opacity: 0.20; }
 }
 
 /* Utility classes for animations */

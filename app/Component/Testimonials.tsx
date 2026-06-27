@@ -22,9 +22,9 @@ const AVATAR_COLORS = [
 
 function Card({ item, i }: { item: TestimonialItem; i: number }) {
   return (
-    <div className="group relative flex w-80 shrink-0 flex-col overflow-hidden rounded-2xl border border-white/5 bg-slate-900/80 p-7 backdrop-blur-sm transition-all duration-300 hover:border-white/10 hover:bg-slate-900 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20">
+    <div className="group relative flex w-80 shrink-0 flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       {/* Quote watermark */}
-      <div className="absolute right-5 top-4 select-none font-serif text-8xl leading-none text-white/4 transition-colors group-hover:text-white/6">
+      <div className="absolute right-5 top-4 select-none font-serif text-7xl leading-none text-gray-100">
         &ldquo;
       </div>
 
@@ -38,20 +38,20 @@ function Card({ item, i }: { item: TestimonialItem; i: number }) {
       </div>
 
       {/* Quote */}
-      <p className="mb-7 flex-1 text-sm leading-relaxed text-slate-300">{item.quote}</p>
+      <p className="mb-7 flex-1 text-sm leading-relaxed text-gray-700">{item.quote}</p>
 
       {/* Divider */}
-      <div className="mb-5 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
+      <div className="mb-5 h-px bg-gray-100" />
 
       {/* Author */}
       <div className="flex items-center gap-3">
-        <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${AVATAR_COLORS[i % AVATAR_COLORS.length]} text-xs font-bold text-white shadow-lg`}>
+        <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${AVATAR_COLORS[i % AVATAR_COLORS.length]} text-xs font-bold text-white shadow`}>
           {item.avatar}
         </div>
         <div>
-          <div className="text-sm font-semibold text-white">{item.name}</div>
-          <div className="text-xs text-slate-500">{item.role}</div>
-          <div className="text-xs text-slate-600">{item.company}</div>
+          <div className="text-sm font-semibold text-gray-900">{item.name}</div>
+          <div className="text-xs text-gray-500">{item.role}</div>
+          <div className="text-xs text-gray-400">{item.company}</div>
         </div>
       </div>
     </div>
@@ -62,17 +62,17 @@ export default function Testimonials({ t }: { t: TestimonialsDict }) {
   const doubled = [...t.items, ...t.items, ...t.items, ...t.items];
 
   return (
-    <section className="py-16 md:py-24 overflow-hidden">
+    <section className="bg-gray-50 py-16 md:py-24 overflow-hidden">
       <div className="mb-16 px-5 text-center md:px-6">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-400">{t.label}</p>
-        <h2 className="text-4xl font-bold text-slate-100 md:text-5xl">{t.title}</h2>
+        <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-700">{t.label}</p>
+        <h2 className="text-4xl font-bold text-gray-900 md:text-5xl">{t.title}</h2>
       </div>
 
       {/* Marquee track */}
       <div className="relative">
         {/* Fade edges */}
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-[#020817] to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-[#020817] to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-gray-50 to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-gray-50 to-transparent" />
 
         <div className="animate-marquee flex gap-5 pb-4">
           {doubled.map((item, i) => (

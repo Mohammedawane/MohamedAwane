@@ -31,60 +31,60 @@ import CourseLink from "./CourseLink";
 
 const COLORS = {
   blue: {
-    section: "border-blue-500/20 bg-gradient-to-r from-blue-500/8 to-transparent",
-    label: "text-blue-400",
-    dot: "bg-blue-500 shadow-blue-500/50 shadow-sm",
-    border: "border-blue-500/20 hover:border-blue-500/40",
-    glow: "bg-blue-600/10",
-    tag: "bg-blue-600 shadow-blue-600/25 shadow-sm",
-    check: "text-blue-400",
-    pill: "bg-blue-500/10 text-blue-400 border border-blue-500/20",
-    cta: "hover:bg-blue-500/10 hover:text-blue-300 hover:border-blue-500/20",
+    header: "bg-gradient-to-r from-blue-700 to-blue-500",
+    badge: "bg-blue-100 text-blue-700",
+    tag: "bg-blue-700 text-white",
+    check: "text-blue-600",
+    pill: "bg-blue-50 text-blue-700 border border-blue-200",
+    categoryDot: "bg-blue-600",
+    categoryLabel: "text-blue-700",
+    ctaPrimary: "bg-blue-700 text-white hover:bg-blue-800",
+    ctaSecondary: "border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-700",
   },
   violet: {
-    section: "border-violet-500/20 bg-gradient-to-r from-violet-500/8 to-transparent",
-    label: "text-violet-400",
-    dot: "bg-violet-500 shadow-violet-500/50 shadow-sm",
-    border: "border-violet-500/20 hover:border-violet-500/40",
-    glow: "bg-violet-600/10",
-    tag: "bg-violet-600 shadow-violet-600/25 shadow-sm",
-    check: "text-violet-400",
-    pill: "bg-violet-500/10 text-violet-400 border border-violet-500/20",
-    cta: "hover:bg-violet-500/10 hover:text-violet-300 hover:border-violet-500/20",
+    header: "bg-gradient-to-r from-violet-700 to-violet-500",
+    badge: "bg-violet-100 text-violet-700",
+    tag: "bg-violet-700 text-white",
+    check: "text-violet-600",
+    pill: "bg-violet-50 text-violet-700 border border-violet-200",
+    categoryDot: "bg-violet-600",
+    categoryLabel: "text-violet-700",
+    ctaPrimary: "bg-violet-700 text-white hover:bg-violet-800",
+    ctaSecondary: "border-gray-200 text-gray-600 hover:border-violet-300 hover:text-violet-700",
   },
   emerald: {
-    section: "border-emerald-500/20 bg-gradient-to-r from-emerald-500/8 to-transparent",
-    label: "text-emerald-400",
-    dot: "bg-emerald-500 shadow-emerald-500/50 shadow-sm",
-    border: "border-emerald-500/20 hover:border-emerald-500/40",
-    glow: "bg-emerald-600/10",
-    tag: "bg-emerald-600 shadow-emerald-600/25 shadow-sm",
-    check: "text-emerald-400",
-    pill: "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
-    cta: "hover:bg-emerald-500/10 hover:text-emerald-300 hover:border-emerald-500/20",
+    header: "bg-gradient-to-r from-emerald-700 to-emerald-500",
+    badge: "bg-emerald-100 text-emerald-700",
+    tag: "bg-emerald-700 text-white",
+    check: "text-emerald-600",
+    pill: "bg-emerald-50 text-emerald-700 border border-emerald-200",
+    categoryDot: "bg-emerald-600",
+    categoryLabel: "text-emerald-700",
+    ctaPrimary: "bg-emerald-700 text-white hover:bg-emerald-800",
+    ctaSecondary: "border-gray-200 text-gray-600 hover:border-emerald-300 hover:text-emerald-700",
   },
   amber: {
-    section: "border-amber-500/20 bg-gradient-to-r from-amber-500/8 to-transparent",
-    label: "text-amber-400",
-    dot: "bg-amber-500 shadow-amber-500/50 shadow-sm",
-    border: "border-amber-500/20 hover:border-amber-500/40",
-    glow: "bg-amber-600/10",
-    tag: "bg-amber-600 shadow-amber-600/25 shadow-sm",
-    check: "text-amber-400",
-    pill: "bg-amber-500/10 text-amber-400 border border-amber-500/20",
-    cta: "hover:bg-amber-500/10 hover:text-amber-300 hover:border-amber-500/20",
+    header: "bg-gradient-to-r from-amber-600 to-amber-400",
+    badge: "bg-amber-100 text-amber-700",
+    tag: "bg-amber-600 text-white",
+    check: "text-amber-600",
+    pill: "bg-amber-50 text-amber-700 border border-amber-200",
+    categoryDot: "bg-amber-500",
+    categoryLabel: "text-amber-700",
+    ctaPrimary: "bg-amber-600 text-white hover:bg-amber-700",
+    ctaSecondary: "border-gray-200 text-gray-600 hover:border-amber-300 hover:text-amber-700",
   },
 };
 
 export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
   return (
-    <section id="formations" className="py-16 px-5 md:py-24 md:px-6">
+    <section id="formations" className="bg-white py-16 px-5 md:py-24 md:px-6">
       <div className="mx-auto max-w-6xl">
         {/* Header */}
         <div className="mb-16 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-400">{t.label}</p>
-          <h2 className="text-4xl font-bold text-slate-100 md:text-5xl">{t.title}</h2>
-          <p className="mx-auto mt-4 max-w-xl text-slate-400">{t.sub}</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-700">{t.label}</p>
+          <h2 className="text-4xl font-bold text-gray-900 md:text-5xl">{t.title}</h2>
+          <p className="mx-auto mt-4 max-w-xl text-gray-600">{t.sub}</p>
         </div>
 
         {/* Categories */}
@@ -95,13 +95,13 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
             if (!items.length) return null;
 
             return (
-              <div key={cat.key}>
+              <div key={cat.key} id={cat.key === "tutorat" ? "tutorat" : undefined}>
                 {/* Category header */}
-                <div className={`mb-6 flex items-center gap-4 rounded-2xl border ${c.section} px-6 py-4`}>
-                  <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${c.dot}`} />
+                <div className="mb-6 flex items-center gap-4 rounded-2xl border border-gray-200 bg-gray-50 px-6 py-4">
+                  <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${c.categoryDot}`} />
                   <div>
-                    <p className={`text-sm font-bold uppercase tracking-widest ${c.label}`}>{cat.label}</p>
-                    <p className="text-xs text-slate-500">{cat.sub}</p>
+                    <p className={`text-sm font-bold uppercase tracking-widest ${c.categoryLabel}`}>{cat.label}</p>
+                    <p className="text-xs text-gray-500">{cat.sub}</p>
                   </div>
                   <span className={`ml-auto rounded-full px-3 py-1 text-xs font-semibold ${c.pill}`}>
                     {items.length} {items.length === 1 ? t.count_one : t.count_other}
@@ -109,52 +109,58 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
                 </div>
 
                 {/* Course cards */}
-                <div className={`grid gap-5 ${items.length === 1 ? "md:grid-cols-1 max-w-md" : "md:grid-cols-2"}`}>
+                <div className={`grid gap-6 ${items.length === 1 ? "md:grid-cols-1 max-w-md" : "md:grid-cols-2 lg:grid-cols-3"}`}>
                   {items.map((course) => (
                     <div
                       key={course.title}
-                      className={`group relative flex flex-col overflow-hidden rounded-2xl border bg-slate-900/70 p-7 transition-all duration-300 hover:bg-slate-900 hover:-translate-y-1 hover:shadow-2xl ${c.border}`}
+                      className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     >
-                      {/* Glow */}
-                      <div className={`pointer-events-none absolute right-0 top-0 h-48 w-48 rounded-full opacity-60 transition-opacity duration-500 group-hover:opacity-100 ${c.glow} blur-[70px]`} />
-
-                      {/* Top row */}
-                      <div className="mb-5 flex flex-wrap items-start gap-2">
-                        <span className="rounded-full border border-white/8 px-3 py-1 text-xs text-slate-400">
-                          {course.badge}
-                        </span>
-                        <span className={`rounded-full ${c.tag} px-3 py-1 text-xs font-semibold text-white`}>
-                          {course.tag}
-                        </span>
+                      {/* Colored header */}
+                      <div className={`h-36 ${c.header} flex items-center justify-center`}>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={1.5} className="h-12 w-12 opacity-60">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                        </svg>
                       </div>
 
-                      <h3 className="mb-3 text-xl font-bold text-slate-100">{course.title}</h3>
-                      <p className="mb-5 flex-1 text-sm leading-relaxed text-slate-400">{course.sub}</p>
+                      <div className="flex flex-1 flex-col p-6">
+                        {/* Top chips */}
+                        <div className="mb-4 flex flex-wrap items-center gap-2">
+                          <span className={`rounded-full px-3 py-1 text-xs font-medium ${c.badge}`}>
+                            {course.badge}
+                          </span>
+                          <span className={`rounded-full px-3 py-1 text-xs font-semibold ${c.tag}`}>
+                            {course.tag}
+                          </span>
+                        </div>
 
-                      <ul className="mb-7 space-y-2">
-                        {course.details.map((d) => (
-                          <li key={d} className="flex items-center gap-2 text-sm text-slate-400">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className={`h-4 w-4 shrink-0 ${c.check}`}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                            </svg>
-                            {d}
-                          </li>
-                        ))}
-                      </ul>
+                        <h3 className="mb-2 text-lg font-bold text-gray-900">{course.title}</h3>
+                        <p className="mb-4 flex-1 text-sm leading-relaxed text-gray-600">{course.sub}</p>
 
-                      <div className="flex flex-col gap-2">
-                        <CourseLink
-                          href={course.href}
-                          className={`block w-full rounded-xl border border-white/5 bg-white/4 py-3 text-center text-sm font-semibold text-slate-300 transition-all duration-200 ${c.cta}`}
-                        >
-                          {course.cta} →
-                        </CourseLink>
-                        <a
-                          href={`/${lang}/formations/${course.href.replace("#contact?course=", "")}`}
-                          className="block w-full rounded-xl border border-white/8 bg-transparent py-2.5 text-center text-sm text-slate-500 transition-all duration-200 hover:border-white/15 hover:text-slate-300"
-                        >
-                          {t.detail_label}
-                        </a>
+                        <ul className="mb-6 space-y-2">
+                          {course.details.map((d) => (
+                            <li key={d} className="flex items-center gap-2 text-sm text-gray-600">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className={`h-4 w-4 shrink-0 ${c.check}`}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                              </svg>
+                              {d}
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div className="flex flex-col gap-2 mt-auto">
+                          <CourseLink
+                            href={course.href}
+                            className={`block w-full rounded-xl py-3 text-center text-sm font-semibold transition-all duration-200 ${c.ctaPrimary}`}
+                          >
+                            {course.cta}
+                          </CourseLink>
+                          <a
+                            href={`/${lang}/formations/${course.href.replace("#contact?course=", "")}`}
+                            className={`block w-full rounded-xl border py-2.5 text-center text-sm transition-all duration-200 ${c.ctaSecondary}`}
+                          >
+                            {t.detail_label}
+                          </a>
+                        </div>
                       </div>
                     </div>
                   ))}
