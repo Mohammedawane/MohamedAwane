@@ -27,7 +27,19 @@ type CoursesDict = {
   detail_label: string;
 };
 
+import Image from "next/image";
 import CourseLink from "./CourseLink";
+
+const COURSE_IMAGES: Record<string, string> = {
+  "qa":               "/coursesPics/qaIA.jpg",
+  "a11y":             "/coursesPics/accesbility.jpg",
+  "web":              "/coursesPics/web.jpg",
+  "iso":              "/coursesPics/iso9001.png",
+  "audit":            "/coursesPics/auditeur.jpg",
+  "tutorat-francais": "/coursesPics/tutorat-francais.jpg",
+  "tutorat-anglais":  "/coursesPics/tutorat-anglais.jpg",
+  "tutorat-math":     "/coursesPics/tutorat-math.jpg",
+};
 
 const COLORS = {
   blue: {
@@ -110,16 +122,31 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
 
                 {/* Course cards */}
                 <div className={`grid gap-6 ${items.length === 1 ? "md:grid-cols-1 max-w-md" : "md:grid-cols-2 lg:grid-cols-3"}`}>
-                  {items.map((course) => (
+                  {items.map((course) => {
+                    const slug = course.href.replace("#contact?course=", "");
+                    const imageSrc = COURSE_IMAGES[slug];
+                    return (
                     <div
                       key={course.title}
                       className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     >
-                      {/* Colored header */}
-                      <div className={`h-36 ${c.header} flex items-center justify-center`}>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={1.5} className="h-12 w-12 opacity-60">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-                        </svg>
+                      {/* Course image / fallback gradient */}
+                      <div className="relative h-44 overflow-hidden">
+                        {imageSrc ? (
+                          <Image
+                            src={imageSrc}
+                            alt={course.title}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        ) : (
+                          <div className={`h-full ${c.header} flex items-center justify-center`}>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={1.5} className="h-12 w-12 opacity-60">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                            </svg>
+                          </div>
+                        )}
                       </div>
 
                       <div className="flex flex-1 flex-col p-6">
@@ -163,7 +190,8 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
                         </div>
                       </div>
                     </div>
-                  ))}
+                  );
+                  })}
                 </div>
               </div>
             );
