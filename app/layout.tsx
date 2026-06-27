@@ -17,6 +17,22 @@ export const metadata: Metadata = {
   title: "Nexo Skills — Connect to your next level.",
   description:
     "Nexo Skills propose des formations pratiques et reconnues en IA & QA, ISO 9001 et management de la qualité. Formateurs experts, certifications incluses.",
+  metadataBase: new URL("https://www.nexo-skills.com"),
+  openGraph: {
+    title: "Nexo Skills — Connect to your next level.",
+    description:
+      "Des formations pratiques en QA & IA, ISO 9001, tutorat en ligne et création web. Formateurs experts, certifications incluses.",
+    url: "https://www.nexo-skills.com",
+    siteName: "Nexo Skills",
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nexo Skills — Connect to your next level.",
+    description:
+      "Des formations pratiques en QA & IA, ISO 9001, tutorat en ligne et création web.",
+  },
 };
 
 export default async function RootLayout({
