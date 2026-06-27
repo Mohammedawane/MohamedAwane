@@ -20,14 +20,12 @@ export default async function FormationPage({
   const t = dict.formations;
   const f = t.courses[course];
 
-  const other = lang === "fr" ? "en" : "fr";
-
   return (
     <main className="min-h-screen bg-[#020817] text-white">
       {/* Minimal header */}
       <header className="sticky top-0 z-50 border-b border-white/5 bg-[#020817]/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5">
-          <a href={`/${lang}`} className="group flex items-center gap-3">
+          <a href="/fr" className="group flex items-center gap-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 shadow-lg shadow-blue-600/30 transition-transform duration-300 group-hover:scale-110">
               <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
                 <path d="M4 5h3l5 7 5-7h3L14 13l6 6h-3l-5-7-5 7H4l6-6L4 5Z" fill="white" />
@@ -45,13 +43,7 @@ export default async function FormationPage({
 
           <div className="flex items-center gap-3">
             <a
-              href={`/${other}/formations/${course}`}
-              className="rounded-lg border border-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-500 transition-all hover:border-white/20 hover:text-slate-300"
-            >
-              {other}
-            </a>
-            <a
-              href={`/${lang}#formations`}
+              href="/fr#formations"
               className="hidden text-sm text-slate-400 transition-colors hover:text-white sm:block"
             >
               {t.back}

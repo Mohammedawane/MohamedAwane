@@ -10,7 +10,7 @@ type NavDict = {
 };
 
 export default function Navbar({ t, lang }: { t: NavDict; lang: string }) {
-  const other = lang === "fr" ? "en" : "fr";
+  void lang;
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -68,12 +68,6 @@ export default function Navbar({ t, lang }: { t: NavDict; lang: string }) {
 
         {/* Right side */}
         <div className="flex items-center gap-2">
-          <a
-            href={`/${other}`}
-            className="rounded-lg border border-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-500 transition-all duration-200 hover:border-white/20 hover:text-slate-300"
-          >
-            {other}
-          </a>
           <a
             href="#contact"
             className="hidden rounded-lg px-5 py-2 text-sm font-semibold text-white shadow-md shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-blue-500/30 md:block"
