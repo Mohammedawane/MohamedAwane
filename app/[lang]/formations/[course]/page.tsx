@@ -3,6 +3,9 @@ import { getDictionary, hasLocale } from "../../dictionaries";
 import FormationEnroll from "@/app/Component/FormationEnroll";
 
 const VALID_COURSES = ["qa", "iso", "web", "a11y", "audit", "tutorat-francais", "tutorat-anglais", "tutorat-math", "anglais-vacances-ete"] as const;
+
+// Only these courses have live enrollment + payment
+const ACTIVE_COURSES = new Set(["anglais-vacances-ete"]);
 type CourseSlug = (typeof VALID_COURSES)[number];
 
 function isValidCourse(slug: string): slug is CourseSlug {
@@ -32,6 +35,9 @@ export default async function FormationPage({
   const t = dict.formations;
   const f = t.courses[course];
   const imageSrc = COURSE_IMAGES[course];
+  const isActive = ACTIVE_COURSES.has(course);
+  const isFr = lang !== "en";
+  const comingSoonStatus = isFr ? "Ouverture des inscriptions — Automne 2026" : "Enrollment opening — Fall 2026";
 
   return (
     <main className="min-h-screen bg-white">
@@ -181,7 +187,10 @@ export default async function FormationPage({
 
           {/* Right column: sticky enroll card */}
           <div id="enroll" className="lg:sticky lg:top-24 lg:self-start">
-            <FormationEnroll t={t} course={course} lang={lang} price={f.price} />
+            {isActive
+              ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} />
+              : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
+            }
           </div>
         </div>
       </div>
@@ -190,14 +199,19 @@ export default async function FormationPage({
       <section className="bg-blue-700 px-5 py-16 md:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="mb-3 text-3xl font-bold text-white">
-            {lang === "fr" ? "Prêt à vous inscrire ?" : "Ready to enroll?"}
+            {isActive
+              ? (isFr ? "Prêt à vous inscrire ?" : "Ready to enroll?")
+              : (isFr ? "Intéressé(e) par cette formation ?" : "Interested in this program?")}
           </h2>
           <p className="mb-8 text-blue-200">
-            {lang === "fr"
-              ? "Renseignez votre nom et email — vous serez redirigé vers le paiement sécurisé."
-              : "Enter your name and email — you'll be redirected to secure payment."}
+            {isActive
+              ? (isFr ? "Renseignez votre nom et email — vous serez redirigé vers le paiement sécurisé." : "Enter your name and email — you'll be redirected to secure payment.")
+              : (isFr ? "Laissez vos coordonnées et nous vous préviendrons dès l'ouverture des inscriptions." : "Leave your details and we'll notify you as soon as enrollment opens.")}
           </p>
-          <FormationEnroll t={t} course={course} lang={lang} price={f.price} />
+          {isActive
+            ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} />
+            : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
+          }
         </div>
       </section>
 

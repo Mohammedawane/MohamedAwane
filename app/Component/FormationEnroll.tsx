@@ -17,15 +17,20 @@ export default function FormationEnroll({
   course,
   lang,
   price,
-  defaultMode = "pay",
+  status,
+  contactOnly = false,
+  defaultMode,
 }: {
   t: EnrollDict;
   course: string;
   lang: string;
-  price: string;
+  price?: string;
+  status?: string;
+  contactOnly?: boolean;
   defaultMode?: Mode;
 }) {
-  const [mode, setMode] = useState<Mode>(defaultMode);
+  const resolvedDefault: Mode = defaultMode ?? (contactOnly ? "contact" : "pay");
+  const [mode, setMode] = useState<Mode>(resolvedDefault);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [contactSent, setContactSent] = useState(false);
@@ -100,13 +105,27 @@ export default function FormationEnroll({
   return (
     <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
 
-      {/* Price header */}
-      <div className="bg-blue-700 px-8 py-6 text-center">
-        <p className="text-3xl font-extrabold text-white">{price}</p>
-        <p className="mt-1 text-sm text-blue-200">
-          {isFr ? "par participant · toutes taxes incluses" : "per participant · all taxes included"}
-        </p>
-      </div>
+      {/* Price / status header */}
+      {price ? (
+        <div className="bg-blue-700 px-8 py-6 text-center">
+          <p className="text-3xl font-extrabold text-white">{price}</p>
+          <p className="mt-1 text-sm text-blue-200">
+            {isFr ? "par participant · toutes taxes incluses" : "per participant · all taxes included"}
+          </p>
+        </div>
+      ) : (
+        <div className="bg-gray-800 px-8 py-6 text-center">
+          <span className="inline-block rounded-full bg-amber-400/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-300">
+            {isFr ? "Prochainement" : "Coming soon"}
+          </span>
+          <p className="mt-3 text-base font-bold text-white">
+            {status ?? (isFr ? "Ouverture des inscriptions bientôt" : "Enrollment opening soon")}
+          </p>
+          <p className="mt-1 text-sm text-gray-400">
+            {isFr ? "Laissez vos coordonnées — on vous contacte en premier." : "Leave your details — we'll reach out first."}
+          </p>
+        </div>
+      )}
 
       {/* Checklist */}
       <div className="border-b border-gray-100 px-8 py-5">
@@ -123,35 +142,37 @@ export default function FormationEnroll({
         ))}
       </div>
 
-      {/* Mode toggle */}
-      <div className="grid grid-cols-2 border-b border-gray-100">
-        <button
-          onClick={() => { setMode("pay"); setError(null); setContactSent(false); }}
-          className={`flex items-center justify-center gap-2 py-3.5 text-sm font-semibold transition-all ${
-            mode === "pay"
-              ? "bg-blue-50 text-blue-700 border-b-2 border-blue-700"
-              : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
-          }`}
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
-          </svg>
-          {isFr ? "Payer en ligne" : "Pay online"}
-        </button>
-        <button
-          onClick={() => { setMode("contact"); setError(null); }}
-          className={`flex items-center justify-center gap-2 py-3.5 text-sm font-semibold transition-all ${
-            mode === "contact"
-              ? "bg-blue-50 text-blue-700 border-b-2 border-blue-700"
-              : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
-          }`}
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-          </svg>
-          {isFr ? "Prendre contact" : "Contact us"}
-        </button>
-      </div>
+      {/* Mode toggle — hidden when contactOnly */}
+      {!contactOnly && (
+        <div className="grid grid-cols-2 border-b border-gray-100">
+          <button
+            onClick={() => { setMode("pay"); setError(null); setContactSent(false); }}
+            className={`flex items-center justify-center gap-2 py-3.5 text-sm font-semibold transition-all ${
+              mode === "pay"
+                ? "bg-blue-50 text-blue-700 border-b-2 border-blue-700"
+                : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
+            }`}
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
+            </svg>
+            {isFr ? "Payer en ligne" : "Pay online"}
+          </button>
+          <button
+            onClick={() => { setMode("contact"); setError(null); }}
+            className={`flex items-center justify-center gap-2 py-3.5 text-sm font-semibold transition-all ${
+              mode === "contact"
+                ? "bg-blue-50 text-blue-700 border-b-2 border-blue-700"
+                : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
+            }`}
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+            </svg>
+            {isFr ? "Prendre contact" : "Contact us"}
+          </button>
+        </div>
+      )}
 
       {/* Forms */}
       <div className="p-8">
