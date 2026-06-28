@@ -40,6 +40,7 @@ export default function FormationEnroll({
   /* ── Payment via Stripe ── */
   async function handlePay(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (contactOnly) return; // safety guard
     setLoading(true);
     setError(null);
 
