@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, message, course } = await req.json();
 
     if (!name || !email || !message) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
@@ -20,13 +20,14 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: "Nexo Skills <info@nexo-skills.com>",
       to: "info@nexo-skills.com",
-      subject: `Nouveau message de ${name}`,
+      subject: course ? `Demande d'info — ${course} — ${name}` : `Nouveau message de ${name}`,
       html: `
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
-          <h2 style="margin:0 0 16px;color:#1e293b;">Nouveau message de contact</h2>
+          <h2 style="margin:0 0 16px;color:#1e293b;">Demande de contact — Nexo Skills</h2>
           <table style="width:100%;border-collapse:collapse;">
             <tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Nom</td><td style="padding:8px 0;font-weight:600;">${name}</td></tr>
             <tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Email</td><td style="padding:8px 0;"><a href="mailto:${email}">${email}</a></td></tr>
+            ${course ? `<tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Formation</td><td style="padding:8px 0;font-weight:600;color:#1d4ed8;">${course}</td></tr>` : ""}
           </table>
           <div style="margin-top:20px;padding:16px;background:#f8fafc;border-radius:8px;border-left:3px solid #3b82f6;">
             <p style="margin:0;white-space:pre-wrap;color:#1e293b;">${message}</p>
