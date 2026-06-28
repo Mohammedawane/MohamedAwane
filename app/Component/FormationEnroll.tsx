@@ -17,13 +17,15 @@ export default function FormationEnroll({
   course,
   lang,
   price,
+  defaultMode = "pay",
 }: {
   t: EnrollDict;
   course: string;
   lang: string;
   price: string;
+  defaultMode?: Mode;
 }) {
-  const [mode, setMode] = useState<Mode>("pay");
+  const [mode, setMode] = useState<Mode>(defaultMode);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [contactSent, setContactSent] = useState(false);

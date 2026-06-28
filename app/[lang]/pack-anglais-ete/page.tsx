@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "../dictionaries";
 import FormationEnroll from "@/app/Component/FormationEnroll";
 
-export async function generateMetadata({ params }: PageProps<"/[lang]/pack-anglais-ete">) {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const isFr = lang !== "en";
   return {
@@ -29,7 +29,7 @@ const PROGRAMME_EN = [
   { num: "04", title: "Presenting in front of the group", desc: "Each child presents a topic of their choice for 2-3 minutes. Kind feedback from tutor and peers.", tags: ["Presentation", "Confidence", "Feedback"] },
 ];
 
-export default async function PackAnglaiseEtePage({ params }: PageProps<"/[lang]/pack-anglais-ete">) {
+export default async function PackAnglaiseEtePage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary(lang);
@@ -178,7 +178,7 @@ export default async function PackAnglaiseEtePage({ params }: PageProps<"/[lang]
 
           {/* Right column — enrollment card */}
           <div id="enroll" className="lg:sticky lg:top-24 lg:self-start">
-            <FormationEnroll t={t} course="anglais-vacances-ete" lang={lang} price="800 DH/mois" />
+            <FormationEnroll t={t} course="anglais-vacances-ete" lang={lang} price="800 DH/mois" defaultMode="contact" />
           </div>
         </div>
       </div>
