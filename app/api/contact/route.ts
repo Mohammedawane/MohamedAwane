@@ -1,10 +1,46 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const COURSE_LABELS: Record<string, string> = {
+  "qa":                    "QA & Tests IA",
+  "a11y":                  "Accessibilité web",
+  "web":                   "Créer son site web avec l'IA",
+  "iso":                   "ISO 9001 Management Qualité",
+  "audit":                 "Auditeur qualité ISO 9001",
+  "tutorat-francais":      "Tutorat Français",
+  "tutorat-anglais":       "Tutorat Anglais",
+  "tutorat-math":          "Tutorat Mathématiques",
+  "anglais-vacances-ete":  "Pack Vacances Anglais (7-14 ans)",
+  "multiple":              "Plusieurs formations",
+};
+
+async function appendToSheet(data: {
+  name: string;
+  email: string;
+  phone?: string;
+  course?: string;
+  message: string;
+}) {
+  const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+  if (!webhookUrl) return;
+  try {
+    await fetch(webhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ...data,
+        courseLabel: data.course ? (COURSE_LABELS[data.course] ?? data.course) : "Contact général",
+      }),
+    });
+  } catch (err) {
+    console.error("[contact] Google Sheets webhook failed:", err);
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, message, course } = await req.json();
+    const { name, email, phone, message, course } = await req.json();
 
-    if (!name || !email || !message) {
+    if (!name || !email) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
 
@@ -27,7 +63,8 @@ export async function POST(req: NextRequest) {
           <table style="width:100%;border-collapse:collapse;">
             <tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Nom</td><td style="padding:8px 0;font-weight:600;">${name}</td></tr>
             <tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Email</td><td style="padding:8px 0;"><a href="mailto:${email}">${email}</a></td></tr>
-            ${course ? `<tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Formation</td><td style="padding:8px 0;font-weight:600;color:#1d4ed8;">${course}</td></tr>` : ""}
+            ${phone ? `<tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Téléphone</td><td style="padding:8px 0;">${phone}</td></tr>` : ""}
+            ${course ? `<tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Formation</td><td style="padding:8px 0;font-weight:600;color:#1d4ed8;">${COURSE_LABELS[course] ?? course}</td></tr>` : ""}
           </table>
           <div style="margin-top:20px;padding:16px;background:#f8fafc;border-radius:8px;border-left:3px solid #3b82f6;">
             <p style="margin:0;white-space:pre-wrap;color:#1e293b;">${message}</p>
@@ -55,6 +92,9 @@ export async function POST(req: NextRequest) {
         </div>
       `,
     });
+
+    // Write to Google Sheet (fire-and-forget, doesn't block the response)
+    void appendToSheet({ name, email, phone, course, message });
 
     return NextResponse.json({ ok: true });
   } catch (err) {
