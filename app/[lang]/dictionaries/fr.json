@@ -3,7 +3,7 @@
     "courses": "Formations",
     "why": "Pourquoi Nexo",
     "contact": "Nous contacter",
-    "enroll": "Réserver ma place"
+    "enroll": "Prendre contact"
   },
   "hero": {
     "badge": "Formateurs experts en activité · Certificat de réussite inclus",
@@ -474,32 +474,31 @@
         "group": "Digital et SI",
         "value": "qa",
         "label": "Ingénierie QA propulsée par l'IA",
-        "badge": "Juillet 2026 · 297$",
-        "stripe": true
+        "badge": "Prochainement"
       },
       {
         "group": "Digital et SI",
         "value": "a11y",
         "label": "Accessibilité web & outils de test",
-        "badge": "Planifié · 200$"
+        "badge": "Prochainement"
       },
       {
         "group": "QHSE et industrie",
         "value": "iso",
         "label": "ISO 9001:2015 — Management Qualité",
-        "badge": "Planifié · 200$"
+        "badge": "Prochainement"
       },
       {
         "group": "QHSE et industrie",
         "value": "audit",
         "label": "Auditeur qualité ISO 9001",
-        "badge": "Planifié · 200$"
+        "badge": "Prochainement"
       },
       {
         "group": "Digital et SI",
         "value": "web",
         "label": "Créez votre site web avec l'IA",
-        "badge": "Planifié · 200$"
+        "badge": "Prochainement"
       },
       {
         "group": "Tutorat et langue",
@@ -519,13 +518,8 @@
     "email_placeholder": "vous@exemple.com",
     "phone": "Téléphone / WhatsApp",
     "phone_placeholder": "+1 234 567 8900",
-    "experience": "Où en êtes-vous aujourd'hui ?",
-    "exp_placeholder": "Sélectionnez votre niveau…",
-    "exp_none": "Aucun background tech ou qualité",
-    "exp_some": "Quelques connaissances, je veux aller plus loin",
-    "exp_dev": "Professionnel en activité cherchant à monter en compétences",
-    "submit": "Réserver ma place",
-    "submit_pay": "Réserver ma place — {badge}",
+    "submit": "Envoyer ma demande",
+    "submit_pay": "S'inscrire — {badge}",
     "loading": "Redirection vers le paiement sécurisé…",
     "trust": "Sécurisé par Stripe · Satisfaction garantie · Sans frais cachés",
     "error": "Une erreur s'est produite de notre côté. Réessayez ou écrivez-nous directement."
@@ -620,6 +614,8 @@
     "name_placeholder": "Votre nom",
     "email": "Adresse email",
     "email_placeholder": "vous@exemple.com",
+    "phone": "Téléphone / WhatsApp",
+    "phone_placeholder": "+212 6 00 00 00 00",
     "message": "Votre message",
     "message_placeholder": "Posez votre question, décrivez votre situation...",
     "submit": "Envoyer le message",

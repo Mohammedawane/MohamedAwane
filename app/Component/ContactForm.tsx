@@ -10,6 +10,8 @@ type ContactDict = {
   name_placeholder: string;
   email: string;
   email_placeholder: string;
+  phone: string;
+  phone_placeholder: string;
   message: string;
   message_placeholder: string;
   submit: string;
@@ -37,6 +39,7 @@ export default function ContactForm({ t }: { t: ContactDict }) {
         body: JSON.stringify({
           name: formData.get("name"),
           email: formData.get("email"),
+          phone: formData.get("phone"),
           message: formData.get("message"),
         }),
       });
@@ -87,6 +90,11 @@ export default function ContactForm({ t }: { t: ContactDict }) {
             <div>
               <label className="mb-1.5 block text-sm font-medium text-gray-700">{t.email}</label>
               <input name="email" type="email" required placeholder={t.email_placeholder} className={inputClass} />
+            </div>
+
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-gray-700">{t.phone}</label>
+              <input name="phone" type="tel" placeholder={t.phone_placeholder} className={inputClass} />
             </div>
 
             <div>

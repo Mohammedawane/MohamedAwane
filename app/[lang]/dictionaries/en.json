@@ -3,7 +3,7 @@
     "courses": "Programs",
     "why": "Why Nexo",
     "contact": "Contact Us",
-    "enroll": "Reserve My Spot"
+    "enroll": "Contact Us"
   },
   "hero": {
     "badge": "Taught by Canadian Industry Experts · Certificate of Completion Included",
@@ -474,32 +474,31 @@
         "group": "Testing & Development",
         "value": "qa",
         "label": "AI-Powered QA Engineering",
-        "badge": "Scheduled · $297",
-        "stripe": true
+        "badge": "Coming soon"
       },
       {
         "group": "Testing & Development",
         "value": "a11y",
         "label": "Web Accessibility & Testing Tools",
-        "badge": "Scheduled · $200"
+        "badge": "Coming soon"
       },
       {
         "group": "Quality Management",
         "value": "iso",
         "label": "ISO 9001:2015 Quality Management",
-        "badge": "Scheduled · $200"
+        "badge": "Coming soon"
       },
       {
         "group": "Quality Management",
         "value": "audit",
         "label": "ISO 9001 Internal Auditor",
-        "badge": "Scheduled · $200"
+        "badge": "Coming soon"
       },
       {
         "group": "Digital Skills",
         "value": "web",
         "label": "Build Your Website with AI",
-        "badge": "Scheduled · $200"
+        "badge": "Coming soon"
       },
       {
         "group": "Tutoring & Language",
@@ -519,13 +518,8 @@
     "email_placeholder": "you@example.com",
     "phone": "Phone / WhatsApp",
     "phone_placeholder": "+1 234 567 8900",
-    "experience": "Where are you starting from?",
-    "exp_placeholder": "Select your level…",
-    "exp_none": "No tech or quality background",
-    "exp_some": "Some knowledge, looking to go further",
-    "exp_dev": "Working professional looking to upskill",
-    "submit": "Reserve My Spot",
-    "submit_pay": "Reserve My Spot — {badge}",
+    "submit": "Send my request",
+    "submit_pay": "Enroll — {badge}",
     "loading": "Redirecting to secure payment…",
     "trust": "Secured by Stripe · Satisfaction guaranteed · No hidden fees",
     "error": "Something went wrong on our end. Please try again or email us directly."
@@ -620,6 +614,8 @@
     "name_placeholder": "Your name",
     "email": "Email Address",
     "email_placeholder": "you@example.com",
+    "phone": "Phone / WhatsApp",
+    "phone_placeholder": "+1 234 567 8900",
     "message": "Your message",
     "message_placeholder": "Ask your question, describe your situation...",
     "submit": "Send message",

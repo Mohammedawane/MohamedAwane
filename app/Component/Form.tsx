@@ -17,11 +17,6 @@ type FormDict = {
   email_placeholder: string;
   phone: string;
   phone_placeholder: string;
-  experience: string;
-  exp_placeholder: string;
-  exp_none: string;
-  exp_some: string;
-  exp_dev: string;
   submit: string;
   submit_pay: string;
   loading: string;
@@ -76,7 +71,6 @@ export default function Form({ t, lang }: { t: FormDict; lang: string }) {
             name: formData.get("name"),
             email: formData.get("email"),
             phone: formData.get("phone"),
-            experience: formData.get("experience"),
             course,
             lang,
           }),
@@ -216,21 +210,6 @@ export default function Form({ t, lang }: { t: FormDict; lang: string }) {
           <div>
             <label className="mb-1.5 block text-sm font-medium text-gray-700">{t.phone}</label>
             <input name="phone" type="tel" placeholder={t.phone_placeholder} className={inputClass} />
-          </div>
-
-          <div>
-            <label className="mb-1.5 block text-sm font-medium text-gray-700">{t.experience}</label>
-            <div className="relative">
-              <select name="experience" className={selectClass}>
-                <option value="">{t.exp_placeholder}</option>
-                <option value="none">{t.exp_none}</option>
-                <option value="some">{t.exp_some}</option>
-                <option value="dev">{t.exp_dev}</option>
-              </select>
-              <svg className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
-              </svg>
-            </div>
           </div>
 
           {errorMsg && (
