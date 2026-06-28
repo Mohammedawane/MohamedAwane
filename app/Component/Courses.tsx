@@ -30,14 +30,15 @@ type CoursesDict = {
 import CourseLink from "./CourseLink";
 
 const COURSE_IMAGES: Record<string, string> = {
-  "qa":               "/coursesPics/qaIA.jpg",
-  "a11y":             "/coursesPics/accesbility.jpg",
-  "web":              "/coursesPics/web.jpg",
-  "iso":              "/coursesPics/iso9001.png",
-  "audit":            "/coursesPics/auditeur.jpg",
-  "tutorat-francais": "/coursesPics/tutorat-francais.jpg",
-  "tutorat-anglais":  "/coursesPics/tutorat-anglais.jpg",
-  "tutorat-math":     "/coursesPics/tutorat-math.jpg",
+  "qa":                   "/coursesPics/qaIA.jpg",
+  "a11y":                 "/coursesPics/accesbility.jpg",
+  "web":                  "/coursesPics/web.jpg",
+  "iso":                  "/coursesPics/iso9001.png",
+  "audit":                "/coursesPics/auditeur.jpg",
+  "tutorat-francais":     "/coursesPics/tutorat-francais.jpg",
+  "tutorat-anglais":      "/coursesPics/tutorat-anglais.jpg",
+  "tutorat-math":         "/coursesPics/tutorat-math.jpg",
+  "anglais-vacances-ete": "/coursesPics/tutorat-anglais.jpg",
 };
 
 const COLORS = {

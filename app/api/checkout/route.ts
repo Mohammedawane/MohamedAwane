@@ -5,7 +5,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   ...(process.env.STRIPE_ACCOUNT_ID ? { stripeAccount: process.env.STRIPE_ACCOUNT_ID } : {}),
 });
 
-type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math";
+type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete";
 
 const COURSES: Record<CourseKey, { name: string; description: string; amount: number; recurring?: boolean }> = {
   qa: {
@@ -54,6 +54,12 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
     name: "Tutorat Mathématiques — Primaire",
     description: "Cours individuel en ligne · 1h/séance · abonnement mensuel",
     amount: 15000,
+    recurring: true,
+  },
+  "anglais-vacances-ete": {
+    name: "Pack Vacances d'Été — Communication Anglais (7-14 ans)",
+    description: "Groupe de 4 · 2 séances/semaine · 1h30/séance · Juillet & Août 2026",
+    amount: 8000, // 800 DH ≈ 80 USD
     recurring: true,
   },
 };

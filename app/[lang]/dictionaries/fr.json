@@ -166,6 +166,20 @@
         ],
         "cta": "S'inscrire — 150$/mois",
         "href": "#contact?course=tutorat-math"
+      },
+      {
+        "category": "tutorat-langue",
+        "badge": "Juillet · Août 2026 · Groupe de 4",
+        "tag": "Pack Vacances d'Été",
+        "title": "Communication Anglais — 7 à 14 ans",
+        "sub": "2 séances par semaine de 1h30 en petit groupe de 4 enfants. On travaille la prise de parole, la présentation et l'expression orale en anglais — dans un cadre bienveillant et stimulant.",
+        "details": [
+          "2 séances/semaine · 1h30 chacune · en ligne",
+          "800 DH / mois · Juillet & Août 2026",
+          "Petit groupe de 4 enfants · 7-14 ans"
+        ],
+        "cta": "S'inscrire — 800 DH/mois",
+        "href": "#contact?course=anglais-vacances-ete"
       }
     ],
     "detail_label": "Voir le programme"
@@ -486,6 +500,12 @@
         "value": "web",
         "label": "Créez votre site web avec l'IA",
         "badge": "Planifié · 200$"
+      },
+      {
+        "group": "Tutorat et langue",
+        "value": "anglais-vacances-ete",
+        "label": "Pack Vacances — Communication Anglais (7-14 ans)",
+        "badge": "Juillet & Août 2026 · 800 DH/mois"
       },
       {
         "group": "",
@@ -1175,6 +1195,77 @@
           "Il a des lacunes qui s'accumulent et il peine à suivre en classe",
           "Vous voulez un suivi personnalisé pour l'aider à combler ses lacunes",
           "Vous préparez votre enfant pour une évaluation ou un passage de niveau"
+        ]
+      },
+      "anglais-vacances-ete": {
+        "title": "Pack Vacances d'Été — Communication Anglais (7-14 ans)",
+        "tagline": "8 semaines pour que votre enfant ose parler, sache se présenter et gagne confiance en anglais — en petit groupe de 4, en ligne, deux fois par semaine.",
+        "price": "800 DH/mois",
+        "duration": "1h30 / séance · 2x par semaine",
+        "date": "Juillet & Août 2026",
+        "cert": "Rapport de progression inclus",
+        "highlights": [
+          {
+            "title": "Petit groupe de 4",
+            "text": "Chaque enfant prend la parole à chaque séance. Pas 1 élève parmi 30 — 1 parmi 4, avec toute l'attention du tuteur."
+          },
+          {
+            "title": "Communication avant tout",
+            "text": "On apprend à se présenter, raconter, expliquer, donner son avis. Des compétences orales concrètes, pas juste de la grammaire."
+          },
+          {
+            "title": "Idéal pour les vacances",
+            "text": "2 séances de 1h30 par semaine — assez pour progresser vraiment, sans alourdir l'été de votre enfant."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Se présenter & parler de soi",
+            "description": "Prénom, âge, famille, loisirs, pays. Jeux de rôle, dialogues en duo, premiers automatismes à l'oral.",
+            "tags": [
+              "Introduction",
+              "Oral",
+              "Jeux de rôle"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "Mon quotidien en anglais",
+            "description": "Décrire ses journées, ses activités de vacances, ses préférences. Vocabulaire du temps libre, du sport, de la musique.",
+            "tags": [
+              "Vocabulaire",
+              "Quotidien",
+              "Expression"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Raconter & expliquer",
+            "description": "Comment raconter un événement ou expliquer une idée simplement en anglais. Travail sur la fluidité et les connecteurs.",
+            "tags": [
+              "Narration",
+              "Fluidité",
+              "Connecteurs"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Présenter devant le groupe",
+            "description": "Mini-présentations de 2-3 minutes sur un sujet choisi par l'enfant. Retour bienveillant du tuteur et des camarades.",
+            "tags": [
+              "Présentation",
+              "Confiance",
+              "Feedback"
+            ]
+          }
+        ],
+        "audience": [
+          "Votre enfant a entre 7 et 14 ans et veut améliorer son anglais oral",
+          "Il comprend un peu mais hésite à parler ou manque de confiance",
+          "Vous cherchez une activité enrichissante et structurée pour l'été",
+          "Vous voulez qu'il reparte en septembre plus à l'aise en cours d'anglais",
+          "Vous préférez un petit groupe chaleureux à une grande classe impersonnelle"
         ]
       }
     }

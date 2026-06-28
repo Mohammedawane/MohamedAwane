@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "../../dictionaries";
 import FormationEnroll from "@/app/Component/FormationEnroll";
 
-const VALID_COURSES = ["qa", "iso", "web", "a11y", "audit", "tutorat-francais", "tutorat-anglais", "tutorat-math"] as const;
+const VALID_COURSES = ["qa", "iso", "web", "a11y", "audit", "tutorat-francais", "tutorat-anglais", "tutorat-math", "anglais-vacances-ete"] as const;
 type CourseSlug = (typeof VALID_COURSES)[number];
 
 function isValidCourse(slug: string): slug is CourseSlug {
@@ -10,14 +10,15 @@ function isValidCourse(slug: string): slug is CourseSlug {
 }
 
 const COURSE_IMAGES: Record<string, string> = {
-  "qa":               "/coursesPics/qaIA.jpg",
-  "a11y":             "/coursesPics/accesbility.jpg",
-  "web":              "/coursesPics/web.jpg",
-  "iso":              "/coursesPics/iso9001.png",
-  "audit":            "/coursesPics/auditeur.jpg",
-  "tutorat-francais": "/coursesPics/tutorat-francais.jpg",
-  "tutorat-anglais":  "/coursesPics/tutorat-anglais.jpg",
-  "tutorat-math":     "/coursesPics/tutorat-math.jpg",
+  "qa":                   "/coursesPics/qaIA.jpg",
+  "a11y":                 "/coursesPics/accesbility.jpg",
+  "web":                  "/coursesPics/web.jpg",
+  "iso":                  "/coursesPics/iso9001.png",
+  "audit":                "/coursesPics/auditeur.jpg",
+  "tutorat-francais":     "/coursesPics/tutorat-francais.jpg",
+  "tutorat-anglais":      "/coursesPics/tutorat-anglais.jpg",
+  "tutorat-math":         "/coursesPics/tutorat-math.jpg",
+  "anglais-vacances-ete": "/coursesPics/tutorat-anglais.jpg",
 };
 
 export default async function FormationPage({

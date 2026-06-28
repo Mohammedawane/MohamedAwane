@@ -166,6 +166,20 @@
         ],
         "cta": "Enroll — $150/month",
         "href": "#contact?course=tutorat-math"
+      },
+      {
+        "category": "tutorat-langue",
+        "badge": "July · August 2026 · Group of 4",
+        "tag": "Summer Pack",
+        "title": "English Communication — Ages 7 to 14",
+        "sub": "2 sessions per week of 1h30 in a small group of 4 children. We work on speaking up, presenting and expressing ideas in English — in a supportive and engaging environment.",
+        "details": [
+          "2 sessions/week · 1h30 each · online",
+          "800 MAD / month · July & August 2026",
+          "Group of 4 children · Ages 7-14"
+        ],
+        "cta": "Enroll — 800 MAD/month",
+        "href": "#contact?course=anglais-vacances-ete"
       }
     ],
     "detail_label": "View program"
@@ -486,6 +500,12 @@
         "value": "web",
         "label": "Build Your Website with AI",
         "badge": "Scheduled · $200"
+      },
+      {
+        "group": "Tutoring & Language",
+        "value": "anglais-vacances-ete",
+        "label": "Summer Pack — English Communication (Ages 7-14)",
+        "badge": "July & August 2026 · 800 MAD/month"
       },
       {
         "group": "",
@@ -1175,6 +1195,77 @@
           "Gaps are piling up and they're struggling to follow class",
           "You want personalized support to help them catch up",
           "You're preparing your child for an assessment or grade transition"
+        ]
+      },
+      "anglais-vacances-ete": {
+        "title": "Summer Pack — English Communication (Ages 7-14)",
+        "tagline": "8 weeks for your child to speak up, present confidently, and gain real fluency in English — in a small group of 4, online, twice a week.",
+        "price": "800 MAD/month",
+        "duration": "1h30 / session · 2x per week",
+        "date": "July & August 2026",
+        "cert": "Progress report included",
+        "highlights": [
+          {
+            "title": "Small group of 4",
+            "text": "Every child speaks at every session. Not 1 in 30 — 1 in 4, with the tutor's full attention throughout."
+          },
+          {
+            "title": "Communication first",
+            "text": "We learn to introduce yourself, tell a story, explain ideas, give an opinion. Real spoken skills — not just grammar rules."
+          },
+          {
+            "title": "Perfect for summer",
+            "text": "2 sessions of 1h30 per week — enough to make real progress without taking over your child's whole summer."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Introducing yourself & talking about yourself",
+            "description": "Name, age, family, hobbies, country. Role-plays, pair dialogues, first speaking habits.",
+            "tags": [
+              "Introduction",
+              "Speaking",
+              "Role-play"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "My daily life in English",
+            "description": "Describing your day, summer activities, preferences. Vocabulary for free time, sport and music.",
+            "tags": [
+              "Vocabulary",
+              "Daily life",
+              "Expression"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Telling stories & explaining ideas",
+            "description": "How to tell an event or explain a simple idea in English. Work on fluency, connectors and sentence flow.",
+            "tags": [
+              "Narration",
+              "Fluency",
+              "Connectors"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Presenting in front of the group",
+            "description": "2-3 minute mini-presentations on a topic chosen by each child. Kind, constructive feedback from the tutor and peers.",
+            "tags": [
+              "Presentation",
+              "Confidence",
+              "Feedback"
+            ]
+          }
+        ],
+        "audience": [
+          "Your child is between 7 and 14 and wants to improve their spoken English",
+          "They understand a little but hesitate to speak or lack confidence",
+          "You're looking for an enriching, structured summer activity",
+          "You want them to go back to school in September more comfortable in English class",
+          "You prefer a warm small group over a large impersonal classroom"
         ]
       }
     }
