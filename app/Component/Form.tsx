@@ -35,10 +35,14 @@ const inputClass =
 const selectClass =
   "w-full appearance-none rounded-xl border border-gray-200 bg-white p-4 pr-10 text-gray-900 outline-none transition-all duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 disabled:opacity-40";
 
+const ACTIVE_COURSES = new Set(["anglais-vacances-ete"]);
+
 export default function Form({ t, lang }: { t: FormDict; lang: string }) {
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [course, setCourse] = useState("");
+  const [contactSent, setContactSent] = useState(false);
+  const isFr = lang !== "en";
 
   useEffect(() => {
     function parseHash() {
@@ -60,34 +64,55 @@ export default function Form({ t, lang }: { t: FormDict; lang: string }) {
     setLoading(true);
     setErrorMsg(null);
 
+    const isActive = ACTIVE_COURSES.has(course);
+
     try {
-      const res = await fetch("/api/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: formData.get("name"),
-          email: formData.get("email"),
-          phone: formData.get("phone"),
-          experience: formData.get("experience"),
-          course,
-          lang,
-        }),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        setErrorMsg(data.error ?? t.error);
-        setLoading(false);
-        return;
+      if (isActive) {
+        // Active course → Stripe checkout
+        const res = await fetch("/api/checkout", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: formData.get("name"),
+            email: formData.get("email"),
+            phone: formData.get("phone"),
+            experience: formData.get("experience"),
+            course,
+            lang,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok) { setErrorMsg(data.error ?? t.error); setLoading(false); return; }
+        window.location.href = data.url;
+      } else {
+        // Coming-soon course → contact email
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: formData.get("name"),
+            email: formData.get("email"),
+            message: isFr
+              ? `Je souhaite être prévenu(e) dès l'ouverture des inscriptions pour : ${selected?.label ?? course}`
+              : `I'd like to be notified when enrollment opens for: ${selected?.label ?? course}`,
+            course,
+          }),
+        });
+        if (!res.ok) {
+          const data = await res.json();
+          setErrorMsg(data.error ?? t.error);
+          setLoading(false);
+          return;
+        }
+        setContactSent(true);
       }
-
-      window.location.href = data.url;
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : t.error);
       setLoading(false);
     }
   }
+
+  const isActiveSelected = ACTIVE_COURSES.has(course);
 
   return (
     <section id="contact" className="bg-white px-5 py-16 md:px-6 md:py-24">
@@ -98,6 +123,23 @@ export default function Form({ t, lang }: { t: FormDict; lang: string }) {
           <p className="mt-4 text-gray-600">{t.sub}</p>
         </div>
 
+        {contactSent ? (
+          <div className="flex flex-col items-center rounded-2xl border border-green-200 bg-green-50 p-12 text-center shadow-md">
+            <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-7 w-7 text-green-600">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+            </div>
+            <p className="text-lg font-bold text-gray-900">
+              {isFr ? "Demande enregistrée !" : "Request received!"}
+            </p>
+            <p className="mt-2 text-sm text-gray-500">
+              {isFr
+                ? "Vous serez parmi les premiers prévenus dès l'ouverture des inscriptions."
+                : "You'll be among the first to know when enrollment opens."}
+            </p>
+          </div>
+        ) : (
         <form
           action={handleSubmit}
           className="space-y-5 rounded-2xl border border-gray-200 bg-white p-8 shadow-md"
@@ -198,7 +240,9 @@ export default function Form({ t, lang }: { t: FormDict; lang: string }) {
           <button
             type="submit"
             disabled={loading || !course}
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-orange-500 p-4 font-bold text-white shadow transition-all duration-200 hover:bg-orange-600 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 disabled:translate-y-0"
+            className={`flex w-full items-center justify-center gap-2 rounded-xl p-4 font-bold text-white shadow transition-all duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 disabled:translate-y-0 ${
+              isActiveSelected ? "bg-orange-500 hover:bg-orange-600" : "bg-blue-700 hover:bg-blue-800"
+            }`}
           >
             {loading ? (
               <>
@@ -208,20 +252,30 @@ export default function Form({ t, lang }: { t: FormDict; lang: string }) {
                 </svg>
                 {t.loading}
               </>
-            ) : (
+            ) : isActiveSelected ? (
               <>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
                 </svg>
                 {selected ? t.submit_pay.replace("{badge}", selected.badge ?? "") : t.submit}
               </>
+            ) : (
+              <>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                </svg>
+                {isFr ? "M'inscrire sur la liste d'attente" : "Join the waiting list"}
+              </>
             )}
           </button>
 
           {course && (
-            <p className="text-center text-xs text-gray-400">{t.trust}</p>
+            <p className="text-center text-xs text-gray-400">
+              {isActiveSelected ? t.trust : (isFr ? "Aucun paiement — nous vous contactons à l'ouverture." : "No payment — we'll reach out when enrollment opens.")}
+            </p>
           )}
         </form>
+        )}
       </div>
     </section>
   );
