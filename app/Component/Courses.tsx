@@ -88,7 +88,10 @@ const COLORS = {
   },
 };
 
+const ACTIVE_COURSES = new Set(["anglais-vacances-ete"]);
+
 export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
+  const isFr = lang !== "en";
   return (
     <section id="formations" className="bg-white py-16 px-5 md:py-24 md:px-6">
       <div className="mx-auto max-w-6xl">
@@ -125,13 +128,14 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
                   {items.map((course) => {
                     const slug = course.href.replace("#contact?course=", "");
                     const imageSrc = COURSE_IMAGES[slug];
+                    const isActive = ACTIVE_COURSES.has(slug);
                     return (
                     <div
                       key={course.title}
                       className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     >
                       {/* Course image / fallback gradient */}
-                      <div className="h-52 overflow-hidden">
+                      <div className="relative h-52 overflow-hidden">
                         {imageSrc ? (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
@@ -145,6 +149,14 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
                             <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={1.5} className="h-12 w-12 opacity-60">
                               <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                             </svg>
+                          </div>
+                        )}
+                        {/* Prochainement overlay badge */}
+                        {!isActive && (
+                          <div className="absolute inset-0 flex items-center justify-center bg-gray-900/50">
+                            <span className="rounded-full bg-white/95 px-5 py-2 text-sm font-bold tracking-wide text-gray-800 shadow-lg">
+                              {isFr ? "Prochainement" : "Coming soon"}
+                            </span>
                           </div>
                         )}
                       </div>
@@ -175,14 +187,23 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
                         </ul>
 
                         <div className="flex flex-col gap-2 mt-auto">
-                          <CourseLink
-                            href={course.href}
-                            className={`block w-full rounded-xl py-3 text-center text-sm font-semibold transition-all duration-200 ${c.ctaPrimary}`}
-                          >
-                            {course.cta}
-                          </CourseLink>
+                          {isActive ? (
+                            <CourseLink
+                              href={course.href}
+                              className={`block w-full rounded-xl py-3 text-center text-sm font-semibold transition-all duration-200 ${c.ctaPrimary}`}
+                            >
+                              {course.cta}
+                            </CourseLink>
+                          ) : (
+                            <CourseLink
+                              href={course.href}
+                              className="block w-full rounded-xl border-2 border-gray-300 py-3 text-center text-sm font-semibold text-gray-600 transition-all duration-200 hover:border-gray-400 hover:text-gray-800"
+                            >
+                              {isFr ? "Me prévenir à l'ouverture" : "Notify me when open"}
+                            </CourseLink>
+                          )}
                           <a
-                            href={`/${lang}/formations/${course.href.replace("#contact?course=", "")}`}
+                            href={`/${lang}/formations/${slug}`}
                             className={`block w-full rounded-xl border py-2.5 text-center text-sm transition-all duration-200 ${c.ctaSecondary}`}
                           >
                             {t.detail_label}
