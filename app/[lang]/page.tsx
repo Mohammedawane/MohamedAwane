@@ -14,6 +14,7 @@ import ContactForm from "@/app/Component/ContactForm";
 import Form from "@/app/Component/Form";
 import Footer from "@/app/Component/Footer";
 import Reveal from "@/app/Component/Reveal";
+import AudienceSelector from "@/app/Component/AudienceSelector";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
@@ -24,6 +25,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     <main className="min-h-screen">
       <Navbar t={dict.nav} lang={lang} courses={dict.courses} />
       <Hero t={dict.hero} coursesCount={dict.courses.items.length} />
+      <AudienceSelector lang={lang} />
 
       <Reveal><Courses t={dict.courses} lang={lang} /></Reveal>
       <Reveal delay={50}><Stats t={dict.stats} /></Reveal>
