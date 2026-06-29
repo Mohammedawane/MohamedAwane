@@ -159,18 +159,42 @@ export async function POST(req: NextRequest) {
 
     console.log("[webhook] payment confirmed", { email, courseKey, name, lang });
 
-    if (email && process.env.RESEND_API_KEY) {
+    if (process.env.RESEND_API_KEY) {
       const { Resend } = await import("resend");
       const resend = new Resend(process.env.RESEND_API_KEY);
-      const { subject, html } = buildEmail(name, courseName, lang);
-      const { error } = await resend.emails.send({
-        from: "Nexo Skills <info@nexo-skills.com>",
-        to: email,
-        subject,
-        html,
+      const adminEmail = process.env.CONTACT_EMAIL ?? "awanemohammed@gmail.com";
+      const amount = session.amount_total ? `${(session.amount_total / 100).toFixed(2)} ${(session.currency ?? "usd").toUpperCase()}` : "";
+
+      // Email de notification admin
+      const { error: adminError } = await resend.emails.send({
+        from: "Nexo Skills <onboarding@resend.dev>",
+        to: adminEmail,
+        subject: `Paiement reçu — ${courseName} — ${name}`,
+        html: `
+          <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
+            <h2 style="color:#1e293b;">Nouveau paiement reçu ✓</h2>
+            <p><strong>Formation :</strong> ${courseName}</p>
+            <p><strong>Client :</strong> ${name}</p>
+            <p><strong>Email :</strong> <a href="mailto:${email}">${email}</a></p>
+            ${amount ? `<p><strong>Montant :</strong> ${amount}</p>` : ""}
+          </div>
+        `,
       });
-      if (error) console.error("[webhook] email error", error);
-      else console.log("[webhook] confirmation email sent to", email);
+      if (adminError) console.error("[webhook] admin email error", adminError);
+      else console.log("[webhook] admin notified at", adminEmail);
+
+      // Email de confirmation client
+      if (email) {
+        const { subject, html } = buildEmail(name, courseName, lang);
+        const { error: clientError } = await resend.emails.send({
+          from: "Nexo Skills <onboarding@resend.dev>",
+          to: email,
+          subject,
+          html,
+        });
+        if (clientError) console.error("[webhook] client email error", clientError);
+        else console.log("[webhook] confirmation sent to", email);
+      }
     }
   }
 
