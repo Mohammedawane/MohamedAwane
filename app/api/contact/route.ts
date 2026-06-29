@@ -9,7 +9,7 @@ const COURSE_LABELS: Record<string, string> = {
   "tutorat-francais":      "Tutorat Français",
   "tutorat-anglais":       "Tutorat Anglais",
   "tutorat-math":          "Tutorat Mathématiques",
-  "anglais-vacances-ete":  "Pack Vacances Anglais (7-14 ans)",
+  "anglais-vacances-ete":  "Pack Vacances — Anglais pour enfants",
   "multiple":              "Plusieurs formations",
 };
 

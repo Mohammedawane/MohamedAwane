@@ -7,7 +7,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const isFr = lang !== "en";
   return {
     title: isFr
-      ? "Pack Vacances d'Été — Communication Anglais 7-14 ans | Nexo Skills"
+      ? "Pack Vacances d'Été — Anglais pour enfants | Nexo Skills"
       : "Summer Pack — English Communication Ages 7-14 | Nexo Skills",
     description: isFr
       ? "Juillet & Août 2026. 2 séances de 1h30 par semaine en petit groupe de 4. Votre enfant gagne confiance en anglais oral dès cet été — en ligne."
@@ -93,7 +93,7 @@ export default async function PackAnglaiseEtePage({ params }: { params: Promise<
 
             <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 md:text-4xl">
               {isFr
-                ? "Pack Vacances d'Été — Communication Anglais (7-14 ans)"
+                ? "Pack Vacances d'Été — Anglais pour enfants"
                 : "Summer Pack — English Communication (Ages 7-14)"}
             </h1>
             <p className="mb-10 max-w-xl text-lg leading-relaxed text-gray-600">

@@ -52,7 +52,7 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
     recurring: true,
   },
   "anglais-vacances-ete": {
-    name: "Pack Vacances d'Été — Communication Anglais (7-14 ans)",
+    name: "Pack Vacances d'Été — Anglais pour enfants",
     description: "Groupe de 4 · 2 séances/semaine · 1h30/séance · Juillet & Août 2026",
     amount: 8000, // 800 DH ≈ 80 USD
     recurring: true,
