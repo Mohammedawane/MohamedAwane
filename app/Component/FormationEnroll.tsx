@@ -302,7 +302,7 @@ export default function FormationEnroll({
               </p>
               <ol className="space-y-1.5 text-orange-700">
                 <li>1. {isFr ? "Rendez-vous dans un point CashPlus" : "Go to a CashPlus location"}</li>
-                <li>2. {isFr ? "Effectuez un transfert au nom de" : "Transfer to the name of"} : <strong>Nexo Skills</strong></li>
+                <li>2. {isFr ? "Effectuez un transfert au nom de" : "Transfer to the name of"} : <strong>Mohammed Awane</strong></li>
                 <li>3. {isFr ? "Montant" : "Amount"} : <strong>{isFr ? "800 DH" : "800 DH"}</strong></li>
                 <li>4. {isFr ? "Notez votre référence de transfert et remplissez le formulaire ci-dessous" : "Note your transfer reference and fill in the form below"}</li>
               </ol>
