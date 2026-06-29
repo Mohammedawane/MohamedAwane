@@ -53,8 +53,8 @@ export async function POST(req: NextRequest) {
       const resend = new Resend(process.env.RESEND_API_KEY);
 
       await resend.emails.send({
-        from: "Nexo Skills <info@nexo-skills.com>",
-        to: "info@nexo-skills.com",
+        from: "Nexo Skills <onboarding@resend.dev>",
+        to: process.env.CONTACT_EMAIL ?? "awanemohammed@gmail.com",
         subject: course ? `Demande d'info — ${COURSE_LABELS[course] ?? course} — ${name}` : `Nouveau message de ${name}`,
         html: `
           <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
       });
 
       await resend.emails.send({
-        from: "Nexo Skills <info@nexo-skills.com>",
+        from: "Nexo Skills <onboarding@resend.dev>",
         to: email,
         subject: "On a bien reçu votre message — Nexo Skills",
         html: `
