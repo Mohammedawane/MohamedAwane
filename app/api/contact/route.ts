@@ -20,21 +20,21 @@ async function sendEmail(data: {
   course?: string;
   message: string;
 }) {
-  const gmailUser = process.env.GMAIL_USER;
-  const gmailPass = process.env.GMAIL_APP_PASSWORD;
-  const notifyEmail = process.env.CONTACT_EMAIL ?? gmailUser;
+  const smtpUser = process.env.SMTP_USER;
+  const smtpPass = process.env.SMTP_PASSWORD;
+  const notifyEmail = process.env.CONTACT_EMAIL ?? smtpUser;
 
-  if (!gmailUser || !gmailPass) {
-    console.warn("[contact] GMAIL_USER or GMAIL_APP_PASSWORD not set — email skipped");
+  if (!smtpUser || !smtpPass) {
+    console.warn("[contact] SMTP_USER or SMTP_PASSWORD not set — email skipped");
     return;
   }
 
   const { createTransport } = await import("nodemailer");
   const transporter = createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
+    host: process.env.SMTP_HOST ?? "smtp-relay.brevo.com",
+    port: Number(process.env.SMTP_PORT ?? 587),
     secure: false,
-    auth: { user: gmailUser, pass: gmailPass },
+    auth: { user: smtpUser, pass: smtpPass },
   });
 
   const courseLabel = data.course ? (COURSE_LABELS[data.course] ?? data.course) : null;
@@ -42,9 +42,11 @@ async function sendEmail(data: {
     ? `Nexo Skills — ${courseLabel} — ${data.name}`
     : `Nexo Skills — Message de ${data.name}`;
 
+  const fromAddress = process.env.CONTACT_EMAIL ?? smtpUser;
+
   // Notification à l'admin
   await transporter.sendMail({
-    from: `"Nexo Skills" <${gmailUser}>`,
+    from: `"Nexo Skills" <${fromAddress}>`,
     to: notifyEmail,
     replyTo: data.email,
     subject,
@@ -59,7 +61,7 @@ async function sendEmail(data: {
 
   // Réponse automatique au client
   await transporter.sendMail({
-    from: `"Nexo Skills" <${gmailUser}>`,
+    from: `"Nexo Skills" <${smtpUser}>`,
     to: data.email,
     subject: "On a bien reçu votre message — Nexo Skills",
     text: `Bonjour ${data.name},\n\nMerci pour votre message. Notre équipe l'a bien reçu et vous répondra dans les 24h.\n\nL'équipe Nexo Skills`,
