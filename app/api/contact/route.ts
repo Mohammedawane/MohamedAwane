@@ -13,6 +13,59 @@ const COURSE_LABELS: Record<string, string> = {
   "multiple":              "Plusieurs formations",
 };
 
+async function sendEmail(data: {
+  name: string;
+  email: string;
+  phone?: string;
+  course?: string;
+  message: string;
+}) {
+  const gmailUser = process.env.GMAIL_USER;
+  const gmailPass = process.env.GMAIL_APP_PASSWORD;
+  const notifyEmail = process.env.CONTACT_EMAIL ?? gmailUser;
+
+  if (!gmailUser || !gmailPass) {
+    console.warn("[contact] GMAIL_USER or GMAIL_APP_PASSWORD not set — email skipped");
+    return;
+  }
+
+  const { createTransport } = await import("nodemailer");
+  const transporter = createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: { user: gmailUser, pass: gmailPass },
+  });
+
+  const courseLabel = data.course ? (COURSE_LABELS[data.course] ?? data.course) : null;
+  const subject = courseLabel
+    ? `Nexo Skills — ${courseLabel} — ${data.name}`
+    : `Nexo Skills — Message de ${data.name}`;
+
+  // Notification à l'admin
+  await transporter.sendMail({
+    from: `"Nexo Skills" <${gmailUser}>`,
+    to: notifyEmail,
+    replyTo: data.email,
+    subject,
+    text: [
+      `Nom       : ${data.name}`,
+      `Email     : ${data.email}`,
+      `Téléphone : ${data.phone || "—"}`,
+      courseLabel ? `Formation : ${courseLabel}` : "",
+      `Message   : ${data.message || "—"}`,
+    ].filter(Boolean).join("\n"),
+  });
+
+  // Réponse automatique au client
+  await transporter.sendMail({
+    from: `"Nexo Skills" <${gmailUser}>`,
+    to: data.email,
+    subject: "On a bien reçu votre message — Nexo Skills",
+    text: `Bonjour ${data.name},\n\nMerci pour votre message. Notre équipe l'a bien reçu et vous répondra dans les 24h.\n\nL'équipe Nexo Skills`,
+  });
+}
+
 async function appendToSheet(data: {
   name: string;
   email: string;
@@ -44,55 +97,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
 
-    // Write to Google Sheet first — works even without Resend
     void appendToSheet({ name, email, phone, course, message });
-
-    // Send emails only if Resend is configured
-    if (process.env.RESEND_API_KEY) {
-      const { Resend } = await import("resend");
-      const resend = new Resend(process.env.RESEND_API_KEY);
-
-      await resend.emails.send({
-        from: "Nexo Skills <onboarding@resend.dev>",
-        to: process.env.CONTACT_EMAIL ?? "awanemohammed@gmail.com",
-        subject: course ? `Demande d'info — ${COURSE_LABELS[course] ?? course} — ${name}` : `Nouveau message de ${name}`,
-        html: `
-          <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
-            <h2 style="margin:0 0 16px;color:#1e293b;">Demande de contact — Nexo Skills</h2>
-            <table style="width:100%;border-collapse:collapse;">
-              <tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Nom</td><td style="padding:8px 0;font-weight:600;">${name}</td></tr>
-              <tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Email</td><td style="padding:8px 0;"><a href="mailto:${email}">${email}</a></td></tr>
-              ${phone ? `<tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Téléphone</td><td style="padding:8px 0;">${phone}</td></tr>` : ""}
-              ${course ? `<tr><td style="padding:8px 0;color:#64748b;font-size:14px;">Formation</td><td style="padding:8px 0;font-weight:600;color:#1d4ed8;">${COURSE_LABELS[course] ?? course}</td></tr>` : ""}
-            </table>
-            <div style="margin-top:20px;padding:16px;background:#f8fafc;border-radius:8px;border-left:3px solid #3b82f6;">
-              <p style="margin:0;white-space:pre-wrap;color:#1e293b;">${message}</p>
-            </div>
-            <p style="margin-top:16px;font-size:12px;color:#94a3b8;">Répondre directement à : <a href="mailto:${email}">${email}</a></p>
-          </div>
-        `,
-        replyTo: email,
-      });
-
-      await resend.emails.send({
-        from: "Nexo Skills <onboarding@resend.dev>",
-        to: email,
-        subject: "On a bien reçu votre message — Nexo Skills",
-        html: `
-          <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;background:#020817;color:#e2e8f0;">
-            <div style="background:linear-gradient(135deg,#1e3a5f,#1e1b4b);padding:32px;border-radius:12px;text-align:center;margin-bottom:24px;">
-              <p style="margin:0 0 8px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#60a5fa;">NEXO SKILLS</p>
-              <h1 style="margin:0;font-size:24px;font-weight:800;color:#fff;">Message bien reçu ✓</h1>
-            </div>
-            <p style="color:#94a3b8;">Bonjour ${name},</p>
-            <p style="color:#cbd5e1;line-height:1.7;">Merci pour votre message. Notre équipe l'a bien reçu et vous répondra dans les <strong style="color:#fff;">24 heures</strong>.</p>
-            <p style="color:#475569;font-size:14px;margin-top:32px;">L'équipe Nexo Skills<br>info@nexo-skills.com</p>
-          </div>
-        `,
-      });
-    } else {
-      console.warn("[contact] RESEND_API_KEY not set — email skipped, Sheet write attempted");
-    }
+    await sendEmail({ name, email, phone, course, message });
 
     return NextResponse.json({ ok: true });
   } catch (err) {
