@@ -54,7 +54,7 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
   "anglais-vacances-ete": {
     name: "Pack Vacances d'Été — Anglais pour enfants",
     description: "Groupe de 4 · 2 séances/semaine · 1h30/séance · Juillet & Août 2026",
-    amount: 80000, // 800 MAD (en centimes)
+    amount: 500, // 5 MAD pour test
     currency: "mad",
     recurring: true,
   },
