@@ -133,7 +133,7 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
         {/* Right: CTA + hamburger */}
         <div className="flex items-center gap-2">
           <a
-            href="#contact"
+            href="#nous-contacter"
             className="hidden rounded-lg bg-blue-700 px-5 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-blue-800 md:block"
           >
             {t.enroll}
@@ -299,7 +299,7 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
           </nav>
 
           <a
-            href="#contact"
+            href="#nous-contacter"
             onClick={() => setOpen(false)}
             className="mt-4 block w-full rounded-xl bg-blue-700 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-800"
           >
