@@ -632,6 +632,7 @@
     "audience_title": "Cette formation est pour vous si…",
     "name_placeholder": "Votre nom complet",
     "email_placeholder": "vous@exemple.com",
+    "phone_placeholder": "+212 6 00 00 00 00",
     "detail_label": "Consulter le détail",
     "courses": {
       "qa": {

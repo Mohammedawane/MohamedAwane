@@ -8,6 +8,7 @@ type EnrollDict = {
   trust: string;
   name_placeholder: string;
   email_placeholder: string;
+  phone_placeholder: string;
 };
 
 type Mode = "pay" | "contact";
@@ -79,13 +80,14 @@ export default function FormationEnroll({
     const form = e.currentTarget;
     const name = (form.elements.namedItem("name") as HTMLInputElement).value;
     const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
     const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message, course }),
+        body: JSON.stringify({ name, email, phone, message, course }),
       });
 
       if (!res.ok) {
@@ -239,6 +241,12 @@ export default function FormationEnroll({
               type="email"
               required
               placeholder={t.email_placeholder}
+              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+            />
+            <input
+              name="phone"
+              type="tel"
+              placeholder={t.phone_placeholder}
               className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
             />
             <textarea
