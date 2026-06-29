@@ -13,61 +13,6 @@ const COURSE_LABELS: Record<string, string> = {
   "multiple":              "Plusieurs formations",
 };
 
-async function sendEmail(data: {
-  name: string;
-  email: string;
-  phone?: string;
-  course?: string;
-  message: string;
-}) {
-  const smtpUser = process.env.SMTP_USER;
-  const smtpPass = process.env.SMTP_PASSWORD;
-  const notifyEmail = process.env.CONTACT_EMAIL ?? smtpUser;
-
-  if (!smtpUser || !smtpPass) {
-    console.warn("[contact] SMTP_USER or SMTP_PASSWORD not set — email skipped");
-    return;
-  }
-
-  const { createTransport } = await import("nodemailer");
-  const transporter = createTransport({
-    host: process.env.SMTP_HOST ?? "smtp-relay.brevo.com",
-    port: Number(process.env.SMTP_PORT ?? 587),
-    secure: false,
-    auth: { user: smtpUser, pass: smtpPass },
-  });
-
-  const courseLabel = data.course ? (COURSE_LABELS[data.course] ?? data.course) : null;
-  const subject = courseLabel
-    ? `Nexo Skills — ${courseLabel} — ${data.name}`
-    : `Nexo Skills — Message de ${data.name}`;
-
-  const fromAddress = process.env.CONTACT_EMAIL ?? smtpUser;
-
-  // Notification à l'admin
-  await transporter.sendMail({
-    from: `"Nexo Skills" <${fromAddress}>`,
-    to: notifyEmail,
-    replyTo: data.email,
-    subject,
-    text: [
-      `Nom       : ${data.name}`,
-      `Email     : ${data.email}`,
-      `Téléphone : ${data.phone || "—"}`,
-      courseLabel ? `Formation : ${courseLabel}` : "",
-      `Message   : ${data.message || "—"}`,
-    ].filter(Boolean).join("\n"),
-  });
-
-  // Réponse automatique au client
-  await transporter.sendMail({
-    from: `"Nexo Skills" <${smtpUser}>`,
-    to: data.email,
-    subject: "On a bien reçu votre message — Nexo Skills",
-    text: `Bonjour ${data.name},\n\nMerci pour votre message. Notre équipe l'a bien reçu et vous répondra dans les 24h.\n\nL'équipe Nexo Skills`,
-  });
-}
-
 async function appendToSheet(data: {
   name: string;
   email: string;
@@ -93,8 +38,7 @@ async function appendToSheet(data: {
 
 export async function GET() {
   return NextResponse.json({
-    GMAIL_USER: process.env.GMAIL_USER ? `${process.env.GMAIL_USER.slice(0, 4)}...` : "NON DEFINI",
-    GMAIL_APP_PASSWORD: process.env.GMAIL_APP_PASSWORD ? `${process.env.GMAIL_APP_PASSWORD.length} caracteres` : "NON DEFINI",
+    RESEND_API_KEY: process.env.RESEND_API_KEY ? "defini" : "NON DEFINI",
     CONTACT_EMAIL: process.env.CONTACT_EMAIL ?? "NON DEFINI",
   });
 }
@@ -109,15 +53,52 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
 
-    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-      console.error("[contact] GMAIL_USER or GMAIL_APP_PASSWORD manquant dans les variables Vercel");
-      return NextResponse.json({ error: "Email non configuré côté serveur" }, { status: 500 });
+    if (!process.env.RESEND_API_KEY) {
+      console.error("[contact] RESEND_API_KEY manquant");
+      return NextResponse.json({ error: "Email non configuré" }, { status: 500 });
     }
 
     void appendToSheet({ name, email, phone, course, message });
-    await sendEmail({ name, email, phone, course, message });
-    console.log("[contact] email envoyé à", email);
 
+    const { Resend } = await import("resend");
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const notifyEmail = process.env.CONTACT_EMAIL ?? "awanemohammed@gmail.com";
+    const courseLabel = course ? (COURSE_LABELS[course] ?? course) : null;
+
+    await resend.emails.send({
+      from: "Nexo Skills <onboarding@resend.dev>",
+      to: notifyEmail,
+      replyTo: email,
+      subject: courseLabel
+        ? `Nexo Skills — ${courseLabel} — ${name}`
+        : `Nexo Skills — Message de ${name}`,
+      html: `
+        <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
+          <h2 style="color:#1e293b;">Nouvelle demande — Nexo Skills</h2>
+          <p><strong>Nom :</strong> ${name}</p>
+          <p><strong>Email :</strong> <a href="mailto:${email}">${email}</a></p>
+          ${phone ? `<p><strong>Téléphone :</strong> ${phone}</p>` : ""}
+          ${courseLabel ? `<p><strong>Formation :</strong> ${courseLabel}</p>` : ""}
+          ${message ? `<p><strong>Message :</strong></p><p style="white-space:pre-wrap;background:#f8fafc;padding:12px;border-radius:8px;">${message}</p>` : ""}
+        </div>
+      `,
+    });
+
+    await resend.emails.send({
+      from: "Nexo Skills <onboarding@resend.dev>",
+      to: email,
+      subject: "On a bien reçu votre message — Nexo Skills",
+      html: `
+        <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
+          <h2 style="color:#1e293b;">Message bien reçu ✓</h2>
+          <p>Bonjour ${name},</p>
+          <p>Merci pour votre message. Notre équipe l'a bien reçu et vous répondra dans les <strong>24 heures</strong>.</p>
+          <p style="color:#64748b;">L'équipe Nexo Skills</p>
+        </div>
+      `,
+    });
+
+    console.log("[contact] emails envoyés");
     return NextResponse.json({ ok: true });
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
