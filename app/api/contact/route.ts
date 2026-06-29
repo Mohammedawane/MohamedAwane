@@ -90,20 +90,28 @@ async function appendToSheet(data: {
 }
 
 export async function POST(req: NextRequest) {
+  console.log("[contact] POST received");
   try {
     const { name, email, phone, message, course } = await req.json();
+    console.log("[contact] data:", { name, email, course });
 
     if (!name || !email) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
 
+    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+      console.error("[contact] GMAIL_USER or GMAIL_APP_PASSWORD manquant dans les variables Vercel");
+      return NextResponse.json({ error: "Email non configuré côté serveur" }, { status: 500 });
+    }
+
     void appendToSheet({ name, email, phone, course, message });
     await sendEmail({ name, email, phone, course, message });
+    console.log("[contact] email envoyé à", email);
 
     return NextResponse.json({ ok: true });
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
-    console.error("[contact]", message);
+    console.error("[contact] erreur:", message);
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
