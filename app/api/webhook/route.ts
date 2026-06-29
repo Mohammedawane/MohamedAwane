@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import Stripe from "stripe";
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+import type Stripe from "stripe";
 
 const COURSE_NAMES: Record<string, { fr: string; en: string }> = {
   qa:       { fr: "Ingénierie QA propulsée par l'IA",        en: "AI-Powered QA Engineering" },
@@ -126,6 +124,13 @@ function buildEmail(name: string, courseName: string, lang: string): { subject: 
 }
 
 export async function POST(req: NextRequest) {
+  if (!process.env.STRIPE_SECRET_KEY) {
+    return NextResponse.json({ error: "Stripe not configured" }, { status: 503 });
+  }
+
+  const { default: StripeLib } = await import("stripe");
+  const stripe = new StripeLib(process.env.STRIPE_SECRET_KEY!);
+
   const body = await req.text();
   const sig = req.headers.get("stripe-signature");
   const secret = process.env.STRIPE_WEBHOOK_SECRET;
