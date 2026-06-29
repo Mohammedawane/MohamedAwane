@@ -89,6 +89,14 @@ async function appendToSheet(data: {
   }
 }
 
+export async function GET() {
+  return NextResponse.json({
+    GMAIL_USER: process.env.GMAIL_USER ? `${process.env.GMAIL_USER.slice(0, 4)}...` : "NON DEFINI",
+    GMAIL_APP_PASSWORD: process.env.GMAIL_APP_PASSWORD ? `${process.env.GMAIL_APP_PASSWORD.length} caracteres` : "NON DEFINI",
+    CONTACT_EMAIL: process.env.CONTACT_EMAIL ?? "NON DEFINI",
+  });
+}
+
 export async function POST(req: NextRequest) {
   console.log("[contact] POST received");
   try {
