@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete";
 
-const COURSES: Record<CourseKey, { name: string; description: string; amount: number; recurring?: boolean }> = {
+const COURSES: Record<CourseKey, { name: string; description: string; amount: number; currency?: string; recurring?: boolean }> = {
   qa: {
     name: "AI-Powered QA Engineering — July 2026",
     description: "4 modules across 3 weekends. Taught by a Canadian QA Expert.",
@@ -54,7 +54,8 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
   "anglais-vacances-ete": {
     name: "Pack Vacances d'Été — Anglais pour enfants",
     description: "Groupe de 4 · 2 séances/semaine · 1h30/séance · Juillet & Août 2026",
-    amount: 8000, // 800 DH ≈ 80 USD
+    amount: 80000, // 800 MAD (en centimes)
+    currency: "mad",
     recurring: true,
   },
 };
@@ -91,7 +92,7 @@ export async function POST(req: NextRequest) {
       line_items: [
         {
           price_data: {
-            currency: "usd",
+            currency: courseData.currency ?? "usd",
             product_data: {
               name: courseData.name,
               description: courseData.description,
