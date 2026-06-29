@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
     const courseLabel = course ? (COURSE_LABELS[course] ?? course) : null;
 
     await resend.emails.send({
-      from: "Nexo Skills <onboarding@resend.dev>",
+      from: "Nexo Skills <info@nexo-skills.com>",
       to: notifyEmail,
       replyTo: email,
       subject: courseLabel
@@ -85,7 +85,7 @@ export async function POST(req: NextRequest) {
     });
 
     await resend.emails.send({
-      from: "Nexo Skills <onboarding@resend.dev>",
+      from: "Nexo Skills <info@nexo-skills.com>",
       to: email,
       subject: "On a bien reçu votre message — Nexo Skills",
       html: `
