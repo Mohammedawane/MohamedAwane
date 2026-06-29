@@ -12,6 +12,7 @@ type EnrollDict = {
 };
 
 type Mode = "pay" | "contact";
+type PayMethod = "card" | "cashplus" | null;
 
 export default function FormationEnroll({
   t,
@@ -32,6 +33,8 @@ export default function FormationEnroll({
 }) {
   const resolvedDefault: Mode = defaultMode ?? (contactOnly ? "contact" : "pay");
   const [mode, setMode] = useState<Mode>(resolvedDefault);
+  const [payMethod, setPayMethod] = useState<PayMethod>(null);
+  const [cashplusSent, setCashplusSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [contactSent, setContactSent] = useState(false);
@@ -67,6 +70,39 @@ export default function FormationEnroll({
       window.location.href = data.url;
     } catch {
       setError(isFr ? "Une erreur est survenue. Réessayez." : "An error occurred. Please try again.");
+      setLoading(false);
+    }
+  }
+
+  /* ── CashPlus transfer notification ── */
+  async function handleCashplus(e: React.SubmitEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
+    const ref = (form.elements.namedItem("ref") as HTMLInputElement).value;
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name, email, phone, course,
+          message: `Paiement CashPlus — Référence de transfert : ${ref}`,
+        }),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        setError(data.error ?? (isFr ? "Une erreur est survenue." : "An error occurred."));
+        setLoading(false);
+        return;
+      }
+      setCashplusSent(true);
+    } catch {
+      setError(isFr ? "Une erreur est survenue. Réessayez." : "An error occurred. Please try again.");
+    } finally {
       setLoading(false);
     }
   }
@@ -180,50 +216,134 @@ export default function FormationEnroll({
       {/* Forms */}
       <div className="p-8">
 
-        {/* ── PAY MODE ── */}
-        {mode === "pay" && (
-          <form onSubmit={handlePay} className="space-y-4">
-            <input
-              name="name"
-              type="text"
-              required
-              placeholder={t.name_placeholder}
-              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
-            />
-            <input
-              name="email"
-              type="email"
-              required
-              placeholder={t.email_placeholder}
-              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
-            />
-            {error && (
-              <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">{error}</p>
-            )}
+        {/* ── PAY MODE — method selection ── */}
+        {mode === "pay" && payMethod === null && (
+          <div className="space-y-3">
+            <p className="mb-4 text-center text-sm font-semibold text-gray-500 uppercase tracking-wider">
+              {isFr ? "Choisissez votre mode de paiement" : "Choose your payment method"}
+            </p>
+
+            {/* Card */}
             <button
-              type="submit"
-              disabled={loading}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-orange-500 py-4 text-base font-bold text-white shadow-md transition-all hover:bg-orange-600 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60 disabled:translate-y-0"
+              onClick={() => setPayMethod("card")}
+              className="group flex w-full items-center gap-4 rounded-2xl border-2 border-gray-200 bg-white p-5 text-left transition-all hover:border-blue-500 hover:shadow-md"
             >
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-100 transition-colors">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-6 w-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <p className="font-bold text-gray-900">{isFr ? "Carte bancaire" : "Credit / Debit card"}</p>
+                <p className="text-xs text-gray-500 mt-0.5">{isFr ? "Visa, Mastercard · Paiement sécurisé Stripe" : "Visa, Mastercard · Secured by Stripe"}</p>
+              </div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5 text-gray-300 group-hover:text-blue-500 transition-colors">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+
+            {/* CashPlus */}
+            <button
+              onClick={() => setPayMethod("cashplus")}
+              className="group flex w-full items-center gap-4 rounded-2xl border-2 border-gray-200 bg-white p-5 text-left transition-all hover:border-orange-400 hover:shadow-md"
+            >
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-500 group-hover:bg-orange-100 transition-colors">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-6 w-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <p className="font-bold text-gray-900">Virement CashPlus</p>
+                <p className="text-xs text-gray-500 mt-0.5">{isFr ? "Transfert d'argent · Confirmation manuelle" : "Money transfer · Manual confirmation"}</p>
+              </div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5 text-gray-300 group-hover:text-orange-400 transition-colors">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+        )}
+
+        {/* ── PAY MODE — carte bancaire ── */}
+        {mode === "pay" && payMethod === "card" && (
+          <form onSubmit={handlePay} className="space-y-4">
+            <button type="button" onClick={() => setPayMethod(null)} className="mb-1 flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 transition-colors">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" /></svg>
+              {isFr ? "Retour" : "Back"}
+            </button>
+            <input name="name" type="text" required placeholder={t.name_placeholder}
+              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20" />
+            <input name="email" type="email" required placeholder={t.email_placeholder}
+              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20" />
+            {error && <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">{error}</p>}
+            <button type="submit" disabled={loading}
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-700 py-4 text-base font-bold text-white shadow-md transition-all hover:bg-blue-800 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60 disabled:translate-y-0">
               {loading ? (
-                <>
-                  <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
-                  </svg>
-                  {t.loading}
-                </>
+                <><svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" /></svg>{t.loading}</>
               ) : (
-                <>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
-                  </svg>
-                  {t.enroll_label}
-                </>
+                <><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" /></svg>{t.enroll_label}</>
               )}
             </button>
             <p className="mt-2 text-center text-xs text-gray-400">{t.trust}</p>
           </form>
+        )}
+
+        {/* ── PAY MODE — CashPlus ── */}
+        {mode === "pay" && payMethod === "cashplus" && !cashplusSent && (
+          <form onSubmit={handleCashplus} className="space-y-4">
+            <button type="button" onClick={() => setPayMethod(null)} className="mb-1 flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 transition-colors">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" /></svg>
+              {isFr ? "Retour" : "Back"}
+            </button>
+
+            {/* CashPlus instructions */}
+            <div className="rounded-xl border border-orange-200 bg-orange-50 p-4 text-sm">
+              <p className="mb-2 font-bold text-orange-800">
+                {isFr ? "Comment payer via CashPlus :" : "How to pay via CashPlus:"}
+              </p>
+              <ol className="space-y-1.5 text-orange-700">
+                <li>1. {isFr ? "Rendez-vous dans un point CashPlus" : "Go to a CashPlus location"}</li>
+                <li>2. {isFr ? "Effectuez un transfert au nom de" : "Transfer to the name of"} : <strong>Nexo Skills</strong></li>
+                <li>3. {isFr ? "Montant" : "Amount"} : <strong>{isFr ? "800 DH" : "800 DH"}</strong></li>
+                <li>4. {isFr ? "Notez votre référence de transfert et remplissez le formulaire ci-dessous" : "Note your transfer reference and fill in the form below"}</li>
+              </ol>
+            </div>
+
+            <input name="name" type="text" required placeholder={t.name_placeholder}
+              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20" />
+            <input name="email" type="email" required placeholder={t.email_placeholder}
+              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20" />
+            <input name="phone" type="tel" required placeholder={t.phone_placeholder}
+              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20" />
+            <input name="ref" type="text" required placeholder={isFr ? "Référence du transfert CashPlus" : "CashPlus transfer reference"}
+              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20" />
+
+            {error && <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">{error}</p>}
+            <button type="submit" disabled={loading}
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-orange-500 py-4 text-base font-bold text-white shadow-md transition-all hover:bg-orange-600 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60 disabled:translate-y-0">
+              {loading ? (
+                <><svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" /></svg>{t.loading}</>
+              ) : (
+                isFr ? "Confirmer mon transfert" : "Confirm my transfer"
+              )}
+            </button>
+          </form>
+        )}
+
+        {/* ── CASHPLUS SUCCESS ── */}
+        {mode === "pay" && payMethod === "cashplus" && cashplusSent && (
+          <div className="flex flex-col items-center py-6 text-center">
+            <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-orange-100">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-7 w-7 text-orange-600">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+            </div>
+            <p className="text-base font-bold text-gray-900">
+              {isFr ? "Transfert enregistré !" : "Transfer received!"}
+            </p>
+            <p className="mt-2 text-sm text-gray-500">
+              {isFr ? "Nous allons vérifier votre paiement et confirmer votre inscription dans les 24h." : "We will verify your payment and confirm your enrollment within 24h."}
+            </p>
+          </div>
         )}
 
         {/* ── CONTACT MODE ── */}
