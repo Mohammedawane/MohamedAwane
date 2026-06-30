@@ -49,7 +49,7 @@ export default function Footer({ t, lang }: { t: FooterDict; lang: string }) {
                 <span className="text-sm font-bold text-gray-900">
                   Nexo <span className="text-blue-700">Skills</span>
                 </span>
-                <span className="text-[9px] tracking-widest text-gray-400">{lang === "fr" ? "PASSEZ AU NIVEAU SUPÉRIEUR" : "CONNECT TO YOUR NEXT LEVEL"}</span>
+                <span className="text-[9px] tracking-widest text-gray-400">CONNECT TO YOUR NEXT LEVEL</span>
               </div>
             </div>
             <p className="mb-4 text-sm leading-relaxed text-gray-500">
@@ -132,7 +132,7 @@ export default function Footer({ t, lang }: { t: FooterDict; lang: string }) {
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-3 border-t border-gray-200 pt-8 text-xs text-gray-400 sm:flex-row">
           <p>© {new Date().getFullYear()} {t.copyright} — Tous droits réservés</p>
-          <p className="italic text-gray-400">{lang === "fr" ? "Passez au niveau supérieur." : "Connect to your next level."}</p>
+          <p className="italic text-gray-400">Connect to your next level.</p>
         </div>
       </div>
     </footer>

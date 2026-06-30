@@ -95,7 +95,7 @@ export default async function FormationPage({
                 Nexo <span className="text-blue-700">Skills</span>
               </span>
               <span className="hidden text-[9px] tracking-widest text-gray-400 sm:block">
-                {isFr ? "PASSEZ AU NIVEAU SUPÉRIEUR" : "CONNECT TO YOUR NEXT LEVEL"}
+                CONNECT TO YOUR NEXT LEVEL
               </span>
             </div>
           </a>
