@@ -56,7 +56,7 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
-  const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
+  const [mobileCoursesOpen, setMobileCoursesOpen] = useState(true);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {

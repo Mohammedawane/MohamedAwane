@@ -56,20 +56,20 @@ export default function Features({ t }: { t: FeaturesDict }) {
 
         {/* Stats band — redesigned with icons */}
         {t.stats && (
-          <div className="mb-10 grid grid-cols-3 gap-4">
+          <div className="mb-10 grid grid-cols-3 gap-2 sm:gap-4">
             {t.stats.map((s, i) => (
               <div
                 key={s.value}
-                className="flex flex-col items-center gap-3 rounded-2xl border border-gray-200 bg-white px-4 py-6 text-center shadow-sm"
+                className="flex flex-col items-center gap-2 sm:gap-3 rounded-2xl border border-gray-200 bg-white px-2 py-4 sm:px-4 sm:py-6 text-center shadow-sm"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-700">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={1.8} className="h-5 w-5">
+                <div className="flex h-8 w-8 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-blue-700">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={1.8} className="h-4 w-4 sm:h-5 sm:w-5">
                     <path strokeLinecap="round" strokeLinejoin="round" d={STAT_ICONS[i] ?? STAT_ICONS[0]} />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-2xl font-extrabold tracking-tight text-gray-900 md:text-3xl">{s.value}</p>
-                  <p className="mt-0.5 text-xs text-gray-500 md:text-sm">{s.label}</p>
+                  <p className="text-base font-extrabold tracking-tight text-gray-900 sm:text-2xl md:text-3xl">{s.value}</p>
+                  <p className="mt-0.5 text-[10px] leading-tight text-gray-500 sm:text-xs md:text-sm">{s.label}</p>
                 </div>
               </div>
             ))}

@@ -55,7 +55,7 @@ export default function AudienceSelector({ lang }: { lang: string }) {
               <button
                 key={a.id}
                 onClick={() => scrollTo(a.targetId)}
-                className={`group flex flex-col items-start rounded-2xl border-2 p-7 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                className={`group flex flex-col items-start rounded-2xl border-2 p-5 md:p-7 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
                   isBlue
                     ? "border-blue-100 bg-blue-50 hover:border-blue-300 hover:bg-blue-50"
                     : "border-amber-100 bg-amber-50 hover:border-amber-300 hover:bg-amber-50"

@@ -103,7 +103,7 @@ export default function Hero({ t, coursesCount }: { t: HeroDict; coursesCount?: 
             { value: stat2Value, label: t.stat2.label },
             { value: t.stat3.value, label: t.stat3.label },
           ].map((stat, i) => (
-            <div key={i} className="flex flex-1 flex-col items-center gap-1 px-8 py-2 sm:border-l sm:border-white/15 sm:first:border-0">
+            <div key={i} className="flex flex-1 flex-col items-center gap-1 px-8 py-2 border-b border-white/15 last:border-b-0 sm:border-b-0 sm:border-l sm:border-white/15 sm:first:border-l-0">
               <div className="text-3xl font-bold text-white">
                 <Counter value={stat.value} />
               </div>

@@ -147,7 +147,7 @@ export default async function FormationPage({
           <div>
             {/* Breadcrumb */}
             <nav className="mb-6 flex items-center gap-2 text-sm text-gray-500">
-              <a href={`/${lang}`} className="hover:text-blue-700">Accueil</a>
+              <a href={`/${lang}`} className="hover:text-blue-700">{isFr ? "Accueil" : "Home"}</a>
               <span>/</span>
               <a href={`/${lang}#formations`} className="hover:text-blue-700">Formations</a>
               <span>/</span>
@@ -248,10 +248,22 @@ export default async function FormationPage({
               ? (isFr ? "Renseignez votre nom et email — vous serez redirigé vers le paiement sécurisé." : "Enter your name and email — you'll be redirected to secure payment.")
               : (isFr ? "Laissez vos coordonnées et nous vous préviendrons dès l'ouverture des inscriptions." : "Leave your details and we'll notify you as soon as enrollment opens.")}
           </p>
-          {isActive
-            ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} />
-            : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
-          }
+          {/* Mobile: simple anchor to the form above to avoid duplication */}
+          <a
+            href="#enroll"
+            className="lg:hidden inline-block rounded-xl bg-white px-8 py-4 font-bold text-blue-700 shadow-lg transition-all hover:-translate-y-0.5"
+          >
+            {isActive
+              ? (isFr ? "Réserver ma place" : "Book my spot")
+              : (isFr ? "Me prévenir à l'ouverture" : "Notify me when open")}
+          </a>
+          {/* Desktop: show form inline */}
+          <div className="hidden lg:block">
+            {isActive
+              ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} />
+              : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
+            }
+          </div>
         </div>
       </section>
 

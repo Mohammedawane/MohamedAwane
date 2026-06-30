@@ -67,8 +67,8 @@ export default function Testimonials({ t }: { t: TestimonialsDict }) {
       {/* Marquee track */}
       <div className="relative">
         {/* Fade edges */}
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-gray-50 to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-gray-50 to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-8 sm:w-32 bg-gradient-to-r from-gray-50 to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-8 sm:w-32 bg-gradient-to-l from-gray-50 to-transparent" />
 
         <div className="animate-marquee flex gap-5 pb-4">
           {doubled.map((item, i) => (
