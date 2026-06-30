@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 type EnrollDict = {
   enroll_label: string;
@@ -38,6 +38,13 @@ export default function FormationEnroll({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [contactSent, setContactSent] = useState(false);
+  const successRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (contactSent && successRef.current) {
+      successRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [contactSent]);
 
   const isFr = lang !== "en";
 
@@ -420,7 +427,7 @@ export default function FormationEnroll({
 
         {/* ── CONTACT SUCCESS ── */}
         {mode === "contact" && contactSent && (
-          <div className="flex flex-col items-center py-6 text-center">
+          <div ref={successRef} className="flex flex-col items-center py-6 text-center">
             <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-7 w-7 text-green-600">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />

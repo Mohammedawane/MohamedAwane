@@ -1,5 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const ipHits = new Map<string, { count: number; reset: number }>();
+function rateLimit(ip: string, max = 5, windowMs = 60_000): boolean {
+  const now = Date.now();
+  const rec = ipHits.get(ip);
+  if (!rec || now > rec.reset) { ipHits.set(ip, { count: 1, reset: now + windowMs }); return true; }
+  if (rec.count >= max) return false;
+  rec.count++;
+  return true;
+}
+
 const COURSE_LABELS: Record<string, string> = {
   "qa":                    "QA & Tests IA",
   "a11y":                  "Accessibilité web",
@@ -45,6 +55,10 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   console.log("[contact] POST received");
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  if (!rateLimit(ip)) {
+    return NextResponse.json({ error: "Trop de demandes. Réessayez dans une minute." }, { status: 429 });
+  }
   try {
     const { name, email, phone, message, course } = await req.json();
     console.log("[contact] data:", { name, email, course });

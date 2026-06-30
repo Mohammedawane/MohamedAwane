@@ -98,7 +98,7 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
               Nexo <span className="text-blue-700">Skills</span>
             </span>
             <span className="hidden text-[9px] tracking-widest text-gray-400 sm:block">
-              CONNECT TO YOUR NEXT LEVEL
+              {lang === "fr" ? "PASSEZ AU NIVEAU SUPÉRIEUR" : "CONNECT TO YOUR NEXT LEVEL"}
             </span>
           </div>
         </a>

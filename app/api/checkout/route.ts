@@ -1,5 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const ipHits = new Map<string, { count: number; reset: number }>();
+function rateLimit(ip: string, max = 10, windowMs = 60_000): boolean {
+  const now = Date.now();
+  const rec = ipHits.get(ip);
+  if (!rec || now > rec.reset) { ipHits.set(ip, { count: 1, reset: now + windowMs }); return true; }
+  if (rec.count >= max) return false;
+  rec.count++;
+  return true;
+}
+
 type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete";
 
 const COURSES: Record<CourseKey, { name: string; description: string; amount: number; currency?: string; recurring?: boolean }> = {
@@ -54,13 +64,17 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
   "anglais-vacances-ete": {
     name: "Pack Vacances d'Été — Anglais pour enfants",
     description: "Groupe de 4 · 2 séances/semaine · 1h30/séance · Juillet & Août 2026",
-    amount: 500, // 5 MAD pour test
+    amount: 80000, // 800 MAD
     currency: "mad",
     recurring: true,
   },
 };
 
 export async function POST(req: NextRequest) {
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  if (!rateLimit(ip)) {
+    return NextResponse.json({ error: "Trop de demandes. Réessayez dans une minute." }, { status: 429 });
+  }
   if (!process.env.STRIPE_SECRET_KEY) {
     return NextResponse.json({ error: "Stripe not configured" }, { status: 503 });
   }

@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { getDictionary, hasLocale } from "../../dictionaries";
 import FormationEnroll from "@/app/Component/FormationEnroll";
 
@@ -39,7 +40,45 @@ export default async function FormationPage({
   const isFr = lang !== "en";
   const comingSoonStatus = isFr ? "Ouverture des inscriptions — Automne 2026" : "Enrollment opening — Fall 2026";
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": f.title,
+    "description": f.tagline,
+    "provider": {
+      "@type": "Organization",
+      "name": "Nexo Skills",
+      "sameAs": "https://www.nexo-skills.com",
+    },
+    "url": `https://www.nexo-skills.com/${lang}/formations/${course}`,
+    "image": imageSrc ? `https://www.nexo-skills.com${imageSrc}` : undefined,
+    "inLanguage": lang === "fr" ? "fr-FR" : "en-US",
+    "courseMode": ["online"],
+    "offers": f.price ? {
+      "@type": "Offer",
+      "price": f.price.replace(/[^0-9.]/g, ""),
+      "priceCurrency": f.price.includes("MAD") ? "MAD" : "USD",
+      "availability": "https://schema.org/InStock",
+      "url": `https://www.nexo-skills.com/${lang}/formations/${course}`,
+    } : undefined,
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "startDate": f.date,
+      "courseWorkload": f.duration,
+      "instructor": {
+        "@type": "Person",
+        "name": "Mohammed Awane",
+      },
+    },
+  };
+
   return (
+    <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
     <main className="min-h-screen bg-white">
 
       {/* Sticky header */}
@@ -56,7 +95,7 @@ export default async function FormationPage({
                 Nexo <span className="text-blue-700">Skills</span>
               </span>
               <span className="hidden text-[9px] tracking-widest text-gray-400 sm:block">
-                CONNECT TO YOUR NEXT LEVEL
+                {isFr ? "PASSEZ AU NIVEAU SUPÉRIEUR" : "CONNECT TO YOUR NEXT LEVEL"}
               </span>
             </div>
           </a>
@@ -84,11 +123,12 @@ export default async function FormationPage({
       {/* Hero image banner */}
       {imageSrc && (
         <div className="relative h-64 overflow-hidden md:h-80">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={imageSrc}
             alt={f.title}
-            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }}
+            fill
+            priority
+            style={{ objectFit: "cover", objectPosition: "center" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/75 via-gray-900/30 to-transparent" />
           <div className="absolute bottom-6 left-5 flex flex-wrap gap-2 md:left-10">
@@ -225,5 +265,6 @@ export default async function FormationPage({
         </p>
       </footer>
     </main>
+    </>
   );
 }

@@ -18,6 +18,13 @@ export const metadata: Metadata = {
   description:
     "Nexo Skills propose des formations pratiques et reconnues en IA & QA, ISO 9001 et management de la qualité. Formateurs experts, certifications incluses.",
   metadataBase: new URL("https://www.nexo-skills.com"),
+  alternates: {
+    canonical: "https://www.nexo-skills.com/fr",
+    languages: {
+      "fr": "https://www.nexo-skills.com/fr",
+      "en": "https://www.nexo-skills.com/en",
+    },
+  },
   openGraph: {
     title: "Nexo Skills — Connect to your next level.",
     description:
