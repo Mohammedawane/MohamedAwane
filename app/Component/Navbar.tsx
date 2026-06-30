@@ -56,7 +56,6 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
-  const [mobileCoursesOpen, setMobileCoursesOpen] = useState(true);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -231,80 +230,85 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
       )}
 
       {/* Mobile menu */}
-      <div className={`overflow-hidden transition-all duration-300 md:hidden ${open ? "max-h-screen border-t border-gray-100" : "max-h-0"}`}>
-        <div className="bg-white px-6 py-4">
-          <nav className="flex flex-col gap-1">
+      <div className={`md:hidden transition-all duration-300 ${open ? "border-t border-gray-100" : "hidden"}`}>
+        <div className="max-h-[calc(100dvh-60px)] overflow-y-auto bg-white">
 
-            {/* Mobile formations accordion */}
-            {courses && (
-              <div>
-                <button
-                  onClick={() => setMobileCoursesOpen((v) => !v)}
-                  className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50"
-                >
-                  {t.courses}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className={`h-4 w-4 transition-transform duration-200 ${mobileCoursesOpen ? "rotate-180" : ""}`}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                  </svg>
-                </button>
+          {/* CTA principal */}
+          <div className="px-4 pt-4 pb-2">
+            <a
+              href="#nous-contacter"
+              onClick={() => setOpen(false)}
+              className="block w-full rounded-xl bg-blue-700 py-3.5 text-center text-sm font-bold text-white shadow-sm"
+            >
+              {t.enroll}
+            </a>
+          </div>
 
-                <div className={`overflow-hidden transition-all duration-300 ${mobileCoursesOpen ? "max-h-screen" : "max-h-0"}`}>
-                  <div className="mb-2 ml-2 space-y-4 border-l-2 border-gray-100 pl-4 pt-2">
-                    {courses.categories.map((cat) => {
-                      const items = courses.items.filter((i) => i.category === cat.key);
-                      const c = CAT_COLORS[cat.color] ?? CAT_COLORS.blue;
-                      return (
-                        <div key={cat.key}>
-                          <a
-                            href={`#${cat.key}`}
-                            onClick={() => { setOpen(false); setMobileCoursesOpen(false); }}
-                            className={`mb-1.5 block text-[11px] font-bold uppercase tracking-wider ${c.label} hover:underline underline-offset-2`}
-                          >
-                            {cat.label}
-                          </a>
-                          <ul className="space-y-0.5">
-                            {items.map((course) => {
-                              const slug = course.href.replace("#contact?course=", "");
-                              return (
-                                <li key={course.title}>
-                                  <a
-                                    href={`/${lang}/formations/${slug}`}
-                                    onClick={() => { setOpen(false); setMobileCoursesOpen(false); }}
-                                    className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900"
-                                  >
-                                    {course.title}
-                                  </a>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-            )}
-
+          {/* Liens rapides */}
+          <div className="px-4 py-2">
             {otherLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-3 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900"
+                className="flex items-center justify-between rounded-xl px-3 py-3.5 text-sm font-medium text-gray-700 hover:bg-gray-50 active:bg-gray-100"
               >
                 {link.label}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4 text-gray-300">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
               </a>
             ))}
-          </nav>
+          </div>
 
-          <a
-            href="#nous-contacter"
-            onClick={() => setOpen(false)}
-            className="mt-4 block w-full rounded-xl bg-blue-700 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-800"
-          >
-            {t.enroll}
-          </a>
+          {/* Formations par catégorie */}
+          {courses && (
+            <div className="px-4 pb-6">
+              <p className="mb-3 px-3 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                {t.courses}
+              </p>
+              <div className="space-y-2">
+                {courses.categories.map((cat) => {
+                  const items = courses.items.filter((i) => i.category === cat.key);
+                  const c = CAT_COLORS[cat.color] ?? CAT_COLORS.blue;
+                  return (
+                    <div key={cat.key} className="overflow-hidden rounded-2xl border border-gray-100">
+                      {/* En-tête catégorie */}
+                      <a
+                        href={`#${cat.key}`}
+                        onClick={() => setOpen(false)}
+                        className="flex items-center gap-3 bg-gray-50 px-4 py-3"
+                      >
+                        <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg ${c.dot}`}>
+                          <CatIcon catKey={cat.key} />
+                        </span>
+                        <span className={`text-xs font-bold uppercase tracking-wider ${c.label}`}>{cat.label}</span>
+                      </a>
+                      {/* Cours */}
+                      <div className="divide-y divide-gray-50">
+                        {items.map((course) => {
+                          const slug = course.href.replace("#contact?course=", "");
+                          return (
+                            <a
+                              key={course.title}
+                              href={`/${lang}/formations/${slug}`}
+                              onClick={() => setOpen(false)}
+                              className="flex items-center justify-between px-4 py-3.5 text-sm text-gray-700 hover:bg-gray-50 active:bg-gray-100"
+                            >
+                              <span>{course.title}</span>
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4 shrink-0 text-gray-300">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                              </svg>
+                            </a>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </header>
