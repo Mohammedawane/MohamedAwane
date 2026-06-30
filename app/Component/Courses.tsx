@@ -176,7 +176,7 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
                         <p className="mb-4 flex-1 text-sm leading-relaxed text-gray-600">{course.sub}</p>
 
                         <ul className="mb-6 space-y-2">
-                          {course.details.map((d) => (
+                          {course.details.filter((d) => !d.includes("$") && !d.includes("MAD") && !d.includes("€") && !/\d+\s*DH/.test(d)).map((d) => (
                             <li key={d} className="flex items-center gap-2 text-sm text-gray-600">
                               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className={`h-4 w-4 shrink-0 ${c.check}`}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
