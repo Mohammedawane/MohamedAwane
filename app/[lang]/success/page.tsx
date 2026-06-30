@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "../dictionaries";
+import FbPurchaseTracker from "@/app/Component/FbPurchaseTracker";
 
 export default async function SuccessPage({ params }: PageProps<"/[lang]/success">) {
   const { lang } = await params;
@@ -9,6 +10,7 @@ export default async function SuccessPage({ params }: PageProps<"/[lang]/success
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-slate-950 px-6 text-white">
+      <FbPurchaseTracker />
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
         <div className="h-[500px] w-[500px] rounded-full bg-blue-600/15 blur-[100px]" />
       </div>

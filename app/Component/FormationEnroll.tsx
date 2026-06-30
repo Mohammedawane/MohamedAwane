@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { fbTrack } from "./FacebookPixel";
 
 type EnrollDict = {
   enroll_label: string;
@@ -107,6 +108,7 @@ export default function FormationEnroll({
         return;
       }
       setCashplusSent(true);
+      fbTrack("Lead", { content_name: course, content_category: "cashplus" });
     } catch {
       setError(isFr ? "Une erreur est survenue. Réessayez." : "An error occurred. Please try again.");
     } finally {
@@ -141,6 +143,7 @@ export default function FormationEnroll({
       }
 
       setContactSent(true);
+      fbTrack("Lead", { content_name: course, content_category: "contact" });
     } catch {
       setError(isFr ? "Une erreur est survenue. Réessayez." : "An error occurred. Please try again.");
     } finally {

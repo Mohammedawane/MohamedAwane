@@ -14,11 +14,11 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://www.googletagmanager.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://www.googletagmanager.com https://connect.facebook.net",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https:",
       "font-src 'self'",
-      "connect-src 'self' https://api.stripe.com https://api.resend.com",
+      "connect-src 'self' https://api.stripe.com https://api.resend.com https://www.facebook.com https://connect.facebook.net",
       "frame-src https://js.stripe.com https://hooks.stripe.com",
     ].join("; "),
   },
