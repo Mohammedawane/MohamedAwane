@@ -43,14 +43,14 @@ export default function Hero({ t, coursesCount }: { t: HeroDict; coursesCount?: 
 
         {/* Badge */}
         <div
-          className="animate-fade-up mb-8 inline-flex flex-wrap items-start justify-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm text-blue-100 backdrop-blur-sm"
+          className="animate-fade-up mb-8 inline-flex items-center gap-2.5 rounded-2xl border border-white/20 bg-white/10 px-5 py-2 text-sm text-blue-100 backdrop-blur-sm"
           style={{ animationDelay: "0ms" }}
         >
-          <span className="relative mt-1 flex h-2 w-2 shrink-0">
+          <span className="relative flex h-2 w-2 shrink-0">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-400" />
           </span>
-          {t.badge}
+          <span className="text-center">{t.badge}</span>
         </div>
 
         {/* Headline */}
