@@ -118,7 +118,7 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
                     <p className={`text-sm font-bold uppercase tracking-widest ${c.categoryLabel}`}>{cat.label}</p>
                     <p className="text-xs text-gray-500">{cat.sub}</p>
                   </div>
-                  <span className={`ml-auto rounded-full px-3 py-1 text-xs font-semibold ${c.pill}`}>
+                  <span className={`ml-auto shrink-0 whitespace-nowrap rounded-full px-3 py-1 text-xs font-semibold ${c.pill}`}>
                     {items.length} {items.length === 1 ? t.count_one : t.count_other}
                   </span>
                 </div>
