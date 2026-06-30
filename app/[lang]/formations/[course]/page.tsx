@@ -1,7 +1,46 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import type { Metadata } from "next";
 import { getDictionary, hasLocale } from "../../dictionaries";
 import FormationEnroll from "@/app/Component/FormationEnroll";
+
+const BASE = "https://www.nexo-skills.com";
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/formations/[course]">): Promise<Metadata> {
+  const { lang, course } = await params;
+  if (!hasLocale(lang) || !isValidCourse(course)) return {};
+  const dict = await getDictionary(lang);
+  const f = dict.formations.courses[course];
+  const imageSrc = COURSE_IMAGES[course];
+  return {
+    title: `${f.title} — Nexo Skills`,
+    description: f.tagline,
+    openGraph: {
+      title: f.title,
+      description: f.tagline,
+      url: `${BASE}/${lang}/formations/${course}`,
+      siteName: "Nexo Skills",
+      locale: lang === "fr" ? "fr_FR" : "en_US",
+      type: "website",
+      images: imageSrc ? [{ url: `${BASE}${imageSrc}`, width: 1200, height: 630, alt: f.title }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: f.title,
+      description: f.tagline,
+      images: imageSrc ? [`${BASE}${imageSrc}`] : [],
+    },
+    alternates: {
+      canonical: `${BASE}/${lang}/formations/${course}`,
+      languages: {
+        fr: `${BASE}/fr/formations/${course}`,
+        en: `${BASE}/en/formations/${course}`,
+      },
+    },
+  };
+}
 
 const VALID_COURSES = ["qa", "iso", "web", "a11y", "audit", "tutorat-francais", "tutorat-anglais", "tutorat-math", "anglais-vacances-ete"] as const;
 
@@ -166,7 +205,15 @@ export default async function FormationPage({
             <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 md:text-4xl lg:text-5xl">
               {f.title}
             </h1>
-            <p className="mb-10 max-w-xl text-lg leading-relaxed text-gray-600">{f.tagline}</p>
+            <p className="mb-8 max-w-xl text-lg leading-relaxed text-gray-600">{f.tagline}</p>
+
+            {/* Mobile only: enroll card right after tagline — visitors from Facebook ads see CTA immediately */}
+            <div className="mb-10 lg:hidden">
+              {isActive
+                ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} />
+                : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
+              }
+            </div>
 
             {/* Highlights */}
             <div className="mb-12 grid gap-4 sm:grid-cols-3">
@@ -225,8 +272,8 @@ export default async function FormationPage({
             </div>
           </div>
 
-          {/* Right column: sticky enroll card */}
-          <div id="enroll" className="lg:sticky lg:top-24 lg:self-start">
+          {/* Right column: sticky enroll card — desktop only, mobile version is above */}
+          <div id="enroll" className="hidden lg:block lg:sticky lg:top-24 lg:self-start">
             {isActive
               ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} />
               : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
