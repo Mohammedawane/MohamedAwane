@@ -130,13 +130,6 @@ export default function AudienceSelector({ lang }: { lang: string }) {
                   : "border-indigo-100 bg-indigo-50 hover:border-indigo-300"
               }`}
             >
-              {/* Badge "Nouveau" */}
-              <div className="mb-3 self-end">
-                <span className="rounded-full bg-indigo-700 px-2.5 py-0.5 text-xs font-bold text-white">
-                  {isFr ? "Nouveau" : "New"}
-                </span>
-              </div>
-
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-700">
                 <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={1.8} className="h-6 w-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
