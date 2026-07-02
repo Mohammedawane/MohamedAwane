@@ -10,7 +10,7 @@ function rateLimit(ip: string, max = 10, windowMs = 60_000): boolean {
   return true;
 }
 
-type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete";
+type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete" | "istqb-fondation";
 
 const COURSES: Record<CourseKey, { name: string; description: string; amount: number; currency?: string; recurring?: boolean }> = {
   qa: {
@@ -68,6 +68,12 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
     currency: "mad",
     recurring: true,
   },
+  "istqb-fondation": {
+    name: "Préparation ISTQB Foundation Level — Nexo Skills",
+    description: "Banque de questions complète · 6 chapitres du syllabus · Mode entraînement & simulation examen · Accès à vie",
+    amount: 4900, // €49
+    currency: "eur",
+  },
 };
 
 export async function POST(req: NextRequest) {
@@ -118,8 +124,12 @@ export async function POST(req: NextRequest) {
           quantity: 1,
         },
       ],
-      success_url: `${origin}/${lang}/success`,
-      cancel_url: `${origin}/#contact`,
+      success_url: course === "istqb-fondation"
+        ? `${origin}/${lang}/istqb/entrainement?session_id={CHECKOUT_SESSION_ID}`
+        : `${origin}/${lang}/success`,
+      cancel_url: course === "istqb-fondation"
+        ? `${origin}/${lang}/istqb`
+        : `${origin}/#contact`,
     });
 
     return NextResponse.json({ url: session.url });
