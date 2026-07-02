@@ -212,7 +212,7 @@ export default function EnterpriseSection({ lang }: { lang: string }) {
 
           <p className="mx-auto mb-12 max-w-2xl text-center text-lg leading-relaxed text-indigo-200">
             {isFr
-              ? "De l'audit des besoins à l'évaluation des acquis, Nexo Skills conçoit et déploie des parcours de formation sur mesure pour vos collaborateurs."
+              ? "De l'analyse des besoins à l'évaluation des acquis, Nexo Skills conçoit et déploie des parcours de formation sur mesure pour vos collaborateurs."
               : "From needs analysis to outcome evaluation, Nexo Skills designs and delivers custom training paths for your workforce."}
           </p>
 
