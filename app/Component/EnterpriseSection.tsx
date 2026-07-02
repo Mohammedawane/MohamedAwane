@@ -20,13 +20,13 @@ const FEATURED = [
     desc_en:
       "From needs analysis to outcome evaluation: we design complete learning paths tailored to your strategic goals.",
     points_fr: [
-      "Audit des besoins",
+      "Analyse des besoins en formation",
       "Conception pédagogique sur mesure",
       "Déploiement intra / inter-entreprise",
       "Évaluation et rapport ROI",
     ],
     points_en: [
-      "Needs analysis",
+      "Training needs analysis",
       "Custom curriculum design",
       "Intra / inter-company delivery",
       "Evaluation & ROI report",
@@ -97,10 +97,10 @@ const FORMATIONS = [
 const STEPS = [
   {
     num: "01",
-    title_fr: "Audit",
-    title_en: "Audit",
-    desc_fr: "Analyse des besoins et définition des objectifs stratégiques",
-    desc_en: "Needs analysis and strategic goal definition",
+    title_fr: "Analyse",
+    title_en: "Analysis",
+    desc_fr: "Recueil et analyse des besoins en formation, définition des objectifs",
+    desc_en: "Training needs gathering and analysis, goal definition",
   },
   {
     num: "02",

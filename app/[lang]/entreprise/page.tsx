@@ -101,8 +101,8 @@ export default async function EntreprisePage({
             "@type": "Service",
             name: isFr ? "Ingénierie de Formation" : "Training Engineering",
             description: isFr
-              ? "Audit des besoins, conception pédagogique sur mesure, déploiement et évaluation ROI"
-              : "Needs audit, custom curriculum design, deployment and ROI evaluation",
+              ? "Analyse des besoins en formation, conception pédagogique sur mesure, déploiement et évaluation ROI"
+              : "Training needs analysis, custom curriculum design, deployment and ROI evaluation",
           },
         },
         {
