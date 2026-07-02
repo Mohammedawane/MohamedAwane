@@ -209,8 +209,21 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
               })}
             </div>
 
+            {/* ISTQB highlight banner */}
+            <a
+              href={`/${lang}/istqb`}
+              onClick={() => setMegaOpen(false)}
+              className="mt-5 flex items-center gap-3 rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 transition-colors hover:bg-blue-100"
+            >
+              <span className="shrink-0 rounded-lg bg-blue-700 px-2.5 py-1 text-xs font-bold text-white">ISTQB FL</span>
+              <p className="text-sm text-gray-700">Préparez la certification <span className="font-semibold text-blue-700">ISTQB Foundation Level</span> avec notre banque de questions</p>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="ml-auto h-4 w-4 shrink-0 text-blue-500">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+
             {/* Bottom bar */}
-            <div className="mt-6 flex items-center justify-between border-t border-gray-100 pt-5">
+            <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-4">
               <p className="text-sm text-gray-500">
                 <span className="font-semibold text-gray-700">{courses.items.length} formations</span> disponibles · en ligne · certificat inclus
               </p>
@@ -307,6 +320,22 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
                   );
                 })}
               </div>
+
+              {/* ISTQB card */}
+              <a
+                href={`/${lang}/istqb`}
+                onClick={() => setOpen(false)}
+                className="mt-1 flex items-center gap-3 rounded-2xl border border-blue-100 bg-blue-50 px-4 py-4"
+              >
+                <span className="shrink-0 rounded-lg bg-blue-700 px-2.5 py-1 text-xs font-bold text-white">ISTQB FL</span>
+                <div>
+                  <p className="text-sm font-semibold text-blue-900">Préparation ISTQB Foundation Level</p>
+                  <p className="text-xs text-gray-500">Banque de questions · Simulation examen</p>
+                </div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="ml-auto h-4 w-4 shrink-0 text-blue-400">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </a>
             </div>
           )}
         </div>
