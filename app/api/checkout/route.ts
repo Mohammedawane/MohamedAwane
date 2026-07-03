@@ -99,7 +99,7 @@ export async function POST(req: NextRequest) {
     const isSubscription = courseData.recurring === true;
 
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
+      automatic_payment_methods: { enabled: true },
       mode: isSubscription ? "subscription" : "payment",
       locale: lang === "fr" ? "fr" : "en",
       customer_email: email ?? undefined,
