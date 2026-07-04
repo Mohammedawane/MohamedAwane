@@ -71,7 +71,7 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
   "istqb-fondation": {
     name: "Préparation ISTQB Foundation Level — Nexo Skills",
     description: "Banque de questions complète · 6 chapitres du syllabus · Mode entraînement & simulation examen · Accès à vie",
-    amount: 1400, // €14
+    amount: 2400, // €24
     currency: "eur",
   },
 };

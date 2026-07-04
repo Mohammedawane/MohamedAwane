@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 import { DOMAINS } from "@/app/data/istqb-questions";
 
 const BASE = "https://www.nexo-skills.com";
-const PRICE_DISPLAY = "14 €";
+const PRICE_DISPLAY = "24 €";
 
 export async function generateMetadata({
   params,
