@@ -1,12 +1,17 @@
 import { notFound, redirect } from "next/navigation";
+import { cookies } from "next/headers";
 import { hasLocale, getDictionary } from "../../dictionaries";
 import Navbar from "@/app/Component/Navbar";
 import ISTQBTraining from "@/app/Component/ISTQBTraining";
 
 export const metadata = {
   title: "Entraînement ISTQB Foundation Level | Nexo Skills",
-  robots: { index: false, follow: false }, // keep training page private
+  robots: { index: false, follow: false },
 };
+
+// Cookie that persists paid access for 1 year
+const ACCESS_COOKIE = "istqb_access";
+const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
 
 async function verifyPayment(sessionId: string): Promise<boolean> {
   if (!process.env.STRIPE_SECRET_KEY) return false;
@@ -35,15 +40,32 @@ export default async function EntrainementPage({
 
   if (!hasLocale(lang)) notFound();
 
-  if (!session_id) redirect(`/${lang}/istqb`);
+  const cookieStore   = await cookies();
+  const savedSession  = cookieStore.get(ACCESS_COOKIE)?.value;
+
+  // Accept session_id from URL (first access after payment) or from saved cookie (return visits)
+  const effectiveId = session_id || savedSession;
+  if (!effectiveId) redirect(`/${lang}/istqb`);
 
   const bypassKey = process.env.ISTQB_PREVIEW_KEY;
   const isBypass =
-    (process.env.NODE_ENV === "development" && session_id === "bypass") ||
-    (!!bypassKey && session_id === bypassKey);
+    (process.env.NODE_ENV === "development" && effectiveId === "bypass") ||
+    (!!bypassKey && effectiveId === bypassKey);
 
-  const paid = isBypass || (await verifyPayment(session_id));
+  const paid = isBypass || (await verifyPayment(effectiveId));
   if (!paid) redirect(`/${lang}/istqb`);
+
+  // On first access after payment: save session_id in a cookie so the user
+  // gets back in automatically on all future visits without needing the URL.
+  if (session_id && session_id !== savedSession && !isBypass) {
+    cookieStore.set(ACCESS_COOKIE, session_id, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      maxAge: COOKIE_MAX_AGE,
+      path: "/",
+    });
+  }
 
   const dict = await getDictionary(lang);
 
