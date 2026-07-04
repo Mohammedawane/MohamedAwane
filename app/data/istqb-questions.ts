@@ -1063,6 +1063,584 @@ export const QUESTIONS: Question[] = [
     explanation:
       "Dans les modèles itératifs, chaque incrément apporte de nouvelles fonctionnalités qui sont testées dans l'itération. Pour éviter les régressions, des tests de régression s'accumulent itération après itération pour vérifier que les fonctionnalités précédentes n'ont pas été impactées.",
   },
+
+  // ── EXAM 5 — Chapitre 1 : Fondamentaux (10 questions) ─────────────────────
+
+  {
+    id: "e5q07",
+    domain: "Fondamentaux du test",
+    difficulty: "moyen",
+    question: "Lequel des 7 principes ISTQB explique pourquoi un logiciel peut ne plus trouver de nouveaux défauts si on répète toujours les mêmes tests ?",
+    options: [
+      "Tests exhaustifs impossibles",
+      "Regroupement des défauts",
+      "Le paradoxe du pesticide",
+      "L'illusion de l'absence d'erreurs",
+    ],
+    answer: 2,
+    explanation: "Le paradoxe du pesticide : comme les insectes développent une résistance aux insecticides, les mêmes tests répétés ne trouvent plus de nouveaux défauts. Il faut régulièrement réviser et enrichir les cas de test.",
+  },
+  {
+    id: "e5q08",
+    domain: "Fondamentaux du test",
+    difficulty: "moyen",
+    question: "Lequel des exemples suivants représente une erreur humaine (et non un défaut ou une défaillance) ?",
+    options: [
+      "Un analyste mal interprète une règle métier et rédige une exigence incorrecte.",
+      "Une boucle infinie dans le code de traitement des commandes.",
+      "Le système affiche un montant incorrect sur la facture de l'utilisateur.",
+      "Une variable non initialisée dans la fonction de calcul des taxes.",
+    ],
+    answer: 0,
+    explanation: "L'erreur humaine est la cause racine (mauvaise interprétation, oubli). Elle produit un défaut dans un livrable (B, D = défauts dans le code). Le défaut, s'il est exécuté, produit une défaillance observable (C).",
+  },
+  {
+    id: "e5q09",
+    domain: "Fondamentaux du test",
+    difficulty: "facile",
+    question: "Un testeur trouve 0 défaut après 500 cas de test sur un module critique. Le chef de projet conclut que le module est exempt de défauts. Quel principe ISTQB est violé ?",
+    options: [
+      "Tester tôt",
+      "Le paradoxe du pesticide",
+      "Tests exhaustifs impossibles",
+      "L'illusion de l'absence d'erreurs",
+    ],
+    answer: 3,
+    explanation: "L'illusion de l'absence d'erreurs : trouver et corriger des défauts ne garantit pas que le logiciel répond aux besoins ni qu'il est exempt de tous défauts. L'absence de défauts trouvés ne prouve pas leur absence réelle.",
+  },
+  {
+    id: "e5q10",
+    domain: "Fondamentaux du test",
+    difficulty: "moyen",
+    question: "Lequel des objectifs suivants s'applique à la fois aux tests et à l'assurance qualité (AQ) ?",
+    options: [
+      "Exécuter des cas de test et comparer les résultats réels aux résultats attendus.",
+      "Concevoir des processus et procédures pour améliorer la qualité de manière systématique.",
+      "Réduire le niveau de risque de qualité du système et prévenir les défauts.",
+      "Auditer les processus de développement pour vérifier la conformité aux standards.",
+    ],
+    answer: 2,
+    explanation: "Les tests ET l'AQ partagent l'objectif de réduire les risques qualité et prévenir les défauts. L'AQ est plus large (processus, standards, audits) ; les tests sont une composante focalisée sur la détection et la prévention.",
+  },
+  {
+    id: "e5q11",
+    domain: "Fondamentaux du test",
+    difficulty: "facile",
+    question: "Dans le contexte ISTQB, qu'est-ce que la base de test ?",
+    options: [
+      "L'environnement de test configuré pour exécuter les cas de test.",
+      "La base de données contenant les données de test utilisées lors des tests.",
+      "L'ensemble des documents à partir desquels les cas de test sont dérivés.",
+      "Le rapport qui sert de référence pour mesurer la progression des tests.",
+    ],
+    answer: 2,
+    explanation: "La base de test est l'ensemble des informations à partir desquelles les exigences de test sont identifiées : exigences, user stories, spécifications de conception, code source, règles métier.",
+  },
+  {
+    id: "e5q12",
+    domain: "Fondamentaux du test",
+    difficulty: "moyen",
+    question: "Lequel des énoncés sur le biais de confirmation en test logiciel est CORRECT ?",
+    options: [
+      "Le biais de confirmation pousse le testeur à tester uniquement les fonctionnalités récemment modifiées.",
+      "Le biais de confirmation pousse inconsciemment à concevoir des tests qui confirment que le système fonctionne plutôt qu'à chercher des défauts.",
+      "Le biais de confirmation est utile pour les tests de confirmation après correction de défauts.",
+      "Le biais de confirmation affecte uniquement les testeurs débutants.",
+    ],
+    answer: 1,
+    explanation: "Le biais de confirmation est un biais cognitif universel : on cherche inconsciemment des preuves qui confirment nos croyances. En test, cela conduit à concevoir des tests qui 'confirment' que le système fonctionne au lieu de chercher à le faire échouer.",
+  },
+  {
+    id: "e5q13",
+    domain: "Fondamentaux du test",
+    difficulty: "facile",
+    question: "Quel est le rôle du testeur dans la prévention des défauts, avant même que le code ne soit écrit ?",
+    options: [
+      "Le testeur n'a aucun rôle dans la prévention — il intervient uniquement après le développement.",
+      "Le testeur prévient les défauts en automatisant les tests de régression.",
+      "Le testeur prévient les défauts en participant aux revues d'exigences et de conception pour identifier les ambiguïtés tôt.",
+      "Le testeur prévient les défauts en formant les développeurs aux bonnes pratiques de codage.",
+    ],
+    answer: 2,
+    explanation: "Le testeur contribue à la prévention en participant aux revues dès les exigences : il identifie les ambiguïtés, incohérences et manques avant qu'ils ne deviennent des défauts dans le code. C'est le 'shift left' appliqué à la prévention.",
+  },
+  {
+    id: "e5q14",
+    domain: "Fondamentaux du test",
+    difficulty: "facile",
+    question: "Lequel des principes ISTQB justifie la nécessité d'adapter les tests au contexte du projet ?",
+    options: [
+      "Tests exhaustifs impossibles",
+      "Regroupement des défauts",
+      "Le paradoxe du pesticide",
+      "Les tests dépendent du contexte",
+    ],
+    answer: 3,
+    explanation: "\"Les tests dépendent du contexte\" est le 6e principe ISTQB : les tests d'un système de contrôle aérien (critique de sécurité) sont très différents de ceux d'un site e-commerce. L'approche, les techniques et l'intensité des tests varient selon le domaine et les risques.",
+  },
+  {
+    id: "e5q15",
+    domain: "Fondamentaux du test",
+    difficulty: "facile",
+    question: "Lequel des éléments suivants fait partie du testware produit pendant les activités de test ?",
+    options: [
+      "Le code source de l'application testée",
+      "Les exigences fonctionnelles rédigées par les analystes métier",
+      "Les plans de test, cas de test, données de test et rapports de test",
+      "Les spécifications d'architecture logicielle",
+    ],
+    answer: 2,
+    explanation: "Le testware désigne tous les produits d'activités créés pendant le processus de test : plans de test, conditions de test, cas de test, scripts, données de test, rapports d'anomalies, rapports de synthèse.",
+  },
+  {
+    id: "e5q16",
+    domain: "Fondamentaux du test",
+    difficulty: "moyen",
+    question: "Quelle est la différence entre la vérification et la validation dans le contexte du test logiciel ?",
+    options: [
+      "La vérification concerne les tests dynamiques ; la validation concerne les tests statiques.",
+      "La vérification est réalisée par les testeurs ; la validation est réalisée par les utilisateurs.",
+      "La vérification vérifie que le produit est construit correctement (conforme aux spécifications) ; la validation vérifie que le bon produit est construit (répond aux besoins réels).",
+      "La vérification et la validation sont synonymes dans le syllabus ISTQB FL.",
+    ],
+    answer: 2,
+    explanation: "Vérification = \"Construisons-nous le produit correctement ?\" (conforme aux spécifications). Validation = \"Construisons-nous le bon produit ?\" (répond aux besoins réels). Un produit peut être correct selon les specs mais inadapté aux besoins réels.",
+  },
+
+  // ── EXAM 5 — Chapitre 2 : Cycle de vie (8 questions) ──────────────────────
+
+  {
+    id: "e5q17",
+    domain: "Tests tout au long du cycle de vie",
+    difficulty: "moyen",
+    question: "Dans un modèle de développement en V, à quel niveau de test correspond la phase de définition des exigences système ?",
+    options: [
+      "Test de composants (unitaire)",
+      "Test d'intégration de composants",
+      "Test système",
+      "Test d'acceptation",
+    ],
+    answer: 3,
+    explanation: "Dans le modèle en V : exigences système ↔ test d'acceptation ; conception système ↔ test système ; conception détaillée ↔ test d'intégration ; code ↔ test de composants. Chaque niveau de test correspond à une phase de développement.",
+  },
+  {
+    id: "e5q18",
+    domain: "Tests tout au long du cycle de vie",
+    difficulty: "moyen",
+    question: "Lequel des énoncés est VRAI concernant les tests de composants (tests unitaires) ?",
+    options: [
+      "Ils sont toujours réalisés uniquement par des testeurs indépendants.",
+      "Ils testent chaque composant logiciel de manière isolée, en utilisant des stubs ou drivers pour simuler les dépendances.",
+      "Ils ne peuvent pas inclure des tests boîte-blanche.",
+      "Ils sont réalisés uniquement après la fin complète du développement.",
+    ],
+    answer: 1,
+    explanation: "Les tests de composants testent chaque module en isolation. Les dépendances sont remplacées par des stubs (simulent les composants appelés) et des drivers (simulent les composants appelants).",
+  },
+  {
+    id: "e5q19",
+    domain: "Tests tout au long du cycle de vie",
+    difficulty: "moyen",
+    question: "Quelle est la principale différence entre le test d'intégration de composants et le test d'intégration système ?",
+    options: [
+      "Le test d'intégration de composants vérifie les interfaces entre composants d'un même système ; le test d'intégration système vérifie les interfaces entre systèmes ou sous-systèmes différents.",
+      "Le test d'intégration de composants est réalisé avant le test de composants ; le test d'intégration système est réalisé avant le test système.",
+      "Les deux types d'intégration sont identiques — seule la terminologie diffère.",
+      "Le test d'intégration de composants est réalisé par les développeurs ; le test d'intégration système par les testeurs.",
+    ],
+    answer: 0,
+    explanation: "Intégration de composants : interfaces entre modules/composants d'un même système. Intégration système : interfaces entre systèmes distincts (ex : notre application avec une API externe, un service de paiement).",
+  },
+  {
+    id: "e5q20",
+    domain: "Tests tout au long du cycle de vie",
+    difficulty: "facile",
+    question: "Lequel des exemples décrit le mieux un test non-fonctionnel ?",
+    options: [
+      "Vérifier que le bouton 'Ajouter au panier' ajoute correctement un produit.",
+      "Vérifier que la fonction de calcul des taxes retourne le bon montant.",
+      "Vérifier que le système supporte 10 000 utilisateurs simultanés sans dégradation visible des performances.",
+      "Vérifier que l'utilisateur peut se connecter avec son nom d'utilisateur et mot de passe.",
+    ],
+    answer: 2,
+    explanation: "Les tests non-fonctionnels vérifient des caractéristiques de qualité : performance, sécurité, utilisabilité, fiabilité, portabilité. Le test de charge (10 000 utilisateurs) est un test de performance — une caractéristique non-fonctionnelle.",
+  },
+  {
+    id: "e5q21",
+    domain: "Tests tout au long du cycle de vie",
+    difficulty: "facile",
+    question: "Dans un projet Agile, comment les tests s'intègrent-ils dans le cycle de développement ?",
+    options: [
+      "Les tests sont réalisés uniquement à la fin de chaque sprint, après que tout le code du sprint est terminé.",
+      "Les tests sont réalisés par une équipe séparée après la fin du projet de développement.",
+      "Les tests sont intégrés tout au long du sprint, avec les testeurs collaborant étroitement avec les développeurs dès le début.",
+      "Les tests Agile remplacent entièrement les revues et inspections statiques.",
+    ],
+    answer: 2,
+    explanation: "En Agile, les tests sont une activité continue et collaborative : les testeurs participent à la définition des critères d'acceptation dès le début du sprint et testent les fonctionnalités au fur et à mesure de leur développement.",
+  },
+  {
+    id: "e5q22",
+    domain: "Tests tout au long du cycle de vie",
+    difficulty: "moyen",
+    question: "Lequel des énoncés est VRAI concernant les tests de maintenance ?",
+    options: [
+      "Les tests de maintenance ne nécessitent jamais de tests de régression.",
+      "Les tests de maintenance sont identiques aux tests système réalisés lors du développement initial.",
+      "L'analyse d'impact est essentielle dans les tests de maintenance pour identifier les zones potentiellement affectées par un changement.",
+      "Les tests de maintenance sont réalisés uniquement lorsque le système est migré vers une nouvelle plateforme.",
+    ],
+    answer: 2,
+    explanation: "L'analyse d'impact est fondamentale pour les tests de maintenance : elle identifie quelles parties du système sont potentiellement affectées par le changement, permettant de cibler les tests de confirmation et de régression de manière efficace.",
+  },
+  {
+    id: "e5q23",
+    domain: "Tests tout au long du cycle de vie",
+    difficulty: "moyen",
+    question: "Parmi les niveaux de test suivants, lequel a pour principale base de test les cas d'utilisation et les exigences de haut niveau ?",
+    options: [
+      "Test de composants",
+      "Test d'intégration de composants",
+      "Test système",
+      "Test de composants et test système",
+    ],
+    answer: 2,
+    explanation: "Le test système utilise comme base de test : les cas d'utilisation, les exigences fonctionnelles et non-fonctionnelles de haut niveau, les processus métier. Il vérifie que le système complet répond aux exigences définies.",
+  },
+  {
+    id: "e5q24",
+    domain: "Tests tout au long du cycle de vie",
+    difficulty: "moyen",
+    question: "Lequel des facteurs distingue principalement les tests alpha des tests bêta ?",
+    options: [
+      "Les tests alpha sont réalisés dans les locaux du développeur avec des utilisateurs sélectionnés ; les tests bêta sont réalisés chez les clients en conditions réelles.",
+      "Les tests alpha sont informels ; les tests bêta suivent des cas de test documentés.",
+      "Les tests alpha sont moins coûteux ; les tests bêta sont plus coûteux car réalisés en conditions réelles.",
+      "Les tests alpha précèdent le développement ; les tests bêta suivent le développement.",
+    ],
+    answer: 0,
+    explanation: "Tests alpha : réalisés dans les locaux du développeur, avec des utilisateurs potentiels ou internes, sous supervision. Tests bêta : réalisés chez les clients ou utilisateurs finaux, dans leur environnement réel, sans supervision directe.",
+  },
+
+  // ── EXAM 5 — Chapitre 3 : Tests statiques (6 questions) ───────────────────
+
+  {
+    id: "e5q25",
+    domain: "Tests statiques",
+    difficulty: "moyen",
+    question: "Lequel des types de défauts suivants est typiquement détecté par l'analyse statique automatisée mais PAS par une revue manuelle ?",
+    options: [
+      "Une exigence ambiguë interprétable de deux façons différentes.",
+      "Une incohérence entre deux exigences contradictoires.",
+      "Une variable déclarée mais jamais utilisée dans 10 000 lignes de code.",
+      "Un flux d'utilisation non intuitif pour les utilisateurs seniors.",
+    ],
+    answer: 2,
+    explanation: "L'analyse statique automatisée (linters, analyseurs de code) parcourt mécaniquement tout le code et détecte des patterns précis (variables non utilisées, code mort) sur de grandes bases de code — impossible à faire manuellement à grande échelle.",
+  },
+  {
+    id: "e5q26",
+    domain: "Tests statiques",
+    difficulty: "moyen",
+    question: "Lors d'une revue formelle, quel est le rôle du facilitateur (modérateur) ?",
+    options: [
+      "Corriger les défauts identifiés par les réviseurs.",
+      "Décider si une revue doit être organisée et allouer les ressources.",
+      "Animer la réunion de revue, s'assurer que les règles sont respectées et gérer les interactions entre participants.",
+      "Documenter toutes les décisions et défauts identifiés pendant la réunion.",
+    ],
+    answer: 2,
+    explanation: "Le facilitateur/modérateur anime la réunion : gère le temps, s'assure que tout le monde participe, évite les débats hors-sujet. Le scribe documente ; l'auteur corrige ; le manager décide d'organiser.",
+  },
+  {
+    id: "e5q27",
+    domain: "Tests statiques",
+    difficulty: "facile",
+    question: "Lequel des types de revue suivants est le MOINS formel ?",
+    options: [
+      "Revue informelle (ex : demander à un collègue de regarder son code)",
+      "Relecture guidée (Walkthrough)",
+      "Revue technique",
+      "Inspection",
+    ],
+    answer: 0,
+    explanation: "Ordre de formalisme croissant : Informelle (aucun processus défini) → Walkthrough (dirigée par l'auteur) → Revue technique (entre pairs) → Inspection (la plus formelle : critères, checklists, métriques).",
+  },
+  {
+    id: "e5q28",
+    domain: "Tests statiques",
+    difficulty: "moyen",
+    question: "Lequel des bénéfices suivants est EXCLUSIF aux tests statiques (impossible à obtenir avec des tests dynamiques seuls) ?",
+    options: [
+      "Détecter les défauts fonctionnels dans les exigences.",
+      "Détecter des défauts dans des documents non exécutables comme les exigences ou les plans de projet.",
+      "Mesurer la couverture des tests exécutés.",
+      "Détecter les défauts de performance sous charge.",
+    ],
+    answer: 1,
+    explanation: "Les tests statiques sont les seuls à pouvoir analyser des documents non exécutables : exigences, plans de projet, spécifications de conception, maquettes. Les tests dynamiques nécessitent un code exécutable.",
+  },
+  {
+    id: "e5q29",
+    domain: "Tests statiques",
+    difficulty: "moyen",
+    question: "Dans quelle phase du processus de revue formelle les critères d'entrée sont-ils vérifiés ?",
+    options: [
+      "Planification",
+      "Lancement (Kick-off)",
+      "Revue individuelle",
+      "Réunion de revue",
+    ],
+    answer: 0,
+    explanation: "Les critères d'entrée sont vérifiés lors de la Planification : le document est-il prêt ? Les bons réviseurs sont-ils disponibles ? Si les critères d'entrée ne sont pas satisfaits, la revue est reportée.",
+  },
+  {
+    id: "e5q30",
+    domain: "Tests statiques",
+    difficulty: "facile",
+    question: "Lequel des défauts suivants est le plus susceptible d'être trouvé par une revue plutôt que par un test dynamique ?",
+    options: [
+      "Une exigence contradictoire avec une autre exigence dans le même document.",
+      "Une fonction qui retourne un résultat incorrect pour des données d'entrée spécifiques.",
+      "Un temps de réponse trop lent sous charge maximale.",
+      "Un crash du système lors d'une déconnexion réseau inattendue.",
+    ],
+    answer: 0,
+    explanation: "Les revues détectent des problèmes dans les documents avant même que le code soit écrit : exigences contradictoires, ambiguïtés, manques. B, C, D nécessitent un système exécutable — détectables uniquement par des tests dynamiques.",
+  },
+
+  // ── EXAM 5 — Chapitre 4 : Techniques de test (8 questions) ────────────────
+
+  {
+    id: "e5q31",
+    domain: "Techniques de test",
+    difficulty: "moyen",
+    question: "Pour un système de facturation (remise 0% si < 100€ ; 5% si 100-499€ ; 10% si ≥ 500€), combien de partitions d'équivalence valides existe-t-il ?",
+    options: [
+      "2 partitions valides",
+      "3 partitions valides (et des partitions invalides en plus)",
+      "5 partitions uniquement (une par valeur limite)",
+      "1 seule partition (tous les montants positifs)",
+    ],
+    answer: 1,
+    explanation: "3 partitions valides : <100€, 100-499€, ≥500€. Il faut aussi considérer les partitions invalides (montants négatifs, non numériques). Un représentant par partition suffit : ex. 50€, 250€, 750€ pour les valides.",
+  },
+  {
+    id: "e5q32",
+    domain: "Techniques de test",
+    difficulty: "moyen",
+    question: "Pour un champ de saisie acceptant des valeurs entières de 1 à 100, quelles valeurs tester en BVA à 2 valeurs ?",
+    options: [
+      "1, 50, 100",
+      "0, 1, 100, 101 et 50 (milieu)",
+      "0, 1, 100, 101",
+      "1, 2, 99, 100",
+    ],
+    answer: 2,
+    explanation: "BVA 2 valeurs = limite + voisin extérieur pour chaque frontière. Limite basse 1 : tester 0 (invalide, juste en dessous) et 1 (valide, limite). Limite haute 100 : tester 100 (limite) et 101 (invalide, juste au-dessus).",
+  },
+  {
+    id: "e5q33",
+    domain: "Techniques de test",
+    difficulty: "moyen",
+    question: "Une table de décision avec 3 conditions binaires (Client fidèle, Commande > 200€, Code promo valide) génère au maximum combien de règles ?",
+    options: [
+      "3 règles",
+      "6 règles",
+      "8 règles (2³ = 8 combinaisons)",
+      "12 règles",
+    ],
+    answer: 2,
+    explanation: "Avec N conditions binaires (Oui/Non), le nombre maximum de règles = 2ᴺ. 3 conditions binaires → 2³ = 8 règles. Certaines peuvent être impossibles ou équivalentes et être éliminées.",
+  },
+  {
+    id: "e5q34",
+    domain: "Techniques de test",
+    difficulty: "moyen",
+    question: "Lequel des énoncés sur la couverture des décisions est CORRECT ?",
+    options: [
+      "La couverture des décisions à 100% garantit l'absence de défauts dans le code.",
+      "La couverture des décisions est moins exigeante que la couverture des instructions.",
+      "La couverture des décisions exige que chaque résultat possible (vrai et faux) de chaque décision soit testé au moins une fois.",
+      "La couverture des décisions à 100% est équivalente à la couverture des chemins à 100%.",
+    ],
+    answer: 2,
+    explanation: "La couverture des décisions : pour chaque point de décision (if, while, switch…), il faut qu'au moins un test couvre le résultat VRAI et au moins un test couvre le résultat FAUX.",
+  },
+  {
+    id: "e5q35",
+    domain: "Techniques de test",
+    difficulty: "moyen",
+    question: "Un système de prêts bancaires a les états : DEMANDE, ANALYSE, APPROUVE, REFUSE, DECAISSE, CLOTURE. Combien d'états doit couvrir un cas de test pour le flux nominal complet (succès) ?",
+    options: [
+      "3 états",
+      "4 états",
+      "5 états (DEMANDE → ANALYSE → APPROUVE → DECAISSE → CLOTURE)",
+      "6 états (tous les états du système)",
+    ],
+    answer: 2,
+    explanation: "Le flux nominal : DEMANDE → ANALYSE → APPROUVE → DECAISSE → CLOTURE = 5 états. L'état REFUSE appartient au flux alternatif. Un bon plan de test couvre à la fois le flux nominal et les flux alternatifs.",
+  },
+  {
+    id: "e5q36",
+    domain: "Techniques de test",
+    difficulty: "moyen",
+    question: "Quelle est la principale différence entre les tests exploratoires et les tests ad-hoc ?",
+    options: [
+      "Les tests exploratoires sont plus rapides que les tests ad-hoc.",
+      "Les tests ad-hoc suivent un plan documenté ; les tests exploratoires sont totalement libres.",
+      "Les tests exploratoires ont un objectif défini (charte) et tirent les leçons de chaque exécution ; les tests ad-hoc sont purement informels et non structurés.",
+      "Les tests exploratoires et ad-hoc sont identiques — seule la terminologie diffère.",
+    ],
+    answer: 2,
+    explanation: "Les tests exploratoires ont une structure légère : une charte (mission, objectifs, durée) guide le testeur qui apprend et adapte sa stratégie en temps réel. Les tests ad-hoc sont entièrement libres, sans objectif défini.",
+  },
+  {
+    id: "e5q37",
+    domain: "Techniques de test",
+    difficulty: "moyen",
+    question: "Pour le code `if (A && B) { action1; } else { action2; }`, combien de cas de test sont nécessaires pour 100% de couverture des décisions ?",
+    options: [
+      "1 cas de test",
+      "2 cas de test",
+      "3 cas de test",
+      "4 cas de test",
+    ],
+    answer: 1,
+    explanation: "Pour 100% de couverture des décisions : Test 1 : A=Vrai, B=Vrai → condition vraie → action1. Test 2 : A=Faux (ou B=Faux) → condition fausse → action2. Les deux résultats (vrai/faux) sont couverts en 2 tests.",
+  },
+  {
+    id: "e5q38",
+    domain: "Techniques de test",
+    difficulty: "moyen",
+    question: "Lequel des exemples illustre le mieux l'estimation d'erreur (Error Guessing) ?",
+    options: [
+      "Un testeur utilise les partitions d'équivalence pour sélectionner les valeurs d'entrée.",
+      "Un testeur réalise une analyse aux valeurs limites sur un champ de saisie numérique.",
+      "Un testeur expérimenté teste spécifiquement la saisie de caractères spéciaux car il a souvent vu des défauts liés à ce type d'entrée.",
+      "Un testeur suit une checklist de vérification fournie par son organisation.",
+    ],
+    answer: 2,
+    explanation: "L'estimation d'erreur exploite l'expérience du testeur : il cible les zones où des défauts ont souvent été trouvés dans le passé (caractères spéciaux, valeurs null, champs vides…). C'est un instinct éduqué basé sur l'historique des défauts.",
+  },
+
+  // ── EXAM 5 — Chapitre 5 : Gestion (5 questions) ───────────────────────────
+
+  {
+    id: "e5q39",
+    domain: "Gestion des activités de test",
+    difficulty: "moyen",
+    question: "Lequel des éléments suivants fait partie des métriques de test utilisées pour le suivi et le contrôle des tests ?",
+    options: [
+      "Le nombre de lignes de code développées par jour.",
+      "Le pourcentage de cas de test exécutés, le taux de réussite/échec et la densité de défauts par module.",
+      "Le nombre de réunions d'équipe organisées pendant la phase de test.",
+      "Le coût total du projet de développement logiciel.",
+    ],
+    answer: 1,
+    explanation: "Les métriques de test mesurent l'avancement et la qualité des tests : % de cas exécutés, taux de réussite/échec, nombre de défauts ouverts/fermés, densité de défauts, couverture des exigences.",
+  },
+  {
+    id: "e5q40",
+    domain: "Gestion des activités de test",
+    difficulty: "moyen",
+    question: "Lequel des critères suivants est un critère de SORTIE (conditions pour terminer les tests) ?",
+    options: [
+      "L'environnement de test est configuré et opérationnel.",
+      "Les données de test sont préparées et validées.",
+      "Les cas de test ont été révisés et approuvés par les parties prenantes.",
+      "Tous les cas de test prioritaires ont été exécutés et aucun défaut bloquant n'est ouvert.",
+    ],
+    answer: 3,
+    explanation: "Les critères de sortie définissent quand arrêter les tests : tous les tests prioritaires exécutés, aucun défaut bloquant ouvert, couverture d'exigences atteinte. A, B, C sont des critères d'ENTRÉE (pour démarrer).",
+  },
+  {
+    id: "e5q41",
+    domain: "Gestion des activités de test",
+    difficulty: "moyen",
+    question: "Lequel des éléments suivants est INCLUS dans un rapport de synthèse de test ?",
+    options: [
+      "Les écarts constatés par rapport au plan de test et les raisons de ces écarts.",
+      "La liste complète de tous les cas de test conçus pendant le projet.",
+      "Les critères d'entrée et de sortie définis pour la phase de test.",
+      "Le plan détaillé de correction de tous les défauts trouvés.",
+    ],
+    answer: 0,
+    explanation: "Le rapport de synthèse contient : résumé des activités, métriques, évaluation de la qualité, écarts par rapport au plan et recommandations. Les critères (C) sont dans le plan de test ; la liste des cas (B) est dans la documentation de test.",
+  },
+  {
+    id: "e5q42",
+    domain: "Gestion des activités de test",
+    difficulty: "moyen",
+    question: "Lequel des facteurs suivants influence directement la priorité d'exécution des cas de test ?",
+    options: [
+      "L'ordre alphabétique des noms des cas de test dans le référentiel.",
+      "L'ordre dans lequel les cas de test ont été rédigés par les testeurs.",
+      "Le niveau de risque associé aux fonctionnalités testées, les dépendances entre cas de test et les critères d'acceptation critiques.",
+      "La longueur et la complexité de chaque cas de test.",
+    ],
+    answer: 2,
+    explanation: "La priorisation des tests est guidée par : le niveau de risque (tester d'abord ce qui est le plus critique), les dépendances (un TC qui en prépare un autre) et les critères d'acceptation critiques pour la mise en production.",
+  },
+  {
+    id: "e5q43",
+    domain: "Gestion des activités de test",
+    difficulty: "moyen",
+    question: "Lequel des éléments suivants est un exemple de risque PROJET (et non de risque produit) ?",
+    options: [
+      "Une fonctionnalité de sécurité peut ne pas être correctement implémentée.",
+      "Le module de paiement peut être instable sous charge élevée.",
+      "L'interface utilisateur peut ne pas être intuitive pour les utilisateurs âgés.",
+      "Un expert clé de l'équipe de test pourrait quitter le projet avant la fin de la phase de test.",
+    ],
+    answer: 3,
+    explanation: "Risque projet = risque affectant le DÉROULEMENT du projet (ressources, planning, budget, compétences). A, B, C sont des risques produit (qualité du logiciel). Le départ d'un expert affecte la capacité à réaliser les tests — c'est un risque projet.",
+  },
+
+  // ── EXAM 5 — Chapitre 6 : Outils de test (3 questions) ────────────────────
+
+  {
+    id: "e5q44",
+    domain: "Outils de test",
+    difficulty: "moyen",
+    question: "Lequel des risques suivants est le plus associé à l'introduction d'un outil d'automatisation des tests ?",
+    options: [
+      "Sous-estimer l'effort nécessaire pour créer, maintenir et faire évoluer les scripts automatisés.",
+      "L'outil peut trouver trop de défauts, dépassant la capacité de correction de l'équipe.",
+      "L'outil peut remplacer complètement les testeurs humains.",
+      "L'outil peut accélérer trop les tests, ne laissant pas le temps aux développeurs de corriger.",
+    ],
+    answer: 0,
+    explanation: "Le risque principal de l'automatisation est de sous-estimer la maintenance : chaque changement d'interface, de flux ou de logique peut invalider de nombreux scripts. Le ROI dépend directement de la stabilité du système testé.",
+  },
+  {
+    id: "e5q45",
+    domain: "Outils de test",
+    difficulty: "moyen",
+    question: "Lequel des outils suivants est le plus approprié pour détecter des fuites mémoire dans un code C++ ?",
+    options: [
+      "Outil de gestion de configuration (ex : Git)",
+      "Outil de management de test (ex : TestRail)",
+      "Outil d'analyse dynamique (ex : Valgrind)",
+      "Outil d'analyse statique (ex : SonarQube)",
+    ],
+    answer: 2,
+    explanation: "Les outils d'analyse dynamique analysent le comportement du programme PENDANT son exécution : fuites mémoire, accès mémoire invalides, variables non initialisées. L'analyse statique (D) ne peut pas détecter les fuites mémoire qui dépendent du comportement à l'exécution.",
+  },
+  {
+    id: "e5q46",
+    domain: "Outils de test",
+    difficulty: "facile",
+    question: "Lequel des bénéfices est associé à l'utilisation d'un outil de gestion de configuration dans un projet de test ?",
+    options: [
+      "Il permet d'exécuter automatiquement les cas de test et de comparer les résultats.",
+      "Il génère automatiquement des cas de test à partir des exigences.",
+      "Il assure que les tests sont toujours exécutés sur la bonne version du logiciel et permet de rejouer les tests sur des versions antérieures.",
+      "Il mesure la couverture du code source atteinte par les tests automatisés.",
+    ],
+    answer: 2,
+    explanation: "L'outil de gestion de configuration (Git, SVN) garantit la traçabilité entre versions : savoir quelle version de l'application a été testée avec quels cas de test, et pouvoir rejouer des tests sur une version précédente.",
+  },
 ];
 
 export const DOMAINS: { key: Domain; chapter: string; color: string }[] = [
@@ -1073,3 +1651,93 @@ export const DOMAINS: { key: Domain; chapter: string; color: string }[] = [
   { key: "Gestion des activités de test",      chapter: "Ch. 5", color: "indigo"  },
   { key: "Outils de test",                     chapter: "Ch. 6", color: "rose"    },
 ];
+
+export type ExamInfo = {
+  id: number;
+  title: string;
+  subtitle: string;
+  questionCount: number;
+  durationMinutes: number;
+};
+
+export const EXAM_INFO: ExamInfo[] = [
+  { id: 1, title: "Examen Blanc 1", subtitle: "Fondamentaux & Techniques", questionCount: 40, durationMinutes: 60 },
+  { id: 2, title: "Examen Blanc 2", subtitle: "Variations avancées · Tous chapitres", questionCount: 40, durationMinutes: 60 },
+  { id: 3, title: "Examen Blanc 3", subtitle: "Session courte · Ch. 1–5", questionCount: 20, durationMinutes: 30 },
+  { id: 4, title: "Examen Blanc 4", subtitle: "Session courte · Ch. 2–6", questionCount: 20, durationMinutes: 30 },
+  { id: 5, title: "Examen Blanc 5", subtitle: "Questions originales · Syllabus complet", questionCount: 40, durationMinutes: 60 },
+];
+
+// Curated question sets for each exam (ordered by chapter)
+export const EXAM_SETS: Record<number, string[]> = {
+  1: [
+    // Ch.1 (12Q)
+    "e1q01","e1q02","e1q03","e1q04","e1q05","e1q06","e1q07","e1q08","e1q09","e1q10","e1q11","e1q12",
+    // Ch.2 (8Q)
+    "e1q14","e1q15","e1q16","e1q17","e1q18","e1q19","e1q20","e1q21",
+    // Ch.3 (3Q)
+    "e1q24","e1q25","e1q26",
+    // Ch.4 (7Q)
+    "e1q30","e1q31","e1q32","e1q33","e1q34","e1q35","e1q36",
+    // Ch.5 (7Q)
+    "e1q42","e1q43","e1q44","e1q45","e1q46","e1q47","e1q48",
+    // Ch.6 (3Q)
+    "e1q51","e1q52","e1q53",
+  ],
+  2: [
+    // Ch.1 (10Q)
+    "e1q13","e2q01","e1q07","e1q08","e1q09","e1q10","e1q11","e1q12","e1q04","e1q06",
+    // Ch.2 (8Q)
+    "e5q05","e5q06","e1q22","e1q23","e1q17","e1q18","e1q19","e1q20",
+    // Ch.3 (4Q)
+    "e2q03","e1q27","e1q28","e1q29",
+    // Ch.4 (10Q)
+    "e2q02","e5q03","e1q37","e1q38","e1q39","e1q40","e1q41","e1q32","e1q33","e1q34",
+    // Ch.5 (6Q)
+    "e2q04","e5q01","e1q49","e1q50","e1q43","e1q44",
+    // Ch.6 (2Q)
+    "e1q54","e1q55",
+  ],
+  3: [
+    // Ch.1 (4Q)
+    "e1q01","e1q06","e1q08","e1q13",
+    // Ch.2 (4Q)
+    "e1q14","e1q16","e1q18","e5q05",
+    // Ch.3 (2Q)
+    "e1q24","e1q28",
+    // Ch.4 (4Q)
+    "e1q30","e1q34","e1q37","e2q02",
+    // Ch.5 (4Q)
+    "e1q42","e1q44","e1q46","e2q04",
+    // Ch.6 (2Q)
+    "e1q51","e1q54",
+  ],
+  4: [
+    // Ch.1 (4Q)
+    "e1q02","e1q07","e1q09","e2q01",
+    // Ch.2 (4Q)
+    "e1q15","e1q17","e1q21","e5q06",
+    // Ch.3 (2Q)
+    "e1q25","e2q03",
+    // Ch.4 (4Q)
+    "e1q31","e1q35","e1q39","e5q03",
+    // Ch.5 (4Q)
+    "e1q43","e1q45","e1q47","e5q01",
+    // Ch.6 (2Q)
+    "e1q52","e1q55",
+  ],
+  5: [
+    // Ch.1 (10Q)
+    "e5q07","e5q08","e5q09","e5q10","e5q11","e5q12","e5q13","e5q14","e5q15","e5q16",
+    // Ch.2 (8Q)
+    "e5q17","e5q18","e5q19","e5q20","e5q21","e5q22","e5q23","e5q24",
+    // Ch.3 (6Q)
+    "e5q25","e5q26","e5q27","e5q28","e5q29","e5q30",
+    // Ch.4 (8Q)
+    "e5q31","e5q32","e5q33","e5q34","e5q35","e5q36","e5q37","e5q38",
+    // Ch.5 (5Q)
+    "e5q39","e5q40","e5q41","e5q42","e5q43",
+    // Ch.6 (3Q)
+    "e5q44","e5q45","e5q46",
+  ],
+};
