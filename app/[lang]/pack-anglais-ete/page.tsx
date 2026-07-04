@@ -52,7 +52,7 @@ export default async function PackAnglaiseEtePage({ params }: { params: Promise<
             <span className="text-sm font-bold text-gray-900">Nexo <span className="text-blue-700">Skills</span></span>
           </a>
           <a href="#enroll" className="rounded-lg bg-amber-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-amber-600">
-            {isFr ? "S'inscrire — 800 DH/mois" : "Enroll — 800 MAD/month"}
+            {isFr ? "S'inscrire — 399 DH/mois" : "Enroll — 399 MAD/month"}
           </a>
         </div>
       </header>
@@ -178,7 +178,7 @@ export default async function PackAnglaiseEtePage({ params }: { params: Promise<
 
           {/* Right column — enrollment card */}
           <div id="enroll" className="lg:sticky lg:top-24 lg:self-start">
-            <FormationEnroll t={t} course="anglais-vacances-ete" lang={lang} price="800 DH/mois" defaultMode="contact" />
+            <FormationEnroll t={t} course="anglais-vacances-ete" lang={lang} price="399 DH/mois" defaultMode="contact" />
           </div>
         </div>
       </div>
