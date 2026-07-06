@@ -10,7 +10,7 @@ function rateLimit(ip: string, max = 10, windowMs = 60_000): boolean {
   return true;
 }
 
-type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete" | "istqb-fondation";
+type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete" | "istqb-fondation" | "istqb-ctal-ta";
 
 const COURSES: Record<CourseKey, { name: string; description: string; amount: number; currency?: string; recurring?: boolean }> = {
   qa: {
@@ -74,6 +74,18 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
     amount: 2400, // €24
     currency: "eur",
   },
+  "istqb-ctal-ta": {
+    name: "Préparation ISTQB CTAL-TA (Advanced Level Test Analyst) — Nexo Skills",
+    description: "200 questions · 6 chapitres du syllabus · Mode entraînement & simulation examen · Accès à vie",
+    amount: 4900, // €49
+    currency: "eur",
+  },
+};
+
+const ISTQB_COURSES = new Set<CourseKey>(["istqb-fondation", "istqb-ctal-ta"]);
+const ISTQB_ROUTE_SLUG: Record<string, string> = {
+  "istqb-fondation": "istqb",
+  "istqb-ctal-ta": "istqb-ctal-ta",
 };
 
 export async function POST(req: NextRequest) {
@@ -123,11 +135,11 @@ export async function POST(req: NextRequest) {
           quantity: 1,
         },
       ],
-      success_url: course === "istqb-fondation"
-        ? `${origin}/${lang}/istqb/entrainement?session_id={CHECKOUT_SESSION_ID}`
+      success_url: ISTQB_COURSES.has(course as CourseKey)
+        ? `${origin}/${lang}/${ISTQB_ROUTE_SLUG[course]}/entrainement?session_id={CHECKOUT_SESSION_ID}`
         : `${origin}/${lang}/success`,
-      cancel_url: course === "istqb-fondation"
-        ? `${origin}/${lang}/istqb`
+      cancel_url: ISTQB_COURSES.has(course as CourseKey)
+        ? `${origin}/${lang}/${ISTQB_ROUTE_SLUG[course]}`
         : `${origin}/#contact`,
     });
 

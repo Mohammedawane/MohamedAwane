@@ -222,6 +222,19 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
               </svg>
             </a>
 
+            {/* CTAL-TA highlight banner */}
+            <a
+              href={`/${lang}/istqb-ctal-ta`}
+              onClick={() => setMegaOpen(false)}
+              className="mt-2 flex items-center gap-3 rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 transition-colors hover:bg-indigo-100"
+            >
+              <span className="shrink-0 rounded-lg bg-indigo-700 px-2.5 py-1 text-xs font-bold text-white">CTAL-TA</span>
+              <p className="text-sm text-gray-700">Préparez la certification <span className="font-semibold text-indigo-700">ISTQB Advanced Level Test Analyst</span> avec 200 questions</p>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="ml-auto h-4 w-4 shrink-0 text-indigo-500">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+
             {/* Bottom bar */}
             <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-4">
               <p className="text-sm text-gray-500">
@@ -333,6 +346,22 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
                   <p className="text-xs text-gray-500">Banque de questions · Simulation examen</p>
                 </div>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="ml-auto h-4 w-4 shrink-0 text-blue-400">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </a>
+
+              {/* CTAL-TA card */}
+              <a
+                href={`/${lang}/istqb-ctal-ta`}
+                onClick={() => setOpen(false)}
+                className="mt-2 flex items-center gap-3 rounded-2xl border border-indigo-100 bg-indigo-50 px-4 py-4"
+              >
+                <span className="shrink-0 rounded-lg bg-indigo-700 px-2.5 py-1 text-xs font-bold text-white">CTAL-TA</span>
+                <div>
+                  <p className="text-sm font-semibold text-indigo-900">Préparation ISTQB CTAL-TA</p>
+                  <p className="text-xs text-gray-500">200 questions · Simulation examen</p>
+                </div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="ml-auto h-4 w-4 shrink-0 text-indigo-400">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
               </a>
