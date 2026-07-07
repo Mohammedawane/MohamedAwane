@@ -10,7 +10,7 @@ function rateLimit(ip: string, max = 10, windowMs = 60_000): boolean {
   return true;
 }
 
-type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete" | "istqb-fondation" | "istqb-ctal-ta";
+type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete" | "istqb-fondation" | "istqb-ctal-ta" | "istqb-ctal-tae";
 
 const COURSES: Record<CourseKey, { name: string; description: string; amount: number; currency?: string; recurring?: boolean }> = {
   qa: {
@@ -80,12 +80,19 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
     amount: 4900, // €49
     currency: "eur",
   },
+  "istqb-ctal-tae": {
+    name: "Préparation ISTQB CTAL-TAE (Test Automation Engineer) — Nexo Skills",
+    description: "199 questions · 7 chapitres du syllabus · Mode entraînement & simulation examen · Accès à vie",
+    amount: 4900, // €49
+    currency: "eur",
+  },
 };
 
-const ISTQB_COURSES = new Set<CourseKey>(["istqb-fondation", "istqb-ctal-ta"]);
+const ISTQB_COURSES = new Set<CourseKey>(["istqb-fondation", "istqb-ctal-ta", "istqb-ctal-tae"]);
 const ISTQB_ROUTE_SLUG: Record<string, string> = {
   "istqb-fondation": "istqb",
   "istqb-ctal-ta": "istqb-ctal-ta",
+  "istqb-ctal-tae": "istqb-ctal-tae",
 };
 
 export async function POST(req: NextRequest) {
