@@ -82,7 +82,7 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
   },
   "istqb-ctal-tae": {
     name: "Préparation ISTQB CTAL-TAE (Test Automation Engineer) — Nexo Skills",
-    description: "199 questions · 7 chapitres du syllabus · Mode entraînement & simulation examen · Accès à vie",
+    description: "200 questions · 7 chapitres du syllabus · Mode entraînement & simulation examen · Accès à vie",
     amount: 4900, // €49
     currency: "eur",
   },

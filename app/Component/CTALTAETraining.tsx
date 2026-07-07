@@ -118,7 +118,7 @@ function HomeScreen({
   onStartExam: (examId: number) => void;
   onOpenConfig: () => void;
 }) {
-  const totalQ   = QUESTIONS.length;
+  const totalQ   = 200;
   const done     = Object.keys(progress).length;
   const bestPct  = done ? Math.max(...Object.values(progress).map((r) => r.score)) : null;
 

@@ -4,7 +4,7 @@ import Navbar from "@/app/Component/Navbar";
 import Footer from "@/app/Component/Footer";
 import ISTQBCheckoutButton from "@/app/Component/ISTQBCheckoutButton";
 import type { Metadata } from "next";
-import { DOMAINS, QUESTIONS } from "@/app/data/istqb-ctal-tae-questions";
+import { DOMAINS } from "@/app/data/istqb-ctal-tae-questions";
 
 const BASE = "https://www.nexo-skills.com";
 const PRICE_DISPLAY = "49 €";
@@ -22,8 +22,8 @@ export async function generateMetadata({
       ? "Préparation ISTQB CTAL-TAE — Questions & Entraînement | Nexo Skills"
       : "ISTQB CTAL-TAE Prep — Practice Questions | Nexo Skills",
     description: isFr
-      ? "Préparez la certification ISTQB Test Automation Engineer (CTAL-TAE) avec 199 questions couvrant les 7 chapitres du syllabus. Mode entraînement avec explications ou simulation d'examen."
-      : "Prepare for the ISTQB Test Automation Engineer (CTAL-TAE) certification with 199 questions covering all 7 syllabus chapters. Training mode with explanations or full exam simulation.",
+      ? "Préparez la certification ISTQB Test Automation Engineer (CTAL-TAE) avec 200 questions couvrant les 7 chapitres du syllabus. Mode entraînement avec explications ou simulation d'examen."
+      : "Prepare for the ISTQB Test Automation Engineer (CTAL-TAE) certification with 200 questions covering all 7 syllabus chapters. Training mode with explanations or full exam simulation.",
     alternates: {
       canonical: `${BASE}/${lang}/istqb-ctal-tae`,
       languages: { fr: `${BASE}/fr/istqb-ctal-tae`, en: `${BASE}/en/istqb-ctal-tae` },
@@ -31,8 +31,8 @@ export async function generateMetadata({
     openGraph: {
       title: isFr ? "Préparation ISTQB CTAL-TAE — Nexo Skills" : "ISTQB CTAL-TAE Prep — Nexo Skills",
       description: isFr
-        ? "Banque de 199 questions ISTQB CTAL-TAE avec explications. Prêt pour l'examen Test Automation Engineer ?"
-        : "199-question ISTQB CTAL-TAE bank with explanations. Ready for the Test Automation Engineer exam?",
+        ? "Banque de 200 questions ISTQB CTAL-TAE avec explications. Prêt pour l'examen Test Automation Engineer ?"
+        : "200-question ISTQB CTAL-TAE bank with explanations. Ready for the Test Automation Engineer exam?",
       url: `${BASE}/${lang}/istqb-ctal-tae`,
       siteName: "Nexo Skills",
       locale: isFr ? "fr_FR" : "en_US",
@@ -42,7 +42,7 @@ export async function generateMetadata({
 }
 
 const WHAT_IS_INCLUDED_FR = [
-  { icon: "📚", label: `${"" }199 questions couvrant les 7 chapitres du syllabus officiel CTAL-TAE` },
+  { icon: "📚", label: "200 questions couvrant les 7 chapitres du syllabus officiel CTAL-TAE" },
   { icon: "🎯", label: "Mode entraînement : explication détaillée après chaque réponse" },
   { icon: "⏱️", label: "Mode simulation examen : conditions réelles, score final" },
   { icon: "✅", label: "Questions à choix unique et à choix multiples, comme le vrai examen" },
@@ -51,7 +51,7 @@ const WHAT_IS_INCLUDED_FR = [
 ];
 
 const WHAT_IS_INCLUDED_EN = [
-  { icon: "📚", label: "199 questions covering all 7 chapters of the official CTAL-TAE syllabus" },
+  { icon: "📚", label: "200 questions covering all 7 chapters of the official CTAL-TAE syllabus" },
   { icon: "🎯", label: "Training mode: detailed explanation after each answer" },
   { icon: "⏱️", label: "Exam simulation mode: real conditions, final score" },
   { icon: "✅", label: "Single-choice and multiple-choice questions, just like the real exam" },
@@ -80,7 +80,7 @@ export default async function ISTQBCTALTAEPage({
   const isFr = lang !== "en";
 
   const included = isFr ? WHAT_IS_INCLUDED_FR : WHAT_IS_INCLUDED_EN;
-  const totalQ = QUESTIONS.length;
+  const totalQ = 200;
 
   return (
     <main className="min-h-screen bg-white">

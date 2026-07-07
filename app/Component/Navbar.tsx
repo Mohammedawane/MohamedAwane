@@ -242,7 +242,7 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
               className="mt-2 flex items-center gap-3 rounded-xl border border-cyan-100 bg-cyan-50 px-4 py-3 transition-colors hover:bg-cyan-100"
             >
               <span className="shrink-0 rounded-lg bg-cyan-700 px-2.5 py-1 text-xs font-bold text-white">CTAL-TAE</span>
-              <p className="text-sm text-gray-700">Préparez la certification <span className="font-semibold text-cyan-700">ISTQB Test Automation Engineer</span> avec 199 questions</p>
+              <p className="text-sm text-gray-700">Préparez la certification <span className="font-semibold text-cyan-700">ISTQB Test Automation Engineer</span> avec 200 questions</p>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="ml-auto h-4 w-4 shrink-0 text-cyan-500">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
               </svg>
@@ -388,7 +388,7 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
                 <span className="shrink-0 rounded-lg bg-cyan-700 px-2.5 py-1 text-xs font-bold text-white">CTAL-TAE</span>
                 <div>
                   <p className="text-sm font-semibold text-cyan-900">Préparation ISTQB CTAL-TAE</p>
-                  <p className="text-xs text-gray-500">199 questions · Simulation examen</p>
+                  <p className="text-xs text-gray-500">200 questions · Simulation examen</p>
                 </div>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="ml-auto h-4 w-4 shrink-0 text-cyan-400">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
