@@ -4,6 +4,10 @@ import type { NextRequest } from "next/server";
 const locales = ["en", "fr"] as const;
 const defaultLocale = "fr";
 
+// Pages that stay live in English (e.g. for English-targeted ad campaigns),
+// unlike the rest of the site which currently redirects /en/* to /fr/*.
+const EN_ALLOWED_PATHS = ["/en/formations/tutorat-francais"];
+
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -16,8 +20,12 @@ export function proxy(request: NextRequest) {
   )
     return;
 
-  // Redirect /en/* to /fr/*
-  if (pathname.startsWith("/en/") || pathname === "/en") {
+  const isEnAllowed = EN_ALLOWED_PATHS.some(
+    (allowed) => pathname === allowed || pathname.startsWith(`${allowed}/`)
+  );
+
+  // Redirect /en/* to /fr/* — except the explicitly allowed English pages above
+  if (!isEnAllowed && (pathname.startsWith("/en/") || pathname === "/en")) {
     const newPath = pathname.replace(/^\/en/, "/fr");
     request.nextUrl.pathname = newPath || "/fr";
     return NextResponse.redirect(request.nextUrl);
@@ -34,7 +42,7 @@ export function proxy(request: NextRequest) {
   }
 
   const response = NextResponse.next();
-  response.headers.set("x-locale", "fr");
+  response.headers.set("x-locale", isEnAllowed ? "en" : "fr");
   return response;
 }
 
