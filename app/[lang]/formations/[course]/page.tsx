@@ -76,6 +76,8 @@ export default async function FormationPage({
   const f = t.courses[course];
   const imageSrc = COURSE_IMAGES[course];
   const isActive = ACTIVE_COURSES.has(course);
+  // CashPlus (Morocco-only transfer) doesn't make sense for this Canada-facing offer
+  const hideCashplus = course === "tutorat-francais";
   const isFr = lang !== "en";
   const comingSoonStatus = isFr ? "Ouverture des inscriptions — Automne 2026" : "Enrollment opening — Fall 2026";
 
@@ -210,7 +212,7 @@ export default async function FormationPage({
             {/* Mobile only: enroll card right after tagline — visitors from Facebook ads see CTA immediately */}
             <div className="mb-10 lg:hidden">
               {isActive
-                ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} />
+                ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} />
                 : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
               }
             </div>
@@ -275,7 +277,7 @@ export default async function FormationPage({
           {/* Right column: sticky enroll card — desktop only, mobile version is above */}
           <div id="enroll" className="hidden lg:block lg:sticky lg:top-24 lg:self-start">
             {isActive
-              ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} />
+              ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} />
               : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
             }
           </div>
@@ -307,7 +309,7 @@ export default async function FormationPage({
           {/* Desktop: show form inline */}
           <div className="hidden lg:block">
             {isActive
-              ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} />
+              ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} />
               : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
             }
           </div>

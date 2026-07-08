@@ -23,6 +23,7 @@ export default function FormationEnroll({
   status,
   contactOnly = false,
   defaultMode,
+  hideCashplus = false,
 }: {
   t: EnrollDict;
   course: string;
@@ -31,10 +32,11 @@ export default function FormationEnroll({
   status?: string;
   contactOnly?: boolean;
   defaultMode?: Mode;
+  hideCashplus?: boolean;
 }) {
   const resolvedDefault: Mode = defaultMode ?? (contactOnly ? "contact" : "pay");
   const [mode, setMode] = useState<Mode>(resolvedDefault);
-  const [payMethod, setPayMethod] = useState<PayMethod>(null);
+  const [payMethod, setPayMethod] = useState<PayMethod>(hideCashplus ? "card" : null);
   const [cashplusSent, setCashplusSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -253,23 +255,25 @@ export default function FormationEnroll({
             </button>
 
             {/* CashPlus */}
-            <button
-              onClick={() => setPayMethod("cashplus")}
-              className="group flex w-full items-center gap-4 rounded-2xl border-2 border-gray-200 bg-white p-5 text-left transition-all hover:border-orange-400 hover:shadow-md"
-            >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-500 group-hover:bg-orange-100 transition-colors">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-6 w-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75" />
+            {!hideCashplus && (
+              <button
+                onClick={() => setPayMethod("cashplus")}
+                className="group flex w-full items-center gap-4 rounded-2xl border-2 border-gray-200 bg-white p-5 text-left transition-all hover:border-orange-400 hover:shadow-md"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-500 group-hover:bg-orange-100 transition-colors">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-6 w-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <p className="font-bold text-gray-900">Virement CashPlus</p>
+                  <p className="text-xs text-gray-500 mt-0.5">{isFr ? "Transfert d'argent · Confirmation manuelle" : "Money transfer · Manual confirmation"}</p>
+                </div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5 text-gray-300 group-hover:text-orange-400 transition-colors">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
-              </div>
-              <div className="flex-1">
-                <p className="font-bold text-gray-900">Virement CashPlus</p>
-                <p className="text-xs text-gray-500 mt-0.5">{isFr ? "Transfert d'argent · Confirmation manuelle" : "Money transfer · Manual confirmation"}</p>
-              </div>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5 text-gray-300 group-hover:text-orange-400 transition-colors">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </button>
+              </button>
+            )}
           </div>
         )}
 
