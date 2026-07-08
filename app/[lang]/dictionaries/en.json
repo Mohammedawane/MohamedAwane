@@ -144,7 +144,7 @@
         "badge": "Open enrollment · 1h/session",
         "tag": "Individual session",
         "title": "French Tutoring — Primary School",
-        "sub": "Reading, writing, grammar and expression. Individual sessions adapted to your child's level, led by a qualified tutor.",
+        "sub": "Reading, interaction and playful activities to give your child a real love of French. Individual sessions adapted to their level, led by a qualified tutor.",
         "details": [
           "1 hour per session · online",
           "Monthly subscription · no commitment",
@@ -1076,72 +1076,72 @@
       },
       "tutorat-francais": {
         "title": "French Tutoring — Primary School",
-        "tagline": "Individual online sessions to strengthen your child's foundations in French and rebuild their confidence.",
+        "tagline": "Individual online sessions full of reading, interaction and hands-on activities, so your child progresses in French while having fun.",
         "price": "$150/month",
         "duration": "1h / session",
         "date": "Open enrollment",
         "cert": "Progress tracking included",
         "highlights": [
           {
-            "title": "100% individual",
-            "text": "Your child has the tutor's full attention — guaranteed progress."
+            "title": "Interactive learning",
+            "text": "Word games, read-alouds, playful activities: every session is lively, not just paper exercises."
           },
           {
-            "title": "Adapted to their level",
-            "text": "Every session is prepared based on the student's specific needs."
+            "title": "A real love of reading",
+            "text": "We build fluency and comprehension through stories your child actually enjoys."
           },
           {
-            "title": "Online, no commute",
-            "text": "From home, on a computer or tablet — simple and convenient."
+            "title": "100% individual, online",
+            "text": "Your child gets the tutor's full, undivided attention — from home."
           }
         ],
         "modules": [
           {
             "num": "01",
-            "title": "Reading & Comprehension",
-            "description": "Work on reading fluency, text comprehension and identifying main ideas.",
+            "title": "Interactive Reading",
+            "description": "Stories, read-aloud games and questions to build fluency and comprehension while having fun.",
             "tags": [
               "Reading",
-              "Comprehension",
-              "Vocabulary"
+              "Fluency",
+              "Love of reading"
             ]
           },
           {
             "num": "02",
-            "title": "Grammar & Spelling",
-            "description": "Core rules, verb and noun agreement, dictation and targeted exercises based on the student's weaknesses.",
+            "title": "Vocabulary Activities & Games",
+            "description": "Word games, riddles and playful activities to grow vocabulary without it feeling like homework.",
             "tags": [
-              "Grammar",
-              "Spelling",
-              "Conjugation"
+              "Vocabulary",
+              "Games",
+              "Activities"
             ]
           },
           {
             "num": "03",
-            "title": "Written Expression",
-            "description": "Learn to structure ideas, write clear sentences and build short texts.",
+            "title": "Expression & Spoken Interaction",
+            "description": "Your child tells stories, explains ideas, asks questions — building confidence both orally and in writing.",
             "tags": [
-              "Writing",
-              "Structure",
-              "Expression"
+              "Speaking",
+              "Confidence",
+              "Interaction"
             ]
           },
           {
             "num": "04",
-            "title": "Review & Test Preparation",
-            "description": "Review current lessons, prepare for school tests and exams.",
+            "title": "Grammar & Writing, Gently",
+            "description": "Core basics (agreement, conjugation, sentence structure) woven naturally into the activities, not taught in isolation.",
             "tags": [
-              "Review",
-              "Tests",
-              "Assessment"
+              "Grammar",
+              "Writing",
+              "Foundations"
             ]
           }
         ],
         "audience": [
-          "Your child is struggling with French in primary school",
-          "They need personalized support the classroom can't provide",
-          "You want to rebuild their confidence before an important test",
-          "You're looking for consistent support throughout the school year"
+          "You want your child to develop a real love of reading and French",
+          "You're looking for lively, interactive sessions — not just repetitive drills",
+          "Your child is in primary school and benefits from one-on-one support",
+          "You want consistent, flexible support from home"
         ]
       },
       "tutorat-anglais": {

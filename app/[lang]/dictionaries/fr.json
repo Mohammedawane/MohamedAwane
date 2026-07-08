@@ -144,7 +144,7 @@
         "badge": "Inscriptions ouvertes · 1h/séance",
         "tag": "Cours individuel",
         "title": "Tutorat Français — Primaire",
-        "sub": "Renforcement en lecture, écriture, grammaire et expression. Séances individuelles adaptées au niveau de votre enfant, animées par un tuteur qualifié.",
+        "sub": "Lecture, interaction et activités ludiques pour donner à votre enfant le goût du français. Séances individuelles adaptées à son niveau, animées par un tuteur qualifié.",
         "details": [
           "1 heure par séance · en ligne",
           "Abonnement mensuel · sans engagement",
@@ -1076,72 +1076,72 @@
       },
       "tutorat-francais": {
         "title": "Tutorat Français — Primaire",
-        "tagline": "Des séances individuelles en ligne pour renforcer les bases et redonner confiance à votre enfant en français.",
+        "tagline": "Des séances individuelles en ligne, pleines de lecture, d'interaction et d'activités, pour que votre enfant progresse en français avec plaisir.",
         "price": "150$/mois",
         "duration": "1h / séance",
         "date": "Inscriptions ouvertes",
         "cert": "Suivi de progression inclus",
         "highlights": [
           {
-            "title": "100% individuel",
-            "text": "Votre enfant est seul avec le tuteur — attention complète, progression garantie."
+            "title": "Apprentissage interactif",
+            "text": "Jeux de mots, lecture à voix haute, activités ludiques : chaque séance est vivante, pas juste des exercices sur papier."
           },
           {
-            "title": "Adapté à son niveau",
-            "text": "Chaque séance est préparée en fonction des besoins spécifiques de l'élève."
+            "title": "Le goût de la lecture",
+            "text": "On travaille la fluidité et la compréhension à travers des histoires qui plaisent vraiment à votre enfant."
           },
           {
-            "title": "En ligne, sans déplacement",
-            "text": "Depuis la maison, sur un ordinateur ou une tablette — simple et pratique."
+            "title": "100% individuel, en ligne",
+            "text": "Votre enfant est seul avec son tuteur, depuis la maison — attention complète à chaque séance."
           }
         ],
         "modules": [
           {
             "num": "01",
-            "title": "Lecture & Compréhension",
-            "description": "Travailler la fluidité de lecture, la compréhension de textes et l'identification des idées principales.",
+            "title": "Lecture interactive",
+            "description": "Histoires, jeux de lecture à voix haute et questions pour développer la fluidité et la compréhension en s'amusant.",
             "tags": [
               "Lecture",
-              "Compréhension",
-              "Vocabulaire"
+              "Fluidité",
+              "Plaisir de lire"
             ]
           },
           {
             "num": "02",
-            "title": "Grammaire & Orthographe",
-            "description": "Règles de base, accord du verbe et du nom, dictées et exercices ciblés selon les difficultés de l'élève.",
+            "title": "Activités & jeux de vocabulaire",
+            "description": "Jeux de mots, devinettes et activités ludiques pour enrichir le vocabulaire sans que ça ressemble à un devoir.",
             "tags": [
-              "Grammaire",
-              "Orthographe",
-              "Conjugaison"
+              "Vocabulaire",
+              "Jeux",
+              "Activités"
             ]
           },
           {
             "num": "03",
-            "title": "Expression écrite",
-            "description": "Apprendre à structurer ses idées, rédiger des phrases claires et construire de petits textes.",
+            "title": "Expression & interaction orale",
+            "description": "Votre enfant raconte, explique, pose des questions — on construit sa confiance à l'oral autant qu'à l'écrit.",
             "tags": [
-              "Rédaction",
-              "Structure",
-              "Expression"
+              "Expression orale",
+              "Confiance",
+              "Interaction"
             ]
           },
           {
             "num": "04",
-            "title": "Révisions & Préparation aux évaluations",
-            "description": "Révision des leçons en cours, préparation aux contrôles et examens scolaires.",
+            "title": "Grammaire & écriture en douceur",
+            "description": "Les bases (accords, conjugaison, structure de phrase) intégrées naturellement à travers les activités, pas de façon isolée.",
             "tags": [
-              "Révisions",
-              "Évaluations",
-              "Bilan"
+              "Grammaire",
+              "Écriture",
+              "Bases"
             ]
           }
         ],
         "audience": [
-          "Votre enfant a des difficultés en français à l'école primaire",
-          "Il a besoin d'un suivi personnalisé que la classe ne peut pas offrir",
-          "Vous voulez lui redonner confiance avant une évaluation importante",
-          "Vous cherchez un soutien régulier tout au long de l'année scolaire"
+          "Vous voulez que votre enfant développe le goût de la lecture et du français",
+          "Vous cherchez des séances vivantes et interactives, pas juste des exercices répétitifs",
+          "Votre enfant est au primaire et profite d'un accompagnement individuel",
+          "Vous voulez un suivi régulier et flexible, depuis la maison"
         ]
       },
       "tutorat-anglais": {

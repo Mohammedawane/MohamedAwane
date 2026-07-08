@@ -45,7 +45,7 @@ export async function generateMetadata({
 const VALID_COURSES = ["qa", "iso", "web", "a11y", "audit", "hse", "tutorat-francais", "tutorat-anglais", "tutorat-math", "anglais-vacances-ete"] as const;
 
 // Only these courses have live enrollment + payment
-const ACTIVE_COURSES = new Set(["anglais-vacances-ete", "hse"]);
+const ACTIVE_COURSES = new Set(["anglais-vacances-ete", "hse", "tutorat-francais"]);
 type CourseSlug = (typeof VALID_COURSES)[number];
 
 function isValidCourse(slug: string): slug is CourseSlug {
