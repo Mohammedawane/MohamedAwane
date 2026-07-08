@@ -313,7 +313,7 @@ export default function FormationEnroll({
               <ol className="space-y-1.5 text-orange-700">
                 <li>1. {isFr ? "Rendez-vous dans un point CashPlus" : "Go to a CashPlus location"}</li>
                 <li>2. {isFr ? "Effectuez un transfert au nom de" : "Transfer to the name of"} : <strong>Mohammed Awane</strong></li>
-                <li>3. {isFr ? "Montant" : "Amount"} : <strong>800 DH</strong></li>
+                <li>3. {isFr ? "Montant" : "Amount"} : <strong>{price ?? "800 DH"}</strong></li>
                 <li className="flex items-center gap-2">
                   <span>4. {isFr ? "Remplissez le formulaire ci-dessous et envoyez le reçu via" : "Fill in the form below and send the receipt via"} WhatsApp</span>
                   <a

@@ -10,7 +10,7 @@ function rateLimit(ip: string, max = 10, windowMs = 60_000): boolean {
   return true;
 }
 
-type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete" | "istqb-fondation" | "istqb-ctal-ta" | "istqb-ctal-tae";
+type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "hse" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete" | "istqb-fondation" | "istqb-ctal-ta" | "istqb-ctal-tae";
 
 const COURSES: Record<CourseKey, { name: string; description: string; amount: number; currency?: string; recurring?: boolean }> = {
   qa: {
@@ -37,6 +37,12 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
     name: "Web Accessibility & Testing Tools — August 2026",
     description: "1 weekend. Build and audit inclusive websites with professional accessibility tools.",
     amount: 20000, // $200
+  },
+  hse: {
+    name: "HSE Officer Bootcamp — 18-19 & 24-25 juillet 2026",
+    description: "2 weekends. Risk Assessment, JSA, Toolbox Talk, Permit to Work, Incident Investigation — kit complet de modèles HSE inclus.",
+    amount: 69900, // 699 MAD
+    currency: "mad",
   },
   multiple: {
     name: "Nexo Skills — Multiple Programs",

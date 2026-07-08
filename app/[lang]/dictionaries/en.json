@@ -112,6 +112,20 @@
         "href": "#contact?course=audit"
       },
       {
+        "category": "qhse",
+        "badge": "July 18-19 & 24-25, 2026 · 2 Weekends",
+        "tag": "New",
+        "title": "HSE Officer Bootcamp",
+        "sub": "100% hands-on: Risk Assessment, JSA, Toolbox Talks, Permit to Work, Incident Investigation. You leave with the skills and documents to start your HSE role the very next day.",
+        "details": [
+          "2 weekends · July 18-19 & 24-25, 2026",
+          "699 MAD · one-time",
+          "Nexo Skills certificate + HSE template kit"
+        ],
+        "cta": "Reserve My Spot — 699 MAD",
+        "href": "#contact?course=hse"
+      },
+      {
         "category": "digital-si",
         "badge": "August 2026 · 1 Weekend",
         "tag": "Planned",
@@ -493,6 +507,12 @@
         "value": "audit",
         "label": "ISO 9001 Internal Auditor",
         "badge": "Coming soon"
+      },
+      {
+        "group": "Quality Management",
+        "value": "hse",
+        "label": "HSE Officer Bootcamp",
+        "badge": "July 18-19 & 24-25, 2026 · 699 MAD"
       },
       {
         "group": "Digital Skills",
@@ -982,6 +1002,76 @@
           "You're a quality manager responsible for the annual audit program",
           "You're preparing your organization for ISO 9001 certification",
           "You've completed the ISO 9001 training and want to move to practice"
+        ]
+      },
+      "hse": {
+        "title": "HSE Officer Bootcamp",
+        "tagline": "Recruiters aren't looking for someone who \"studied HSE\" — they're looking for someone who can, from day one, run a Risk Assessment, write a JSA, lead a Toolbox Talk, manage a Permit to Work, and conduct an Incident Investigation.",
+        "price": "699 MAD",
+        "duration": "2 weekends",
+        "date": "July 18-19 & 24-25, 2026",
+        "cert": "Nexo Skills certificate",
+        "highlights": [
+          {
+            "title": "100% hands-on",
+            "text": "You work on the actual documents used on the job — no theory disconnected from the field."
+          },
+          {
+            "title": "Fits your current job",
+            "text": "Just 2 weekends, so you can train without leaving your current position."
+          },
+          {
+            "title": "Full kit included",
+            "text": "Ready-to-use HSE templates, inspection checklists, real examples — to start the very next day."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Risk Assessment",
+            "description": "Identify hazards, assess risks and prioritize prevention measures using a proven methodology.",
+            "tags": [
+              "Risk Assessment",
+              "Prevention",
+              "Methodology"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "JSA — Job Safety Analysis",
+            "description": "Break a task into steps, identify associated hazards and define control measures.",
+            "tags": [
+              "JSA",
+              "Task Analysis",
+              "Control Measures"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Toolbox Talk & Permit to Work",
+            "description": "Lead effective safety briefings and manage work permits for high-risk tasks.",
+            "tags": [
+              "Toolbox Talk",
+              "Permit to Work",
+              "Communication"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Incident Investigation",
+            "description": "Conduct a structured incident investigation, identify root causes and write an actionable report.",
+            "tags": [
+              "Investigation",
+              "Root Causes",
+              "Report"
+            ]
+          }
+        ],
+        "audience": [
+          "You're targeting an HSE Officer / HSE Coordinator position",
+          "You already work in safety and want to structure your practices",
+          "You're transitioning into HSE / QHSE roles",
+          "You supervise teams on-site or in industrial settings"
         ]
       },
       "tutorat-francais": {

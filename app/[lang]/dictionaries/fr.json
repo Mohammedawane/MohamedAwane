@@ -112,6 +112,20 @@
         "href": "#contact?course=audit"
       },
       {
+        "category": "qhse",
+        "badge": "18-19 & 24-25 juillet 2026 · 2 weekends",
+        "tag": "Nouveau",
+        "title": "HSE Officer Bootcamp",
+        "sub": "100% pratique : Risk Assessment, JSA, Toolbox Talk, Permit to Work, Incident Investigation. Vous repartez avec les compétences et les documents pour démarrer votre poste HSE dès le lendemain.",
+        "details": [
+          "2 weekends · 18-19 & 24-25 juillet 2026",
+          "699 DH · paiement unique",
+          "Attestation Nexo Skills + kit de modèles HSE"
+        ],
+        "cta": "Réserver ma place — 699 DH",
+        "href": "#contact?course=hse"
+      },
+      {
         "category": "digital-si",
         "badge": "Août 2026 · 1 weekend",
         "tag": "Planifié",
@@ -493,6 +507,12 @@
         "value": "audit",
         "label": "Auditeur qualité ISO 9001",
         "badge": "Prochainement"
+      },
+      {
+        "group": "QHSE et industrie",
+        "value": "hse",
+        "label": "HSE Officer Bootcamp",
+        "badge": "18-19 & 24-25 juillet 2026 · 699 DH"
       },
       {
         "group": "Digital et SI",
@@ -982,6 +1002,76 @@
           "Vous êtes responsable qualité en charge du programme d'audit annuel",
           "Vous préparez votre organisation à une certification ISO 9001",
           "Vous avez suivi la formation ISO 9001 et voulez passer à la pratique"
+        ]
+      },
+      "hse": {
+        "title": "HSE Officer Bootcamp",
+        "tagline": "Les recruteurs ne cherchent pas quelqu'un qui a « étudié le HSE » — ils cherchent quelqu'un qui sait, dès le premier jour, réaliser un Risk Assessment, rédiger une JSA, animer un Toolbox Talk, gérer un Permit to Work et mener une Incident Investigation.",
+        "price": "699 DH",
+        "duration": "2 weekends",
+        "date": "18-19 & 24-25 juillet 2026",
+        "cert": "Attestation Nexo Skills",
+        "highlights": [
+          {
+            "title": "100% pratique",
+            "text": "Vous travaillez sur les vrais documents du métier — pas de théorie déconnectée du terrain."
+          },
+          {
+            "title": "Compatible avec votre emploi",
+            "text": "2 weekends seulement, pour vous former sans quitter votre poste actuel."
+          },
+          {
+            "title": "Kit complet offert",
+            "text": "Modèles HSE prêts à l'emploi, check-lists, exemples réels — pour démarrer dès le lendemain."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Risk Assessment",
+            "description": "Identifier les dangers, évaluer les risques et prioriser les mesures de prévention selon une méthodologie éprouvée.",
+            "tags": [
+              "Évaluation des risques",
+              "Prévention",
+              "Méthodologie"
+            ]
+          },
+          {
+            "num": "02",
+            "title": "JSA — Job Safety Analysis",
+            "description": "Décomposer une tâche en étapes, identifier les risques associés et définir les mesures de contrôle.",
+            "tags": [
+              "JSA",
+              "Analyse de tâche",
+              "Mesures de contrôle"
+            ]
+          },
+          {
+            "num": "03",
+            "title": "Toolbox Talk & Permit to Work",
+            "description": "Animer des briefings sécurité efficaces et gérer les autorisations de travail pour les tâches à risque.",
+            "tags": [
+              "Toolbox Talk",
+              "Permit to Work",
+              "Communication"
+            ]
+          },
+          {
+            "num": "04",
+            "title": "Incident Investigation",
+            "description": "Mener une investigation d'incident structurée, identifier les causes racines et rédiger un rapport actionnable.",
+            "tags": [
+              "Investigation",
+              "Causes racines",
+              "Rapport"
+            ]
+          }
+        ],
+        "audience": [
+          "Vous visez un poste de HSE Officer / HSE Coordinator",
+          "Vous travaillez déjà en sécurité et voulez structurer vos pratiques",
+          "Vous êtes en reconversion vers les métiers HSE / QHSE",
+          "Vous encadrez des équipes sur chantier ou en industrie"
         ]
       },
       "tutorat-francais": {
