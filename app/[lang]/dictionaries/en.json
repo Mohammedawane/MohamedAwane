@@ -141,12 +141,12 @@
       },
       {
         "category": "tutorat-langue",
-        "badge": "Open enrollment · 1h/session",
+        "badge": "Open enrollment · 2x 1h/week",
         "tag": "Individual session",
         "title": "French Tutoring — Primary School",
         "sub": "Reading, interaction and playful activities to give your child a real love of French. Individual sessions adapted to their level, led by a qualified tutor.",
         "details": [
-          "1 hour per session · online",
+          "2 one-hour sessions per week · online",
           "Monthly subscription · no commitment",
           "Personalized individual sessions"
         ],
@@ -1078,7 +1078,7 @@
         "title": "French Tutoring — Primary School",
         "tagline": "Individual online sessions full of reading, interaction and hands-on activities, so your child progresses in French while having fun.",
         "price": "$150/month",
-        "duration": "1h / session",
+        "duration": "1h / session · 2x per week",
         "date": "Open enrollment",
         "cert": "Progress tracking included",
         "highlights": [

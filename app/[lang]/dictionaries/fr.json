@@ -141,12 +141,12 @@
       },
       {
         "category": "tutorat-langue",
-        "badge": "Inscriptions ouvertes · 1h/séance",
+        "badge": "Inscriptions ouvertes · 2x 1h/semaine",
         "tag": "Cours individuel",
         "title": "Tutorat Français — Primaire",
         "sub": "Lecture, interaction et activités ludiques pour donner à votre enfant le goût du français. Séances individuelles adaptées à son niveau, animées par un tuteur qualifié.",
         "details": [
-          "1 heure par séance · en ligne",
+          "2 séances d'1 heure par semaine · en ligne",
           "Abonnement mensuel · sans engagement",
           "Séances individuelles personnalisées"
         ],
@@ -1078,7 +1078,7 @@
         "title": "Tutorat Français — Primaire",
         "tagline": "Des séances individuelles en ligne, pleines de lecture, d'interaction et d'activités, pour que votre enfant progresse en français avec plaisir.",
         "price": "150$/mois",
-        "duration": "1h / séance",
+        "duration": "1h / séance · 2x par semaine",
         "date": "Inscriptions ouvertes",
         "cert": "Suivi de progression inclus",
         "highlights": [
