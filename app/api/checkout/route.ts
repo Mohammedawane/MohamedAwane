@@ -52,7 +52,8 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
   "tutorat-francais": {
     name: "Tutorat Français — Primaire",
     description: "Cours individuel en ligne · 1h/séance · abonnement mensuel",
-    amount: 15000, // $150/mois
+    amount: 15000, // 150 CAD/mois
+    currency: "cad",
     recurring: true,
   },
   "tutorat-anglais": {
