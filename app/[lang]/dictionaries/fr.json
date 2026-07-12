@@ -1080,7 +1080,16 @@
         "price": "150$/mois",
         "duration": "1h / séance · 2x par semaine",
         "date": "Inscriptions ouvertes",
-        "cert": "Suivi de progression inclus",
+        "cert": "Amélioration des notes au bulletin",
+        "idealPace": "Un rythme idéal : 2 séances par semaine pour une progression rapide et durable.",
+        "audienceTitle": "Ce programme est fait pour votre enfant si…",
+        "checklist": [
+          "Tuteur spécialisé en pédagogie du primaire",
+          "Séances vivantes et interactives, pensées pour les enfants",
+          "Suivi de progression partagé avec les parents",
+          "Satisfaction garantie"
+        ],
+        "defaultContactMessage": "Bonjour, j'aimerais inscrire mon enfant et planifier une évaluation de son niveau avant de commencer.",
         "highlights": [
           {
             "title": "Apprentissage interactif",
@@ -1093,6 +1102,10 @@
           {
             "title": "100% individuel, en ligne",
             "text": "Votre enfant est seul avec son tuteur, depuis la maison — attention complète à chaque séance."
+          },
+          {
+            "title": "Tuteurs spécialisés enfants",
+            "text": "Formés à la pédagogie du primaire, nos tuteurs savent capter l'attention d'un enfant à l'écran grâce à des activités ludiques et interactives."
           }
         ],
         "modules": [
@@ -1142,6 +1155,20 @@
           "Vous cherchez des séances vivantes et interactives, pas juste des exercices répétitifs",
           "Votre enfant est au primaire et profite d'un accompagnement individuel",
           "Vous voulez un suivi régulier et flexible, depuis la maison"
+        ],
+        "testimonials": [
+          {
+            "quote": "Mon fils a repris confiance en lui en quelques semaines grâce au rythme de 2 séances par semaine.",
+            "name": "Parent d'un élève de 2e année"
+          },
+          {
+            "quote": "Les séances sont vivantes, mon enfant attend son cours avec impatience au lieu de le redouter.",
+            "name": "Parent d'un élève de 4e année"
+          },
+          {
+            "quote": "On voit vraiment la différence sur les évaluations de lecture depuis le début du suivi.",
+            "name": "Parent d'un élève du primaire"
+          }
         ]
       },
       "tutorat-anglais": {

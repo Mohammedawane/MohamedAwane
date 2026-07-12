@@ -24,6 +24,8 @@ export default function FormationEnroll({
   contactOnly = false,
   defaultMode,
   hideCashplus = false,
+  checklist,
+  defaultContactMessage,
 }: {
   t: EnrollDict;
   course: string;
@@ -33,6 +35,8 @@ export default function FormationEnroll({
   contactOnly?: boolean;
   defaultMode?: Mode;
   hideCashplus?: boolean;
+  checklist?: string[];
+  defaultContactMessage?: string;
 }) {
   const resolvedDefault: Mode = defaultMode ?? (contactOnly ? "contact" : "pay");
   const [mode, setMode] = useState<Mode>(resolvedDefault);
@@ -180,10 +184,10 @@ export default function FormationEnroll({
 
       {/* Checklist */}
       <div className="border-b border-gray-100 px-8 py-5">
-        {(isFr
+        {(checklist ?? (isFr
           ? ["Formateur professionnel en activité", "Certificat de réussite inclus", "Supports de cours accès à vie", "Satisfaction garantie"]
           : ["Taught by an active professional", "Certificate of completion included", "Lifetime access to course materials", "Satisfaction guaranteed"]
-        ).map((item) => (
+        )).map((item) => (
           <div key={item} className="flex items-center gap-2.5 py-1.5">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-4 w-4 shrink-0 text-blue-700">
               <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
@@ -401,7 +405,7 @@ export default function FormationEnroll({
               required
               rows={4}
               placeholder={isFr ? "Votre question ou commentaire…" : "Your question or comment…"}
-              defaultValue={isFr ? `Bonjour, je suis intéressé(e) par cette formation et j'aimerais avoir plus d'informations.` : `Hello, I'm interested in this program and would like more information.`}
+              defaultValue={defaultContactMessage ?? (isFr ? `Bonjour, je suis intéressé(e) par cette formation et j'aimerais avoir plus d'informations.` : `Hello, I'm interested in this program and would like more information.`)}
               className="w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
             />
             {error && (

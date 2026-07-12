@@ -73,7 +73,13 @@ export default async function FormationPage({
 
   const dict = await getDictionary(lang);
   const t = dict.formations;
-  const f = t.courses[course];
+  const f = t.courses[course] as (typeof t.courses)[CourseSlug] & {
+    idealPace?: string;
+    audienceTitle?: string;
+    checklist?: string[];
+    defaultContactMessage?: string;
+    testimonials?: { quote: string; name: string }[];
+  };
   const imageSrc = COURSE_IMAGES[course];
   const isActive = ACTIVE_COURSES.has(course);
   // CashPlus (Morocco-only transfer) doesn't make sense for this Canada-facing offer
@@ -212,13 +218,25 @@ export default async function FormationPage({
             {/* Mobile only: enroll card right after tagline — visitors from Facebook ads see CTA immediately */}
             <div className="mb-10 lg:hidden">
               {isActive
-                ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} />
+                ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} checklist={f.checklist} defaultContactMessage={f.defaultContactMessage} />
                 : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
               }
             </div>
 
+            {/* Ideal pace callout */}
+            {f.idealPace && (
+              <div className="mb-8 flex items-start gap-3 rounded-2xl border border-blue-200 bg-blue-50 p-5">
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-700 text-white">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5A3.375 3.375 0 0 0 6.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0 0 15 2.25h-1.5a2.251 2.251 0 0 0-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5" />
+                  </svg>
+                </span>
+                <p className="text-base font-semibold text-gray-900">{f.idealPace}</p>
+              </div>
+            )}
+
             {/* Highlights */}
-            <div className="mb-12 grid gap-4 sm:grid-cols-3">
+            <div className={`mb-12 grid gap-4 ${f.highlights.length === 4 ? "sm:grid-cols-2" : "sm:grid-cols-3"}`}>
               {f.highlights.map((h) => (
                 <div key={h.title} className="rounded-xl border border-gray-200 bg-gray-50 p-5">
                   <div className="mb-3 h-1 w-8 rounded-full bg-blue-700" />
@@ -258,7 +276,7 @@ export default async function FormationPage({
 
             {/* Audience */}
             <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8">
-              <h2 className="mb-6 text-xl font-bold text-gray-900">{t.audience_title}</h2>
+              <h2 className="mb-6 text-xl font-bold text-gray-900">{f.audienceTitle ?? t.audience_title}</h2>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {f.audience.map((item) => (
                   <li key={item} className="flex items-start gap-3">
@@ -272,12 +290,32 @@ export default async function FormationPage({
                 ))}
               </ul>
             </div>
+
+            {/* Testimonials */}
+            {f.testimonials && f.testimonials.length > 0 && (
+              <div className="mt-12">
+                <h2 className="mb-6 text-xl font-bold text-gray-900">
+                  {isFr ? "Ce que nos familles nous disent" : "What our families tell us"}
+                </h2>
+                <div className="grid gap-4 sm:grid-cols-3">
+                  {f.testimonials.map((tst) => (
+                    <div key={tst.name} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="mb-3 h-6 w-6 text-blue-200">
+                        <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.83v-6.83H4.5a2.67 2.67 0 0 1 2.67-2.67V6Zm10 0A5.17 5.17 0 0 0 12 11.17V18h6.83v-6.83H14.5a2.67 2.67 0 0 1 2.67-2.67V6Z" />
+                      </svg>
+                      <p className="mb-4 text-sm italic leading-relaxed text-gray-700">"{tst.quote}"</p>
+                      <p className="text-sm font-semibold text-gray-900">— {tst.name}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Right column: sticky enroll card — desktop only, mobile version is above */}
           <div id="enroll" className="hidden lg:block lg:sticky lg:top-24 lg:self-start">
             {isActive
-              ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} />
+              ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} checklist={f.checklist} defaultContactMessage={f.defaultContactMessage} />
               : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
             }
           </div>
@@ -309,7 +347,7 @@ export default async function FormationPage({
           {/* Desktop: show form inline */}
           <div className="hidden lg:block">
             {isActive
-              ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} />
+              ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} checklist={f.checklist} defaultContactMessage={f.defaultContactMessage} />
               : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
             }
           </div>

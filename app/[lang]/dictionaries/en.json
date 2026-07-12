@@ -1080,7 +1080,16 @@
         "price": "$150/month",
         "duration": "1h / session · 2x per week",
         "date": "Open enrollment",
-        "cert": "Progress tracking included",
+        "cert": "Real improvement in report card grades",
+        "idealPace": "The ideal rhythm: 2 sessions per week for fast, lasting progress.",
+        "audienceTitle": "This program is right for your child if…",
+        "checklist": [
+          "Tutor specialized in elementary-level pedagogy",
+          "Engaging, interactive sessions designed for kids",
+          "Progress updates shared with parents",
+          "Satisfaction guaranteed"
+        ],
+        "defaultContactMessage": "Hello, I'd like to enroll my child and schedule a level assessment before we start.",
         "highlights": [
           {
             "title": "Interactive learning",
@@ -1093,6 +1102,10 @@
           {
             "title": "100% individual, online",
             "text": "Your child gets the tutor's full, undivided attention — from home."
+          },
+          {
+            "title": "Tutors specialized for kids",
+            "text": "Trained in elementary-level pedagogy, our tutors know how to keep a child engaged on screen through playful, interactive activities."
           }
         ],
         "modules": [
@@ -1142,6 +1155,20 @@
           "You're looking for lively, interactive sessions — not just repetitive drills",
           "Your child is in primary school and benefits from one-on-one support",
           "You want consistent, flexible support from home"
+        ],
+        "testimonials": [
+          {
+            "quote": "My son regained his confidence in just a few weeks thanks to the twice-a-week rhythm.",
+            "name": "Parent of a Grade 2 student"
+          },
+          {
+            "quote": "The sessions are lively — my child looks forward to it instead of dreading it.",
+            "name": "Parent of a Grade 4 student"
+          },
+          {
+            "quote": "We've really seen the difference in reading assessments since starting.",
+            "name": "Parent of an elementary school student"
+          }
         ]
       },
       "tutorat-anglais": {
