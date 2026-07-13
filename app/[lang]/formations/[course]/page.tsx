@@ -104,7 +104,7 @@ export default async function FormationPage({
     "offers": f.price ? {
       "@type": "Offer",
       "price": f.price.replace(/[^0-9.]/g, ""),
-      "priceCurrency": f.price.includes("MAD") ? "MAD" : f.price.includes("CA") ? "CAD" : "USD",
+      "priceCurrency": f.price.includes("MAD") ? "MAD" : f.price.includes("FCFA") ? "XOF" : f.price.includes("CA") ? "CAD" : "USD",
       "availability": "https://schema.org/InStock",
       "url": `https://www.nexo-skills.com/${lang}/formations/${course}`,
     } : undefined,

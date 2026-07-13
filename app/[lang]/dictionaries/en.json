@@ -119,10 +119,10 @@
         "sub": "100% hands-on: Risk Assessment, JSA, Toolbox Talks, Permit to Work, Incident Investigation. You leave with the skills and documents to start your HSE role the very next day.",
         "details": [
           "2 weekends · July 18-19 & 24-25, 2026",
-          "699 MAD · one-time",
+          "45,000 FCFA · one-time",
           "Nexo Skills certificate + HSE template kit"
         ],
-        "cta": "Reserve My Spot — 699 MAD",
+        "cta": "Reserve My Spot — 45,000 FCFA",
         "href": "#contact?course=hse"
       },
       {
@@ -512,7 +512,7 @@
         "group": "Quality Management",
         "value": "hse",
         "label": "HSE Officer Bootcamp",
-        "badge": "July 18-19 & 24-25, 2026 · 699 MAD"
+        "badge": "July 18-19 & 24-25, 2026 · 45,000 FCFA"
       },
       {
         "group": "Digital Skills",
@@ -1007,7 +1007,7 @@
       "hse": {
         "title": "Become an HSE Officer",
         "tagline": "Recruiters aren't looking for someone who \"studied HSE\" — they're looking for someone who can, from day one, run a Risk Assessment, write a JSA, lead a Toolbox Talk, manage a Permit to Work, and conduct an Incident Investigation.",
-        "price": "699 MAD",
+        "price": "45,000 FCFA",
         "duration": "2 weekends",
         "date": "July 18-19 & 24-25, 2026",
         "cert": "Nexo Skills certificate",

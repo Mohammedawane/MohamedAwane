@@ -119,10 +119,10 @@
         "sub": "100% pratique : Risk Assessment, JSA, Toolbox Talk, Permit to Work, Incident Investigation. Vous repartez avec les compétences et les documents pour démarrer votre poste HSE dès le lendemain.",
         "details": [
           "2 weekends · 18-19 & 24-25 juillet 2026",
-          "699 DH · paiement unique",
+          "45 000 FCFA · paiement unique",
           "Attestation Nexo Skills + kit de modèles HSE"
         ],
-        "cta": "Réserver ma place — 699 DH",
+        "cta": "Réserver ma place — 45 000 FCFA",
         "href": "#contact?course=hse"
       },
       {
@@ -512,7 +512,7 @@
         "group": "QHSE et industrie",
         "value": "hse",
         "label": "HSE Officer Bootcamp",
-        "badge": "18-19 & 24-25 juillet 2026 · 699 DH"
+        "badge": "18-19 & 24-25 juillet 2026 · 45 000 FCFA"
       },
       {
         "group": "Digital et SI",
@@ -1007,7 +1007,7 @@
       "hse": {
         "title": "Devenez Responsable HSE",
         "tagline": "Les recruteurs ne cherchent pas quelqu'un qui a « étudié le HSE » — ils cherchent quelqu'un qui sait, dès le premier jour, réaliser un Risk Assessment, rédiger une JSA, animer un Toolbox Talk, gérer un Permit to Work et mener une Incident Investigation.",
-        "price": "699 DH",
+        "price": "45 000 FCFA",
         "duration": "2 weekends",
         "date": "18-19 & 24-25 juillet 2026",
         "cert": "Attestation Nexo Skills",
