@@ -39,8 +39,8 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
     amount: 20000, // $200
   },
   hse: {
-    name: "HSE Officer Bootcamp — 18-19 & 24-25 juillet 2026",
-    description: "2 weekends. Risk Assessment, JSA, Toolbox Talk, Permit to Work, Incident Investigation — kit complet de modèles HSE inclus.",
+    name: "HSE Officer Bootcamp — 18-19 juillet 2026",
+    description: "1 weekend. Risk Assessment, JSA, Toolbox Talk, Permit to Work, Incident Investigation — kit complet de modèles HSE inclus.",
     amount: 45000, // 45 000 FCFA — XOF is a zero-decimal currency in Stripe, no *100
     currency: "xof",
   },
