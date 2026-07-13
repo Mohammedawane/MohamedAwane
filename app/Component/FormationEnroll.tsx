@@ -26,6 +26,7 @@ export default function FormationEnroll({
   hideCashplus = false,
   checklist,
   defaultContactMessage,
+  altTransfer,
 }: {
   t: EnrollDict;
   course: string;
@@ -37,7 +38,9 @@ export default function FormationEnroll({
   hideCashplus?: boolean;
   checklist?: string[];
   defaultContactMessage?: string;
+  altTransfer?: { name: string; locationFr: string; locationEn: string };
 }) {
+  const transferName = altTransfer?.name ?? "CashPlus";
   const resolvedDefault: Mode = defaultMode ?? (contactOnly ? "contact" : "pay");
   const [mode, setMode] = useState<Mode>(resolvedDefault);
   const [payMethod, setPayMethod] = useState<PayMethod>(hideCashplus ? "card" : null);
@@ -104,7 +107,7 @@ export default function FormationEnroll({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name, email, phone, course,
-          message: `Paiement CashPlus — Référence de transfert : ${ref}`,
+          message: `Paiement ${transferName} — Référence de transfert : ${ref}`,
         }),
       });
       if (!res.ok) {
@@ -270,7 +273,7 @@ export default function FormationEnroll({
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <p className="font-bold text-gray-900">Virement CashPlus</p>
+                  <p className="font-bold text-gray-900">Virement {transferName}</p>
                   <p className="text-xs text-gray-500 mt-0.5">{isFr ? "Transfert d'argent · Confirmation manuelle" : "Money transfer · Manual confirmation"}</p>
                 </div>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5 text-gray-300 group-hover:text-orange-400 transition-colors">
@@ -313,17 +316,19 @@ export default function FormationEnroll({
               {isFr ? "Retour" : "Back"}
             </button>
 
-            {/* CashPlus instructions */}
+            {/* Alt transfer instructions */}
             <div className="rounded-xl border border-orange-200 bg-orange-50 p-4 text-sm">
               <p className="mb-2 font-bold text-orange-800">
-                {isFr ? "Comment payer via CashPlus :" : "How to pay via CashPlus:"}
+                {isFr ? `Comment payer via ${transferName} :` : `How to pay via ${transferName}:`}
               </p>
               <ol className="space-y-1.5 text-orange-700">
-                <li>1. {isFr ? "Rendez-vous dans un point CashPlus" : "Go to a CashPlus location"}</li>
+                <li>1. {isFr ? `Rendez-vous dans ${altTransfer?.locationFr ?? "un point CashPlus"}` : `Go to ${altTransfer?.locationEn ?? "a CashPlus location"}`}</li>
                 <li>2. {isFr ? "Effectuez un transfert au nom de" : "Transfer to the name of"} : <strong>Mohammed Awane</strong></li>
                 <li>3. {isFr ? "Montant" : "Amount"} : <strong>{price ?? "800 DH"}</strong></li>
                 <li className="flex items-center gap-2">
-                  <span>4. {isFr ? "Remplissez le formulaire ci-dessous et envoyez le reçu via" : "Fill in the form below and send the receipt via"} WhatsApp</span>
+                  <span>4. {isFr
+                    ? `Remplissez le formulaire ci-dessous et envoyez ${altTransfer ? "une photo du reçu" : "le reçu"} via`
+                    : `Fill in the form below and send ${altTransfer ? "a photo of the receipt" : "the receipt"} via`} WhatsApp</span>
                   <a
                     href="https://wa.me/212641189785"
                     target="_blank"
@@ -345,7 +350,7 @@ export default function FormationEnroll({
               className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20" />
             <input name="phone" type="tel" required placeholder={t.phone_placeholder}
               className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20" />
-            <input name="ref" type="text" required placeholder={isFr ? "Référence du transfert CashPlus" : "CashPlus transfer reference"}
+            <input name="ref" type="text" required placeholder={isFr ? `Référence du transfert ${transferName}` : `${transferName} transfer reference`}
               className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20" />
 
             {error && <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">{error}</p>}
