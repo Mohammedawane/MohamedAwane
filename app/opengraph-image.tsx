@@ -1,11 +1,14 @@
 import { ImageResponse } from "next/og";
+import { readFileSync } from "fs";
+import { join } from "path";
 
-export const runtime = "edge";
 export const alt = "Nexo Skills — Connect to your next level.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default function OGImage() {
+  const logoSrc = `data:image/png;base64,${readFileSync(join(process.cwd(), "public", "logo-icon.png")).toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -37,23 +40,14 @@ export default function OGImage() {
         />
 
         {/* Logo icon */}
-        <div
-          style={{
-            width: "96px",
-            height: "96px",
-            borderRadius: "20px",
-            background: "linear-gradient(135deg, #3b82f6 0%, #4f46e5 100%)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginBottom: "32px",
-            boxShadow: "0 20px 60px rgba(59,130,246,0.4)",
-          }}
-        >
-          <svg width="52" height="52" viewBox="0 0 24 24" fill="none">
-            <path d="M4 5h3l5 7 5-7h3L14 13l6 6h-3l-5-7-5 7H4l6-6L4 5Z" fill="white" />
-          </svg>
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={logoSrc}
+          width={130}
+          height={96}
+          alt=""
+          style={{ marginBottom: "32px" }}
+        />
 
         {/* Brand */}
         <div

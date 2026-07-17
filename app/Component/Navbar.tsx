@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 type NavDict = {
   courses: string;
@@ -93,11 +94,14 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
 
         {/* Logo */}
         <a href={`/${lang}`} className="group flex items-center gap-3">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-700 shadow-sm transition-transform duration-300 group-hover:scale-110">
-            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
-              <path d="M4 5h3l5 7 5-7h3L14 13l6 6h-3l-5-7-5 7H4l6-6L4 5Z" fill="white" />
-            </svg>
-          </div>
+          <Image
+            src="/logo-icon.png"
+            alt="Nexo Skills"
+            width={44}
+            height={32}
+            priority
+            className="h-8 w-auto transition-transform duration-300 group-hover:scale-110"
+          />
           <div className="flex flex-col leading-none">
             <span className="text-sm font-bold tracking-tight text-gray-900">
               Nexo <span className="text-blue-700">Skills</span>

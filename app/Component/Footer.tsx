@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type FooterDict = {
   copyright: string;
   email?: string;
@@ -40,11 +42,7 @@ export default function Footer({ t, lang }: { t: FooterDict; lang: string }) {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-700">
-                <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
-                  <path d="M4 5h3l5 7 5-7h3L14 13l6 6h-3l-5-7-5 7H4l6-6L4 5Z" fill="white" />
-                </svg>
-              </div>
+              <Image src="/logo-icon.png" alt="Nexo Skills" width={44} height={32} className="h-8 w-auto" />
               <div className="flex flex-col leading-none">
                 <span className="text-sm font-bold text-gray-900">
                   Nexo <span className="text-blue-700">Skills</span>

@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { getDictionary, hasLocale } from "../dictionaries";
 import FormationEnroll from "@/app/Component/FormationEnroll";
 
@@ -44,11 +45,13 @@ export default async function PackAnglaiseEtePage({ params }: { params: Promise<
       <header className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5">
           <a href={`/${lang}`} className="group flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-700 transition-transform duration-300 group-hover:scale-110">
-              <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
-                <path d="M4 5h3l5 7 5-7h3L14 13l6 6h-3l-5-7-5 7H4l6-6L4 5Z" fill="white" />
-              </svg>
-            </div>
+            <Image
+              src="/logo-icon.png"
+              alt="Nexo Skills"
+              width={44}
+              height={32}
+              className="h-8 w-auto transition-transform duration-300 group-hover:scale-110"
+            />
             <span className="text-sm font-bold text-gray-900">Nexo <span className="text-blue-700">Skills</span></span>
           </a>
           <a href="#enroll" className="rounded-lg bg-amber-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-amber-600">
