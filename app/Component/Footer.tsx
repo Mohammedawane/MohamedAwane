@@ -14,11 +14,11 @@ export default function Footer({ t, lang }: { t: FooterDict; lang: string }) {
   void lang;
 
   const formationLinks = [
-    { label: "IA & QA", href: "#formations" },
-    { label: "ISO 9001", href: "#formations" },
-    { label: "Accessibilité web", href: "#formations" },
-    { label: "Site web avec IA", href: "#formations" },
-    { label: "Tutorat primaire", href: "#tutorat" },
+    { label: "Anglais conversationnel", href: "#formations" },
+    { label: "Préparation DELF / DALF", href: "#formations" },
+    { label: "Tutorat Anglais", href: "#formations" },
+    { label: "Tutorat Français", href: "#formations" },
+    { label: "Pack vacances d'été", href: "#formations" },
   ];
 
   const infoLinks = [
@@ -51,7 +51,7 @@ export default function Footer({ t, lang }: { t: FooterDict; lang: string }) {
               </div>
             </div>
             <p className="mb-4 text-sm leading-relaxed text-gray-500">
-              Cabinet de formation pratique en IA, qualité et compétences digitales. Formateurs professionnels en activité.
+              École de langues en ligne. Tuteurs experts, cours interactifs en direct, pour enfants et adultes.
             </p>
             {t.email && (
               <a

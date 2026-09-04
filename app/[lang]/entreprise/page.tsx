@@ -17,14 +17,14 @@ export async function generateMetadata({
 
   return {
     title: isFr
-      ? "Solutions Entreprise — Ingénierie de Formation Sur Mesure | Nexo Skills"
-      : "Enterprise Solutions — Custom Corporate Training | Nexo Skills",
+      ? "Solutions Entreprise — Formation Linguistique Sur Mesure | Nexo Skills"
+      : "Enterprise Solutions — Custom Corporate Language Training | Nexo Skills",
     description: isFr
-      ? "Nexo Skills accompagne les entreprises dans la montée en compétences de leurs collaborateurs : ingénierie de formation, programmes sur mesure, management, transformation digitale et communication professionnelle. Consultation gratuite sous 24h."
-      : "Nexo Skills helps companies upskill their workforce: training engineering, custom programs, management, digital transformation and professional communication. Free consultation within 24h.",
+      ? "Nexo Skills accompagne les entreprises dans la montée en compétences linguistiques de leurs collaborateurs : diagnostic, cours sur mesure en anglais des affaires, français professionnel et préparation aux certifications. Consultation gratuite sous 24h."
+      : "Nexo Skills helps companies upskill their workforce's language skills: assessment, custom business English and professional French classes, and exam certification prep. Free consultation within 24h.",
     keywords: isFr
-      ? ["formation entreprise", "ingénierie de formation", "formation sur mesure", "montée en compétences", "management leadership", "transformation digitale", "communication professionnelle", "formation intra-entreprise"]
-      : ["corporate training", "training engineering", "custom programs", "upskilling", "management leadership", "digital transformation", "professional communication", "in-house training"],
+      ? ["formation langue entreprise", "anglais des affaires", "français professionnel", "cours de langue sur mesure", "formation linguistique intra-entreprise", "préparation TOEFL IELTS DELF entreprise"]
+      : ["corporate language training", "business English", "professional French", "custom language classes", "in-house language training", "corporate TOEFL IELTS DELF prep"],
     alternates: {
       canonical: `${BASE}/${lang}/entreprise`,
       languages: {
@@ -37,8 +37,8 @@ export async function generateMetadata({
         ? "Solutions Entreprise — Nexo Skills"
         : "Enterprise Solutions — Nexo Skills",
       description: isFr
-        ? "Formez vos équipes avec des programmes sur mesure : ingénierie de formation, management, digital et communication. Consultation gratuite."
-        : "Train your teams with custom programs: training engineering, management, digital and communication. Free consultation.",
+        ? "Formez vos équipes en langues avec des cours sur mesure : anglais des affaires, français professionnel, préparation aux certifications. Consultation gratuite."
+        : "Train your teams in languages with custom classes: business English, professional French, exam certification prep. Free consultation.",
       url: `${BASE}/${lang}/entreprise`,
       siteName: "Nexo Skills",
       locale: isFr ? "fr_FR" : "en_US",
@@ -50,8 +50,8 @@ export async function generateMetadata({
         ? "Solutions Entreprise — Nexo Skills"
         : "Enterprise Solutions — Nexo Skills",
       description: isFr
-        ? "Formez vos équipes avec des programmes sur mesure. Ingénierie de formation, management, digital."
-        : "Train your teams with custom programs. Training engineering, management, digital.",
+        ? "Formez vos équipes en langues avec des cours sur mesure. Anglais des affaires, français professionnel."
+        : "Train your teams in languages with custom classes. Business English, professional French.",
     },
     robots: {
       index: true,
@@ -82,14 +82,14 @@ export default async function EntreprisePage({
     "@type": "Service",
     name: isFr ? "Solutions Entreprise — Nexo Skills" : "Enterprise Solutions — Nexo Skills",
     description: isFr
-      ? "Ingénierie de formation et programmes sur mesure : management, transformation digitale, communication professionnelle."
-      : "Training engineering and custom programs: management, digital transformation, professional communication.",
+      ? "Diagnostic linguistique et cours sur mesure : anglais des affaires, français professionnel, préparation aux certifications."
+      : "Language assessment and custom classes: business English, professional French, exam certification prep.",
     provider: {
       "@type": "Organization",
       name: "Nexo Skills",
       url: BASE,
     },
-    serviceType: isFr ? "Formation professionnelle entreprise" : "Corporate Training",
+    serviceType: isFr ? "Formation linguistique entreprise" : "Corporate Language Training",
     areaServed: { "@type": "Country", name: "France" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -99,50 +99,50 @@ export default async function EntreprisePage({
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: isFr ? "Ingénierie de Formation" : "Training Engineering",
+            name: isFr ? "Diagnostic Linguistique" : "Language Needs Assessment",
             description: isFr
-              ? "Analyse des besoins en formation, conception pédagogique sur mesure, déploiement et évaluation ROI"
-              : "Training needs analysis, custom curriculum design, deployment and ROI evaluation",
+              ? "Test de niveau, objectifs alignés sur vos enjeux métier, suivi de progression"
+              : "Level testing, goals aligned with business needs, progress tracking",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: isFr ? "Offre Sur Mesure" : "Custom Programs",
+            name: isFr ? "Cours Sur Mesure" : "Custom Programs",
             description: isFr
-              ? "Co-construction avec vos RH, formats hybrides, certifiant ou non-certifiant"
-              : "Co-design with HR, hybrid formats, certified or non-certified",
+              ? "Co-construction avec vos RH, cours individuels ou en petit groupe, en ligne"
+              : "Co-design with HR, individual or small-group live online classes",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Management & Leadership",
+            name: isFr ? "Anglais des Affaires" : "Business English",
             description: isFr
-              ? "Animer une équipe, déléguer, motiver et développer les talents en entreprise"
-              : "Lead a team, delegate, motivate and develop in-house talent",
+              ? "Réunions, emails, présentations et négociations en anglais"
+              : "Meetings, emails, presentations and negotiations in English",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: isFr ? "Transformation Digitale" : "Digital Transformation",
+            name: isFr ? "Français Professionnel" : "Professional French",
             description: isFr
-              ? "IA, automatisation et culture data pour accompagner vos collaborateurs"
-              : "AI, automation and data culture to prepare your workforce",
+              ? "Communication écrite et orale en français pour équipes non-francophones"
+              : "Written and spoken French communication for non-native employees",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: isFr ? "Communication Professionnelle" : "Professional Communication",
+            name: isFr ? "Préparation aux Certifications" : "Exam & Certification Prep",
             description: isFr
-              ? "Prise de parole, anglais des affaires et techniques de négociation"
-              : "Public speaking, business English and negotiation techniques",
+              ? "TOEFL, IELTS, DELF/DALF pour la mobilité internationale"
+              : "TOEFL, IELTS, DELF/DALF for international mobility",
           },
         },
       ],

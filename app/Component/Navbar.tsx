@@ -5,6 +5,7 @@ import Image from "next/image";
 
 type NavDict = {
   courses: string;
+  business: string;
   why: string;
   contact: string;
   enroll: string;
@@ -34,12 +35,6 @@ const CAT_COLORS: Record<string, { dot: string; label: string; item: string; ico
   emerald: { dot: "bg-emerald-600", label: "text-emerald-700", item: "hover:bg-emerald-50 hover:text-emerald-700", icon: "text-white" },
   amber:   { dot: "bg-amber-500",   label: "text-amber-700",   item: "hover:bg-amber-50 hover:text-amber-700",   icon: "text-white" },
 };
-
-const ISTQB_NAV_ITEMS = [
-  { slug: "istqb",          badge: "FL",       badgeBg: "bg-blue-700",   title: "Foundation Level",              sub: "Banque de questions" },
-  { slug: "istqb-ctal-ta",  badge: "CTAL-TA",  badgeBg: "bg-indigo-700", title: "Advanced Level Test Analyst",    sub: "200 questions" },
-  { slug: "istqb-ctal-tae", badge: "CTAL-TAE", badgeBg: "bg-cyan-700",   title: "Test Automation Engineer",       sub: "200 questions" },
-] as const;
 
 function CatIcon({ catKey }: { catKey: string }) {
   if (catKey === "digital-si") return (
@@ -80,6 +75,7 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
   };
 
   const otherLinks = [
+    { href: `/${lang}/entreprise`, label: t.business },
     { href: "#why", label: t.why },
     { href: "#nous-contacter", label: t.contact },
   ];
@@ -219,56 +215,17 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
               })}
             </div>
 
-            {/* ISTQB highlight banner */}
-            <a
-              href={`/${lang}/istqb`}
-              onClick={() => setMegaOpen(false)}
-              className="mt-5 flex items-center gap-3 rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 transition-colors hover:bg-blue-100"
-            >
-              <span className="shrink-0 rounded-lg bg-blue-700 px-2.5 py-1 text-xs font-bold text-white">ISTQB FL</span>
-              <p className="text-sm text-gray-700">Préparez la certification <span className="font-semibold text-blue-700">ISTQB Foundation Level</span> avec notre banque de questions</p>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="ml-auto h-4 w-4 shrink-0 text-blue-500">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-
-            {/* CTAL-TA highlight banner */}
-            <a
-              href={`/${lang}/istqb-ctal-ta`}
-              onClick={() => setMegaOpen(false)}
-              className="mt-2 flex items-center gap-3 rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 transition-colors hover:bg-indigo-100"
-            >
-              <span className="shrink-0 rounded-lg bg-indigo-700 px-2.5 py-1 text-xs font-bold text-white">CTAL-TA</span>
-              <p className="text-sm text-gray-700">Préparez la certification <span className="font-semibold text-indigo-700">ISTQB Advanced Level Test Analyst</span> avec 200 questions</p>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="ml-auto h-4 w-4 shrink-0 text-indigo-500">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-
-            {/* CTAL-TAE highlight banner */}
-            <a
-              href={`/${lang}/istqb-ctal-tae`}
-              onClick={() => setMegaOpen(false)}
-              className="mt-2 flex items-center gap-3 rounded-xl border border-cyan-100 bg-cyan-50 px-4 py-3 transition-colors hover:bg-cyan-100"
-            >
-              <span className="shrink-0 rounded-lg bg-cyan-700 px-2.5 py-1 text-xs font-bold text-white">CTAL-TAE</span>
-              <p className="text-sm text-gray-700">Préparez la certification <span className="font-semibold text-cyan-700">ISTQB Test Automation Engineer</span> avec 200 questions</p>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="ml-auto h-4 w-4 shrink-0 text-cyan-500">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
-
             {/* Bottom bar */}
             <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-4">
               <p className="text-sm text-gray-500">
-                <span className="font-semibold text-gray-700">{courses.items.length} formations</span> disponibles · en ligne · certificat inclus
+                <span className="font-semibold text-gray-700">{courses.items.length} cours</span> disponibles · en ligne · tuteurs experts
               </p>
               <a
                 href="#formations"
                 onClick={() => setMegaOpen(false)}
                 className="flex items-center gap-1.5 rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-blue-800"
               >
-                Voir tous les programmes
+                Voir tous les cours
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-3.5 w-3.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
@@ -355,39 +312,6 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
                     </div>
                   );
                 })}
-              </div>
-
-              {/* Certifications ISTQB — bloc compact, même style accordéon que les catégories ci-dessus */}
-              <div className="mt-2 overflow-hidden rounded-2xl border border-gray-100">
-                <div className="flex items-center gap-3 bg-gray-50 px-4 py-3">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-slate-700">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-4 w-4 text-white">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-                    </svg>
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-700">Certifications ISTQB</span>
-                </div>
-                <div className="divide-y divide-gray-50">
-                  {ISTQB_NAV_ITEMS.map((item) => (
-                    <a
-                      key={item.slug}
-                      href={`/${lang}/${item.slug}`}
-                      onClick={() => setOpen(false)}
-                      className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 active:bg-gray-100"
-                    >
-                      <span className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] font-bold text-white ${item.badgeBg}`}>
-                        {item.badge}
-                      </span>
-                      <span className="min-w-0 flex-1">
-                        <span className="block truncate font-medium text-gray-900">{item.title}</span>
-                        <span className="block text-xs text-gray-400">{item.sub}</span>
-                      </span>
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4 shrink-0 text-gray-300">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                      </svg>
-                    </a>
-                  ))}
-                </div>
               </div>
             </div>
           )}

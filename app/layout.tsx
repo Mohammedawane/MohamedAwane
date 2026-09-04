@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Nexo Skills — Connect to your next level.",
   description:
-    "Nexo Skills propose des formations pratiques et reconnues en IA & QA, ISO 9001 et management de la qualité. Formateurs experts, certifications incluses.",
+    "Nexo Skills propose des cours de langues en ligne avec des tuteurs experts : anglais, français, préparation DELF/DALF et tutorat pour enfants. Cours interactifs en direct, flexibles et accessibles.",
   metadataBase: new URL("https://www.nexo-skills.com"),
   alternates: {
     canonical: "https://www.nexo-skills.com/fr",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Nexo Skills — Connect to your next level.",
     description:
-      "Des formations pratiques en QA & IA, ISO 9001, tutorat en ligne et création web. Formateurs experts, certifications incluses.",
+      "Des cours de langues en ligne avec des tuteurs experts : anglais, français, préparation aux examens et tutorat pour enfants. Cours interactifs en direct.",
     url: "https://www.nexo-skills.com",
     siteName: "Nexo Skills",
     locale: "fr_FR",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nexo Skills — Connect to your next level.",
     description:
-      "Des formations pratiques en QA & IA, ISO 9001, tutorat en ligne et création web.",
+      "Des cours de langues en ligne avec des tuteurs experts : anglais, français, préparation aux examens et tutorat pour enfants.",
   },
 };
 

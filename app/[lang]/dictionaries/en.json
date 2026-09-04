@@ -1,160 +1,97 @@
 {
   "nav": {
-    "courses": "Programs",
-    "why": "Why Nexo",
+    "courses": "Courses",
+    "business": "For Business",
+    "why": "Why Learn",
     "contact": "Contact Us",
-    "enroll": "Contact Us"
+    "enroll": "Book Trial"
   },
   "hero": {
-    "badge": "Taught by Canadian Industry Experts · Certificate of Completion Included",
+    "badge": "Expert online language tutors · Live interactive lessons",
     "headline": [
-      "Learn the skills that",
-      "get you hired.",
-      "Not just certified."
+      "Learn languages with",
+      "confidence and fluency.",
+      "Flexible. Engaging. Effective."
     ],
-    "sub": "Hands-on weekend training led by active industry professionals — the real tools, the real practice, the proof you're job-ready.",
-    "cta_primary": "See Our Programs",
-    "cta_secondary": "Talk to Us",
+    "sub": "We offer expert online language tutors, flexible online classes, and interactive lessons that make learning effective, engaging, and accessible for every learner.",
+    "cta_primary": "Browse Courses",
+    "cta_secondary": "Book a Free Trial",
     "stat1": {
       "value": "200+",
-      "label": "Professionals trained"
+      "label": "Experienced tutors"
     },
     "stat2": {
       "value": "5",
-      "label": "Programs available"
+      "label": "Course formats available"
     },
     "stat3": {
-      "value": "100%",
-      "label": "Certificate included"
+      "value": "Flexible",
+      "label": "Scheduling options"
     }
   },
   "courses": {
-    "label": "Our Programs",
-    "title": "Find the program that fits your goal",
-    "sub": "Three expert tracks built for working professionals — practical, focused, and designed to move your career forward.",
-    "count_one": "program",
-    "count_other": "programs",
+    "label": "Our Courses",
+    "title": "Language learning designed for you",
+    "sub": "Expert tutors, flexible class formats, and interactive lessons — choose the path that fits your goals.",
+    "count_one": "course",
+    "count_other": "courses",
     "categories": [
       {
-        "key": "digital-si",
-        "label": "Digital & IT",
-        "sub": "QA, software testing, web development and digital accessibility",
+        "key": "general-language",
+        "label": "General Language",
+        "sub": "Conversational and grammar-focused classes for everyday use",
         "color": "blue"
       },
       {
-        "key": "qhse",
-        "label": "QHSE & Industry",
-        "sub": "Quality systems, audits, ISO standards and organizational compliance",
+        "key": "exam-prep",
+        "label": "Exam Preparation",
+        "sub": "DELF, DALF, TOEFL, IELTS and other certification prep",
         "color": "violet"
       },
       {
-        "key": "tutorat-langue",
-        "label": "Tutoring & Language",
-        "sub": "Individual online sessions — Primary School · French, English, Mathematics",
+        "key": "tutoring",
+        "label": "1:1 Tutoring",
+        "sub": "Personalized individual sessions for primary school students",
+        "color": "emerald"
+      },
+      {
+        "key": "kids-teens",
+        "label": "Kids & Teens Groups",
+        "sub": "Small-group programs to build confidence in a new language",
         "color": "amber"
       }
     ],
     "items": [
       {
-        "category": "digital-si",
-        "badge": "July 2026 · 3 Weekends",
-        "tag": "Most Popular",
-        "title": "AI-Powered QA Engineering",
-        "sub": "Go from zero to job-ready QA Engineer in just 3 weekends. Learn manual testing, then supercharge every skill with AI tools that professionals actually use.",
+        "category": "general-language",
+        "badge": "Open enrollment · Weekly",
+        "tag": "Popular",
+        "title": "Conversational English — All Levels",
+        "sub": "Interactive classes focused on speaking, comprehension, and real-world communication.",
         "details": [
-          "3 weekends only — July 2026",
-          "$297 one-time · no hidden fees",
-          "Certificate of completion"
+          "Weekly live classes · online",
+          "Flexible schedules · group or 1:1",
+          "Personalized learning paths"
         ],
-        "cta": "Reserve My Spot — $297",
-        "href": "#contact?course=qa"
+        "cta": "Join a Class",
+        "href": "#contact?course=conversational-english"
       },
       {
-        "category": "qhse",
-        "badge": "July 2026 · Weekends",
-        "tag": "Planned",
-        "title": "ISO 9001:2015 Quality Management",
-        "sub": "The world's most recognized quality standard, decoded. Implement a full QMS, run internal audits, and walk away ready for certification — in one weekend format.",
+        "category": "exam-prep",
+        "badge": "Course package · 8 weeks",
+        "tag": "Exam Prep",
+        "title": "DELF / DALF Preparation",
+        "sub": "Targeted lessons, mock exams, and examiner-style feedback to boost your score.",
         "details": [
-          "Weekend format · July 2026",
-          "$200 · one-time",
-          "Certificate of completion"
+          "8-week program · live",
+          "Mock exams and detailed feedback",
+          "Guaranteed structured progression"
         ],
-        "cta": "Reserve My Spot — $200",
-        "href": "#contact?course=iso"
+        "cta": "Enroll",
+        "href": "#contact?course=delf"
       },
       {
-        "category": "digital-si",
-        "badge": "August 2026 · 1 Weekend",
-        "tag": "Planned",
-        "title": "Web Accessibility & Testing Tools",
-        "sub": "Learn to build and audit inclusive websites — and master the tools professionals use to catch what the eye misses.",
-        "details": [
-          "1 weekend · August 2026",
-          "$200 · one-time",
-          "Certificate of completion"
-        ],
-        "cta": "Reserve My Spot — $200",
-        "href": "#contact?course=a11y"
-      },
-      {
-        "category": "qhse",
-        "badge": "September 2026 · 1 Weekend",
-        "tag": "Planned",
-        "title": "ISO 9001 Internal Auditor",
-        "sub": "Master the audit process from planning to closing meeting. Conduct effective internal audits, write findings that drive real improvement, and prepare your organization for external certification.",
-        "details": [
-          "1 weekend · September 2026",
-          "$200 · one-time",
-          "Certificate of completion"
-        ],
-        "cta": "Reserve my spot — $80",
-        "href": "#contact?course=audit"
-      },
-      {
-        "category": "qhse",
-        "badge": "July 18-19, 2026 · 1 Weekend",
-        "tag": "New",
-        "title": "HSE Officer Bootcamp",
-        "sub": "100% hands-on: Risk Assessment, JSA, Toolbox Talks, Permit to Work, Incident Investigation. You leave with the skills and documents to start your HSE role the very next day.",
-        "details": [
-          "1 weekend · July 18-19, 2026",
-          "45,000 FCFA · one-time",
-          "Nexo Skills certificate + HSE template kit"
-        ],
-        "cta": "Reserve My Spot — 45,000 FCFA",
-        "href": "#contact?course=hse"
-      },
-      {
-        "category": "digital-si",
-        "badge": "August 2026 · 1 Weekend",
-        "tag": "Planned",
-        "title": "Build Your Website with AI",
-        "sub": "Turn your idea into a live, professional website in a single weekend — no coding required. You do the work, AI handles the heavy lifting.",
-        "details": [
-          "1 weekend · August 2026",
-          "$200 · one-time",
-          "Certificate of completion"
-        ],
-        "cta": "Reserve My Spot — $200",
-        "href": "#contact?course=web"
-      },
-      {
-        "category": "tutorat-langue",
-        "badge": "Open enrollment · 2x 1h/week",
-        "tag": "Individual session",
-        "title": "French Tutoring — Primary School",
-        "sub": "Reading, interaction and playful activities to give your child a real love of French. Individual sessions adapted to their level, led by a qualified tutor.",
-        "details": [
-          "2 one-hour sessions per week · online",
-          "Monthly subscription · no commitment",
-          "Personalized individual sessions"
-        ],
-        "cta": "Contact us",
-        "href": "#contact?course=tutorat-francais"
-      },
-      {
-        "category": "tutorat-langue",
+        "category": "tutoring",
         "badge": "Open enrollment · 1h/session",
         "tag": "Individual session",
         "title": "English Tutoring — Primary School",
@@ -164,25 +101,25 @@
           "Monthly subscription · no commitment",
           "Personalized individual sessions"
         ],
-        "cta": "Contact us",
+        "cta": "Book a Session",
         "href": "#contact?course=tutorat-anglais"
       },
       {
-        "category": "tutorat-langue",
-        "badge": "Open enrollment · 1h/session",
+        "category": "tutoring",
+        "badge": "Open enrollment · 2x 1h/week",
         "tag": "Individual session",
-        "title": "Math Tutoring — Primary School",
-        "sub": "Operations, fractions, word problems and logical reasoning. We start from the fundamentals and build solidly so your child follows and understands in class.",
+        "title": "French Tutoring — Primary School",
+        "sub": "Reading, interaction and playful activities to give your child a real love of French. Individual sessions adapted to their level, led by a qualified tutor.",
         "details": [
-          "1 hour per session · online",
+          "2 one-hour sessions per week · online",
           "Monthly subscription · no commitment",
           "Personalized individual sessions"
         ],
-        "cta": "Contact us",
-        "href": "#contact?course=tutorat-math"
+        "cta": "Book a Session",
+        "href": "#contact?course=tutorat-francais"
       },
       {
-        "category": "tutorat-langue",
+        "category": "kids-teens",
         "badge": "July · August 2026 · Group of 4",
         "tag": "Summer Pack",
         "title": "English Communication — Ages 7 to 14",
@@ -196,7 +133,7 @@
         "href": "#contact?course=anglais-vacances-ete"
       }
     ],
-    "detail_label": "View program"
+    "detail_label": "View course"
   },
   "qaSection": {
     "label": "Program 1 — Testing & Development",
@@ -434,94 +371,82 @@
     "badge2": "August 2026 · Exact date coming soon"
   },
   "testimonials": {
-    "label": "Student Stories",
+    "label": "Learner Stories",
     "title": "They did it. You can too.",
     "items": [
       {
         "name": "Amira Slimani",
         "avatar": "AS",
-        "quote": "I had zero tech background before this program. Nine weeks later I had a job offer. The AI module wasn't just useful — it made me stand out in every interview. I still use those skills every single day."
+        "quote": "I could barely hold a conversation in English before starting. Three months of weekly classes later, I gave a full work presentation in English without freezing once."
       },
       {
         "name": "Youssef Benali",
         "avatar": "YB",
-        "quote": "I had the skills but my CV wasn't telling the story. After the career session, I rewrote everything. One week later: three interview requests. The coaching alone justified the $297."
+        "quote": "My son used to dread English homework. After a few months of tutoring, he's putting his hand up in class. The tutor makes every session feel like a game, not a chore."
       },
       {
         "name": "Fatima Lahlou",
         "avatar": "FL",
-        "quote": "I spent months on free YouTube tutorials going in circles. This program gave me a clear path, someone to answer my questions, and a portfolio I was actually proud to show. That changes everything."
+        "quote": "I tried apps for years and never got past the basics. Having a real tutor who corrects me live made more difference in two months than two years of apps ever did."
       },
       {
         "name": "Karim Mansouri",
         "avatar": "KM",
-        "quote": "The ISO 9001 training was exactly what I needed to prepare for our certification audit. The practical case studies and tools provided helped me structure our quality approach in just a few weeks."
+        "quote": "The DELF prep classes gave me exactly the exam technique I was missing. Mock exams, real feedback, and I passed with a B2 on my first attempt."
       },
       {
         "name": "Inès Guerrouche",
         "avatar": "IG",
-        "quote": "I took the 'Build your website' course on a Saturday morning and by Sunday evening my first site was live. The instructor explains everything clearly without unnecessary jargon. Exactly what I needed to get started."
+        "quote": "The summer pack was the best decision for my daughter. Small group, lots of speaking time, and she came back to school in September so much more confident."
       },
       {
         "name": "Mehdi Aouad",
         "avatar": "MA",
-        "quote": "The Quality Auditor program gave me a complete view of real-world audits. The practical scenarios closely mirror actual workplace situations. I'd highly recommend it to anyone preparing for certification."
+        "quote": "We use Nexo Skills for our team's business English. Flexible scheduling around our workload and noticeably better client calls within a few weeks."
       }
     ]
   },
   "cta": {
     "title1": "Every week you wait is a week",
-    "title2": "someone else gets ahead.",
-    "sub": "The skills that move careers don't come from watching videos. Join Nexo Skills and build something real — starting this weekend.",
-    "button": "See All Programs",
-    "contact": "Enroll now →",
-    "trust": "Taught by industry experts · Certificate included · Satisfaction guaranteed"
+    "title2": "you could've been speaking with confidence.",
+    "sub": "Fluency doesn't come from apps alone. Join Nexo Skills and start speaking with a real tutor — starting this week.",
+    "button": "See All Courses",
+    "contact": "Book a trial →",
+    "trust": "Expert tutors · Flexible scheduling · Satisfaction guaranteed"
   },
   "form": {
     "label": "Enrollment",
-    "title": "Reserve your spot",
-    "sub": "Fill in your details to enroll in one of our programs. We confirm your registration within 24 hours.",
-    "course": "Which program would you like to join?",
-    "course_placeholder": "Choose a program…",
+    "title": "Book your class",
+    "sub": "Fill in your details to get started. We confirm your booking within 24 hours.",
+    "course": "Which course are you interested in?",
+    "course_placeholder": "Choose a course…",
     "courses": [
       {
-        "group": "Testing & Development",
-        "value": "qa",
-        "label": "AI-Powered QA Engineering",
+        "group": "Group Classes",
+        "value": "conversational-english",
+        "label": "Conversational English — All Levels",
         "badge": "Coming soon"
       },
       {
-        "group": "Testing & Development",
-        "value": "a11y",
-        "label": "Web Accessibility & Testing Tools",
+        "group": "Exam Preparation",
+        "value": "delf",
+        "label": "DELF / DALF Preparation",
         "badge": "Coming soon"
       },
       {
-        "group": "Quality Management",
-        "value": "iso",
-        "label": "ISO 9001:2015 Quality Management",
-        "badge": "Coming soon"
+        "group": "1:1 Tutoring",
+        "value": "tutorat-anglais",
+        "label": "English Tutoring — Primary School",
+        "badge": "$150/month"
       },
       {
-        "group": "Quality Management",
-        "value": "audit",
-        "label": "ISO 9001 Internal Auditor",
-        "badge": "Coming soon"
+        "group": "1:1 Tutoring",
+        "value": "tutorat-francais",
+        "label": "French Tutoring — Primary School",
+        "badge": "$150/month"
       },
       {
-        "group": "Quality Management",
-        "value": "hse",
-        "label": "HSE Officer Bootcamp",
-        "badge": "July 18-19, 2026 · 45,000 FCFA"
-      },
-      {
-        "group": "Digital Skills",
-        "value": "web",
-        "label": "Build Your Website with AI",
-        "badge": "Coming soon"
-      },
-      {
-        "group": "Tutoring & Language",
+        "group": "Kids & Teens",
         "value": "anglais-vacances-ete",
         "label": "Summer Pack — English Communication (Ages 7-14)",
         "badge": "July & August 2026 · 399 MAD/month"
@@ -529,7 +454,7 @@
       {
         "group": "",
         "value": "multiple",
-        "label": "More than one program — I'd like to discuss"
+        "label": "More than one course — I'd like to discuss"
       }
     ],
     "name": "Full Name",
@@ -546,31 +471,31 @@
   },
   "stats": {
     "items": [
-      { "value": "5", "label": "Available programs" },
-      { "value": "150+", "label": "Learners trained" },
+      { "value": "5", "label": "Course formats available" },
+      { "value": "150+", "label": "Learners taught" },
       { "value": "98%", "label": "Satisfaction rate" },
-      { "value": "100%", "label": "Certificate on completion" }
+      { "value": "Live", "label": "1:1 & group classes" }
     ]
   },
   "modalities": {
-    "title": "How do our programs work?",
+    "title": "How do our classes work?",
     "sub": "Flexible formats designed to fit your schedule and learning style.",
     "items": [
-      { "icon": "calendar", "title": "Intensive weekend", "description": "Concentrated sessions over 1–3 weekends so you can learn without leaving your job." },
-      { "icon": "video", "title": "Live online", "description": "Real-time virtual classes with your instructor — from anywhere." },
-      { "icon": "user", "title": "Individual tutoring", "description": "Personalized one-on-one sessions for primary school students, online." },
-      { "icon": "briefcase", "title": "Career coaching", "description": "CV review, LinkedIn, mock interviews — support all the way to your goal." }
+      { "icon": "calendar", "title": "Flexible scheduling", "description": "Book weekly or one-off sessions at times that fit your life — mornings, evenings, or weekends." },
+      { "icon": "video", "title": "Live online classes", "description": "Real-time video classes with your tutor — from anywhere, on any device." },
+      { "icon": "user", "title": "1:1 or small group", "description": "Choose fully personalized individual sessions or small interactive group classes." },
+      { "icon": "briefcase", "title": "Progress tracking", "description": "Regular feedback and progress reports so you — or your child — always know where things stand." }
     ]
   },
   "about": {
     "label": "Who we are",
-    "title": "A training school built by practitioners, for practitioners.",
-    "description": "Nexo Skills was born from a simple observation: too many programs teach outdated theory with no connection to real-world practice. We wanted to do things differently — instructors who work in their field today, content that reflects current practices, and support that goes all the way to employment.",
+    "title": "A language school built around real conversation.",
+    "description": "Nexo Skills was born from a simple observation: too many people study a language for years without ever feeling confident speaking it. We built a different kind of school — real tutors, live interactive classes, and lesson plans built around what you'll actually use, whether that's a job interview, an exam, or your child's next school year.",
     "points": [
-      "Instructors who are active professionals",
-      "100% practical and up-to-date content",
-      "AI integrated into every program",
-      "Career support included (CV, LinkedIn, interviews)"
+      "Vetted, experienced language tutors",
+      "100% live, interactive classes",
+      "Personalized learning paths for every level",
+      "Flexible scheduling that fits your life"
     ]
   },
   "footer": {
@@ -588,31 +513,31 @@
     "items": [
       {
         "q": "What level do I need to join?",
-        "a": "No prior experience required for most programs. QA Engineering and Website programs start from zero. ISO and Auditor programs don't require a technical background, but some familiarity with business operations is helpful."
+        "a": "No prior experience required. We welcome complete beginners through advanced learners, and every learner starts with a quick level check so classes start at the right place."
       },
       {
-        "q": "Are courses online or in-person?",
-        "a": "All programs are delivered live online via video conference. You attend from anywhere — all you need is a computer and a stable internet connection."
+        "q": "Are classes online or in-person?",
+        "a": "All classes are delivered live online via video call. All you need is a computer or tablet and a stable internet connection."
       },
       {
-        "q": "How many students per group?",
-        "a": "Groups are capped at 12 participants so every student gets direct attention from the trainer."
+        "q": "How many students per group class?",
+        "a": "Group classes stay small — 4 to 8 learners depending on the program — so every student gets real speaking time with the tutor."
       },
       {
-        "q": "Is the certificate recognized by employers?",
-        "a": "Our certificate is issued by Nexo Skills and documents that you completed the full program. It is not a government-accredited diploma, but it is valued by employers who prioritize practical skills over formal credentials."
+        "q": "What languages do you teach?",
+        "a": "We currently offer English and French, for both adults and children, with more languages being added. Tell us what you're looking for — we're always expanding."
       },
       {
         "q": "Can I pay in installments?",
-        "a": "Yes. For the QA Engineering program ($297), you can split the payment into 3 monthly installments of $99. Email us at info@nexo-skills.com to arrange it."
+        "a": "Individual tutoring is billed monthly with no long-term commitment, so you can pause or stop anytime. For group programs and packs, email us at info@nexo-skills.com to discuss options."
       },
       {
         "q": "What if I miss a session?",
-        "a": "All sessions are recorded and shared with enrolled participants. You can catch up on any missed session via the recording at any time."
+        "a": "Let your tutor know in advance and we'll help you reschedule where possible. Consistency matters most for progress, so we work with you to keep things on track."
       },
       {
-        "q": "What language are courses taught in?",
-        "a": "Courses are taught in French. All written materials are available in both French and English."
+        "q": "What language are classes taught in?",
+        "a": "Instruction adapts to the learner — typically a mix of the target language and French or English, depending on level and age."
       },
       {
         "q": "How quickly will I hear back after registering?",
@@ -655,6 +580,114 @@
     "phone_placeholder": "+1 234 567 8900",
     "detail_label": "View details",
     "courses": {
+      "conversational-english": {
+        "title": "Conversational English — All Levels",
+        "tagline": "Build real speaking confidence with live, interactive classes — not another textbook.",
+        "price": "Coming soon",
+        "duration": "1h / session · weekly",
+        "date": "Enrollment opening soon",
+        "cert": "Progress tracking included",
+        "highlights": [
+          {
+            "title": "Speaking from lesson one",
+            "text": "Every class is built around real conversation, not passive grammar drills."
+          },
+          {
+            "title": "Flexible group or 1:1",
+            "text": "Join a small weekly group or book fully personalized individual sessions."
+          },
+          {
+            "title": "A path, not a random lesson",
+            "text": "Your tutor tracks your level and builds a plan that moves you forward every week."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Everyday Conversation",
+            "description": "Introductions, daily life, opinions — the vocabulary and confidence to hold a real conversation.",
+            "tags": ["Speaking", "Vocabulary", "Listening"]
+          },
+          {
+            "num": "02",
+            "title": "Grammar in Context",
+            "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.",
+            "tags": ["Grammar", "Sentence Structure"]
+          },
+          {
+            "num": "03",
+            "title": "Listening & Comprehension",
+            "description": "Understand native speakers at natural speed through guided listening practice.",
+            "tags": ["Listening", "Comprehension"]
+          },
+          {
+            "num": "04",
+            "title": "Real-World Practice",
+            "description": "Role-plays and scenarios — ordering food, job interviews, small talk — so you're ready for real situations.",
+            "tags": ["Role-play", "Fluency"]
+          }
+        ],
+        "audience": [
+          "You want to speak with real confidence, not just pass a grammar test",
+          "You've studied before but freeze up in real conversations",
+          "You're starting from scratch and want a structured path",
+          "You want flexible classes that fit around your schedule"
+        ]
+      },
+      "delf": {
+        "title": "DELF / DALF Preparation",
+        "tagline": "Targeted exam prep with mock exams and examiner-style feedback to boost your score.",
+        "price": "Coming soon",
+        "duration": "8-week program · live",
+        "date": "Enrollment opening soon",
+        "cert": "Progress tracking included",
+        "highlights": [
+          {
+            "title": "Built around the real exam",
+            "text": "Every session maps directly to the DELF/DALF format — no wasted time on off-topic material."
+          },
+          {
+            "title": "Mock exams with feedback",
+            "text": "Practice under real exam conditions and get examiner-style feedback on every attempt."
+          },
+          {
+            "title": "Structured 8-week plan",
+            "text": "A clear, progressive path from your current level to exam day — not a random collection of lessons."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Compréhension orale & écrite",
+            "description": "Listening and reading strategies specific to the DELF/DALF exam format.",
+            "tags": ["Listening", "Reading", "Exam Strategy"]
+          },
+          {
+            "num": "02",
+            "title": "Production écrite",
+            "description": "Structuring written responses that meet examiner expectations at your level.",
+            "tags": ["Writing", "Structure"]
+          },
+          {
+            "num": "03",
+            "title": "Production orale",
+            "description": "Oral presentation and interaction practice, with live feedback on delivery and fluency.",
+            "tags": ["Speaking", "Presentation"]
+          },
+          {
+            "num": "04",
+            "title": "Mock Exams & Review",
+            "description": "Full mock exams under timed conditions, followed by detailed, personalized feedback.",
+            "tags": ["Mock Exam", "Feedback"]
+          }
+        ],
+        "audience": [
+          "You have a DELF or DALF exam date coming up",
+          "You need study or work certification for French proficiency",
+          "You know the language but need exam-specific technique",
+          "You want structured practice with real feedback, not just self-study"
+        ]
+      },
       "qa": {
         "title": "AI-Powered QA Engineering",
         "tagline": "From zero to job-ready QA Engineer in 3 weekends — with AI as your force multiplier.",

@@ -12,24 +12,24 @@ const labelClass = "mb-1.5 block text-sm font-medium text-gray-700";
 
 const FEATURED = [
   {
-    id: "ingenierie",
-    title_fr: "Ingénierie de Formation",
-    title_en: "Training Engineering",
+    id: "diagnostic",
+    title_fr: "Diagnostic Linguistique",
+    title_en: "Language Needs Assessment",
     desc_fr:
-      "De l'audit des besoins à l'évaluation des acquis : nous concevons des parcours pédagogiques complets, adaptés à vos objectifs stratégiques.",
+      "De l'évaluation du niveau de vos équipes à la définition des objectifs : nous concevons des parcours linguistiques adaptés à vos enjeux business.",
     desc_en:
-      "From needs analysis to outcome evaluation: we design complete learning paths tailored to your strategic goals.",
+      "From assessing your teams' level to defining clear goals: we design language learning paths tailored to your business needs.",
     points_fr: [
-      "Analyse des besoins en formation",
-      "Conception pédagogique sur mesure",
-      "Déploiement intra / inter-entreprise",
-      "Évaluation et rapport ROI",
+      "Test de niveau pour chaque collaborateur",
+      "Objectifs alignés sur vos enjeux métier",
+      "Suivi de progression individuel et collectif",
+      "Bilan et rapport de progression",
     ],
     points_en: [
-      "Training needs analysis",
-      "Custom curriculum design",
-      "Intra / inter-company delivery",
-      "Evaluation & ROI report",
+      "Level test for every employee",
+      "Goals aligned with your business needs",
+      "Individual and team progress tracking",
+      "Progress report and review",
     ],
     accent: "indigo",
     iconPath:
@@ -37,23 +37,23 @@ const FEATURED = [
   },
   {
     id: "sur-mesure",
-    title_fr: "Offre Sur Mesure",
+    title_fr: "Cours Sur Mesure",
     title_en: "Custom Programs",
     desc_fr:
-      "Vos collaborateurs, vos contraintes, votre planning. Nous co-construisons avec vos RH des programmes hybrides certifiants ou non.",
+      "Vos collaborateurs, vos contraintes, votre planning. Nous construisons avec vos RH des cours individuels ou en petit groupe, en présentiel virtuel.",
     desc_en:
-      "Your team, your constraints, your schedule. We co-design hybrid certified or non-certified programs with your HR.",
+      "Your team, your constraints, your schedule. We build individual or small-group live online classes with your HR team.",
     points_fr: [
       "Co-construction avec vos RH",
-      "Formats hybrides (présentiel + e-learning)",
-      "Certifiant ou non-certifiant",
-      "Groupes de 4 à 20 participants",
+      "Cours individuels ou en petit groupe",
+      "Anglais, français et autres langues sur demande",
+      "Groupes de 2 à 12 participants",
     ],
     points_en: [
       "Co-design with your HR team",
-      "Hybrid formats (in-person + e-learning)",
-      "Certified or non-certified options",
-      "Groups of 4 to 20",
+      "Individual or small-group classes",
+      "English, French and other languages on request",
+      "Groups of 2 to 12",
     ],
     accent: "violet",
     iconPath:
@@ -63,34 +63,34 @@ const FEATURED = [
 
 const FORMATIONS = [
   {
-    id: "management",
-    title_fr: "Management & Leadership",
-    title_en: "Management & Leadership",
-    desc_fr: "Animer une équipe, déléguer, motiver et développer les talents en entreprise.",
-    desc_en: "Lead a team, delegate, motivate and develop in-house talent.",
+    id: "business-english",
+    title_fr: "Anglais des Affaires",
+    title_en: "Business English",
+    desc_fr: "Réunions, emails, présentations et négociations en anglais — pour des équipes opérationnelles à l'international.",
+    desc_en: "Meetings, emails, presentations and negotiations in English — for teams working internationally.",
     accent: "blue",
     iconPath:
-      "M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z",
+      "M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z",
   },
   {
-    id: "digital",
-    title_fr: "Transformation Digitale",
-    title_en: "Digital Transformation",
-    desc_fr: "IA, automatisation et culture data pour accompagner vos collaborateurs vers le futur du travail.",
-    desc_en: "AI, automation and data culture to prepare your workforce for the future of work.",
+    id: "french-pro",
+    title_fr: "Français Professionnel",
+    title_en: "Professional French",
+    desc_fr: "Communication écrite et orale en français pour vos équipes non-francophones ou en montée en compétences.",
+    desc_en: "Written and spoken French communication for non-native or upskilling employees.",
     accent: "emerald",
     iconPath:
       "M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0H3",
   },
   {
-    id: "communication",
-    title_fr: "Communication Professionnelle",
-    title_en: "Professional Communication",
-    desc_fr: "Prise de parole, anglais des affaires et techniques de négociation pour vos équipes.",
-    desc_en: "Public speaking, business English and negotiation for your teams.",
+    id: "exam-prep",
+    title_fr: "Préparation aux Certifications",
+    title_en: "Exam & Certification Prep",
+    desc_fr: "TOEFL, IELTS, DELF/DALF — préparez vos collaborateurs aux certifications requises pour la mobilité internationale.",
+    desc_en: "TOEFL, IELTS, DELF/DALF — prepare your employees for the certifications needed for international mobility.",
     accent: "amber",
     iconPath:
-      "M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z",
+      "M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z",
   },
 ];
 
@@ -111,17 +111,17 @@ const STEPS = [
   },
   {
     num: "03",
-    title_fr: "Formation",
-    title_en: "Training",
-    desc_fr: "Déploiement en intra ou inter-entreprise, présentiel ou distanciel",
-    desc_en: "Delivery in-house or multi-company, in-person or remote",
+    title_fr: "Cours",
+    title_en: "Classes",
+    desc_fr: "Cours en direct en ligne, individuels ou en petit groupe, avec vos tuteurs dédiés",
+    desc_en: "Live online classes, individual or small-group, with your dedicated tutors",
   },
   {
     num: "04",
     title_fr: "Bilan",
     title_en: "Review",
-    desc_fr: "Évaluation des acquis, rapport ROI et plan de montée en compétences",
-    desc_en: "Outcome evaluation, ROI report and skills development roadmap",
+    desc_fr: "Évaluation des progrès, bilan de niveau et plan de montée en compétences",
+    desc_en: "Progress evaluation, level review and skills development roadmap",
   },
 ];
 
@@ -204,23 +204,23 @@ export default function EnterpriseSection({ lang }: { lang: string }) {
 
           <h2 className="mb-5 text-center text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
             {isFr ? (
-              <>{`Formez vos équipes,`}<br /><span className="text-amber-400">boostez vos performances</span></>
+              <>{`Formez vos équipes en langues,`}<br /><span className="text-amber-400">boostez leur performance</span></>
             ) : (
-              <>{`Train your teams,`}<br /><span className="text-amber-400">boost your performance</span></>
+              <>{`Train your teams in languages,`}<br /><span className="text-amber-400">boost their performance</span></>
             )}
           </h2>
 
           <p className="mx-auto mb-12 max-w-2xl text-center text-lg leading-relaxed text-indigo-200">
             {isFr
-              ? "De l'analyse des besoins à l'évaluation des acquis, Nexo Skills conçoit et déploie des parcours de formation sur mesure pour vos collaborateurs."
-              : "From needs analysis to outcome evaluation, Nexo Skills designs and delivers custom training paths for your workforce."}
+              ? "Du diagnostic linguistique à l'évaluation des progrès, Nexo Skills conçoit et déploie des cours de langue sur mesure pour vos collaborateurs."
+              : "From language assessment to progress tracking, Nexo Skills designs and delivers custom language classes for your workforce."}
           </p>
 
           <div className="grid grid-cols-3 gap-4 md:gap-6">
             {[
               { val: "+50",  label_fr: "Entreprises partenaires", label_en: "Partner companies"    },
-              { val: "100%", label_fr: "Programmes certifiables", label_en: "Certifiable programs" },
-              { val: "+200", label_fr: "Formations déployées",    label_en: "Trainings delivered"  },
+              { val: "100%", label_fr: "Cours en direct",         label_en: "Live classes"          },
+              { val: "+200", label_fr: "Apprenants formés",       label_en: "Employees trained"     },
             ].map((s) => (
               <div key={s.val} className="rounded-2xl border border-indigo-500/20 bg-white/5 p-5 text-center backdrop-blur-sm">
                 <div className="text-3xl font-bold text-white md:text-4xl">{s.val}</div>

@@ -25,11 +25,112 @@ const COURSE_IMAGES: Record<string, string> = {
   "audit":"/coursesPics/auditeur.jpg",
 };
 
-const PRO_CATEGORIES = ["digital-si", "qhse"];
-
 const CAT_COLORS: Record<string, { bg: string; text: string; badge: string; cta: string; ctaHover: string }> = {
   "digital-si": { bg: "bg-blue-50",   text: "text-blue-700",   badge: "bg-blue-100 text-blue-700",   cta: "bg-blue-700",   ctaHover: "hover:bg-blue-800"   },
   "qhse":       { bg: "bg-violet-50", text: "text-violet-700", badge: "bg-violet-100 text-violet-700", cta: "bg-violet-700", ctaHover: "hover:bg-violet-800" },
+};
+
+// Archived programs — no longer part of the language-course catalog, but this
+// page and its Stripe checkout stay reachable via direct link.
+type ArchivedCategory = { key: string; label: string; sub: string };
+type ArchivedItem = { category: string; badge: string; title: string; sub: string; cta: string; href: string };
+
+const PRO_CATEGORY_DATA: Record<"fr" | "en", ArchivedCategory[]> = {
+  fr: [
+    { key: "digital-si", label: "Compétences digitales", sub: "Accessibilité web et création de site avec l'IA" },
+    { key: "qhse", label: "Qualité & HSE", sub: "ISO 9001, audit interne et sécurité au travail" },
+  ],
+  en: [
+    { key: "digital-si", label: "Digital Skills", sub: "Web accessibility and AI-powered website building" },
+    { key: "qhse", label: "Quality & HSE", sub: "ISO 9001, internal audit and workplace safety training" },
+  ],
+};
+
+const PRO_ITEMS_DATA: Record<"fr" | "en", ArchivedItem[]> = {
+  fr: [
+    {
+      category: "qhse",
+      badge: "Juillet 2026 · Weekends",
+      title: "ISO 9001:2015 — Management de la Qualité",
+      sub: "La norme qualité la plus reconnue au monde, enfin enseignée comme les praticiens en ont besoin.",
+      cta: "Réserver ma place — 200$",
+      href: "#contact?course=iso",
+    },
+    {
+      category: "digital-si",
+      badge: "Août 2026 · 1 weekend",
+      title: "Accessibilité web & outils de test",
+      sub: "Apprenez à créer et auditer des sites inclusifs — et maîtrisez les outils professionnels.",
+      cta: "Réserver ma place — 200$",
+      href: "#contact?course=a11y",
+    },
+    {
+      category: "qhse",
+      badge: "Septembre 2026 · 1 weekend",
+      title: "Devenir auditeur qualité ISO 9001",
+      sub: "Planifiez, conduisez et clôturez des audits internes efficaces.",
+      cta: "Réserver ma place — 80$",
+      href: "#contact?course=audit",
+    },
+    {
+      category: "qhse",
+      badge: "18-19 juillet 2026 · 1 weekend",
+      title: "HSE Officer Bootcamp",
+      sub: "100% pratique : Risk Assessment, JSA, Toolbox Talk, Permit to Work, Incident Investigation.",
+      cta: "Réserver ma place — 45 000 FCFA",
+      href: "#contact?course=hse",
+    },
+    {
+      category: "digital-si",
+      badge: "Août 2026 · 1 weekend",
+      title: "Créez votre site web avec l'IA",
+      sub: "De l'idée à un site professionnel en ligne, sans une seule ligne de code.",
+      cta: "Réserver ma place — 200$",
+      href: "#contact?course=web",
+    },
+  ],
+  en: [
+    {
+      category: "qhse",
+      badge: "July 2026 · Weekends",
+      title: "ISO 9001:2015 Quality Management",
+      sub: "The world's most recognized quality standard, decoded for practitioners.",
+      cta: "Reserve My Spot — $200",
+      href: "#contact?course=iso",
+    },
+    {
+      category: "digital-si",
+      badge: "August 2026 · 1 Weekend",
+      title: "Web Accessibility & Testing Tools",
+      sub: "Learn to build and audit inclusive websites with professional tools.",
+      cta: "Reserve My Spot — $200",
+      href: "#contact?course=a11y",
+    },
+    {
+      category: "qhse",
+      badge: "September 2026 · 1 Weekend",
+      title: "ISO 9001 Internal Auditor",
+      sub: "Plan, conduct and close effective internal audits.",
+      cta: "Reserve My Spot — $80",
+      href: "#contact?course=audit",
+    },
+    {
+      category: "qhse",
+      badge: "July 18-19, 2026 · 1 Weekend",
+      title: "HSE Officer Bootcamp",
+      sub: "100% hands-on: Risk Assessment, JSA, Toolbox Talks, Permit to Work, Incident Investigation.",
+      cta: "Reserve My Spot — 45,000 FCFA",
+      href: "#contact?course=hse",
+    },
+    {
+      category: "digital-si",
+      badge: "August 2026 · 1 Weekend",
+      title: "Build Your Website with AI",
+      sub: "From idea to a live professional website — no code required.",
+      cta: "Reserve My Spot — $200",
+      href: "#contact?course=web",
+    },
+  ],
 };
 
 export default async function FormationsProPage({ params }: PageProps<"/[lang]/formations-pro">) {
@@ -37,9 +138,10 @@ export default async function FormationsProPage({ params }: PageProps<"/[lang]/f
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary(lang);
   const isFr = lang !== "en";
+  const localeKey = isFr ? "fr" : "en";
 
-  const proCourses = dict.courses.items.filter((c) => PRO_CATEGORIES.includes(c.category));
-  const proCategories = dict.courses.categories.filter((c) => PRO_CATEGORIES.includes(c.key));
+  const proCourses = PRO_ITEMS_DATA[localeKey];
+  const proCategories = PRO_CATEGORY_DATA[localeKey];
 
   return (
     <main className="min-h-screen bg-white">

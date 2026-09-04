@@ -1,160 +1,97 @@
 {
   "nav": {
-    "courses": "Formations",
-    "why": "Pourquoi Nexo",
+    "courses": "Cours",
+    "business": "Entreprise",
+    "why": "Pourquoi apprendre",
     "contact": "Nous contacter",
-    "enroll": "Prendre contact"
+    "enroll": "Réserver essai"
   },
   "hero": {
-    "badge": "Formateurs experts en activité · Certificat de réussite inclus",
+    "badge": "Tuteurs de langues experts en ligne · Cours interactifs en direct",
     "headline": [
-      "Pas juste un certificat.",
-      "Les vraies compétences",
-      "que les recruteurs cherchent."
+      "Apprenez les langues",
+      "avec confiance.",
+      "Flexible. Ludique. Efficace."
     ],
-    "sub": "Des weekends intensifs encadrés par des professionnels en activité — vous repartez avec du concret, pas du théorique.",
-    "cta_primary": "Voir nos formations",
-    "cta_secondary": "Nous contacter",
+    "sub": "Nous proposons des tuteurs de langues experts en ligne, des cours flexibles et des leçons interactives qui rendent l'apprentissage efficace, engageant et accessible à tous.",
+    "cta_primary": "Voir les cours",
+    "cta_secondary": "Réserver un essai gratuit",
     "stat1": {
       "value": "200+",
-      "label": "Professionnels formés"
+      "label": "Tuteurs expérimentés"
     },
     "stat2": {
       "value": "5",
-      "label": "Programmes disponibles"
+      "label": "Formats de cours disponibles"
     },
     "stat3": {
-      "value": "100%",
-      "label": "Certificat inclus"
+      "value": "Horaires",
+      "label": "Options flexibles"
     }
   },
   "courses": {
-    "label": "Nos programmes",
-    "title": "Trouvez la formation qui correspond à votre objectif",
-    "sub": "Trois parcours d'expertise pour professionnels en activité — concrets, ciblés, et pensés pour faire avancer votre carrière.",
-    "count_one": "formation",
-    "count_other": "formations",
+    "label": "Nos cours",
+    "title": "L'apprentissage des langues conçu pour vous",
+    "sub": "Tuteurs experts, formats flexibles, et leçons interactives — choisissez la voie qui correspond à vos objectifs.",
+    "count_one": "cours",
+    "count_other": "cours",
     "categories": [
       {
-        "key": "digital-si",
-        "label": "Digital et SI",
-        "sub": "QA, tests logiciels, développement web et accessibilité numérique",
+        "key": "general-language",
+        "label": "Langue générale",
+        "sub": "Cours conversationnels et axés sur la grammaire pour un usage quotidien",
         "color": "blue"
       },
       {
-        "key": "qhse",
-        "label": "QHSE et industrie",
-        "sub": "Systèmes qualité, audits, normes ISO et conformité organisationnelle",
+        "key": "exam-prep",
+        "label": "Préparation aux examens",
+        "sub": "DELF, DALF, TOEFL, IELTS et autres préparations à la certification",
         "color": "violet"
       },
       {
-        "key": "tutorat-langue",
-        "label": "Tutorat et langue",
-        "sub": "Cours individuels en ligne — Primaire · Français, Anglais, Mathématiques",
+        "key": "tutoring",
+        "label": "Tutorat individuel",
+        "sub": "Séances individuelles personnalisées pour les élèves du primaire",
+        "color": "emerald"
+      },
+      {
+        "key": "kids-teens",
+        "label": "Enfants & Ados en groupe",
+        "sub": "Programmes en petit groupe pour progresser en confiance dans une nouvelle langue",
         "color": "amber"
       }
     ],
     "items": [
       {
-        "category": "digital-si",
-        "badge": "Juillet 2026 · 3 weekends",
-        "tag": "Le plus demandé",
-        "title": "Ingénierie QA propulsée par l'IA",
-        "sub": "De zéro à Ingénieur QA opérationnel en 3 weekends. Maîtrisez les tests logiciels, puis décuplez chaque compétence avec les outils IA que les professionnels utilisent vraiment.",
+        "category": "general-language",
+        "badge": "Inscriptions ouvertes · Hebdomadaire",
+        "tag": "Populaire",
+        "title": "Anglais conversationnel — Tous niveaux",
+        "sub": "Cours interactifs axés sur la prise de parole, la compréhension et la communication réelle.",
         "details": [
-          "3 weekends seulement — Juillet 2026",
-          "297$ · paiement unique, sans surprise",
-          "Certificat de réussite"
+          "Cours hebdomadaires en direct · en ligne",
+          "Horaires flexibles · groupe ou 1:1",
+          "Parcours d'apprentissage personnalisés"
         ],
-        "cta": "Réserver ma place — 297$",
-        "href": "#contact?course=qa"
+        "cta": "Rejoindre un cours",
+        "href": "#contact?course=conversational-english"
       },
       {
-        "category": "qhse",
-        "badge": "Juillet 2026 · Weekends",
-        "tag": "Planifié",
-        "title": "ISO 9001:2015 — Management de la Qualité",
-        "sub": "La norme qualité la plus reconnue au monde, enfin enseignée comme les praticiens en ont besoin. Mettez en place un SMQ complet, conduisez des audits internes, et sortez prêt pour la certification.",
+        "category": "exam-prep",
+        "badge": "Programme · 8 semaines",
+        "tag": "Prépa examen",
+        "title": "Préparation DELF / DALF",
+        "sub": "Leçons ciblées, examens blancs et retours détaillés pour améliorer votre score.",
         "details": [
-          "Format weekends · Juillet 2026",
-          "200$ · paiement unique",
-          "Certificat de réussite"
+          "Programme 8 semaines · en direct",
+          "Examens blancs et retours détaillés",
+          "Progression structurée garantie"
         ],
-        "cta": "Réserver ma place — 200$",
-        "href": "#contact?course=iso"
+        "cta": "S'inscrire",
+        "href": "#contact?course=delf"
       },
       {
-        "category": "digital-si",
-        "badge": "Août 2026 · 1 weekend",
-        "tag": "Planifié",
-        "title": "Accessibilité web & outils de test",
-        "sub": "Apprenez à créer et auditer des sites inclusifs — et maîtrisez les outils que les professionnels utilisent pour détecter ce que l'œil ne voit pas.",
-        "details": [
-          "1 weekend · Août 2026",
-          "200$ · paiement unique",
-          "Certificat de réussite"
-        ],
-        "cta": "Réserver ma place — 200$",
-        "href": "#contact?course=a11y"
-      },
-      {
-        "category": "qhse",
-        "badge": "Septembre 2026 · 1 weekend",
-        "tag": "Planifié",
-        "title": "Devenir auditeur qualité ISO 9001",
-        "sub": "Maîtrisez le processus d'audit de bout en bout. Planifiez, conduisez et clôturez des audits internes efficaces — et rédigez des constats qui génèrent une vraie amélioration.",
-        "details": [
-          "1 weekend · Septembre 2026",
-          "200$ · paiement unique",
-          "Certificat de réussite"
-        ],
-        "cta": "Réserver ma place — 80$",
-        "href": "#contact?course=audit"
-      },
-      {
-        "category": "qhse",
-        "badge": "18-19 juillet 2026 · 1 weekend",
-        "tag": "Nouveau",
-        "title": "HSE Officer Bootcamp",
-        "sub": "100% pratique : Risk Assessment, JSA, Toolbox Talk, Permit to Work, Incident Investigation. Vous repartez avec les compétences et les documents pour démarrer votre poste HSE dès le lendemain.",
-        "details": [
-          "1 weekend · 18-19 juillet 2026",
-          "45 000 FCFA · paiement unique",
-          "Attestation Nexo Skills + kit de modèles HSE"
-        ],
-        "cta": "Réserver ma place — 45 000 FCFA",
-        "href": "#contact?course=hse"
-      },
-      {
-        "category": "digital-si",
-        "badge": "Août 2026 · 1 weekend",
-        "tag": "Planifié",
-        "title": "Créez votre site web avec l'IA",
-        "sub": "Vous avez une idée, une activité ou une marque qui mérite d'exister en ligne. Ce weekend change ça — sans une seule ligne de code.",
-        "details": [
-          "1 weekend · Août 2026",
-          "200$ · paiement unique",
-          "Certificat de réussite"
-        ],
-        "cta": "Réserver ma place — 200$",
-        "href": "#contact?course=web"
-      },
-      {
-        "category": "tutorat-langue",
-        "badge": "Inscriptions ouvertes · 2x 1h/semaine",
-        "tag": "Cours individuel",
-        "title": "Tutorat Français — Primaire",
-        "sub": "Lecture, interaction et activités ludiques pour donner à votre enfant le goût du français. Séances individuelles adaptées à son niveau, animées par un tuteur qualifié.",
-        "details": [
-          "2 séances d'1 heure par semaine · en ligne",
-          "Abonnement mensuel · sans engagement",
-          "Séances individuelles personnalisées"
-        ],
-        "cta": "Prendre contact",
-        "href": "#contact?course=tutorat-francais"
-      },
-      {
-        "category": "tutorat-langue",
+        "category": "tutoring",
         "badge": "Inscriptions ouvertes · 1h/séance",
         "tag": "Cours individuel",
         "title": "Tutorat Anglais — Primaire",
@@ -164,25 +101,25 @@
           "Abonnement mensuel · sans engagement",
           "Séances individuelles personnalisées"
         ],
-        "cta": "Prendre contact",
+        "cta": "Prendre une séance",
         "href": "#contact?course=tutorat-anglais"
       },
       {
-        "category": "tutorat-langue",
-        "badge": "Inscriptions ouvertes · 1h/séance",
+        "category": "tutoring",
+        "badge": "Inscriptions ouvertes · 2x 1h/semaine",
         "tag": "Cours individuel",
-        "title": "Tutorat Mathématiques — Primaire",
-        "sub": "Opérations, fractions, problèmes et raisonnement logique. On repart des bases et on construit solidement pour que votre enfant suive et comprenne en classe.",
+        "title": "Tutorat Français — Primaire",
+        "sub": "Lecture, interaction et activités ludiques pour donner à votre enfant le goût du français. Séances individuelles adaptées à son niveau, animées par un tuteur qualifié.",
         "details": [
-          "1 heure par séance · en ligne",
+          "2 séances d'1 heure par semaine · en ligne",
           "Abonnement mensuel · sans engagement",
           "Séances individuelles personnalisées"
         ],
-        "cta": "Prendre contact",
-        "href": "#contact?course=tutorat-math"
+        "cta": "Prendre une séance",
+        "href": "#contact?course=tutorat-francais"
       },
       {
-        "category": "tutorat-langue",
+        "category": "kids-teens",
         "badge": "Juillet · Août 2026 · Groupe de 4",
         "tag": "Pack Vacances d'Été",
         "title": "Communication Anglais — 7 à 14 ans",
@@ -196,7 +133,7 @@
         "href": "#contact?course=anglais-vacances-ete"
       }
     ],
-    "detail_label": "Voir le programme"
+    "detail_label": "Voir le cours"
   },
   "qaSection": {
     "label": "Formation 1 — Métiers du Test & Dev",
@@ -434,102 +371,90 @@
     "badge2": "Août 2026 · Date exacte à venir"
   },
   "testimonials": {
-    "label": "Ils l'ont fait. Vous aussi pouvez.",
-    "title": "Des vraies personnes. Des vrais résultats.",
+    "label": "Témoignages d'apprenants",
+    "title": "Ils l'ont fait. Vous aussi pouvez.",
     "items": [
       {
         "name": "Amira Slimani",
         "avatar": "AS",
-        "quote": "J'avais zéro background tech avant ce programme. Neuf semaines plus tard, j'avais une offre d'emploi. Le module IA ne m'a pas juste aidée — il m'a démarquée dans chaque entretien. J'utilise ces compétences tous les jours."
+        "quote": "Je tenais à peine une conversation en anglais avant de commencer. Trois mois de cours hebdomadaires plus tard, j'ai présenté un dossier complet en anglais devant mon équipe sans bloquer une seule fois."
       },
       {
         "name": "Youssef Benali",
         "avatar": "YB",
-        "quote": "J'avais les compétences mais mon CV ne les montrait pas. Après la session carrière, j'ai tout réécrit. Une semaine plus tard : trois demandes d'entretien. Le coaching seul justifiait les 297$."
+        "quote": "Mon fils détestait ses devoirs d'anglais. Après quelques mois de tutorat, il lève la main en classe. Le tuteur transforme chaque séance en jeu, pas en corvée."
       },
       {
         "name": "Fatima Lahlou",
         "avatar": "FL",
-        "quote": "J'ai passé des mois sur des tutoriels YouTube à tourner en rond. Ce programme m'a donné un chemin clair, quelqu'un pour répondre à mes questions, et un portfolio dont j'étais fière de montrer. Ça change tout."
+        "quote": "J'ai essayé des applications pendant des années sans jamais dépasser les bases. Avoir un vrai tuteur qui me corrige en direct m'a fait progresser plus en deux mois qu'en deux ans d'applications."
       },
       {
         "name": "Karim Mansouri",
         "avatar": "KM",
-        "quote": "La formation ISO 9001 était exactement ce qu'il me fallait pour préparer mon audit de certification. Les cas pratiques et les outils fournis m'ont permis de structurer notre démarche qualité en quelques semaines seulement."
+        "quote": "La préparation DELF m'a donné exactement la technique d'examen qui me manquait. Examens blancs, vrais retours, et j'ai obtenu mon B2 dès la première tentative."
       },
       {
         "name": "Inès Guerrouche",
         "avatar": "IG",
-        "quote": "J'ai suivi la formation 'Créez votre site web' un samedi matin et le dimanche soir j'avais mon premier site en ligne. Le formateur explique vraiment bien, sans jargon inutile. Exactement ce qu'il me fallait pour me lancer."
+        "quote": "Le pack vacances a été la meilleure décision pour ma fille. Petit groupe, beaucoup de temps de parole, et elle est revenue en cours d'anglais en septembre bien plus confiante."
       },
       {
         "name": "Mehdi Aouad",
         "avatar": "MA",
-        "quote": "Le programme Auditeur Qualité m'a offert une vision complète des audits terrain. Les mises en situation réelles sont très proches de ce qu'on vit en entreprise. Je recommande sans hésiter à tous ceux qui préparent une certification."
+        "quote": "On utilise Nexo Skills pour l'anglais professionnel de notre équipe. Des horaires flexibles autour de notre charge de travail, et des appels clients nettement plus fluides en quelques semaines."
       }
     ]
   },
   "cta": {
     "title1": "Chaque semaine qui passe est une semaine",
-    "title2": "où quelqu'un d'autre prend de l'avance.",
-    "sub": "Les compétences qui font avancer les carrières ne s'acquièrent pas en regardant des vidéos. Rejoignez Nexo Skills et construisez quelque chose de réel — dès ce weekend.",
-    "button": "Voir toutes les formations",
-    "contact": "S'inscrire →",
-    "trust": "Formateurs en activité · Certificat inclus · Satisfaction garantie"
+    "title2": "où vous auriez pu déjà parler avec confiance.",
+    "sub": "La maîtrise d'une langue ne s'acquiert pas seul avec une application. Rejoignez Nexo Skills et commencez à parler avec un vrai tuteur — dès cette semaine.",
+    "button": "Voir tous les cours",
+    "contact": "Réserver un essai →",
+    "trust": "Tuteurs experts · Horaires flexibles · Satisfaction garantie"
   },
   "form": {
     "label": "Inscription",
-    "title": "Réservez votre place",
-    "sub": "Remplissez le formulaire pour vous inscrire à l'une de nos formations. Nous confirmons votre inscription sous 24 heures.",
-    "course": "À quelle formation souhaitez-vous vous inscrire ?",
-    "course_placeholder": "Choisir une formation…",
+    "title": "Réservez votre cours",
+    "sub": "Remplissez le formulaire pour démarrer. Nous confirmons votre réservation sous 24 heures.",
+    "course": "Quel cours vous intéresse ?",
+    "course_placeholder": "Choisir un cours…",
     "courses": [
       {
-        "group": "Digital et SI",
-        "value": "qa",
-        "label": "Ingénierie QA propulsée par l'IA",
+        "group": "Cours en groupe",
+        "value": "conversational-english",
+        "label": "Anglais conversationnel — Tous niveaux",
         "badge": "Prochainement"
       },
       {
-        "group": "Digital et SI",
-        "value": "a11y",
-        "label": "Accessibilité web & outils de test",
+        "group": "Préparation aux examens",
+        "value": "delf",
+        "label": "Préparation DELF / DALF",
         "badge": "Prochainement"
       },
       {
-        "group": "QHSE et industrie",
-        "value": "iso",
-        "label": "ISO 9001:2015 — Management Qualité",
-        "badge": "Prochainement"
+        "group": "Tutorat individuel",
+        "value": "tutorat-anglais",
+        "label": "Tutorat Anglais — Primaire",
+        "badge": "150$/mois"
       },
       {
-        "group": "QHSE et industrie",
-        "value": "audit",
-        "label": "Auditeur qualité ISO 9001",
-        "badge": "Prochainement"
+        "group": "Tutorat individuel",
+        "value": "tutorat-francais",
+        "label": "Tutorat Français — Primaire",
+        "badge": "150$/mois"
       },
       {
-        "group": "QHSE et industrie",
-        "value": "hse",
-        "label": "HSE Officer Bootcamp",
-        "badge": "18-19 juillet 2026 · 45 000 FCFA"
-      },
-      {
-        "group": "Digital et SI",
-        "value": "web",
-        "label": "Créez votre site web avec l'IA",
-        "badge": "Prochainement"
-      },
-      {
-        "group": "Tutorat et langue",
+        "group": "Enfants & Ados",
         "value": "anglais-vacances-ete",
-        "label": "Pack Vacances — Anglais pour enfants",
+        "label": "Pack Vacances — Anglais pour enfants (7-14 ans)",
         "badge": "Juillet & Août 2026 · 399 DH/mois"
       },
       {
         "group": "",
         "value": "multiple",
-        "label": "Plusieurs formations — j'aimerais en discuter"
+        "label": "Plusieurs cours — j'aimerais en discuter"
       }
     ],
     "name": "Nom complet",
@@ -546,31 +471,31 @@
   },
   "stats": {
     "items": [
-      { "value": "5", "label": "Formations disponibles" },
+      { "value": "5", "label": "Formats de cours disponibles" },
       { "value": "150+", "label": "Apprenants formés" },
       { "value": "98%", "label": "Taux de satisfaction" },
-      { "value": "100%", "label": "Certifié à la réussite" }
+      { "value": "Direct", "label": "Cours individuels & en groupe" }
     ]
   },
   "modalities": {
-    "title": "Comment se déroulent nos formations ?",
-    "sub": "Des modalités flexibles adaptées à votre emploi du temps et votre style d'apprentissage.",
+    "title": "Comment se déroulent nos cours ?",
+    "sub": "Des formats flexibles adaptés à votre emploi du temps et votre style d'apprentissage.",
     "items": [
-      { "icon": "calendar", "title": "Weekend intensif", "description": "Des sessions concentrées sur 1 à 3 weekends pour apprendre sans quitter votre emploi." },
-      { "icon": "video", "title": "En ligne en direct", "description": "Classes virtuelles en temps réel avec votre formateur — depuis n'importe où." },
-      { "icon": "user", "title": "Tutorat individuel", "description": "Séances individuelles personnalisées pour les élèves du primaire, en ligne." },
-      { "icon": "briefcase", "title": "Coaching carrière", "description": "Révision CV, LinkedIn, entretiens simulés — un suivi jusqu'à votre objectif." }
+      { "icon": "calendar", "title": "Horaires flexibles", "description": "Réservez des séances hebdomadaires ou ponctuelles quand ça vous arrange — matin, soir ou weekend." },
+      { "icon": "video", "title": "Cours en ligne en direct", "description": "Cours vidéo en temps réel avec votre tuteur — depuis n'importe où, sur n'importe quel appareil." },
+      { "icon": "user", "title": "Individuel ou petit groupe", "description": "Choisissez des séances individuelles sur mesure ou des cours en petit groupe interactif." },
+      { "icon": "briefcase", "title": "Suivi de progression", "description": "Des retours réguliers et des bilans de progression pour toujours savoir où vous — ou votre enfant — en êtes." }
     ]
   },
   "about": {
     "label": "Qui sommes-nous",
-    "title": "Une école de formation pensée par des praticiens, pour des praticiens.",
-    "description": "Nexo Skills est né d'un constat simple : trop de formations enseignent une théorie dépassée, sans lien avec la réalité du terrain. Nous avons voulu faire autrement — des formateurs qui exercent leur métier aujourd'hui, des contenus qui reflètent les pratiques actuelles, et un suivi qui va jusqu'à l'emploi.",
+    "title": "Une école de langues pensée autour de la vraie conversation.",
+    "description": "Nexo Skills est né d'un constat simple : trop de gens étudient une langue pendant des années sans jamais se sentir à l'aise pour la parler. Nous avons construit une école différente — de vrais tuteurs, des cours interactifs en direct, et des parcours pensés pour ce que vous allez vraiment utiliser, que ce soit un entretien d'embauche, un examen, ou la prochaine rentrée scolaire de votre enfant.",
     "points": [
-      "Formateurs professionnels en activité",
-      "Contenus 100% pratiques et actualisés",
-      "L'IA intégrée dans chaque programme",
-      "Suivi carrière inclus (CV, LinkedIn, entretiens)"
+      "Tuteurs de langues expérimentés et sélectionnés",
+      "100% de cours en direct et interactifs",
+      "Parcours personnalisés pour chaque niveau",
+      "Des horaires flexibles adaptés à votre vie"
     ]
   },
   "footer": {
@@ -588,31 +513,31 @@
     "items": [
       {
         "q": "Quel niveau est requis pour s'inscrire ?",
-        "a": "Aucune expérience préalable n'est requise pour la plupart des programmes. Les formations QA Engineering et Site web partent de zéro. Les formations ISO 9001 et Auditeur ne nécessitent pas de background technique, mais une certaine familiarité avec le monde de l'entreprise est utile."
+        "a": "Aucune expérience préalable n'est requise. Nous accueillons les débutants complets comme les apprenants avancés, et chaque apprenant démarre par un bilan de niveau rapide pour commencer au bon endroit."
       },
       {
-        "q": "Les formations sont-elles en ligne ou en présentiel ?",
-        "a": "Toutes les formations sont dispensées en direct par visioconférence. Vous participez depuis n'importe où — il vous faut uniquement un ordinateur et une connexion internet stable."
+        "q": "Les cours sont-ils en ligne ou en présentiel ?",
+        "a": "Tous les cours sont dispensés en direct par visioconférence. Il vous faut uniquement un ordinateur ou une tablette et une connexion internet stable."
       },
       {
-        "q": "Combien de participants par groupe ?",
-        "a": "Les groupes sont limités à 12 participants maximum pour que chaque apprenant bénéficie d'une attention directe du formateur."
+        "q": "Combien d'élèves par cours en groupe ?",
+        "a": "Les groupes restent petits — 4 à 8 apprenants selon le programme — pour que chaque élève ait vraiment le temps de parler avec le tuteur."
       },
       {
-        "q": "Le certificat est-il reconnu par les employeurs ?",
-        "a": "Le certificat est émis par Nexo Skills et atteste que vous avez complété l'intégralité du programme. Ce n'est pas un diplôme d'État, mais il est valorisé par les employeurs qui privilégient les compétences pratiques sur les titres formels."
+        "q": "Quelles langues enseignez-vous ?",
+        "a": "Nous proposons actuellement l'anglais et le français, pour les adultes comme pour les enfants, avec d'autres langues à venir. Dites-nous ce que vous cherchez — nous élargissons régulièrement notre offre."
       },
       {
         "q": "Peut-on payer en plusieurs fois ?",
-        "a": "Oui. Pour la formation QA Engineering (297$), il est possible de payer en 3 mensualités de 99$. Écrivez-nous à info@nexo-skills.com pour en convenir."
+        "a": "Le tutorat individuel est facturé au mois, sans engagement, vous pouvez donc suspendre ou arrêter à tout moment. Pour les programmes en groupe et les packs, écrivez-nous à info@nexo-skills.com pour en discuter."
       },
       {
-        "q": "Que se passe-t-il si je rate une session ?",
-        "a": "Toutes les séances sont enregistrées et partagées avec les participants inscrits. Vous pouvez rattraper n'importe quelle session via l'enregistrement, à tout moment."
+        "q": "Que se passe-t-il si je rate une séance ?",
+        "a": "Prévenez votre tuteur à l'avance et nous vous aidons à la reprogrammer dans la mesure du possible. La régularité compte le plus pour progresser, donc on s'organise avec vous pour rester sur la bonne voie."
       },
       {
-        "q": "Dans quelle langue sont enseignées les formations ?",
-        "a": "Les formations sont dispensées en français. Tous les supports écrits sont disponibles en français et en anglais."
+        "q": "Dans quelle langue sont dispensés les cours ?",
+        "a": "L'enseignement s'adapte à l'apprenant — généralement un mélange de la langue cible et du français ou de l'anglais, selon le niveau et l'âge."
       },
       {
         "q": "Sous quel délai suis-je contacté après mon inscription ?",
@@ -655,6 +580,114 @@
     "phone_placeholder": "+212 6 00 00 00 00",
     "detail_label": "Consulter le détail",
     "courses": {
+      "conversational-english": {
+        "title": "Anglais conversationnel — Tous niveaux",
+        "tagline": "Gagnez une vraie confiance à l'oral avec des cours en direct et interactifs — pas un manuel de plus.",
+        "price": "Prochainement",
+        "duration": "1h / séance · hebdomadaire",
+        "date": "Ouverture des inscriptions bientôt",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          {
+            "title": "On parle dès la première leçon",
+            "text": "Chaque cours est construit autour de la vraie conversation, pas d'exercices de grammaire passifs."
+          },
+          {
+            "title": "Groupe ou 1:1, au choix",
+            "text": "Rejoignez un petit groupe hebdomadaire ou réservez des séances individuelles sur mesure."
+          },
+          {
+            "title": "Un parcours, pas un cours au hasard",
+            "text": "Votre tuteur suit votre niveau et construit un plan qui vous fait progresser chaque semaine."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Conversation du quotidien",
+            "description": "Se présenter, parler de sa vie quotidienne, donner son avis — le vocabulaire et la confiance pour tenir une vraie conversation.",
+            "tags": ["Oral", "Vocabulaire", "Écoute"]
+          },
+          {
+            "num": "02",
+            "title": "La grammaire en contexte",
+            "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.",
+            "tags": ["Grammaire", "Structure de phrase"]
+          },
+          {
+            "num": "03",
+            "title": "Écoute & Compréhension",
+            "description": "Comprendre des locuteurs natifs à vitesse naturelle grâce à des exercices d'écoute guidés.",
+            "tags": ["Écoute", "Compréhension"]
+          },
+          {
+            "num": "04",
+            "title": "Mise en situation réelle",
+            "description": "Jeux de rôle et mises en situation — commander au restaurant, entretien d'embauche, discussion informelle — pour être prêt en conditions réelles.",
+            "tags": ["Jeux de rôle", "Fluidité"]
+          }
+        ],
+        "audience": [
+          "Vous voulez parler avec une vraie confiance, pas juste réussir un test de grammaire",
+          "Vous avez déjà étudié mais vous bloquez dans les conversations réelles",
+          "Vous partez de zéro et voulez un parcours structuré",
+          "Vous voulez des cours flexibles qui s'adaptent à votre emploi du temps"
+        ]
+      },
+      "delf": {
+        "title": "Préparation DELF / DALF",
+        "tagline": "Une préparation ciblée avec examens blancs et retours détaillés pour améliorer votre score.",
+        "price": "Prochainement",
+        "duration": "Programme 8 semaines · en direct",
+        "date": "Ouverture des inscriptions bientôt",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          {
+            "title": "Construit autour de l'examen réel",
+            "text": "Chaque séance colle directement au format DELF/DALF — pas de temps perdu sur du hors-sujet."
+          },
+          {
+            "title": "Examens blancs avec retours",
+            "text": "Entraînez-vous en conditions réelles et recevez des retours détaillés à chaque tentative."
+          },
+          {
+            "title": "Un plan structuré sur 8 semaines",
+            "text": "Un parcours clair et progressif depuis votre niveau actuel jusqu'au jour de l'examen — pas une suite de cours au hasard."
+          }
+        ],
+        "modules": [
+          {
+            "num": "01",
+            "title": "Compréhension orale & écrite",
+            "description": "Stratégies d'écoute et de lecture spécifiques au format de l'examen DELF/DALF.",
+            "tags": ["Écoute", "Lecture", "Stratégie d'examen"]
+          },
+          {
+            "num": "02",
+            "title": "Production écrite",
+            "description": "Structurer des réponses écrites qui répondent aux attentes de l'examinateur pour votre niveau.",
+            "tags": ["Rédaction", "Structure"]
+          },
+          {
+            "num": "03",
+            "title": "Production orale",
+            "description": "Entraînement à la présentation orale et à l'interaction, avec retours en direct sur l'aisance et la prise de parole.",
+            "tags": ["Oral", "Présentation"]
+          },
+          {
+            "num": "04",
+            "title": "Examens blancs & Révisions",
+            "description": "Des examens blancs complets en conditions chronométrées, suivis d'un retour détaillé et personnalisé.",
+            "tags": ["Examen blanc", "Retour personnalisé"]
+          }
+        ],
+        "audience": [
+          "Vous avez une date d'examen DELF ou DALF déjà fixée",
+          "Vous avez besoin d'une certification de français pour vos études ou votre travail",
+          "Vous maîtrisez la langue mais manquez de technique d'examen",
+          "Vous voulez un entraînement structuré avec de vrais retours, pas juste réviser seul"
+        ]
+      },
       "qa": {
         "title": "Ingénierie QA propulsée par l'IA",
         "tagline": "De zéro à QA Engineer opérationnel en 3 weekends — avec l'IA comme multiplicateur de force.",

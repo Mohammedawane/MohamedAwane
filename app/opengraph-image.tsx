@@ -80,7 +80,7 @@ export default function OGImage() {
 
         {/* Pills */}
         <div style={{ display: "flex", gap: "16px" }}>
-          {["QA & IA", "ISO 9001", "Tutorat en ligne", "Création web"].map((label) => (
+          {["Anglais", "Français", "Prépa DELF/DALF", "Tutorat en ligne"].map((label) => (
             <div
               key={label}
               style={{
