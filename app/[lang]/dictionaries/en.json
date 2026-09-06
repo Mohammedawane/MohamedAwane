@@ -58,72 +58,72 @@
     "items": [
       {
         "category": "general-language",
-        "badge": "Open enrollment · Weekly",
+        "badge": "Open enrollment · Individual sessions",
         "tag": "Popular",
         "title": "English",
         "sub": "Build the confidence to work, travel, and connect in English — the world's most in-demand second language.",
         "details": [
-          "Weekly live classes · online",
-          "Flexible schedules · group or 1:1",
+          "Free level assessment (A1 to C2)",
+          "100% individual sessions · online",
           "Personalized learning paths"
         ],
-        "cta": "Join a Class",
+        "cta": "Book a Session",
         "href": "#contact?course=conversational-english"
       },
       {
         "category": "general-language",
-        "badge": "Open enrollment · Weekly",
+        "badge": "Open enrollment · Individual sessions",
         "tag": "New",
         "title": "French",
         "sub": "Speak French with confidence for work, travel, or everyday life — from Paris to Montréal.",
         "details": [
-          "Weekly live classes · online",
-          "Flexible schedules · group or 1:1",
+          "Free level assessment (A1 to C2)",
+          "100% individual sessions · online",
           "Personalized learning paths"
         ],
-        "cta": "Join a Class",
+        "cta": "Book a Session",
         "href": "#contact?course=conversational-french"
       },
       {
         "category": "general-language",
-        "badge": "Open enrollment · Weekly",
+        "badge": "Open enrollment · Individual sessions",
         "tag": "New",
         "title": "Arabic",
         "sub": "Connect with family, travel, and communities across the Arabic-speaking world through real conversation.",
         "details": [
-          "Weekly live classes · online",
-          "Flexible schedules · group or 1:1",
+          "Free level assessment (A1 to C2)",
+          "100% individual sessions · online",
           "Personalized learning paths"
         ],
-        "cta": "Join a Class",
+        "cta": "Book a Session",
         "href": "#contact?course=conversational-arabic"
       },
       {
         "category": "general-language",
-        "badge": "Open enrollment · Weekly",
+        "badge": "Open enrollment · Individual sessions",
         "tag": "New",
         "title": "Spanish",
         "sub": "Speak Spanish with confidence for travel, business, and connecting with over 500 million speakers worldwide.",
         "details": [
-          "Weekly live classes · online",
-          "Flexible schedules · group or 1:1",
+          "Free level assessment (A1 to C2)",
+          "100% individual sessions · online",
           "Personalized learning paths"
         ],
-        "cta": "Join a Class",
+        "cta": "Book a Session",
         "href": "#contact?course=conversational-spanish"
       },
       {
         "category": "general-language",
-        "badge": "Open enrollment · Weekly",
+        "badge": "Open enrollment · Individual sessions",
         "tag": "New",
         "title": "Italian",
         "sub": "Learn to speak Italian for travel, culture, and the everyday joys of la dolce vita.",
         "details": [
-          "Weekly live classes · online",
-          "Flexible schedules · group or 1:1",
+          "Free level assessment (A1 to C2)",
+          "100% individual sessions · online",
           "Personalized learning paths"
         ],
-        "cta": "Join a Class",
+        "cta": "Book a Session",
         "href": "#contact?course=conversational-italian"
       },
       {
@@ -729,157 +729,148 @@
     "detail_label": "View details",
     "courses": {
       "conversational-english": {
-        "title": "Conversational English — All Levels",
-        "tagline": "Build real speaking confidence with live, interactive classes — not another textbook.",
-        "price": "Coming soon",
-        "duration": "1h / session · weekly",
-        "date": "Enrollment opening soon",
+        "title": "Learn English for Work, Life, and Travel",
+        "tagline": "Perfect for busy people who want to speak English with real confidence in everyday situations — whatever your level or schedule, we adapt to fit your needs.",
+        "price": "",
+        "duration": "1h / session · individual",
+        "date": "Open enrollment",
         "cert": "Progress tracking included",
+        "checklist": ["100% individual, one-on-one sessions", "Free level assessment (A1 to C2)", "Personalized lesson plan & flexible scheduling", "Focus on speaking, listening, reading and writing"],
+        "defaultContactMessage": "Hello, I'm interested in individual English classes and would like to book my free level assessment.",
         "highlights": [
-          {
-            "title": "Speaking from lesson one",
-            "text": "Every class is built around real conversation, not passive grammar drills."
-          },
-          {
-            "title": "Flexible group or 1:1",
-            "text": "Join a small weekly group or book fully personalized individual sessions."
-          },
-          {
-            "title": "A path, not a random lesson",
-            "text": "Your tutor tracks your level and builds a plan that moves you forward every week."
-          }
+          { "title": "Free level assessment first", "text": "A short, free assessment places you precisely on the CEFR scale (A1 to C2) — no guessing, no wasted lessons." },
+          { "title": "Learn from anywhere", "text": "Join your live class from home, the office, or anywhere with an internet connection." },
+          { "title": "Learn on your schedule", "text": "Your tutor adapts to your pace and goals, with lesson times that fit your life — not the other way around." },
+          { "title": "Practical, effective learning", "text": "Conversation-focused, real-world classes designed to build usable English skills faster." }
         ],
         "modules": [
-          {
-            "num": "01",
-            "title": "Everyday Conversation",
-            "description": "Introductions, daily life, opinions — the vocabulary and confidence to hold a real conversation.",
-            "tags": ["Speaking", "Vocabulary", "Listening"]
-          },
-          {
-            "num": "02",
-            "title": "Grammar in Context",
-            "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.",
-            "tags": ["Grammar", "Sentence Structure"]
-          },
-          {
-            "num": "03",
-            "title": "Listening & Comprehension",
-            "description": "Understand native speakers at natural speed through guided listening practice.",
-            "tags": ["Listening", "Comprehension"]
-          },
-          {
-            "num": "04",
-            "title": "Real-World Practice",
-            "description": "Role-plays and scenarios — ordering food, job interviews, small talk — so you're ready for real situations.",
-            "tags": ["Role-play", "Fluency"]
-          }
+          { "num": "01", "title": "Level Assessment & Goal Setting", "description": "A short diagnostic places you precisely on the CEFR scale (A1 to C2), and we build a plan around your real goals.", "tags": ["Level Test", "CEFR", "Goal Setting"] },
+          { "num": "02", "title": "Speaking & Listening", "description": "Everyday conversation, opinions, and understanding native speakers at natural speed.", "tags": ["Speaking", "Listening"] },
+          { "num": "03", "title": "Reading & Writing", "description": "Build practical reading comprehension and clear written expression for work, study, or daily life.", "tags": ["Reading", "Writing"] },
+          { "num": "04", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
+          { "num": "05", "title": "Real-World Practice", "description": "Role-plays and scenarios — meetings, travel, job interviews, small talk — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
         ],
         "audience": [
-          "You want to speak with real confidence, not just pass a grammar test",
+          "You want to speak English with real confidence at work, while traveling, or in daily life",
           "You've studied before but freeze up in real conversations",
-          "You're starting from scratch and want a structured path",
-          "You want flexible classes that fit around your schedule"
+          "You're starting from scratch and want a clear, structured path",
+          "You want a program built around your schedule, not a fixed classroom timetable"
         ]
       },
       "conversational-french": {
-        "title": "Conversational French — All Levels",
-        "tagline": "Build real speaking confidence with live, interactive classes — not another textbook.",
-        "price": "Coming soon",
-        "duration": "1h / session · weekly",
-        "date": "Enrollment opening soon",
+        "title": "Learn French for Work, Life, and Travel",
+        "tagline": "Perfect for busy people who want to speak French with real confidence in everyday situations — whatever your level or schedule, we adapt to fit your needs.",
+        "price": "",
+        "duration": "1h / session · individual",
+        "date": "Open enrollment",
         "cert": "Progress tracking included",
+        "checklist": ["100% individual, one-on-one sessions", "Free level assessment (A1 to C2)", "Personalized lesson plan & flexible scheduling", "Focus on speaking, listening, reading and writing"],
+        "defaultContactMessage": "Hello, I'm interested in individual French classes and would like to book my free level assessment.",
         "highlights": [
-          { "title": "Speaking from lesson one", "text": "Every class is built around real conversation, not passive grammar drills." },
-          { "title": "Flexible group or 1:1", "text": "Join a small weekly group or book fully personalized individual sessions." },
-          { "title": "A path, not a random lesson", "text": "Your tutor tracks your level and builds a plan that moves you forward every week." }
+          { "title": "Free level assessment first", "text": "A short, free assessment places you precisely on the CEFR scale (A1 to C2) — no guessing, no wasted lessons." },
+          { "title": "Learn from anywhere", "text": "Join your live class from home, the office, or anywhere with an internet connection." },
+          { "title": "Learn on your schedule", "text": "Your tutor adapts to your pace and goals, with lesson times that fit your life — not the other way around." },
+          { "title": "Practical, effective learning", "text": "Conversation-focused, real-world classes designed to build usable French skills faster." }
         ],
         "modules": [
-          { "num": "01", "title": "Everyday Conversation", "description": "Introductions, daily life, opinions — the vocabulary and confidence to hold a real conversation.", "tags": ["Speaking", "Vocabulary", "Listening"] },
-          { "num": "02", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
-          { "num": "03", "title": "Listening & Comprehension", "description": "Understand native speakers at natural speed through guided listening practice.", "tags": ["Listening", "Comprehension"] },
-          { "num": "04", "title": "Real-World Practice", "description": "Role-plays and scenarios — ordering food, job interviews, small talk — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
+          { "num": "01", "title": "Level Assessment & Goal Setting", "description": "A short diagnostic places you precisely on the CEFR scale (A1 to C2), and we build a plan around your real goals.", "tags": ["Level Test", "CEFR", "Goal Setting"] },
+          { "num": "02", "title": "Speaking & Listening", "description": "Everyday conversation, opinions, and understanding native speakers at natural speed.", "tags": ["Speaking", "Listening"] },
+          { "num": "03", "title": "Reading & Writing", "description": "Build practical reading comprehension and clear written expression for work, study, or daily life.", "tags": ["Reading", "Writing"] },
+          { "num": "04", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
+          { "num": "05", "title": "Real-World Practice", "description": "Role-plays and scenarios — meetings, travel, job interviews, small talk — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
         ],
         "audience": [
-          "You want to speak with real confidence, not just pass a grammar test",
+          "You want to speak French with real confidence at work, while traveling, or in daily life",
           "You've studied before but freeze up in real conversations",
-          "You're starting from scratch and want a structured path",
-          "You want flexible classes that fit around your schedule"
+          "You're starting from scratch and want a clear, structured path",
+          "You want a program built around your schedule, not a fixed classroom timetable"
         ]
       },
       "conversational-arabic": {
-        "title": "Conversational Arabic — All Levels",
-        "tagline": "Build real speaking confidence with live, interactive classes — not another textbook.",
-        "price": "Coming soon",
-        "duration": "1h / session · weekly",
-        "date": "Enrollment opening soon",
+        "title": "Learn Arabic for Family, Travel, and Life",
+        "tagline": "Perfect for busy people who want to connect with family, travel, and Arabic-speaking communities with real confidence — whatever your level or schedule, we adapt to fit your needs.",
+        "price": "",
+        "duration": "1h / session · individual",
+        "date": "Open enrollment",
         "cert": "Progress tracking included",
+        "checklist": ["100% individual, one-on-one sessions", "Free level assessment (A1 to C2)", "Personalized lesson plan & flexible scheduling", "Focus on speaking, listening, reading and writing"],
+        "defaultContactMessage": "Hello, I'm interested in individual Arabic classes and would like to book my free level assessment.",
         "highlights": [
-          { "title": "Speaking from lesson one", "text": "Every class is built around real conversation, not passive grammar drills." },
-          { "title": "Flexible group or 1:1", "text": "Join a small weekly group or book fully personalized individual sessions." },
-          { "title": "A path, not a random lesson", "text": "Your tutor tracks your level and builds a plan that moves you forward every week." }
+          { "title": "Free level assessment first", "text": "A short, free assessment places you precisely on the CEFR scale (A1 to C2) — no guessing, no wasted lessons." },
+          { "title": "Learn from anywhere", "text": "Join your live class from home, the office, or anywhere with an internet connection." },
+          { "title": "Learn on your schedule", "text": "Your tutor adapts to your pace and goals, with lesson times that fit your life — not the other way around." },
+          { "title": "Practical, effective learning", "text": "Conversation-focused, real-world classes designed to build usable Arabic skills faster." }
         ],
         "modules": [
-          { "num": "01", "title": "Everyday Conversation", "description": "Introductions, daily life, opinions — the vocabulary and confidence to hold a real conversation.", "tags": ["Speaking", "Vocabulary", "Listening"] },
-          { "num": "02", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
-          { "num": "03", "title": "Listening & Comprehension", "description": "Understand native speakers at natural speed through guided listening practice.", "tags": ["Listening", "Comprehension"] },
-          { "num": "04", "title": "Real-World Practice", "description": "Role-plays and scenarios — ordering food, job interviews, small talk — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
+          { "num": "01", "title": "Level Assessment & Goal Setting", "description": "A short diagnostic places you precisely on the CEFR scale (A1 to C2), and we build a plan around your real goals.", "tags": ["Level Test", "CEFR", "Goal Setting"] },
+          { "num": "02", "title": "Speaking & Listening", "description": "Everyday conversation, opinions, and understanding native speakers at natural speed.", "tags": ["Speaking", "Listening"] },
+          { "num": "03", "title": "Reading & Writing", "description": "Build practical reading comprehension and clear written expression for family, travel, or daily life.", "tags": ["Reading", "Writing"] },
+          { "num": "04", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
+          { "num": "05", "title": "Real-World Practice", "description": "Role-plays and scenarios — family conversations, travel, everyday errands — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
         ],
         "audience": [
-          "You want to speak with real confidence, not just pass a grammar test",
+          "You want to connect with family, community, or travel with real confidence in Arabic",
           "You've studied before but freeze up in real conversations",
-          "You're starting from scratch and want a structured path",
-          "You want flexible classes that fit around your schedule"
+          "You're starting from scratch and want a clear, structured path",
+          "You want a program built around your schedule, not a fixed classroom timetable"
         ]
       },
       "conversational-spanish": {
-        "title": "Conversational Spanish — All Levels",
-        "tagline": "Build real speaking confidence with live, interactive classes — not another textbook.",
-        "price": "Coming soon",
-        "duration": "1h / session · weekly",
-        "date": "Enrollment opening soon",
+        "title": "Learn Spanish for Work, Travel, and Life",
+        "tagline": "Perfect for busy people who want to speak Spanish with real confidence for travel, business, and everyday life — whatever your level or schedule, we adapt to fit your needs.",
+        "price": "",
+        "duration": "1h / session · individual",
+        "date": "Open enrollment",
         "cert": "Progress tracking included",
+        "checklist": ["100% individual, one-on-one sessions", "Free level assessment (A1 to C2)", "Personalized lesson plan & flexible scheduling", "Focus on speaking, listening, reading and writing"],
+        "defaultContactMessage": "Hello, I'm interested in individual Spanish classes and would like to book my free level assessment.",
         "highlights": [
-          { "title": "Speaking from lesson one", "text": "Every class is built around real conversation, not passive grammar drills." },
-          { "title": "Flexible group or 1:1", "text": "Join a small weekly group or book fully personalized individual sessions." },
-          { "title": "A path, not a random lesson", "text": "Your tutor tracks your level and builds a plan that moves you forward every week." }
+          { "title": "Free level assessment first", "text": "A short, free assessment places you precisely on the CEFR scale (A1 to C2) — no guessing, no wasted lessons." },
+          { "title": "Learn from anywhere", "text": "Join your live class from home, the office, or anywhere with an internet connection." },
+          { "title": "Learn on your schedule", "text": "Your tutor adapts to your pace and goals, with lesson times that fit your life — not the other way around." },
+          { "title": "Practical, effective learning", "text": "Conversation-focused, real-world classes designed to build usable Spanish skills faster." }
         ],
         "modules": [
-          { "num": "01", "title": "Everyday Conversation", "description": "Introductions, daily life, opinions — the vocabulary and confidence to hold a real conversation.", "tags": ["Speaking", "Vocabulary", "Listening"] },
-          { "num": "02", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
-          { "num": "03", "title": "Listening & Comprehension", "description": "Understand native speakers at natural speed through guided listening practice.", "tags": ["Listening", "Comprehension"] },
-          { "num": "04", "title": "Real-World Practice", "description": "Role-plays and scenarios — ordering food, job interviews, small talk — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
+          { "num": "01", "title": "Level Assessment & Goal Setting", "description": "A short diagnostic places you precisely on the CEFR scale (A1 to C2), and we build a plan around your real goals.", "tags": ["Level Test", "CEFR", "Goal Setting"] },
+          { "num": "02", "title": "Speaking & Listening", "description": "Everyday conversation, opinions, and understanding native speakers at natural speed.", "tags": ["Speaking", "Listening"] },
+          { "num": "03", "title": "Reading & Writing", "description": "Build practical reading comprehension and clear written expression for work, travel, or daily life.", "tags": ["Reading", "Writing"] },
+          { "num": "04", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
+          { "num": "05", "title": "Real-World Practice", "description": "Role-plays and scenarios — travel, business meetings, everyday conversations — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
         ],
         "audience": [
-          "You want to speak with real confidence, not just pass a grammar test",
+          "You want to speak Spanish with real confidence at work, while traveling, or in daily life",
           "You've studied before but freeze up in real conversations",
-          "You're starting from scratch and want a structured path",
-          "You want flexible classes that fit around your schedule"
+          "You're starting from scratch and want a clear, structured path",
+          "You want a program built around your schedule, not a fixed classroom timetable"
         ]
       },
       "conversational-italian": {
-        "title": "Conversational Italian — All Levels",
-        "tagline": "Build real speaking confidence with live, interactive classes — not another textbook.",
-        "price": "Coming soon",
-        "duration": "1h / session · weekly",
-        "date": "Enrollment opening soon",
+        "title": "Learn Italian for Travel, Culture, and Life",
+        "tagline": "Perfect for busy people who want to speak Italian with real confidence for travel and everyday life — whatever your level or schedule, we adapt to fit your needs.",
+        "price": "",
+        "duration": "1h / session · individual",
+        "date": "Open enrollment",
         "cert": "Progress tracking included",
+        "checklist": ["100% individual, one-on-one sessions", "Free level assessment (A1 to C2)", "Personalized lesson plan & flexible scheduling", "Focus on speaking, listening, reading and writing"],
+        "defaultContactMessage": "Hello, I'm interested in individual Italian classes and would like to book my free level assessment.",
         "highlights": [
-          { "title": "Speaking from lesson one", "text": "Every class is built around real conversation, not passive grammar drills." },
-          { "title": "Flexible group or 1:1", "text": "Join a small weekly group or book fully personalized individual sessions." },
-          { "title": "A path, not a random lesson", "text": "Your tutor tracks your level and builds a plan that moves you forward every week." }
+          { "title": "Free level assessment first", "text": "A short, free assessment places you precisely on the CEFR scale (A1 to C2) — no guessing, no wasted lessons." },
+          { "title": "Learn from anywhere", "text": "Join your live class from home, the office, or anywhere with an internet connection." },
+          { "title": "Learn on your schedule", "text": "Your tutor adapts to your pace and goals, with lesson times that fit your life — not the other way around." },
+          { "title": "Practical, effective learning", "text": "Conversation-focused, real-world classes designed to build usable Italian skills faster." }
         ],
         "modules": [
-          { "num": "01", "title": "Everyday Conversation", "description": "Introductions, daily life, opinions — the vocabulary and confidence to hold a real conversation.", "tags": ["Speaking", "Vocabulary", "Listening"] },
-          { "num": "02", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
-          { "num": "03", "title": "Listening & Comprehension", "description": "Understand native speakers at natural speed through guided listening practice.", "tags": ["Listening", "Comprehension"] },
-          { "num": "04", "title": "Real-World Practice", "description": "Role-plays and scenarios — ordering food, job interviews, small talk — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
+          { "num": "01", "title": "Level Assessment & Goal Setting", "description": "A short diagnostic places you precisely on the CEFR scale (A1 to C2), and we build a plan around your real goals.", "tags": ["Level Test", "CEFR", "Goal Setting"] },
+          { "num": "02", "title": "Speaking & Listening", "description": "Everyday conversation, opinions, and understanding native speakers at natural speed.", "tags": ["Speaking", "Listening"] },
+          { "num": "03", "title": "Reading & Writing", "description": "Build practical reading comprehension and clear written expression for travel or daily life.", "tags": ["Reading", "Writing"] },
+          { "num": "04", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
+          { "num": "05", "title": "Real-World Practice", "description": "Role-plays and scenarios — travel, restaurants, everyday conversations — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
         ],
         "audience": [
-          "You want to speak with real confidence, not just pass a grammar test",
+          "You want to speak Italian with real confidence while traveling or in daily life",
           "You've studied before but freeze up in real conversations",
-          "You're starting from scratch and want a structured path",
-          "You want flexible classes that fit around your schedule"
+          "You're starting from scratch and want a clear, structured path",
+          "You want a program built around your schedule, not a fixed classroom timetable"
         ]
       },
       "delf": {

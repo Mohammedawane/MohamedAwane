@@ -46,6 +46,10 @@ const VALID_COURSES = ["conversational-english", "conversational-french", "conve
 
 // Only these courses have live enrollment + payment
 const ACTIVE_COURSES = new Set(["anglais-vacances-ete", "hse", "tutorat-francais", "tutorat-anglais", "tutorat-math"]);
+
+// Open for enrollment now, but priced per learner after a free assessment —
+// so they use the contact flow rather than a fixed Stripe price.
+const OPEN_CONTACT_COURSES = new Set(["conversational-english", "conversational-french", "conversational-arabic", "conversational-spanish", "conversational-italian"]);
 type CourseSlug = (typeof VALID_COURSES)[number];
 
 function isValidCourse(slug: string): slug is CourseSlug {
@@ -82,12 +86,22 @@ export default async function FormationPage({
   };
   const imageSrc = COURSE_IMAGES[course];
   const isActive = ACTIVE_COURSES.has(course);
+  // These take leads now (open enrollment) but have no fixed public price yet —
+  // individual language classes priced per learner after the free assessment.
+  const isOpenContact = OPEN_CONTACT_COURSES.has(course);
   // CashPlus (Morocco-only transfer) doesn't make sense for this Canada-facing offer
   const hideCashplus = course === "tutorat-francais";
   // HSE is now priced in FCFA — swap the Morocco-only CashPlus transfer for Ria
   const altTransfer = course === "hse" ? { name: "Ria", locationFr: "une agence Ria", locationEn: "a Ria agency" } : undefined;
   const isFr = lang !== "en";
   const comingSoonStatus = isFr ? "Ouverture des inscriptions — Automne 2026" : "Enrollment opening — Fall 2026";
+  const openLabel = isFr ? "Cours individuel" : "Individual course";
+  const openStatus = isFr ? "Bilan de niveau gratuit inclus" : "Free level assessment included";
+  const enrollCard = isActive
+    ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} checklist={f.checklist} defaultContactMessage={f.defaultContactMessage} altTransfer={altTransfer} />
+    : isOpenContact
+    ? <FormationEnroll t={t} course={course} lang={lang} contactOnly openLabel={openLabel} status={openStatus} checklist={f.checklist} defaultContactMessage={f.defaultContactMessage} />
+    : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -221,10 +235,7 @@ export default async function FormationPage({
 
             {/* Mobile only: enroll card right after tagline — visitors from Facebook ads see CTA immediately */}
             <div className="mb-10 lg:hidden">
-              {isActive
-                ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} checklist={f.checklist} defaultContactMessage={f.defaultContactMessage} altTransfer={altTransfer} />
-                : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
-              }
+              {enrollCard}
             </div>
 
             {/* Ideal pace callout */}
@@ -249,6 +260,27 @@ export default async function FormationPage({
                 </div>
               ))}
             </div>
+
+            {/* Expert tutors — language courses only */}
+            {isOpenContact && (
+              <div className="mb-12 flex items-start gap-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-700 text-white">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  </svg>
+                </span>
+                <div>
+                  <h2 className="mb-1.5 text-lg font-bold text-gray-900">
+                    {isFr ? "Progressez avec des tuteurs experts" : "Practice with Expert Tutors"}
+                  </h2>
+                  <p className="text-sm leading-relaxed text-gray-600">
+                    {isFr
+                      ? "Chaque tuteur Nexo Skills est un locuteur natif ou de niveau très avancé, sélectionné à la fois pour sa maîtrise de la langue et sa pédagogie — pour de vraies explications claires et une vraie pratique de conversation, pas un script."
+                      : "Every Nexo Skills tutor is a highly proficient or native speaker, carefully selected for both language mastery and teaching skill — so you get clear explanations and real conversation practice, not a script."}
+                  </p>
+                </div>
+              </div>
+            )}
 
             {/* Modules */}
             <div className="mb-12">
@@ -278,6 +310,38 @@ export default async function FormationPage({
               </div>
             </div>
 
+            {/* CEFR level assessment — language courses only */}
+            {isOpenContact && (
+              <div className="mb-12 rounded-2xl border border-blue-200 bg-blue-50 p-8">
+                <h2 className="mb-2 text-xl font-bold text-gray-900">
+                  {isFr ? "Vous ne savez pas par où commencer ?" : "Not Sure Where to Start?"}
+                </h2>
+                <p className="mb-6 max-w-2xl text-sm leading-relaxed text-gray-600">
+                  {isFr
+                    ? "Faites notre bilan gratuit et démarrez au bon niveau — du grand débutant (A1) à l'avancé (C2). On vous associe au bon tuteur et à un programme construit autour de vos objectifs."
+                    : "Take our free assessment and get placed at the right level — from complete beginner (A1) to advanced (C2). We'll match you with the right tutor and a plan built around your goals."}
+                </p>
+                <div className="flex overflow-hidden rounded-xl shadow-sm">
+                  {[
+                    { label: "A1", color: "bg-blue-200" },
+                    { label: "A2", color: "bg-blue-300" },
+                    { label: "B1", color: "bg-blue-400" },
+                    { label: "B2", color: "bg-blue-500" },
+                    { label: "C1", color: "bg-blue-600" },
+                    { label: "C2", color: "bg-blue-700" },
+                  ].map((level) => (
+                    <div key={level.label} className={`flex-1 py-3 text-center text-xs font-bold text-white ${level.color}`}>
+                      {level.label}
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-2 flex justify-between text-xs text-gray-500">
+                  <span>{isFr ? "Débutant" : "Beginner"}</span>
+                  <span>{isFr ? "Avancé" : "Advanced"}</span>
+                </div>
+              </div>
+            )}
+
             {/* Audience */}
             <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8">
               <h2 className="mb-6 text-xl font-bold text-gray-900">{f.audienceTitle ?? t.audience_title}</h2>
@@ -294,6 +358,50 @@ export default async function FormationPage({
                 ))}
               </ul>
             </div>
+
+            {/* Cross-links to other formats — language courses only */}
+            {isOpenContact && (
+              <div className="mt-12 grid gap-4 sm:grid-cols-2">
+                <a
+                  href={`/${lang}/entreprise`}
+                  className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md"
+                >
+                  <p className="mb-1.5 text-sm font-bold text-gray-900">
+                    {isFr ? "Formation linguistique pour vos équipes" : "Language Training for Teams"}
+                  </p>
+                  <p className="mb-3 text-xs leading-relaxed text-gray-600">
+                    {isFr
+                      ? "Formez vos collaborateurs avec des programmes sur mesure — anglais des affaires, français professionnel, et plus."
+                      : "Upskill your workforce with custom business language programs — business English, professional French, and more."}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-700">
+                    {isFr ? "Voir les solutions entreprise" : "See business solutions"}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </span>
+                </a>
+                <a
+                  href={`/${lang}#formations`}
+                  className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-amber-300 hover:shadow-md"
+                >
+                  <p className="mb-1.5 text-sm font-bold text-gray-900">
+                    {isFr ? "Cours pour enfants & tutorat primaire" : "Kids' Classes & Primary Tutoring"}
+                  </p>
+                  <p className="mb-3 text-xs leading-relaxed text-gray-600">
+                    {isFr
+                      ? "Séances individuelles ou pack vacances en petit groupe, pensés pour les enfants du primaire."
+                      : "Individual sessions or a small-group summer pack, designed for primary school children."}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700">
+                    {isFr ? "Voir les cours pour enfants" : "See kids' courses"}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            )}
 
             {/* Testimonials */}
             {f.testimonials && f.testimonials.length > 0 && (
@@ -318,10 +426,7 @@ export default async function FormationPage({
 
           {/* Right column: sticky enroll card — desktop only, mobile version is above */}
           <div id="enroll" className="hidden lg:block lg:sticky lg:top-24 lg:self-start">
-            {isActive
-              ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} checklist={f.checklist} defaultContactMessage={f.defaultContactMessage} altTransfer={altTransfer} />
-              : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
-            }
+            {enrollCard}
           </div>
         </div>
       </div>
@@ -332,11 +437,15 @@ export default async function FormationPage({
           <h2 className="mb-3 text-3xl font-bold text-white">
             {isActive
               ? (isFr ? "Prêt à vous inscrire ?" : "Ready to enroll?")
+              : isOpenContact
+              ? (isFr ? "Prêt à commencer ?" : "Ready to start?")
               : (isFr ? "Intéressé(e) par cette formation ?" : "Interested in this program?")}
           </h2>
           <p className="mb-8 text-blue-200">
             {isActive
               ? (isFr ? "Renseignez votre nom et email — vous serez redirigé vers le paiement sécurisé." : "Enter your name and email — you'll be redirected to secure payment.")
+              : isOpenContact
+              ? (isFr ? "Laissez vos coordonnées — on vous recontacte sous 24h pour planifier votre bilan de niveau gratuit." : "Leave your details — we'll reach out within 24h to schedule your free level assessment.")
               : (isFr ? "Laissez vos coordonnées et nous vous préviendrons dès l'ouverture des inscriptions." : "Leave your details and we'll notify you as soon as enrollment opens.")}
           </p>
           {/* Mobile: simple anchor to the form above to avoid duplication */}
@@ -346,14 +455,13 @@ export default async function FormationPage({
           >
             {isActive
               ? (isFr ? "Réserver ma place" : "Book my spot")
+              : isOpenContact
+              ? (isFr ? "Réserver mon bilan gratuit" : "Book my free assessment")
               : (isFr ? "Me prévenir à l'ouverture" : "Notify me when open")}
           </a>
           {/* Desktop: show form inline */}
           <div className="hidden lg:block">
-            {isActive
-              ? <FormationEnroll t={t} course={course} lang={lang} price={f.price} hideCashplus={hideCashplus} checklist={f.checklist} defaultContactMessage={f.defaultContactMessage} altTransfer={altTransfer} />
-              : <FormationEnroll t={t} course={course} lang={lang} status={comingSoonStatus} contactOnly />
-            }
+            {enrollCard}
           </div>
         </div>
       </section>

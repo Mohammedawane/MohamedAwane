@@ -27,6 +27,7 @@ export default function FormationEnroll({
   checklist,
   defaultContactMessage,
   altTransfer,
+  openLabel,
 }: {
   t: EnrollDict;
   course: string;
@@ -39,6 +40,10 @@ export default function FormationEnroll({
   checklist?: string[];
   defaultContactMessage?: string;
   altTransfer?: { name: string; locationFr: string; locationEn: string };
+  // When set (and no price), shows an "open for enrollment" header instead of
+  // the "coming soon" one — for courses that take leads now but have no fixed
+  // public price yet (e.g. individual language classes priced per learner).
+  openLabel?: string;
 }) {
   const transferName = altTransfer?.name ?? "CashPlus";
   const resolvedDefault: Mode = defaultMode ?? (contactOnly ? "contact" : "pay");
@@ -163,12 +168,24 @@ export default function FormationEnroll({
   return (
     <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
 
-      {/* Price / status header */}
+      {/* Price / open-enrollment / coming-soon header */}
       {price ? (
         <div className="bg-blue-700 px-8 py-6 text-center">
           <p className="text-3xl font-extrabold text-white">{price}</p>
           <p className="mt-1 text-sm text-blue-200">
             {isFr ? "par participant · toutes taxes incluses" : "per participant · all taxes included"}
+          </p>
+        </div>
+      ) : openLabel ? (
+        <div className="bg-blue-700 px-8 py-6 text-center">
+          <span className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white">
+            {openLabel}
+          </span>
+          <p className="mt-3 text-base font-bold text-white">
+            {status ?? (isFr ? "Inscriptions ouvertes" : "Open enrollment")}
+          </p>
+          <p className="mt-1 text-sm text-blue-200">
+            {isFr ? "Laissez vos coordonnées — on vous recontacte sous 24h pour planifier votre bilan gratuit." : "Leave your details — we'll reach out within 24h to schedule your free assessment."}
           </p>
         </div>
       ) : (

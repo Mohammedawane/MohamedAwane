@@ -58,72 +58,72 @@
     "items": [
       {
         "category": "general-language",
-        "badge": "Inscriptions ouvertes · Hebdomadaire",
+        "badge": "Inscriptions ouvertes · Cours individuel",
         "tag": "Populaire",
         "title": "Anglais",
         "sub": "Prenez confiance en anglais pour travailler, voyager et communiquer — la langue la plus demandée au monde.",
         "details": [
-          "Cours hebdomadaires en direct · en ligne",
-          "Horaires flexibles · groupe ou 1:1",
+          "Bilan de niveau gratuit (A1 à C2)",
+          "Séances 100% individuelles · en ligne",
           "Parcours d'apprentissage personnalisés"
         ],
-        "cta": "Rejoindre un cours",
+        "cta": "Prendre une séance",
         "href": "#contact?course=conversational-english"
       },
       {
         "category": "general-language",
-        "badge": "Inscriptions ouvertes · Hebdomadaire",
+        "badge": "Inscriptions ouvertes · Cours individuel",
         "tag": "Nouveau",
         "title": "Français",
         "sub": "Parlez français avec confiance pour le travail, les voyages ou le quotidien — de Paris à Montréal.",
         "details": [
-          "Cours hebdomadaires en direct · en ligne",
-          "Horaires flexibles · groupe ou 1:1",
+          "Bilan de niveau gratuit (A1 à C2)",
+          "Séances 100% individuelles · en ligne",
           "Parcours d'apprentissage personnalisés"
         ],
-        "cta": "Rejoindre un cours",
+        "cta": "Prendre une séance",
         "href": "#contact?course=conversational-french"
       },
       {
         "category": "general-language",
-        "badge": "Inscriptions ouvertes · Hebdomadaire",
+        "badge": "Inscriptions ouvertes · Cours individuel",
         "tag": "Nouveau",
         "title": "Arabe",
         "sub": "Renouez avec votre famille, voyagez et échangez avec les communautés arabophones grâce à la vraie conversation.",
         "details": [
-          "Cours hebdomadaires en direct · en ligne",
-          "Horaires flexibles · groupe ou 1:1",
+          "Bilan de niveau gratuit (A1 à C2)",
+          "Séances 100% individuelles · en ligne",
           "Parcours d'apprentissage personnalisés"
         ],
-        "cta": "Rejoindre un cours",
+        "cta": "Prendre une séance",
         "href": "#contact?course=conversational-arabic"
       },
       {
         "category": "general-language",
-        "badge": "Inscriptions ouvertes · Hebdomadaire",
+        "badge": "Inscriptions ouvertes · Cours individuel",
         "tag": "Nouveau",
         "title": "Espagnol",
         "sub": "Parlez espagnol avec confiance pour voyager, travailler et échanger avec plus de 500 millions de locuteurs dans le monde.",
         "details": [
-          "Cours hebdomadaires en direct · en ligne",
-          "Horaires flexibles · groupe ou 1:1",
+          "Bilan de niveau gratuit (A1 à C2)",
+          "Séances 100% individuelles · en ligne",
           "Parcours d'apprentissage personnalisés"
         ],
-        "cta": "Rejoindre un cours",
+        "cta": "Prendre une séance",
         "href": "#contact?course=conversational-spanish"
       },
       {
         "category": "general-language",
-        "badge": "Inscriptions ouvertes · Hebdomadaire",
+        "badge": "Inscriptions ouvertes · Cours individuel",
         "tag": "Nouveau",
         "title": "Italien",
         "sub": "Apprenez à parler italien pour voyager, découvrir la culture et savourer la dolce vita au quotidien.",
         "details": [
-          "Cours hebdomadaires en direct · en ligne",
-          "Horaires flexibles · groupe ou 1:1",
+          "Bilan de niveau gratuit (A1 à C2)",
+          "Séances 100% individuelles · en ligne",
           "Parcours d'apprentissage personnalisés"
         ],
-        "cta": "Rejoindre un cours",
+        "cta": "Prendre une séance",
         "href": "#contact?course=conversational-italian"
       },
       {
@@ -729,157 +729,148 @@
     "detail_label": "Consulter le détail",
     "courses": {
       "conversational-english": {
-        "title": "Anglais conversationnel — Tous niveaux",
-        "tagline": "Gagnez une vraie confiance à l'oral avec des cours en direct et interactifs — pas un manuel de plus.",
-        "price": "Prochainement",
-        "duration": "1h / séance · hebdomadaire",
-        "date": "Ouverture des inscriptions bientôt",
+        "title": "Apprenez l'anglais pour le travail, la vie et les voyages",
+        "tagline": "Idéal pour les personnes occupées qui veulent parler anglais avec une vraie confiance au quotidien — quel que soit votre niveau ou votre emploi du temps, on s'adapte à vos besoins.",
+        "price": "",
+        "duration": "1h / séance · individuel",
+        "date": "Inscriptions ouvertes",
         "cert": "Suivi de progression inclus",
+        "checklist": ["Séances 100% individuelles, en tête-à-tête", "Bilan de niveau gratuit (A1 à C2)", "Programme personnalisé et horaires flexibles", "Travail de l'oral, de l'écoute, de la lecture et de l'écriture"],
+        "defaultContactMessage": "Bonjour, je suis intéressé(e) par des cours d'anglais individuels et j'aimerais réserver mon bilan de niveau gratuit.",
         "highlights": [
-          {
-            "title": "On parle dès la première leçon",
-            "text": "Chaque cours est construit autour de la vraie conversation, pas d'exercices de grammaire passifs."
-          },
-          {
-            "title": "Groupe ou 1:1, au choix",
-            "text": "Rejoignez un petit groupe hebdomadaire ou réservez des séances individuelles sur mesure."
-          },
-          {
-            "title": "Un parcours, pas un cours au hasard",
-            "text": "Votre tuteur suit votre niveau et construit un plan qui vous fait progresser chaque semaine."
-          }
+          { "title": "Un bilan de niveau gratuit d'abord", "text": "Un bilan rapide et gratuit vous place précisément sur l'échelle du CECR (A1 à C2) — sans deviner, sans perdre de séances." },
+          { "title": "Apprenez où que vous soyez", "text": "Suivez votre cours en direct depuis chez vous, votre bureau, ou partout avec une connexion internet." },
+          { "title": "Apprenez à votre rythme", "text": "Votre tuteur s'adapte à votre rythme et vos objectifs, avec des horaires qui collent à votre vie — pas l'inverse." },
+          { "title": "Un apprentissage concret et efficace", "text": "Des cours axés sur la conversation et le réel, pensés pour progresser vite en anglais." }
         ],
         "modules": [
-          {
-            "num": "01",
-            "title": "Conversation du quotidien",
-            "description": "Se présenter, parler de sa vie quotidienne, donner son avis — le vocabulaire et la confiance pour tenir une vraie conversation.",
-            "tags": ["Oral", "Vocabulaire", "Écoute"]
-          },
-          {
-            "num": "02",
-            "title": "La grammaire en contexte",
-            "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.",
-            "tags": ["Grammaire", "Structure de phrase"]
-          },
-          {
-            "num": "03",
-            "title": "Écoute & Compréhension",
-            "description": "Comprendre des locuteurs natifs à vitesse naturelle grâce à des exercices d'écoute guidés.",
-            "tags": ["Écoute", "Compréhension"]
-          },
-          {
-            "num": "04",
-            "title": "Mise en situation réelle",
-            "description": "Jeux de rôle et mises en situation — commander au restaurant, entretien d'embauche, discussion informelle — pour être prêt en conditions réelles.",
-            "tags": ["Jeux de rôle", "Fluidité"]
-          }
+          { "num": "01", "title": "Bilan de niveau & objectifs", "description": "Un diagnostic rapide vous place précisément sur l'échelle du CECR (A1 à C2), et on construit un plan autour de vos objectifs réels.", "tags": ["Bilan de niveau", "CECR", "Objectifs"] },
+          { "num": "02", "title": "Oral & Écoute", "description": "Conversation du quotidien, expression d'opinions, et compréhension de locuteurs natifs à vitesse naturelle.", "tags": ["Oral", "Écoute"] },
+          { "num": "03", "title": "Lecture & Écriture", "description": "Développez une compréhension écrite concrète et une expression claire pour le travail, les études ou le quotidien.", "tags": ["Lecture", "Écriture"] },
+          { "num": "04", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
+          { "num": "05", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation — réunions, voyages, entretiens d'embauche, discussion informelle — pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
         ],
         "audience": [
-          "Vous voulez parler avec une vraie confiance, pas juste réussir un test de grammaire",
+          "Vous voulez parler anglais avec une vraie confiance au travail, en voyage ou au quotidien",
           "Vous avez déjà étudié mais vous bloquez dans les conversations réelles",
-          "Vous partez de zéro et voulez un parcours structuré",
-          "Vous voulez des cours flexibles qui s'adaptent à votre emploi du temps"
+          "Vous partez de zéro et voulez un parcours clair et structuré",
+          "Vous voulez un programme construit autour de votre emploi du temps, pas un planning fixe"
         ]
       },
       "conversational-french": {
-        "title": "Français conversationnel — Tous niveaux",
-        "tagline": "Gagnez une vraie confiance à l'oral avec des cours en direct et interactifs — pas un manuel de plus.",
-        "price": "Prochainement",
-        "duration": "1h / séance · hebdomadaire",
-        "date": "Ouverture des inscriptions bientôt",
+        "title": "Apprenez le français pour le travail, la vie et les voyages",
+        "tagline": "Idéal pour les personnes occupées qui veulent parler français avec une vraie confiance au quotidien — quel que soit votre niveau ou votre emploi du temps, on s'adapte à vos besoins.",
+        "price": "",
+        "duration": "1h / séance · individuel",
+        "date": "Inscriptions ouvertes",
         "cert": "Suivi de progression inclus",
+        "checklist": ["Séances 100% individuelles, en tête-à-tête", "Bilan de niveau gratuit (A1 à C2)", "Programme personnalisé et horaires flexibles", "Travail de l'oral, de l'écoute, de la lecture et de l'écriture"],
+        "defaultContactMessage": "Bonjour, je suis intéressé(e) par des cours de français individuels et j'aimerais réserver mon bilan de niveau gratuit.",
         "highlights": [
-          { "title": "On parle dès la première leçon", "text": "Chaque cours est construit autour de la vraie conversation, pas d'exercices de grammaire passifs." },
-          { "title": "Groupe ou 1:1, au choix", "text": "Rejoignez un petit groupe hebdomadaire ou réservez des séances individuelles sur mesure." },
-          { "title": "Un parcours, pas un cours au hasard", "text": "Votre tuteur suit votre niveau et construit un plan qui vous fait progresser chaque semaine." }
+          { "title": "Un bilan de niveau gratuit d'abord", "text": "Un bilan rapide et gratuit vous place précisément sur l'échelle du CECR (A1 à C2) — sans deviner, sans perdre de séances." },
+          { "title": "Apprenez où que vous soyez", "text": "Suivez votre cours en direct depuis chez vous, votre bureau, ou partout avec une connexion internet." },
+          { "title": "Apprenez à votre rythme", "text": "Votre tuteur s'adapte à votre rythme et vos objectifs, avec des horaires qui collent à votre vie — pas l'inverse." },
+          { "title": "Un apprentissage concret et efficace", "text": "Des cours axés sur la conversation et le réel, pensés pour progresser vite en français." }
         ],
         "modules": [
-          { "num": "01", "title": "Conversation du quotidien", "description": "Se présenter, parler de sa vie quotidienne, donner son avis — le vocabulaire et la confiance pour tenir une vraie conversation.", "tags": ["Oral", "Vocabulaire", "Écoute"] },
-          { "num": "02", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
-          { "num": "03", "title": "Écoute & Compréhension", "description": "Comprendre des locuteurs natifs à vitesse naturelle grâce à des exercices d'écoute guidés.", "tags": ["Écoute", "Compréhension"] },
-          { "num": "04", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
+          { "num": "01", "title": "Bilan de niveau & objectifs", "description": "Un diagnostic rapide vous place précisément sur l'échelle du CECR (A1 à C2), et on construit un plan autour de vos objectifs réels.", "tags": ["Bilan de niveau", "CECR", "Objectifs"] },
+          { "num": "02", "title": "Oral & Écoute", "description": "Conversation du quotidien, expression d'opinions, et compréhension de locuteurs natifs à vitesse naturelle.", "tags": ["Oral", "Écoute"] },
+          { "num": "03", "title": "Lecture & Écriture", "description": "Développez une compréhension écrite concrète et une expression claire pour le travail, les études ou le quotidien.", "tags": ["Lecture", "Écriture"] },
+          { "num": "04", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
+          { "num": "05", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation — réunions, voyages, entretiens d'embauche, discussion informelle — pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
         ],
         "audience": [
-          "Vous voulez parler avec une vraie confiance, pas juste réussir un test de grammaire",
+          "Vous voulez parler français avec une vraie confiance au travail, en voyage ou au quotidien",
           "Vous avez déjà étudié mais vous bloquez dans les conversations réelles",
-          "Vous partez de zéro et voulez un parcours structuré",
-          "Vous voulez des cours flexibles qui s'adaptent à votre emploi du temps"
+          "Vous partez de zéro et voulez un parcours clair et structuré",
+          "Vous voulez un programme construit autour de votre emploi du temps, pas un planning fixe"
         ]
       },
       "conversational-arabic": {
-        "title": "Arabe conversationnel — Tous niveaux",
-        "tagline": "Gagnez une vraie confiance à l'oral avec des cours en direct et interactifs — pas un manuel de plus.",
-        "price": "Prochainement",
-        "duration": "1h / séance · hebdomadaire",
-        "date": "Ouverture des inscriptions bientôt",
+        "title": "Apprenez l'arabe pour la famille, les voyages et la vie",
+        "tagline": "Idéal pour les personnes occupées qui veulent renouer avec leur famille, voyager et échanger avec les communautés arabophones en toute confiance — quel que soit votre niveau ou votre emploi du temps.",
+        "price": "",
+        "duration": "1h / séance · individuel",
+        "date": "Inscriptions ouvertes",
         "cert": "Suivi de progression inclus",
+        "checklist": ["Séances 100% individuelles, en tête-à-tête", "Bilan de niveau gratuit (A1 à C2)", "Programme personnalisé et horaires flexibles", "Travail de l'oral, de l'écoute, de la lecture et de l'écriture"],
+        "defaultContactMessage": "Bonjour, je suis intéressé(e) par des cours d'arabe individuels et j'aimerais réserver mon bilan de niveau gratuit.",
         "highlights": [
-          { "title": "On parle dès la première leçon", "text": "Chaque cours est construit autour de la vraie conversation, pas d'exercices de grammaire passifs." },
-          { "title": "Groupe ou 1:1, au choix", "text": "Rejoignez un petit groupe hebdomadaire ou réservez des séances individuelles sur mesure." },
-          { "title": "Un parcours, pas un cours au hasard", "text": "Votre tuteur suit votre niveau et construit un plan qui vous fait progresser chaque semaine." }
+          { "title": "Un bilan de niveau gratuit d'abord", "text": "Un bilan rapide et gratuit vous place précisément sur l'échelle du CECR (A1 à C2) — sans deviner, sans perdre de séances." },
+          { "title": "Apprenez où que vous soyez", "text": "Suivez votre cours en direct depuis chez vous, votre bureau, ou partout avec une connexion internet." },
+          { "title": "Apprenez à votre rythme", "text": "Votre tuteur s'adapte à votre rythme et vos objectifs, avec des horaires qui collent à votre vie — pas l'inverse." },
+          { "title": "Un apprentissage concret et efficace", "text": "Des cours axés sur la conversation et le réel, pensés pour progresser vite en arabe." }
         ],
         "modules": [
-          { "num": "01", "title": "Conversation du quotidien", "description": "Se présenter, parler de sa vie quotidienne, donner son avis — le vocabulaire et la confiance pour tenir une vraie conversation.", "tags": ["Oral", "Vocabulaire", "Écoute"] },
-          { "num": "02", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
-          { "num": "03", "title": "Écoute & Compréhension", "description": "Comprendre des locuteurs natifs à vitesse naturelle grâce à des exercices d'écoute guidés.", "tags": ["Écoute", "Compréhension"] },
-          { "num": "04", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
+          { "num": "01", "title": "Bilan de niveau & objectifs", "description": "Un diagnostic rapide vous place précisément sur l'échelle du CECR (A1 à C2), et on construit un plan autour de vos objectifs réels.", "tags": ["Bilan de niveau", "CECR", "Objectifs"] },
+          { "num": "02", "title": "Oral & Écoute", "description": "Conversation du quotidien, expression d'opinions, et compréhension de locuteurs natifs à vitesse naturelle.", "tags": ["Oral", "Écoute"] },
+          { "num": "03", "title": "Lecture & Écriture", "description": "Développez une compréhension écrite concrète et une expression claire pour la famille, les voyages ou le quotidien.", "tags": ["Lecture", "Écriture"] },
+          { "num": "04", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
+          { "num": "05", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation — conversations en famille, voyages, démarches du quotidien — pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
         ],
         "audience": [
-          "Vous voulez parler avec une vraie confiance, pas juste réussir un test de grammaire",
+          "Vous voulez renouer avec votre famille, votre communauté ou voyager en toute confiance en arabe",
           "Vous avez déjà étudié mais vous bloquez dans les conversations réelles",
-          "Vous partez de zéro et voulez un parcours structuré",
-          "Vous voulez des cours flexibles qui s'adaptent à votre emploi du temps"
+          "Vous partez de zéro et voulez un parcours clair et structuré",
+          "Vous voulez un programme construit autour de votre emploi du temps, pas un planning fixe"
         ]
       },
       "conversational-spanish": {
-        "title": "Espagnol conversationnel — Tous niveaux",
-        "tagline": "Gagnez une vraie confiance à l'oral avec des cours en direct et interactifs — pas un manuel de plus.",
-        "price": "Prochainement",
-        "duration": "1h / séance · hebdomadaire",
-        "date": "Ouverture des inscriptions bientôt",
+        "title": "Apprenez l'espagnol pour le travail, les voyages et la vie",
+        "tagline": "Idéal pour les personnes occupées qui veulent parler espagnol avec une vraie confiance pour voyager, travailler et échanger au quotidien — quel que soit votre niveau ou votre emploi du temps.",
+        "price": "",
+        "duration": "1h / séance · individuel",
+        "date": "Inscriptions ouvertes",
         "cert": "Suivi de progression inclus",
+        "checklist": ["Séances 100% individuelles, en tête-à-tête", "Bilan de niveau gratuit (A1 à C2)", "Programme personnalisé et horaires flexibles", "Travail de l'oral, de l'écoute, de la lecture et de l'écriture"],
+        "defaultContactMessage": "Bonjour, je suis intéressé(e) par des cours d'espagnol individuels et j'aimerais réserver mon bilan de niveau gratuit.",
         "highlights": [
-          { "title": "On parle dès la première leçon", "text": "Chaque cours est construit autour de la vraie conversation, pas d'exercices de grammaire passifs." },
-          { "title": "Groupe ou 1:1, au choix", "text": "Rejoignez un petit groupe hebdomadaire ou réservez des séances individuelles sur mesure." },
-          { "title": "Un parcours, pas un cours au hasard", "text": "Votre tuteur suit votre niveau et construit un plan qui vous fait progresser chaque semaine." }
+          { "title": "Un bilan de niveau gratuit d'abord", "text": "Un bilan rapide et gratuit vous place précisément sur l'échelle du CECR (A1 à C2) — sans deviner, sans perdre de séances." },
+          { "title": "Apprenez où que vous soyez", "text": "Suivez votre cours en direct depuis chez vous, votre bureau, ou partout avec une connexion internet." },
+          { "title": "Apprenez à votre rythme", "text": "Votre tuteur s'adapte à votre rythme et vos objectifs, avec des horaires qui collent à votre vie — pas l'inverse." },
+          { "title": "Un apprentissage concret et efficace", "text": "Des cours axés sur la conversation et le réel, pensés pour progresser vite en espagnol." }
         ],
         "modules": [
-          { "num": "01", "title": "Conversation du quotidien", "description": "Se présenter, parler de sa vie quotidienne, donner son avis — le vocabulaire et la confiance pour tenir une vraie conversation.", "tags": ["Oral", "Vocabulaire", "Écoute"] },
-          { "num": "02", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
-          { "num": "03", "title": "Écoute & Compréhension", "description": "Comprendre des locuteurs natifs à vitesse naturelle grâce à des exercices d'écoute guidés.", "tags": ["Écoute", "Compréhension"] },
-          { "num": "04", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
+          { "num": "01", "title": "Bilan de niveau & objectifs", "description": "Un diagnostic rapide vous place précisément sur l'échelle du CECR (A1 à C2), et on construit un plan autour de vos objectifs réels.", "tags": ["Bilan de niveau", "CECR", "Objectifs"] },
+          { "num": "02", "title": "Oral & Écoute", "description": "Conversation du quotidien, expression d'opinions, et compréhension de locuteurs natifs à vitesse naturelle.", "tags": ["Oral", "Écoute"] },
+          { "num": "03", "title": "Lecture & Écriture", "description": "Développez une compréhension écrite concrète et une expression claire pour le travail, les voyages ou le quotidien.", "tags": ["Lecture", "Écriture"] },
+          { "num": "04", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
+          { "num": "05", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation — voyages, réunions professionnelles, discussions du quotidien — pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
         ],
         "audience": [
-          "Vous voulez parler avec une vraie confiance, pas juste réussir un test de grammaire",
+          "Vous voulez parler espagnol avec une vraie confiance au travail, en voyage ou au quotidien",
           "Vous avez déjà étudié mais vous bloquez dans les conversations réelles",
-          "Vous partez de zéro et voulez un parcours structuré",
-          "Vous voulez des cours flexibles qui s'adaptent à votre emploi du temps"
+          "Vous partez de zéro et voulez un parcours clair et structuré",
+          "Vous voulez un programme construit autour de votre emploi du temps, pas un planning fixe"
         ]
       },
       "conversational-italian": {
-        "title": "Italien conversationnel — Tous niveaux",
-        "tagline": "Gagnez une vraie confiance à l'oral avec des cours en direct et interactifs — pas un manuel de plus.",
-        "price": "Prochainement",
-        "duration": "1h / séance · hebdomadaire",
-        "date": "Ouverture des inscriptions bientôt",
+        "title": "Apprenez l'italien pour les voyages, la culture et la vie",
+        "tagline": "Idéal pour les personnes occupées qui veulent parler italien avec une vraie confiance pour voyager et au quotidien — quel que soit votre niveau ou votre emploi du temps.",
+        "price": "",
+        "duration": "1h / séance · individuel",
+        "date": "Inscriptions ouvertes",
         "cert": "Suivi de progression inclus",
+        "checklist": ["Séances 100% individuelles, en tête-à-tête", "Bilan de niveau gratuit (A1 à C2)", "Programme personnalisé et horaires flexibles", "Travail de l'oral, de l'écoute, de la lecture et de l'écriture"],
+        "defaultContactMessage": "Bonjour, je suis intéressé(e) par des cours d'italien individuels et j'aimerais réserver mon bilan de niveau gratuit.",
         "highlights": [
-          { "title": "On parle dès la première leçon", "text": "Chaque cours est construit autour de la vraie conversation, pas d'exercices de grammaire passifs." },
-          { "title": "Groupe ou 1:1, au choix", "text": "Rejoignez un petit groupe hebdomadaire ou réservez des séances individuelles sur mesure." },
-          { "title": "Un parcours, pas un cours au hasard", "text": "Votre tuteur suit votre niveau et construit un plan qui vous fait progresser chaque semaine." }
+          { "title": "Un bilan de niveau gratuit d'abord", "text": "Un bilan rapide et gratuit vous place précisément sur l'échelle du CECR (A1 à C2) — sans deviner, sans perdre de séances." },
+          { "title": "Apprenez où que vous soyez", "text": "Suivez votre cours en direct depuis chez vous, votre bureau, ou partout avec une connexion internet." },
+          { "title": "Apprenez à votre rythme", "text": "Votre tuteur s'adapte à votre rythme et vos objectifs, avec des horaires qui collent à votre vie — pas l'inverse." },
+          { "title": "Un apprentissage concret et efficace", "text": "Des cours axés sur la conversation et le réel, pensés pour progresser vite en italien." }
         ],
         "modules": [
-          { "num": "01", "title": "Conversation du quotidien", "description": "Se présenter, parler de sa vie quotidienne, donner son avis — le vocabulaire et la confiance pour tenir une vraie conversation.", "tags": ["Oral", "Vocabulaire", "Écoute"] },
-          { "num": "02", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
-          { "num": "03", "title": "Écoute & Compréhension", "description": "Comprendre des locuteurs natifs à vitesse naturelle grâce à des exercices d'écoute guidés.", "tags": ["Écoute", "Compréhension"] },
-          { "num": "04", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
+          { "num": "01", "title": "Bilan de niveau & objectifs", "description": "Un diagnostic rapide vous place précisément sur l'échelle du CECR (A1 à C2), et on construit un plan autour de vos objectifs réels.", "tags": ["Bilan de niveau", "CECR", "Objectifs"] },
+          { "num": "02", "title": "Oral & Écoute", "description": "Conversation du quotidien, expression d'opinions, et compréhension de locuteurs natifs à vitesse naturelle.", "tags": ["Oral", "Écoute"] },
+          { "num": "03", "title": "Lecture & Écriture", "description": "Développez une compréhension écrite concrète et une expression claire pour les voyages ou le quotidien.", "tags": ["Lecture", "Écriture"] },
+          { "num": "04", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
+          { "num": "05", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation — voyages, restaurants, discussions du quotidien — pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
         ],
         "audience": [
-          "Vous voulez parler avec une vraie confiance, pas juste réussir un test de grammaire",
+          "Vous voulez parler italien avec une vraie confiance en voyage ou au quotidien",
           "Vous avez déjà étudié mais vous bloquez dans les conversations réelles",
-          "Vous partez de zéro et voulez un parcours structuré",
-          "Vous voulez des cours flexibles qui s'adaptent à votre emploi du temps"
+          "Vous partez de zéro et voulez un parcours clair et structuré",
+          "Vous voulez un programme construit autour de votre emploi du temps, pas un planning fixe"
         ]
       },
       "delf": {
