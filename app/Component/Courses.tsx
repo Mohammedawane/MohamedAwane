@@ -126,9 +126,13 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
                 {/* Course cards */}
                 <div className={`grid gap-6 ${items.length === 1 ? "md:grid-cols-1 max-w-md" : "md:grid-cols-2 lg:grid-cols-3"}`}>
                   {items.map((course) => {
-                    const slug = course.href.replace("#contact?course=", "");
-                    const imageSrc = COURSE_IMAGES[slug];
-                    const isActive = ACTIVE_COURSES.has(slug);
+                    // Direct-link items (e.g. standalone ISTQB pages) store a real
+                    // path in href instead of the "#contact?course=" convention.
+                    const isDirectLink = course.href.startsWith("/");
+                    const slug = isDirectLink ? "" : course.href.replace("#contact?course=", "");
+                    const imageSrc = isDirectLink ? undefined : COURSE_IMAGES[slug];
+                    const isActive = isDirectLink || ACTIVE_COURSES.has(slug);
+                    const primaryHref = isDirectLink ? `/${lang}${course.href}` : course.href;
                     return (
                     <div
                       key={course.title}
@@ -189,7 +193,7 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
                         <div className="flex flex-col gap-2 mt-auto">
                           {isActive ? (
                             <CourseLink
-                              href={course.href}
+                              href={primaryHref}
                               className={`block w-full rounded-xl py-3 text-center text-sm font-semibold transition-all duration-200 ${c.ctaPrimary}`}
                             >
                               {course.cta}
@@ -202,12 +206,14 @@ export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
                               {isFr ? "Me prévenir à l'ouverture" : "Notify me when open"}
                             </CourseLink>
                           )}
-                          <a
-                            href={`/${lang}/formations/${slug}`}
-                            className={`block w-full rounded-xl border py-2.5 text-center text-sm transition-all duration-200 ${c.ctaSecondary}`}
-                          >
-                            {t.detail_label}
-                          </a>
+                          {!isDirectLink && (
+                            <a
+                              href={`/${lang}/formations/${slug}`}
+                              className={`block w-full rounded-xl border py-2.5 text-center text-sm transition-all duration-200 ${c.ctaSecondary}`}
+                            >
+                              {t.detail_label}
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>

@@ -42,7 +42,7 @@ export async function generateMetadata({
   };
 }
 
-const VALID_COURSES = ["conversational-english", "conversational-french", "conversational-arabic", "conversational-spanish", "conversational-italian", "delf", "qa", "iso", "web", "a11y", "audit", "hse", "tutorat-francais", "tutorat-anglais", "tutorat-math", "tutorat-arabe", "anglais-vacances-ete"] as const;
+const VALID_COURSES = ["conversational-english", "conversational-french", "conversational-arabic", "conversational-spanish", "conversational-italian", "delf", "ielts", "tef-canada", "tcf-canada", "qa", "iso", "web", "a11y", "audit", "hse", "tutorat-francais", "tutorat-anglais", "tutorat-math", "tutorat-arabe", "anglais-vacances-ete"] as const;
 
 // Only these courses have live enrollment + payment
 const ACTIVE_COURSES = new Set(["anglais-vacances-ete", "hse", "tutorat-francais", "tutorat-anglais", "tutorat-math"]);

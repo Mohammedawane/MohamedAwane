@@ -193,11 +193,13 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
                     {/* Course links */}
                     <ul className="space-y-0.5">
                       {items.map((course) => {
+                        const isDirectLink = course.href.startsWith("/");
                         const slug = course.href.replace("#contact?course=", "");
+                        const linkHref = isDirectLink ? `/${lang}${course.href}` : `/${lang}/formations/${slug}`;
                         return (
                           <li key={course.title}>
                             <a
-                              href={`/${lang}/formations/${slug}`}
+                              href={linkHref}
                               onClick={() => setMegaOpen(false)}
                               className={`flex items-start gap-2 rounded-lg px-2.5 py-2 text-sm text-gray-700 transition-all duration-150 ${c.item}`}
                             >
@@ -293,11 +295,13 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
                       {/* Cours */}
                       <div className="divide-y divide-gray-50">
                         {items.map((course) => {
+                          const isDirectLink = course.href.startsWith("/");
                           const slug = course.href.replace("#contact?course=", "");
+                          const linkHref = isDirectLink ? `/${lang}${course.href}` : `/${lang}/formations/${slug}`;
                           return (
                             <a
                               key={course.title}
-                              href={`/${lang}/formations/${slug}`}
+                              href={linkHref}
                               onClick={() => setOpen(false)}
                               className="flex items-center justify-between px-4 py-3.5 text-sm text-gray-700 hover:bg-gray-50 active:bg-gray-100"
                             >

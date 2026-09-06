@@ -21,7 +21,7 @@
       "label": "Tuteurs expérimentés"
     },
     "stat2": {
-      "value": "11",
+      "value": "16",
       "label": "Formats de cours disponibles"
     },
     "stat3": {
@@ -127,20 +127,6 @@
         "href": "#contact?course=conversational-italian"
       },
       {
-        "category": "general-language",
-        "badge": "Juillet · Août 2026 · Groupe de 4",
-        "tag": "Pack Vacances d'Été",
-        "title": "Communication Anglais — 7 à 14 ans",
-        "sub": "2 séances par semaine de 1h30 en petit groupe de 4 enfants. On travaille la prise de parole, la présentation et l'expression orale en anglais — dans un cadre bienveillant et stimulant.",
-        "details": [
-          "2 séances/semaine · 1h30 chacune · en ligne",
-          "399 DH / mois · Juillet & Août 2026",
-          "Petit groupe de 4 enfants · 7-14 ans"
-        ],
-        "cta": "S'inscrire",
-        "href": "#contact?course=anglais-vacances-ete"
-      },
-      {
         "category": "tutoring",
         "badge": "Inscriptions ouvertes · 1h/séance",
         "tag": "Cours individuel",
@@ -209,6 +195,90 @@
         ],
         "cta": "S'inscrire",
         "href": "#contact?course=delf"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "Programme · 8 semaines",
+        "tag": "Nouveau",
+        "title": "Préparation IELTS",
+        "sub": "Leçons ciblées, examens blancs et retours détaillés pour améliorer votre score.",
+        "details": [
+          "Programme 8 semaines · en direct",
+          "Examens blancs et retours détaillés",
+          "Progression structurée garantie"
+        ],
+        "cta": "S'inscrire",
+        "href": "#contact?course=ielts"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "Programme · 8 semaines",
+        "tag": "Nouveau",
+        "title": "Préparation TEF Canada",
+        "sub": "Leçons ciblées, examens blancs et retours détaillés pour l'immigration et les études au Canada.",
+        "details": [
+          "Programme 8 semaines · en direct",
+          "Examens blancs et retours détaillés",
+          "Progression structurée garantie"
+        ],
+        "cta": "S'inscrire",
+        "href": "#contact?course=tef-canada"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "Programme · 8 semaines",
+        "tag": "Nouveau",
+        "title": "Préparation TCF Canada",
+        "sub": "Leçons ciblées, examens blancs et retours détaillés pour l'immigration et les études au Canada.",
+        "details": [
+          "Programme 8 semaines · en direct",
+          "Examens blancs et retours détaillés",
+          "Progression structurée garantie"
+        ],
+        "cta": "S'inscrire",
+        "href": "#contact?course=tcf-canada"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "24 € · Accès à vie",
+        "tag": "Banque de questions",
+        "title": "ISTQB Foundation Level",
+        "sub": "Banque de questions complète couvrant les 6 chapitres du syllabus, avec mode entraînement et simulation d'examen.",
+        "details": [
+          "6 chapitres du syllabus",
+          "Mode entraînement avec explications",
+          "Accès à vie"
+        ],
+        "cta": "Commencer",
+        "href": "/istqb"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "49 € · Accès à vie",
+        "tag": "Banque de questions",
+        "title": "ISTQB CTAL-TA",
+        "sub": "200 questions couvrant le syllabus Advanced Level Test Analyst, avec mode entraînement et simulation d'examen.",
+        "details": [
+          "200 questions · 6 chapitres",
+          "Mode entraînement avec explications",
+          "Accès à vie"
+        ],
+        "cta": "Commencer",
+        "href": "/istqb-ctal-ta"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "49 € · Accès à vie",
+        "tag": "Banque de questions",
+        "title": "ISTQB CTAL-TAE",
+        "sub": "200 questions couvrant le syllabus Test Automation Engineer, avec mode entraînement et simulation d'examen.",
+        "details": [
+          "200 questions · 7 chapitres",
+          "Mode entraînement avec explications",
+          "Accès à vie"
+        ],
+        "cta": "Commencer",
+        "href": "/istqb-ctal-tae"
       }
     ],
     "detail_label": "Voir le cours"
@@ -549,7 +619,7 @@
   },
   "stats": {
     "items": [
-      { "value": "11", "label": "Formats de cours disponibles" },
+      { "value": "16", "label": "Formats de cours disponibles" },
       { "value": "150+", "label": "Apprenants formés" },
       { "value": "98%", "label": "Taux de satisfaction" },
       { "value": "Direct", "label": "Cours individuels & en groupe" }
@@ -862,6 +932,81 @@
         "audience": [
           "Vous avez une date d'examen DELF ou DALF déjà fixée",
           "Vous avez besoin d'une certification de français pour vos études ou votre travail",
+          "Vous maîtrisez la langue mais manquez de technique d'examen",
+          "Vous voulez un entraînement structuré avec de vrais retours, pas juste réviser seul"
+        ]
+      },
+      "ielts": {
+        "title": "Préparation IELTS",
+        "tagline": "Une préparation ciblée avec examens blancs et retours détaillés pour améliorer votre score.",
+        "price": "Prochainement",
+        "duration": "Programme 8 semaines · en direct",
+        "date": "Ouverture des inscriptions bientôt",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          { "title": "Construit autour de l'examen réel", "text": "Chaque séance colle directement au format IELTS — pas de temps perdu sur du hors-sujet." },
+          { "title": "Examens blancs avec retours", "text": "Entraînez-vous en conditions réelles et recevez des retours détaillés à chaque tentative." },
+          { "title": "Un plan structuré sur 8 semaines", "text": "Un parcours clair et progressif depuis votre niveau actuel jusqu'au jour de l'examen." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Listening & Reading", "description": "Stratégies spécifiques aux sections d'écoute et de lecture de l'IELTS.", "tags": ["Écoute", "Lecture", "Stratégie d'examen"] },
+          { "num": "02", "title": "Writing Task 1 & 2", "description": "Structurer des réponses écrites qui répondent aux attentes de l'examinateur pour votre niveau visé.", "tags": ["Rédaction", "Structure"] },
+          { "num": "03", "title": "Speaking", "description": "Entraînement à la présentation orale et à l'interaction, avec retours en direct.", "tags": ["Oral", "Présentation"] },
+          { "num": "04", "title": "Examens blancs & Révisions", "description": "Des examens blancs complets en conditions chronométrées, suivis d'un retour détaillé.", "tags": ["Examen blanc", "Retour personnalisé"] }
+        ],
+        "audience": [
+          "Vous avez une date d'examen IELTS déjà fixée",
+          "Vous avez besoin d'une certification pour étudier ou travailler à l'étranger",
+          "Vous maîtrisez la langue mais manquez de technique d'examen",
+          "Vous voulez un entraînement structuré avec de vrais retours, pas juste réviser seul"
+        ]
+      },
+      "tef-canada": {
+        "title": "Préparation TEF Canada",
+        "tagline": "Une préparation ciblée avec examens blancs et retours détaillés pour l'immigration et les études au Canada.",
+        "price": "Prochainement",
+        "duration": "Programme 8 semaines · en direct",
+        "date": "Ouverture des inscriptions bientôt",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          { "title": "Construit autour de l'examen réel", "text": "Chaque séance colle directement au format TEF Canada — pas de temps perdu sur du hors-sujet." },
+          { "title": "Examens blancs avec retours", "text": "Entraînez-vous en conditions réelles et recevez des retours détaillés à chaque tentative." },
+          { "title": "Un plan structuré sur 8 semaines", "text": "Un parcours clair et progressif depuis votre niveau actuel jusqu'au jour de l'examen." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Compréhension orale & écrite", "description": "Stratégies d'écoute et de lecture spécifiques au format TEF Canada.", "tags": ["Écoute", "Lecture", "Stratégie d'examen"] },
+          { "num": "02", "title": "Expression écrite", "description": "Structurer des réponses écrites qui répondent aux attentes pour votre niveau visé.", "tags": ["Rédaction", "Structure"] },
+          { "num": "03", "title": "Expression orale", "description": "Entraînement à la présentation orale et à l'interaction, avec retours en direct.", "tags": ["Oral", "Présentation"] },
+          { "num": "04", "title": "Examens blancs & Révisions", "description": "Des examens blancs complets en conditions chronométrées, suivis d'un retour détaillé.", "tags": ["Examen blanc", "Retour personnalisé"] }
+        ],
+        "audience": [
+          "Vous avez une date d'examen TEF Canada déjà fixée pour l'immigration ou la citoyenneté",
+          "Vous avez besoin d'un score de français pour Entrée express ou un permis d'études",
+          "Vous maîtrisez la langue mais manquez de technique d'examen",
+          "Vous voulez un entraînement structuré avec de vrais retours, pas juste réviser seul"
+        ]
+      },
+      "tcf-canada": {
+        "title": "Préparation TCF Canada",
+        "tagline": "Une préparation ciblée avec examens blancs et retours détaillés pour l'immigration et les études au Canada.",
+        "price": "Prochainement",
+        "duration": "Programme 8 semaines · en direct",
+        "date": "Ouverture des inscriptions bientôt",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          { "title": "Construit autour de l'examen réel", "text": "Chaque séance colle directement au format TCF Canada — pas de temps perdu sur du hors-sujet." },
+          { "title": "Examens blancs avec retours", "text": "Entraînez-vous en conditions réelles et recevez des retours détaillés à chaque tentative." },
+          { "title": "Un plan structuré sur 8 semaines", "text": "Un parcours clair et progressif depuis votre niveau actuel jusqu'au jour de l'examen." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Compréhension orale & écrite", "description": "Stratégies d'écoute et de lecture spécifiques au format TCF Canada.", "tags": ["Écoute", "Lecture", "Stratégie d'examen"] },
+          { "num": "02", "title": "Expression écrite", "description": "Structurer des réponses écrites qui répondent aux attentes pour votre niveau visé.", "tags": ["Rédaction", "Structure"] },
+          { "num": "03", "title": "Expression orale", "description": "Entraînement à la présentation orale et à l'interaction, avec retours en direct.", "tags": ["Oral", "Présentation"] },
+          { "num": "04", "title": "Examens blancs & Révisions", "description": "Des examens blancs complets en conditions chronométrées, suivis d'un retour détaillé.", "tags": ["Examen blanc", "Retour personnalisé"] }
+        ],
+        "audience": [
+          "Vous avez une date d'examen TCF Canada déjà fixée pour l'immigration ou la citoyenneté",
+          "Vous avez besoin d'un score de français pour Entrée express ou un permis d'études",
           "Vous maîtrisez la langue mais manquez de technique d'examen",
           "Vous voulez un entraînement structuré avec de vrais retours, pas juste réviser seul"
         ]

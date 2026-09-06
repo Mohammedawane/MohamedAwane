@@ -4,10 +4,13 @@ const BASE_URL = "https://www.nexo-skills.com";
 
 const courses = [
   "conversational-english", "conversational-french", "conversational-arabic",
-  "conversational-spanish", "conversational-italian", "delf",
+  "conversational-spanish", "conversational-italian", "delf", "ielts",
+  "tef-canada", "tcf-canada",
   "tutorat-francais", "tutorat-anglais", "tutorat-math", "tutorat-arabe",
   "anglais-vacances-ete",
 ];
+
+const standalonePages = ["istqb", "istqb-ctal-ta", "istqb-ctal-tae"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const langs = ["fr", "en"];
@@ -48,5 +51,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticPages, ...coursePages];
+  const standalonePagesEntries = langs.flatMap((lang) =>
+    standalonePages.map((page) => ({
+      url: `${BASE_URL}/${lang}/${page}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    }))
+  );
+
+  return [...staticPages, ...coursePages, ...standalonePagesEntries];
 }

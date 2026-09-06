@@ -21,7 +21,7 @@
       "label": "Experienced tutors"
     },
     "stat2": {
-      "value": "11",
+      "value": "16",
       "label": "Course formats available"
     },
     "stat3": {
@@ -127,20 +127,6 @@
         "href": "#contact?course=conversational-italian"
       },
       {
-        "category": "general-language",
-        "badge": "July · August 2026 · Group of 4",
-        "tag": "Summer Pack",
-        "title": "English Communication — Ages 7 to 14",
-        "sub": "2 sessions per week of 1h30 in a small group of 4 children. We work on speaking up, presenting and expressing ideas in English — in a supportive and engaging environment.",
-        "details": [
-          "2 sessions/week · 1h30 each · online",
-          "399 MAD / month · July & August 2026",
-          "Group of 4 children · Ages 7-14"
-        ],
-        "cta": "Enroll",
-        "href": "#contact?course=anglais-vacances-ete"
-      },
-      {
         "category": "tutoring",
         "badge": "Open enrollment · 1h/session",
         "tag": "Individual session",
@@ -209,6 +195,90 @@
         ],
         "cta": "Enroll",
         "href": "#contact?course=delf"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "Course package · 8 weeks",
+        "tag": "New",
+        "title": "IELTS Preparation",
+        "sub": "Targeted lessons, mock exams, and examiner-style feedback to boost your score.",
+        "details": [
+          "8-week program · live",
+          "Mock exams and detailed feedback",
+          "Guaranteed structured progression"
+        ],
+        "cta": "Enroll",
+        "href": "#contact?course=ielts"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "Course package · 8 weeks",
+        "tag": "New",
+        "title": "TEF Canada Preparation",
+        "sub": "Targeted lessons, mock exams, and examiner-style feedback for Canadian immigration and study requirements.",
+        "details": [
+          "8-week program · live",
+          "Mock exams and detailed feedback",
+          "Guaranteed structured progression"
+        ],
+        "cta": "Enroll",
+        "href": "#contact?course=tef-canada"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "Course package · 8 weeks",
+        "tag": "New",
+        "title": "TCF Canada Preparation",
+        "sub": "Targeted lessons, mock exams, and examiner-style feedback for Canadian immigration and study requirements.",
+        "details": [
+          "8-week program · live",
+          "Mock exams and detailed feedback",
+          "Guaranteed structured progression"
+        ],
+        "cta": "Enroll",
+        "href": "#contact?course=tcf-canada"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "24 € · Lifetime access",
+        "tag": "Question Bank",
+        "title": "ISTQB Foundation Level",
+        "sub": "Full question bank covering all 6 syllabus chapters, with training mode and full exam simulation.",
+        "details": [
+          "6 syllabus chapters",
+          "Training mode with explanations",
+          "Lifetime access"
+        ],
+        "cta": "Start Preparing",
+        "href": "/istqb"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "49 € · Lifetime access",
+        "tag": "Question Bank",
+        "title": "ISTQB CTAL-TA",
+        "sub": "200 questions covering the Advanced Level Test Analyst syllabus, with training mode and full exam simulation.",
+        "details": [
+          "200 questions · 6 chapters",
+          "Training mode with explanations",
+          "Lifetime access"
+        ],
+        "cta": "Start Preparing",
+        "href": "/istqb-ctal-ta"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "49 € · Lifetime access",
+        "tag": "Question Bank",
+        "title": "ISTQB CTAL-TAE",
+        "sub": "200 questions covering the Test Automation Engineer syllabus, with training mode and full exam simulation.",
+        "details": [
+          "200 questions · 7 chapters",
+          "Training mode with explanations",
+          "Lifetime access"
+        ],
+        "cta": "Start Preparing",
+        "href": "/istqb-ctal-tae"
       }
     ],
     "detail_label": "View course"
@@ -549,7 +619,7 @@
   },
   "stats": {
     "items": [
-      { "value": "11", "label": "Course formats available" },
+      { "value": "16", "label": "Course formats available" },
       { "value": "150+", "label": "Learners taught" },
       { "value": "98%", "label": "Satisfaction rate" },
       { "value": "Live", "label": "1:1 & group classes" }
@@ -862,6 +932,81 @@
         "audience": [
           "You have a DELF or DALF exam date coming up",
           "You need study or work certification for French proficiency",
+          "You know the language but need exam-specific technique",
+          "You want structured practice with real feedback, not just self-study"
+        ]
+      },
+      "ielts": {
+        "title": "IELTS Preparation",
+        "tagline": "Targeted exam prep with mock exams and examiner-style feedback to boost your score.",
+        "price": "Coming soon",
+        "duration": "8-week program · live",
+        "date": "Enrollment opening soon",
+        "cert": "Progress tracking included",
+        "highlights": [
+          { "title": "Built around the real exam", "text": "Every session maps directly to the IELTS format — no wasted time on off-topic material." },
+          { "title": "Mock exams with feedback", "text": "Practice under real exam conditions and get examiner-style feedback on every attempt." },
+          { "title": "Structured 8-week plan", "text": "A clear, progressive path from your current level to exam day — not a random collection of lessons." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Listening & Reading", "description": "Strategies specific to the IELTS listening and reading sections.", "tags": ["Listening", "Reading", "Exam Strategy"] },
+          { "num": "02", "title": "Writing Task 1 & 2", "description": "Structuring written responses that meet examiner expectations at your target band.", "tags": ["Writing", "Structure"] },
+          { "num": "03", "title": "Speaking", "description": "Oral presentation and interaction practice, with live feedback on delivery and fluency.", "tags": ["Speaking", "Presentation"] },
+          { "num": "04", "title": "Mock Exams & Review", "description": "Full mock exams under timed conditions, followed by detailed, personalized feedback.", "tags": ["Mock Exam", "Feedback"] }
+        ],
+        "audience": [
+          "You have an IELTS exam date coming up",
+          "You need a certification for study or work abroad",
+          "You know the language but need exam-specific technique",
+          "You want structured practice with real feedback, not just self-study"
+        ]
+      },
+      "tef-canada": {
+        "title": "TEF Canada Preparation",
+        "tagline": "Targeted exam prep with mock exams and examiner-style feedback for Canadian immigration and study requirements.",
+        "price": "Coming soon",
+        "duration": "8-week program · live",
+        "date": "Enrollment opening soon",
+        "cert": "Progress tracking included",
+        "highlights": [
+          { "title": "Built around the real exam", "text": "Every session maps directly to the TEF Canada format — no wasted time on off-topic material." },
+          { "title": "Mock exams with feedback", "text": "Practice under real exam conditions and get examiner-style feedback on every attempt." },
+          { "title": "Structured 8-week plan", "text": "A clear, progressive path from your current level to exam day — not a random collection of lessons." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Compréhension orale & écrite", "description": "Listening and reading strategies specific to the TEF Canada format.", "tags": ["Listening", "Reading", "Exam Strategy"] },
+          { "num": "02", "title": "Expression écrite", "description": "Structuring written responses that meet examiner expectations at your target level.", "tags": ["Writing", "Structure"] },
+          { "num": "03", "title": "Expression orale", "description": "Oral presentation and interaction practice, with live feedback on delivery and fluency.", "tags": ["Speaking", "Presentation"] },
+          { "num": "04", "title": "Mock Exams & Review", "description": "Full mock exams under timed conditions, followed by detailed, personalized feedback.", "tags": ["Mock Exam", "Feedback"] }
+        ],
+        "audience": [
+          "You have a TEF Canada exam date coming up for immigration or citizenship",
+          "You need a French proficiency score for Express Entry or a study permit",
+          "You know the language but need exam-specific technique",
+          "You want structured practice with real feedback, not just self-study"
+        ]
+      },
+      "tcf-canada": {
+        "title": "TCF Canada Preparation",
+        "tagline": "Targeted exam prep with mock exams and examiner-style feedback for Canadian immigration and study requirements.",
+        "price": "Coming soon",
+        "duration": "8-week program · live",
+        "date": "Enrollment opening soon",
+        "cert": "Progress tracking included",
+        "highlights": [
+          { "title": "Built around the real exam", "text": "Every session maps directly to the TCF Canada format — no wasted time on off-topic material." },
+          { "title": "Mock exams with feedback", "text": "Practice under real exam conditions and get examiner-style feedback on every attempt." },
+          { "title": "Structured 8-week plan", "text": "A clear, progressive path from your current level to exam day — not a random collection of lessons." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Compréhension orale & écrite", "description": "Listening and reading strategies specific to the TCF Canada format.", "tags": ["Listening", "Reading", "Exam Strategy"] },
+          { "num": "02", "title": "Expression écrite", "description": "Structuring written responses that meet examiner expectations at your target level.", "tags": ["Writing", "Structure"] },
+          { "num": "03", "title": "Expression orale", "description": "Oral presentation and interaction practice, with live feedback on delivery and fluency.", "tags": ["Speaking", "Presentation"] },
+          { "num": "04", "title": "Mock Exams & Review", "description": "Full mock exams under timed conditions, followed by detailed, personalized feedback.", "tags": ["Mock Exam", "Feedback"] }
+        ],
+        "audience": [
+          "You have a TCF Canada exam date coming up for immigration or citizenship",
+          "You need a French proficiency score for Express Entry or a study permit",
           "You know the language but need exam-specific technique",
           "You want structured practice with real feedback, not just self-study"
         ]
