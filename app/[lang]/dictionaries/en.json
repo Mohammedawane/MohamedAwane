@@ -68,7 +68,7 @@
           "Personalized learning paths"
         ],
         "cta": "Book a Session",
-        "href": "#contact?course=conversational-english"
+        "href": "/formations/conversational-english"
       },
       {
         "category": "general-language",
@@ -82,7 +82,7 @@
           "Personalized learning paths"
         ],
         "cta": "Book a Session",
-        "href": "#contact?course=conversational-french"
+        "href": "/formations/conversational-french"
       },
       {
         "category": "general-language",
@@ -96,7 +96,7 @@
           "Personalized learning paths"
         ],
         "cta": "Book a Session",
-        "href": "#contact?course=conversational-arabic"
+        "href": "/formations/conversational-arabic"
       },
       {
         "category": "general-language",
@@ -110,7 +110,7 @@
           "Personalized learning paths"
         ],
         "cta": "Book a Session",
-        "href": "#contact?course=conversational-spanish"
+        "href": "/formations/conversational-spanish"
       },
       {
         "category": "general-language",
@@ -124,7 +124,7 @@
           "Personalized learning paths"
         ],
         "cta": "Book a Session",
-        "href": "#contact?course=conversational-italian"
+        "href": "/formations/conversational-italian"
       },
       {
         "category": "tutoring",
