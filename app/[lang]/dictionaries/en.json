@@ -21,7 +21,7 @@
       "label": "Experienced tutors"
     },
     "stat2": {
-      "value": "5",
+      "value": "11",
       "label": "Course formats available"
     },
     "stat3": {
@@ -38,15 +38,9 @@
     "categories": [
       {
         "key": "general-language",
-        "label": "General Language",
-        "sub": "Conversational and grammar-focused classes for everyday use",
+        "label": "Languages",
+        "sub": "Conversational classes across English, French, Arabic, Spanish and Italian",
         "color": "blue"
-      },
-      {
-        "key": "exam-prep",
-        "label": "Exam Preparation",
-        "sub": "DELF, DALF, TOEFL, IELTS and other certification prep",
-        "color": "violet"
       },
       {
         "key": "tutoring",
@@ -55,10 +49,10 @@
         "color": "emerald"
       },
       {
-        "key": "kids-teens",
-        "label": "Kids & Teens Groups",
-        "sub": "Small-group programs to build confidence in a new language",
-        "color": "amber"
+        "key": "exam-prep",
+        "label": "Certification Prep",
+        "sub": "DELF, DALF, TOEFL, IELTS and other certification prep",
+        "color": "violet"
       }
     ],
     "items": [
@@ -77,18 +71,74 @@
         "href": "#contact?course=conversational-english"
       },
       {
-        "category": "exam-prep",
-        "badge": "Course package · 8 weeks",
-        "tag": "Exam Prep",
-        "title": "DELF / DALF Preparation",
-        "sub": "Targeted lessons, mock exams, and examiner-style feedback to boost your score.",
+        "category": "general-language",
+        "badge": "Open enrollment · Weekly",
+        "tag": "New",
+        "title": "Conversational French — All Levels",
+        "sub": "Interactive classes focused on speaking, comprehension, and real-world communication.",
         "details": [
-          "8-week program · live",
-          "Mock exams and detailed feedback",
-          "Guaranteed structured progression"
+          "Weekly live classes · online",
+          "Flexible schedules · group or 1:1",
+          "Personalized learning paths"
+        ],
+        "cta": "Join a Class",
+        "href": "#contact?course=conversational-french"
+      },
+      {
+        "category": "general-language",
+        "badge": "Open enrollment · Weekly",
+        "tag": "New",
+        "title": "Conversational Arabic — All Levels",
+        "sub": "Interactive classes focused on speaking, comprehension, and real-world communication.",
+        "details": [
+          "Weekly live classes · online",
+          "Flexible schedules · group or 1:1",
+          "Personalized learning paths"
+        ],
+        "cta": "Join a Class",
+        "href": "#contact?course=conversational-arabic"
+      },
+      {
+        "category": "general-language",
+        "badge": "Open enrollment · Weekly",
+        "tag": "New",
+        "title": "Conversational Spanish — All Levels",
+        "sub": "Interactive classes focused on speaking, comprehension, and real-world communication.",
+        "details": [
+          "Weekly live classes · online",
+          "Flexible schedules · group or 1:1",
+          "Personalized learning paths"
+        ],
+        "cta": "Join a Class",
+        "href": "#contact?course=conversational-spanish"
+      },
+      {
+        "category": "general-language",
+        "badge": "Open enrollment · Weekly",
+        "tag": "New",
+        "title": "Conversational Italian — All Levels",
+        "sub": "Interactive classes focused on speaking, comprehension, and real-world communication.",
+        "details": [
+          "Weekly live classes · online",
+          "Flexible schedules · group or 1:1",
+          "Personalized learning paths"
+        ],
+        "cta": "Join a Class",
+        "href": "#contact?course=conversational-italian"
+      },
+      {
+        "category": "general-language",
+        "badge": "July · August 2026 · Group of 4",
+        "tag": "Summer Pack",
+        "title": "English Communication — Ages 7 to 14",
+        "sub": "2 sessions per week of 1h30 in a small group of 4 children. We work on speaking up, presenting and expressing ideas in English — in a supportive and engaging environment.",
+        "details": [
+          "2 sessions/week · 1h30 each · online",
+          "399 MAD / month · July & August 2026",
+          "Group of 4 children · Ages 7-14"
         ],
         "cta": "Enroll",
-        "href": "#contact?course=delf"
+        "href": "#contact?course=anglais-vacances-ete"
       },
       {
         "category": "tutoring",
@@ -119,18 +169,46 @@
         "href": "#contact?course=tutorat-francais"
       },
       {
-        "category": "kids-teens",
-        "badge": "July · August 2026 · Group of 4",
-        "tag": "Summer Pack",
-        "title": "English Communication — Ages 7 to 14",
-        "sub": "2 sessions per week of 1h30 in a small group of 4 children. We work on speaking up, presenting and expressing ideas in English — in a supportive and engaging environment.",
+        "category": "tutoring",
+        "badge": "Open enrollment · 1h/session",
+        "tag": "Individual session",
+        "title": "Math Tutoring — Primary School",
+        "sub": "Operations, fractions, word problems and logical reasoning. We start from the fundamentals and build solidly so your child follows and understands in class.",
         "details": [
-          "2 sessions/week · 1h30 each · online",
-          "399 MAD / month · July & August 2026",
-          "Group of 4 children · Ages 7-14"
+          "1 hour per session · online",
+          "Monthly subscription · no commitment",
+          "Personalized individual sessions"
+        ],
+        "cta": "Book a Session",
+        "href": "#contact?course=tutorat-math"
+      },
+      {
+        "category": "tutoring",
+        "badge": "Open enrollment · 1h/session",
+        "tag": "New",
+        "title": "Arabic Tutoring — Primary School",
+        "sub": "Vocabulary, reading and conversation basics in Arabic. A supportive environment for your child to build confidence and progress at their own pace.",
+        "details": [
+          "1 hour per session · online",
+          "Monthly subscription · no commitment",
+          "Personalized individual sessions"
+        ],
+        "cta": "Book a Session",
+        "href": "#contact?course=tutorat-arabe"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "Course package · 8 weeks",
+        "tag": "Exam Prep",
+        "title": "DELF / DALF Preparation",
+        "sub": "Targeted lessons, mock exams, and examiner-style feedback to boost your score.",
+        "details": [
+          "8-week program · live",
+          "Mock exams and detailed feedback",
+          "Guaranteed structured progression"
         ],
         "cta": "Enroll",
-        "href": "#contact?course=anglais-vacances-ete"
+        "href": "#contact?course=delf"
       }
     ],
     "detail_label": "View course"
@@ -471,7 +549,7 @@
   },
   "stats": {
     "items": [
-      { "value": "5", "label": "Course formats available" },
+      { "value": "11", "label": "Course formats available" },
       { "value": "150+", "label": "Learners taught" },
       { "value": "98%", "label": "Satisfaction rate" },
       { "value": "Live", "label": "1:1 & group classes" }
@@ -626,6 +704,106 @@
             "description": "Role-plays and scenarios — ordering food, job interviews, small talk — so you're ready for real situations.",
             "tags": ["Role-play", "Fluency"]
           }
+        ],
+        "audience": [
+          "You want to speak with real confidence, not just pass a grammar test",
+          "You've studied before but freeze up in real conversations",
+          "You're starting from scratch and want a structured path",
+          "You want flexible classes that fit around your schedule"
+        ]
+      },
+      "conversational-french": {
+        "title": "Conversational French — All Levels",
+        "tagline": "Build real speaking confidence with live, interactive classes — not another textbook.",
+        "price": "Coming soon",
+        "duration": "1h / session · weekly",
+        "date": "Enrollment opening soon",
+        "cert": "Progress tracking included",
+        "highlights": [
+          { "title": "Speaking from lesson one", "text": "Every class is built around real conversation, not passive grammar drills." },
+          { "title": "Flexible group or 1:1", "text": "Join a small weekly group or book fully personalized individual sessions." },
+          { "title": "A path, not a random lesson", "text": "Your tutor tracks your level and builds a plan that moves you forward every week." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Everyday Conversation", "description": "Introductions, daily life, opinions — the vocabulary and confidence to hold a real conversation.", "tags": ["Speaking", "Vocabulary", "Listening"] },
+          { "num": "02", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
+          { "num": "03", "title": "Listening & Comprehension", "description": "Understand native speakers at natural speed through guided listening practice.", "tags": ["Listening", "Comprehension"] },
+          { "num": "04", "title": "Real-World Practice", "description": "Role-plays and scenarios — ordering food, job interviews, small talk — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
+        ],
+        "audience": [
+          "You want to speak with real confidence, not just pass a grammar test",
+          "You've studied before but freeze up in real conversations",
+          "You're starting from scratch and want a structured path",
+          "You want flexible classes that fit around your schedule"
+        ]
+      },
+      "conversational-arabic": {
+        "title": "Conversational Arabic — All Levels",
+        "tagline": "Build real speaking confidence with live, interactive classes — not another textbook.",
+        "price": "Coming soon",
+        "duration": "1h / session · weekly",
+        "date": "Enrollment opening soon",
+        "cert": "Progress tracking included",
+        "highlights": [
+          { "title": "Speaking from lesson one", "text": "Every class is built around real conversation, not passive grammar drills." },
+          { "title": "Flexible group or 1:1", "text": "Join a small weekly group or book fully personalized individual sessions." },
+          { "title": "A path, not a random lesson", "text": "Your tutor tracks your level and builds a plan that moves you forward every week." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Everyday Conversation", "description": "Introductions, daily life, opinions — the vocabulary and confidence to hold a real conversation.", "tags": ["Speaking", "Vocabulary", "Listening"] },
+          { "num": "02", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
+          { "num": "03", "title": "Listening & Comprehension", "description": "Understand native speakers at natural speed through guided listening practice.", "tags": ["Listening", "Comprehension"] },
+          { "num": "04", "title": "Real-World Practice", "description": "Role-plays and scenarios — ordering food, job interviews, small talk — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
+        ],
+        "audience": [
+          "You want to speak with real confidence, not just pass a grammar test",
+          "You've studied before but freeze up in real conversations",
+          "You're starting from scratch and want a structured path",
+          "You want flexible classes that fit around your schedule"
+        ]
+      },
+      "conversational-spanish": {
+        "title": "Conversational Spanish — All Levels",
+        "tagline": "Build real speaking confidence with live, interactive classes — not another textbook.",
+        "price": "Coming soon",
+        "duration": "1h / session · weekly",
+        "date": "Enrollment opening soon",
+        "cert": "Progress tracking included",
+        "highlights": [
+          { "title": "Speaking from lesson one", "text": "Every class is built around real conversation, not passive grammar drills." },
+          { "title": "Flexible group or 1:1", "text": "Join a small weekly group or book fully personalized individual sessions." },
+          { "title": "A path, not a random lesson", "text": "Your tutor tracks your level and builds a plan that moves you forward every week." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Everyday Conversation", "description": "Introductions, daily life, opinions — the vocabulary and confidence to hold a real conversation.", "tags": ["Speaking", "Vocabulary", "Listening"] },
+          { "num": "02", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
+          { "num": "03", "title": "Listening & Comprehension", "description": "Understand native speakers at natural speed through guided listening practice.", "tags": ["Listening", "Comprehension"] },
+          { "num": "04", "title": "Real-World Practice", "description": "Role-plays and scenarios — ordering food, job interviews, small talk — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
+        ],
+        "audience": [
+          "You want to speak with real confidence, not just pass a grammar test",
+          "You've studied before but freeze up in real conversations",
+          "You're starting from scratch and want a structured path",
+          "You want flexible classes that fit around your schedule"
+        ]
+      },
+      "conversational-italian": {
+        "title": "Conversational Italian — All Levels",
+        "tagline": "Build real speaking confidence with live, interactive classes — not another textbook.",
+        "price": "Coming soon",
+        "duration": "1h / session · weekly",
+        "date": "Enrollment opening soon",
+        "cert": "Progress tracking included",
+        "highlights": [
+          { "title": "Speaking from lesson one", "text": "Every class is built around real conversation, not passive grammar drills." },
+          { "title": "Flexible group or 1:1", "text": "Join a small weekly group or book fully personalized individual sessions." },
+          { "title": "A path, not a random lesson", "text": "Your tutor tracks your level and builds a plan that moves you forward every week." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Everyday Conversation", "description": "Introductions, daily life, opinions — the vocabulary and confidence to hold a real conversation.", "tags": ["Speaking", "Vocabulary", "Listening"] },
+          { "num": "02", "title": "Grammar in Context", "description": "Grammar taught through real sentences you'll actually use, not isolated rules to memorize.", "tags": ["Grammar", "Sentence Structure"] },
+          { "num": "03", "title": "Listening & Comprehension", "description": "Understand native speakers at natural speed through guided listening practice.", "tags": ["Listening", "Comprehension"] },
+          { "num": "04", "title": "Real-World Practice", "description": "Role-plays and scenarios — ordering food, job interviews, small talk — so you're ready for real situations.", "tags": ["Role-play", "Fluency"] }
         ],
         "audience": [
           "You want to speak with real confidence, not just pass a grammar test",
@@ -1342,6 +1520,31 @@
           "Gaps are piling up and they're struggling to follow class",
           "You want personalized support to help them catch up",
           "You're preparing your child for an assessment or grade transition"
+        ]
+      },
+      "tutorat-arabe": {
+        "title": "Arabic Tutoring — Primary School",
+        "tagline": "Individual online sessions to build strong Arabic foundations and grow in confidence.",
+        "price": "Coming soon",
+        "duration": "1h / session",
+        "date": "Enrollment opening soon",
+        "cert": "Progress tracking included",
+        "highlights": [
+          { "title": "100% individual", "text": "Your child has the tutor's full attention — guaranteed progress." },
+          { "title": "Adapted to their level", "text": "Beginner or intermediate, every session builds on what the student already knows." },
+          { "title": "Online, no commute", "text": "From home, on a computer or tablet — simple and convenient." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Vocabulary & Pronunciation", "description": "Learn everyday vocabulary through games and oral exercises.", "tags": ["Vocabulary", "Speaking", "Pronunciation"] },
+          { "num": "02", "title": "Basic Grammar", "description": "Simple sentence structure, questions and answers, everyday expressions.", "tags": ["Grammar", "Sentences", "Structure"] },
+          { "num": "03", "title": "Comprehension & Expression", "description": "Short texts, simple dialogues, listening exercises and answering in Arabic.", "tags": ["Comprehension", "Listening", "Expression"] },
+          { "num": "04", "title": "Review & Test Preparation", "description": "Review current lessons, unit vocabulary, and preparation for school tests.", "tags": ["Review", "Tests", "Assessment"] }
+        ],
+        "audience": [
+          "Your child is starting Arabic and needs gentle support",
+          "They're struggling to keep up in class and losing confidence",
+          "You want to give them a head start from primary school",
+          "You're looking for consistent, caring support throughout the year"
         ]
       },
       "anglais-vacances-ete": {

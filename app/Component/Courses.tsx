@@ -88,7 +88,7 @@ const COLORS = {
   },
 };
 
-const ACTIVE_COURSES = new Set(["anglais-vacances-ete", "hse", "tutorat-francais", "tutorat-anglais"]);
+const ACTIVE_COURSES = new Set(["anglais-vacances-ete", "hse", "tutorat-francais", "tutorat-anglais", "tutorat-math"]);
 
 export default function Courses({ t, lang }: { t: CoursesDict; lang: string }) {
   const isFr = lang !== "en";

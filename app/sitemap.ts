@@ -3,8 +3,9 @@ import type { MetadataRoute } from "next";
 const BASE_URL = "https://www.nexo-skills.com";
 
 const courses = [
-  "conversational-english", "delf",
-  "tutorat-francais", "tutorat-anglais",
+  "conversational-english", "conversational-french", "conversational-arabic",
+  "conversational-spanish", "conversational-italian", "delf",
+  "tutorat-francais", "tutorat-anglais", "tutorat-math", "tutorat-arabe",
   "anglais-vacances-ete",
 ];
 

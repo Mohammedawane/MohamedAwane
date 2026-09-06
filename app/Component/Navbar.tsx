@@ -169,7 +169,7 @@ export default function Navbar({ t, lang, courses }: { t: NavDict; lang: string;
           }`}
         >
           <div className="mx-auto max-w-6xl px-6 py-8">
-            <div className="grid grid-cols-4 gap-6">
+            <div className="grid grid-cols-3 gap-6">
               {courses.categories.map((cat) => {
                 const items = courses.items.filter((i) => i.category === cat.key);
                 const c = CAT_COLORS[cat.color] ?? CAT_COLORS.blue;

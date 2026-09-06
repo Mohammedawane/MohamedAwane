@@ -21,7 +21,7 @@
       "label": "Tuteurs expérimentés"
     },
     "stat2": {
-      "value": "5",
+      "value": "11",
       "label": "Formats de cours disponibles"
     },
     "stat3": {
@@ -38,15 +38,9 @@
     "categories": [
       {
         "key": "general-language",
-        "label": "Langue générale",
-        "sub": "Cours conversationnels et axés sur la grammaire pour un usage quotidien",
+        "label": "Langues",
+        "sub": "Cours conversationnels en anglais, français, arabe, espagnol et italien",
         "color": "blue"
-      },
-      {
-        "key": "exam-prep",
-        "label": "Préparation aux examens",
-        "sub": "DELF, DALF, TOEFL, IELTS et autres préparations à la certification",
-        "color": "violet"
       },
       {
         "key": "tutoring",
@@ -55,10 +49,10 @@
         "color": "emerald"
       },
       {
-        "key": "kids-teens",
-        "label": "Enfants & Ados en groupe",
-        "sub": "Programmes en petit groupe pour progresser en confiance dans une nouvelle langue",
-        "color": "amber"
+        "key": "exam-prep",
+        "label": "Préparation Certifications",
+        "sub": "DELF, DALF, TOEFL, IELTS et autres préparations à la certification",
+        "color": "violet"
       }
     ],
     "items": [
@@ -77,18 +71,74 @@
         "href": "#contact?course=conversational-english"
       },
       {
-        "category": "exam-prep",
-        "badge": "Programme · 8 semaines",
-        "tag": "Prépa examen",
-        "title": "Préparation DELF / DALF",
-        "sub": "Leçons ciblées, examens blancs et retours détaillés pour améliorer votre score.",
+        "category": "general-language",
+        "badge": "Inscriptions ouvertes · Hebdomadaire",
+        "tag": "Nouveau",
+        "title": "Français conversationnel — Tous niveaux",
+        "sub": "Cours interactifs axés sur la prise de parole, la compréhension et la communication réelle.",
         "details": [
-          "Programme 8 semaines · en direct",
-          "Examens blancs et retours détaillés",
-          "Progression structurée garantie"
+          "Cours hebdomadaires en direct · en ligne",
+          "Horaires flexibles · groupe ou 1:1",
+          "Parcours d'apprentissage personnalisés"
+        ],
+        "cta": "Rejoindre un cours",
+        "href": "#contact?course=conversational-french"
+      },
+      {
+        "category": "general-language",
+        "badge": "Inscriptions ouvertes · Hebdomadaire",
+        "tag": "Nouveau",
+        "title": "Arabe conversationnel — Tous niveaux",
+        "sub": "Cours interactifs axés sur la prise de parole, la compréhension et la communication réelle.",
+        "details": [
+          "Cours hebdomadaires en direct · en ligne",
+          "Horaires flexibles · groupe ou 1:1",
+          "Parcours d'apprentissage personnalisés"
+        ],
+        "cta": "Rejoindre un cours",
+        "href": "#contact?course=conversational-arabic"
+      },
+      {
+        "category": "general-language",
+        "badge": "Inscriptions ouvertes · Hebdomadaire",
+        "tag": "Nouveau",
+        "title": "Espagnol conversationnel — Tous niveaux",
+        "sub": "Cours interactifs axés sur la prise de parole, la compréhension et la communication réelle.",
+        "details": [
+          "Cours hebdomadaires en direct · en ligne",
+          "Horaires flexibles · groupe ou 1:1",
+          "Parcours d'apprentissage personnalisés"
+        ],
+        "cta": "Rejoindre un cours",
+        "href": "#contact?course=conversational-spanish"
+      },
+      {
+        "category": "general-language",
+        "badge": "Inscriptions ouvertes · Hebdomadaire",
+        "tag": "Nouveau",
+        "title": "Italien conversationnel — Tous niveaux",
+        "sub": "Cours interactifs axés sur la prise de parole, la compréhension et la communication réelle.",
+        "details": [
+          "Cours hebdomadaires en direct · en ligne",
+          "Horaires flexibles · groupe ou 1:1",
+          "Parcours d'apprentissage personnalisés"
+        ],
+        "cta": "Rejoindre un cours",
+        "href": "#contact?course=conversational-italian"
+      },
+      {
+        "category": "general-language",
+        "badge": "Juillet · Août 2026 · Groupe de 4",
+        "tag": "Pack Vacances d'Été",
+        "title": "Communication Anglais — 7 à 14 ans",
+        "sub": "2 séances par semaine de 1h30 en petit groupe de 4 enfants. On travaille la prise de parole, la présentation et l'expression orale en anglais — dans un cadre bienveillant et stimulant.",
+        "details": [
+          "2 séances/semaine · 1h30 chacune · en ligne",
+          "399 DH / mois · Juillet & Août 2026",
+          "Petit groupe de 4 enfants · 7-14 ans"
         ],
         "cta": "S'inscrire",
-        "href": "#contact?course=delf"
+        "href": "#contact?course=anglais-vacances-ete"
       },
       {
         "category": "tutoring",
@@ -119,18 +169,46 @@
         "href": "#contact?course=tutorat-francais"
       },
       {
-        "category": "kids-teens",
-        "badge": "Juillet · Août 2026 · Groupe de 4",
-        "tag": "Pack Vacances d'Été",
-        "title": "Communication Anglais — 7 à 14 ans",
-        "sub": "2 séances par semaine de 1h30 en petit groupe de 4 enfants. On travaille la prise de parole, la présentation et l'expression orale en anglais — dans un cadre bienveillant et stimulant.",
+        "category": "tutoring",
+        "badge": "Inscriptions ouvertes · 1h/séance",
+        "tag": "Cours individuel",
+        "title": "Tutorat Mathématiques — Primaire",
+        "sub": "Opérations, fractions, problèmes et raisonnement logique. On repart des bases et on construit solidement pour que votre enfant suive et comprenne en classe.",
         "details": [
-          "2 séances/semaine · 1h30 chacune · en ligne",
-          "399 DH / mois · Juillet & Août 2026",
-          "Petit groupe de 4 enfants · 7-14 ans"
+          "1 heure par séance · en ligne",
+          "Abonnement mensuel · sans engagement",
+          "Séances individuelles personnalisées"
+        ],
+        "cta": "Prendre une séance",
+        "href": "#contact?course=tutorat-math"
+      },
+      {
+        "category": "tutoring",
+        "badge": "Inscriptions ouvertes · 1h/séance",
+        "tag": "Nouveau",
+        "title": "Tutorat Arabe — Primaire",
+        "sub": "Vocabulaire, lecture et bases de la conversation en arabe. Un environnement bienveillant pour que votre enfant gagne confiance et progresse à son rythme.",
+        "details": [
+          "1 heure par séance · en ligne",
+          "Abonnement mensuel · sans engagement",
+          "Séances individuelles personnalisées"
+        ],
+        "cta": "Prendre une séance",
+        "href": "#contact?course=tutorat-arabe"
+      },
+      {
+        "category": "exam-prep",
+        "badge": "Programme · 8 semaines",
+        "tag": "Prépa examen",
+        "title": "Préparation DELF / DALF",
+        "sub": "Leçons ciblées, examens blancs et retours détaillés pour améliorer votre score.",
+        "details": [
+          "Programme 8 semaines · en direct",
+          "Examens blancs et retours détaillés",
+          "Progression structurée garantie"
         ],
         "cta": "S'inscrire",
-        "href": "#contact?course=anglais-vacances-ete"
+        "href": "#contact?course=delf"
       }
     ],
     "detail_label": "Voir le cours"
@@ -471,7 +549,7 @@
   },
   "stats": {
     "items": [
-      { "value": "5", "label": "Formats de cours disponibles" },
+      { "value": "11", "label": "Formats de cours disponibles" },
       { "value": "150+", "label": "Apprenants formés" },
       { "value": "98%", "label": "Taux de satisfaction" },
       { "value": "Direct", "label": "Cours individuels & en groupe" }
@@ -626,6 +704,106 @@
             "description": "Jeux de rôle et mises en situation — commander au restaurant, entretien d'embauche, discussion informelle — pour être prêt en conditions réelles.",
             "tags": ["Jeux de rôle", "Fluidité"]
           }
+        ],
+        "audience": [
+          "Vous voulez parler avec une vraie confiance, pas juste réussir un test de grammaire",
+          "Vous avez déjà étudié mais vous bloquez dans les conversations réelles",
+          "Vous partez de zéro et voulez un parcours structuré",
+          "Vous voulez des cours flexibles qui s'adaptent à votre emploi du temps"
+        ]
+      },
+      "conversational-french": {
+        "title": "Français conversationnel — Tous niveaux",
+        "tagline": "Gagnez une vraie confiance à l'oral avec des cours en direct et interactifs — pas un manuel de plus.",
+        "price": "Prochainement",
+        "duration": "1h / séance · hebdomadaire",
+        "date": "Ouverture des inscriptions bientôt",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          { "title": "On parle dès la première leçon", "text": "Chaque cours est construit autour de la vraie conversation, pas d'exercices de grammaire passifs." },
+          { "title": "Groupe ou 1:1, au choix", "text": "Rejoignez un petit groupe hebdomadaire ou réservez des séances individuelles sur mesure." },
+          { "title": "Un parcours, pas un cours au hasard", "text": "Votre tuteur suit votre niveau et construit un plan qui vous fait progresser chaque semaine." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Conversation du quotidien", "description": "Se présenter, parler de sa vie quotidienne, donner son avis — le vocabulaire et la confiance pour tenir une vraie conversation.", "tags": ["Oral", "Vocabulaire", "Écoute"] },
+          { "num": "02", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
+          { "num": "03", "title": "Écoute & Compréhension", "description": "Comprendre des locuteurs natifs à vitesse naturelle grâce à des exercices d'écoute guidés.", "tags": ["Écoute", "Compréhension"] },
+          { "num": "04", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
+        ],
+        "audience": [
+          "Vous voulez parler avec une vraie confiance, pas juste réussir un test de grammaire",
+          "Vous avez déjà étudié mais vous bloquez dans les conversations réelles",
+          "Vous partez de zéro et voulez un parcours structuré",
+          "Vous voulez des cours flexibles qui s'adaptent à votre emploi du temps"
+        ]
+      },
+      "conversational-arabic": {
+        "title": "Arabe conversationnel — Tous niveaux",
+        "tagline": "Gagnez une vraie confiance à l'oral avec des cours en direct et interactifs — pas un manuel de plus.",
+        "price": "Prochainement",
+        "duration": "1h / séance · hebdomadaire",
+        "date": "Ouverture des inscriptions bientôt",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          { "title": "On parle dès la première leçon", "text": "Chaque cours est construit autour de la vraie conversation, pas d'exercices de grammaire passifs." },
+          { "title": "Groupe ou 1:1, au choix", "text": "Rejoignez un petit groupe hebdomadaire ou réservez des séances individuelles sur mesure." },
+          { "title": "Un parcours, pas un cours au hasard", "text": "Votre tuteur suit votre niveau et construit un plan qui vous fait progresser chaque semaine." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Conversation du quotidien", "description": "Se présenter, parler de sa vie quotidienne, donner son avis — le vocabulaire et la confiance pour tenir une vraie conversation.", "tags": ["Oral", "Vocabulaire", "Écoute"] },
+          { "num": "02", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
+          { "num": "03", "title": "Écoute & Compréhension", "description": "Comprendre des locuteurs natifs à vitesse naturelle grâce à des exercices d'écoute guidés.", "tags": ["Écoute", "Compréhension"] },
+          { "num": "04", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
+        ],
+        "audience": [
+          "Vous voulez parler avec une vraie confiance, pas juste réussir un test de grammaire",
+          "Vous avez déjà étudié mais vous bloquez dans les conversations réelles",
+          "Vous partez de zéro et voulez un parcours structuré",
+          "Vous voulez des cours flexibles qui s'adaptent à votre emploi du temps"
+        ]
+      },
+      "conversational-spanish": {
+        "title": "Espagnol conversationnel — Tous niveaux",
+        "tagline": "Gagnez une vraie confiance à l'oral avec des cours en direct et interactifs — pas un manuel de plus.",
+        "price": "Prochainement",
+        "duration": "1h / séance · hebdomadaire",
+        "date": "Ouverture des inscriptions bientôt",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          { "title": "On parle dès la première leçon", "text": "Chaque cours est construit autour de la vraie conversation, pas d'exercices de grammaire passifs." },
+          { "title": "Groupe ou 1:1, au choix", "text": "Rejoignez un petit groupe hebdomadaire ou réservez des séances individuelles sur mesure." },
+          { "title": "Un parcours, pas un cours au hasard", "text": "Votre tuteur suit votre niveau et construit un plan qui vous fait progresser chaque semaine." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Conversation du quotidien", "description": "Se présenter, parler de sa vie quotidienne, donner son avis — le vocabulaire et la confiance pour tenir une vraie conversation.", "tags": ["Oral", "Vocabulaire", "Écoute"] },
+          { "num": "02", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
+          { "num": "03", "title": "Écoute & Compréhension", "description": "Comprendre des locuteurs natifs à vitesse naturelle grâce à des exercices d'écoute guidés.", "tags": ["Écoute", "Compréhension"] },
+          { "num": "04", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
+        ],
+        "audience": [
+          "Vous voulez parler avec une vraie confiance, pas juste réussir un test de grammaire",
+          "Vous avez déjà étudié mais vous bloquez dans les conversations réelles",
+          "Vous partez de zéro et voulez un parcours structuré",
+          "Vous voulez des cours flexibles qui s'adaptent à votre emploi du temps"
+        ]
+      },
+      "conversational-italian": {
+        "title": "Italien conversationnel — Tous niveaux",
+        "tagline": "Gagnez une vraie confiance à l'oral avec des cours en direct et interactifs — pas un manuel de plus.",
+        "price": "Prochainement",
+        "duration": "1h / séance · hebdomadaire",
+        "date": "Ouverture des inscriptions bientôt",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          { "title": "On parle dès la première leçon", "text": "Chaque cours est construit autour de la vraie conversation, pas d'exercices de grammaire passifs." },
+          { "title": "Groupe ou 1:1, au choix", "text": "Rejoignez un petit groupe hebdomadaire ou réservez des séances individuelles sur mesure." },
+          { "title": "Un parcours, pas un cours au hasard", "text": "Votre tuteur suit votre niveau et construit un plan qui vous fait progresser chaque semaine." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Conversation du quotidien", "description": "Se présenter, parler de sa vie quotidienne, donner son avis — le vocabulaire et la confiance pour tenir une vraie conversation.", "tags": ["Oral", "Vocabulaire", "Écoute"] },
+          { "num": "02", "title": "La grammaire en contexte", "description": "La grammaire enseignée à travers de vraies phrases que vous allez utiliser, pas des règles isolées à mémoriser.", "tags": ["Grammaire", "Structure de phrase"] },
+          { "num": "03", "title": "Écoute & Compréhension", "description": "Comprendre des locuteurs natifs à vitesse naturelle grâce à des exercices d'écoute guidés.", "tags": ["Écoute", "Compréhension"] },
+          { "num": "04", "title": "Mise en situation réelle", "description": "Jeux de rôle et mises en situation pour être prêt en conditions réelles.", "tags": ["Jeux de rôle", "Fluidité"] }
         ],
         "audience": [
           "Vous voulez parler avec une vraie confiance, pas juste réussir un test de grammaire",
@@ -1342,6 +1520,31 @@
           "Il a des lacunes qui s'accumulent et il peine à suivre en classe",
           "Vous voulez un suivi personnalisé pour l'aider à combler ses lacunes",
           "Vous préparez votre enfant pour une évaluation ou un passage de niveau"
+        ]
+      },
+      "tutorat-arabe": {
+        "title": "Tutorat Arabe — Primaire",
+        "tagline": "Des séances individuelles en ligne pour poser des bases solides en arabe et progresser avec confiance.",
+        "price": "Prochainement",
+        "duration": "1h / séance",
+        "date": "Ouverture des inscriptions bientôt",
+        "cert": "Suivi de progression inclus",
+        "highlights": [
+          { "title": "100% individuel", "text": "Votre enfant est seul avec le tuteur — attention complète, progression garantie." },
+          { "title": "Adapté à son niveau", "text": "Débutant ou intermédiaire, chaque séance part des acquis de l'élève." },
+          { "title": "En ligne, sans déplacement", "text": "Depuis la maison, sur un ordinateur ou une tablette — simple et pratique." }
+        ],
+        "modules": [
+          { "num": "01", "title": "Vocabulaire & Prononciation", "description": "Apprendre le vocabulaire du quotidien à travers des jeux et des exercices oraux.", "tags": ["Vocabulaire", "Oral", "Prononciation"] },
+          { "num": "02", "title": "Grammaire de base", "description": "Structure des phrases simples, questions et réponses, expressions courantes.", "tags": ["Grammaire", "Phrases", "Structure"] },
+          { "num": "03", "title": "Compréhension & Expression", "description": "Petits textes, dialogues simples, exercices d'écoute et de réponse en arabe.", "tags": ["Compréhension", "Écoute", "Expression"] },
+          { "num": "04", "title": "Révisions & Préparation aux évaluations", "description": "Révision des leçons en cours, vocabulaire des unités scolaires, préparation aux contrôles.", "tags": ["Révisions", "Évaluations", "Bilan"] }
+        ],
+        "audience": [
+          "Votre enfant commence l'arabe et a besoin d'un accompagnement doux",
+          "Il a du mal à suivre en classe et perd confiance",
+          "Vous voulez lui donner une longueur d'avance dès le primaire",
+          "Vous cherchez un suivi régulier et bienveillant tout au long de l'année"
         ]
       },
       "anglais-vacances-ete": {
