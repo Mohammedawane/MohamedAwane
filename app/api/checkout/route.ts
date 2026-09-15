@@ -96,7 +96,7 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
   "conversational-english": {
     name: "Individual English Classes — Nexo Skills",
     description: "Cours d'anglais individuels en ligne · Bilan de niveau gratuit inclus (A1 à C2)",
-    amount: 50000, // 500 CAD
+    amount: 30000, // 300 CAD
     currency: "cad",
   },
 };
