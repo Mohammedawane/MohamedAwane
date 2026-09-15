@@ -10,7 +10,7 @@ function rateLimit(ip: string, max = 10, windowMs = 60_000): boolean {
   return true;
 }
 
-type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "hse" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete" | "istqb-fondation" | "istqb-ctal-ta" | "istqb-ctal-tae";
+type CourseKey = "qa" | "iso" | "audit" | "web" | "a11y" | "hse" | "multiple" | "tutorat-francais" | "tutorat-anglais" | "tutorat-math" | "anglais-vacances-ete" | "istqb-fondation" | "istqb-ctal-ta" | "istqb-ctal-tae" | "conversational-english";
 
 const COURSES: Record<CourseKey, { name: string; description: string; amount: number; currency?: string; recurring?: boolean }> = {
   qa: {
@@ -92,6 +92,12 @@ const COURSES: Record<CourseKey, { name: string; description: string; amount: nu
     description: "200 questions · 7 chapitres du syllabus · Mode entraînement & simulation examen · Accès à vie",
     amount: 4900, // €49
     currency: "eur",
+  },
+  "conversational-english": {
+    name: "Individual English Classes — Nexo Skills",
+    description: "Cours d'anglais individuels en ligne · Bilan de niveau gratuit inclus (A1 à C2)",
+    amount: 200000, // 2000 CAD
+    currency: "cad",
   },
 };
 

@@ -45,11 +45,11 @@ export async function generateMetadata({
 const VALID_COURSES = ["conversational-english", "conversational-french", "conversational-arabic", "conversational-spanish", "conversational-italian", "delf", "ielts", "tef-canada", "tcf-canada", "qa", "iso", "web", "a11y", "audit", "hse", "tutorat-francais", "tutorat-anglais", "tutorat-math", "tutorat-arabe", "anglais-vacances-ete"] as const;
 
 // Only these courses have live enrollment + payment
-const ACTIVE_COURSES = new Set(["anglais-vacances-ete", "hse", "tutorat-francais", "tutorat-anglais", "tutorat-math"]);
+const ACTIVE_COURSES = new Set(["anglais-vacances-ete", "hse", "tutorat-francais", "tutorat-anglais", "tutorat-math", "conversational-english"]);
 
 // Open for enrollment now, but priced per learner after a free assessment —
 // so they use the contact flow rather than a fixed Stripe price.
-const OPEN_CONTACT_COURSES = new Set(["conversational-english", "conversational-french", "conversational-arabic", "conversational-spanish", "conversational-italian"]);
+const OPEN_CONTACT_COURSES = new Set(["conversational-french", "conversational-arabic", "conversational-spanish", "conversational-italian"]);
 type CourseSlug = (typeof VALID_COURSES)[number];
 
 function isValidCourse(slug: string): slug is CourseSlug {
@@ -90,7 +90,7 @@ export default async function FormationPage({
   // individual language classes priced per learner after the free assessment.
   const isOpenContact = OPEN_CONTACT_COURSES.has(course);
   // CashPlus (Morocco-only transfer) doesn't make sense for this Canada-facing offer
-  const hideCashplus = course === "tutorat-francais";
+  const hideCashplus = course === "tutorat-francais" || course === "conversational-english";
   // HSE is now priced in FCFA — swap the Morocco-only CashPlus transfer for Ria
   const altTransfer = course === "hse" ? { name: "Ria", locationFr: "une agence Ria", locationEn: "a Ria agency" } : undefined;
   const isFr = lang !== "en";
